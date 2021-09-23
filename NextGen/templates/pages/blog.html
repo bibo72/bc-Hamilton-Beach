@@ -1,0 +1,28 @@
+---
+blog:
+    posts:
+        limit: {{theme_settings.blogpage_blog_posts_count}}
+        pages: 3
+        summary: 140
+---
+{{#partial "page"}}
+
+{{#if theme_settings.blog_page_with_sidenav}}
+    {{> components/custom/sidenav}}
+{{/if}}
+
+<main class="page blog {{#if ../theme_settings.inverse-productCard-buttonColors '===' true}} inverse-productCard-buttonColors{{/if}}">
+
+  {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <h1 class="page-heading">{{ blog.name }}</h1>
+
+    {{#each blog.posts}}
+        {{> components/blog/post-page post=this}}
+    {{/each}}
+    <div class="clear"></div>
+
+    {{> components/common/paginator pagination.blog}}
+</main>
+
+{{/partial}}
+{{> layout/blog}}

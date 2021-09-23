@@ -1,0 +1,60 @@
+<section class="productCarousel blog-carousel"
+    data-list-name="{{list}}"
+    data-slick='{
+        "dots": false,
+        "infinite": false,
+        "mobileFirst": false,
+        "slidesToShow": {{theme_settings.blog_feed_columns}},
+        "slidesToScroll": {{theme_settings.blog_feed_columns}},
+        "responsive": [
+        {
+          "breakpoint": 981,
+          "settings": {
+            "slidesToShow": {{theme_settings.blog_feed_columns}},
+            "slidesToScroll": {{theme_settings.blog_feed_columns}}
+          }
+        },
+        {
+          "breakpoint": 801,
+          "settings": {
+            "slidesToShow": 3,
+            "slidesToScroll": 3
+          }
+        },
+        {
+          "breakpoint": 551,
+          "settings": {
+            "slidesToShow": 1,
+            "slidesToScroll": 1
+          }
+        }
+        ]
+    }'>
+    {{#each blog.recent_posts}}
+      {{#if thumbnail}}
+        <figure class="blog-thumbnail">
+          <a aria-label="{{title}}" href="{{url}}">
+            <div class="zoom-image-container">
+              <img src="{{getImage thumbnail 'theme_settings.blog_size'}}" alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}">
+            </div>
+            <div class="blog-text-section">
+              <p class="blog-date">{{date_published}}</p>
+              <div class="blog-title"><a aria-label="{{title}}" href="{{url}}">{{title}}</a></div>
+            </div>
+          </a>
+        </figure>
+      {{else}}
+      <figure class="blog-thumbnail">
+        <a aria-label="{{title}}" href="{{url}}">
+          <div class="zoom-image-container">
+            <img src="{{cdn 'img/blog-feed-image-coming-soon-placeholder.png'}}" alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}">
+          </div>
+          <div class="blog-text-section">
+            <p class="blog-date">{{date_published}}</p>
+            <div class="blog-title"><a aria-label="{{title}}" href="{{url}}">{{title}}</a></div>
+          </div>
+        </a>
+      </figure>
+      {{/if}}
+    {{/each}}
+</section>

@@ -1,0 +1,14 @@
+{{#partial "page"}}
+
+{{#if theme_settings.blog_post_with_sidenav}}
+    {{> components/custom/sidenav}}
+{{/if}}
+
+<div class="blog-post-container single-post-page">
+  {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+  {{> components/blog/post-post post=blog.post show_tags=true}}
+  <div class="clear"></div>
+</div>
+
+{{/partial}}
+{{> layout/blog-post}}

@@ -1,0 +1,32 @@
+<div class="navPage-subMenu navPage-subMenu-horizontal" aria-hidden="true" tabindex="-1">
+    <ul class="navPage-subMenu-list">
+      <div class="submenu-list-wrapper">
+        <li class="navPage-subMenu-item-parent">
+            <a class="navPage-subMenu-action navPages-action navPages-action-depth-max {{#if is_active}} activePage{{/if}}" href="{{url}}">{{lang 'category.view_all.name' category=name}}</a>
+        </li>
+
+        {{#each children}}
+            <li class="navPage-subMenu-item-child level-2">
+              {{#if image}}
+                <a class="category-image zoom-image-container {{#if image '<=' 0}}hidden{{/if}}" href="{{url}}"><div class="category-header-image" style="background-image: url('{{getImage image}}');"></div></a>
+                {{#if image '<=' 0}}
+                  <a class="category-image zoom-image-container placeholder" href="{{url}}"><div class="category-header-image placeholder" style="background-image: url( {{getImage image 'gallery' (cdn '../img/image-coming-soon-placeholder.png') }});"></div></a>
+                {{/if}}
+              {{/if}}
+                {{#if children}}
+                    <a class="navPage-subMenu-action navPages-action navPages-action-depth-max has-subMenu{{#if is_active}} activePage{{/if}} level-2" href="{{url}}" data-collapsible="navPages-{{id}}">
+                        {{name}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xlink:href="#icon-angle-down" /></svg></i>
+                    </a>
+                    {{> components/common/navigation-dropdown-level-3-plus}}
+                {{else}}
+                    <a class="navPage-subMenu-action navPages-action{{#if is_active}} activePage{{/if}} level-2" href="{{url}}">{{name}}</a>
+                {{/if}}
+                <div class="clear"></div>
+            </li>
+        {{/each}}
+        <div class="clear"></div>
+
+        </div>
+<div class="clear"></div>
+    </ul>
+</div>

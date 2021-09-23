@@ -1,0 +1,253 @@
+<div class="global-region screen-width above-footer">
+	<div class="global-region body-width">
+		{{{region name="footer_above--global"}}}
+	</div>
+</div>
+
+{{#if settings.show_newsletter_box}}
+<div class="footer">
+		<div class="footer-top newsletter">
+			<div class="content newsletter">
+					<div class="" data-section-type="newsletterSubscription">
+									{{> components/common/subscription-form}}
+									<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+<div class="global-region screen-width below-footer-newsletter">
+	<div class="global-region body-width">
+		{{{region name="footer_below_newsletter--global"}}}
+	</div>
+</div>
+
+ {{/if}}
+
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <section class="footer-info{{#if theme_settings.footer-columns '===' 4}} four-columns{{/if}}{{#if theme_settings.footer-columns '===' 5}} five-columns{{/if}}{{#if theme_settings.footer-columns '===' 6}} six-columns{{/if}}">
+					{{#if theme_settings.footer_contact_info_visibility '===' true}}
+				 		<article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
+                <h3 class="footer-info-heading">{{theme_settings.contact_header}}</h3>
+                <div class="regular">
+                    <address>{{nl2br settings.address}}</address>
+                </div>
+
+								<div class="global-region container-width">
+									{{{region name="footer_below_contact--global"}}}
+								</div>
+        		</article>
+					{{/if}}
+
+						{{#if theme_settings.footer_account_links_visibility '===' true}}
+            	<article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h3 class="footer-info-heading">{{theme_settings.account_header}}</h3>
+                <div class="regular">
+                <ul class="footer-info-list">
+                	{{#if settings.gift_certificates_enabled}}
+                        <li>
+                            <a href="/giftcertificates.php">Gift Certificates</a>
+                        </li>
+                    {{/if}}
+										{{#if settings.show_wishlist}}
+											<li>
+												<a href="/wishlist.php">Wishlist</a>
+											</li>
+										{{/if}}
+                    {{#if settings.account_creation_enabled}}
+                        {{#if customer}}
+                            <li><a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a></li>
+                            <li><a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a></li>
+														<li>
+				                        <a href="/account.php?action=order_status">Order Status</a>
+				                    </li>
+                        {{else}}
+                            <li><a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
+                            {{#if settings.account_creation_enabled}}
+                                <span class="navUser-or">{{lang 'common.or'}}</span> <a class="navUser-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a></li>
+                            {{/if}}
+                        {{/if}}
+                    {{/if}}
+
+										{{#if theme_settings.show_shipping_returns_link}}
+                    	<li>
+												<a href="{{theme_settings.shipping_returns_url}}">{{theme_settings.shipping_returns_link_name}}</a>
+                    	</li>
+										{{/if}}
+                </ul>
+                </div>
+
+								<div class="global-region container-width">
+									{{{region name="footer_below_account--global"}}}
+								</div>
+            	</article>
+						{{/if}}
+
+						{{#if theme_settings.footer_page_links_visibility '===' true}}
+            	<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
+                <h3 class="footer-info-heading">{{theme_settings.pages_header}}</h3>
+                <div class="regular">
+                <ul class="footer-info-list">
+                    {{#each (limit pages theme_settings.pages_category_brands_limit_footer)}}
+                    <li>
+                        <a href="{{url}}">{{name}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+                </div>
+
+								<div class="global-region container-width">
+									{{{region name="footer_below_quick_links--global"}}}
+								</div>
+            </article>
+						{{/if}}
+
+						{{#if theme_settings.footer_category_links_visibility '===' true}}
+							<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
+	    					<h3 class="footer-info-heading">{{theme_settings.categories_header}}</h3>
+	    					<div class="regular">
+	        				<ul class="footer-info-list">
+										{{#each (limit categories theme_settings.pages_category_brands_limit_footer)}}
+										  <li class="navPages-item">
+										  	{{> components/common/navigation-list-top-level-categories-only}}
+										  </li>
+										{{/each}}
+										<div class="clear"></div>
+	        				</ul>
+	    					</div>
+	    					<div class="global-region container-width">
+		   						{{{region name="footer_below_quick_links--global"}}}
+								</div>
+							</article>
+						{{/if}}
+
+					{{#if theme_settings.footer_brand_links_visibility '===' true}}
+						<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
+    					<h3 class="footer-info-heading">{{theme_settings.brands_header}}</h3>
+    					<div class="regular">
+        				<ul class="footer-info-list">
+            			{{#each (limit shop_by_brand theme_settings.pages_category_brands_limit_footer)}}
+                		<li>
+                    	<a href="{{url}}">{{name}}</a>
+                		</li>
+            			{{/each}}
+        				</ul>
+    					</div>
+    					<div class="global-region container-width">
+	   						{{{region name="footer_below_quick_links--global"}}}
+							</div>
+						</article>
+					{{/if}}
+
+					{{#if theme_settings.footer_blog_visibility '===' true}}
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
+							{{#if settings.blog_enabled}}
+                <h3 class="footer-info-heading recent-posts-heading">{{theme_settings.blog_header}}</h3>
+                <div class="blog regular">
+                    <ul class="footer-info-list">
+                        {{#each (limit blog.recent_posts theme_settings.footer_blog_posts_count)}}
+                            <li><a href="{{url}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+							{{/if}}
+						{{/if}}
+
+						{{#if theme_settings.footer_social_links_visibility '===' true}}
+                <div class="social-media">
+                    {{> components/common/social-links}}
+                </div>
+
+								<div class="global-region container-width">
+									{{{region name="footer_below_social_links--global"}}}
+								</div>
+            </article>
+						{{/if}}
+
+            <div class="clear"></div>
+						{{#if theme_settings.geotrust_ssl_common_name}}
+							<div class="footer-geotrust-ssl-seal">
+								{{> components/common/geotrust-ssl-seal}}
+								<div class="clear"></div>
+							</div>
+						{{/if}}
+						{{#if theme_settings.footer_payment_icons_visibility '===' true}}
+            	{{> components/common/payment-icons}}
+						{{/if}}
+
+        </section>
+
+        <div class="clear"></div>
+    </div>
+
+	<div class="global-region screen-width above-footer-creditsBar">
+		<div class="global-region body-width">
+			{{{region name="footer_above_credits_bar--global"}}}
+		</div>
+	</div>
+
+    <div class="footer-bottom">
+        <div class="content copyright">
+					<ul class="site-info">
+							{{#if theme_settings.show_copyright_footer}}
+											<li class="copyright"><span class="current-year">&copy; <span id="copyright_year"></span> {{settings.store_name}}</span>
+							{{/if}}
+
+							{{#if theme_settings.show_copyright_footer '===' true}}
+								{{#if theme_settings.show_sitemap_link '===' true}}
+									{{#if theme_settings.show_powered_by '===' true}}
+										<span class="separator"> | </span>
+									{{/if}}
+								{{/if}}
+							{{/if}}
+
+
+							{{#if theme_settings.show_copyright_footer '===' true}}
+								{{#if theme_settings.show_sitemap_link '===' true}}
+									{{#if theme_settings.show_powered_by '===' false}}
+										<span class="separator"> | </span>
+									{{/if}}
+								{{/if}}
+							{{/if}}
+
+							{{#if theme_settings.show_copyright_footer '===' true}}
+								{{#if theme_settings.show_sitemap_link '===' false}}
+									{{#if theme_settings.show_powered_by '===' true}}
+										<span class="separator"> | </span>
+									{{/if}}
+								{{/if}}
+							{{/if}}
+							</li>
+
+							{{#if theme_settings.show_sitemap_link}}
+								<li class="sitemap"><a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
+							{{/if}}
+
+								{{#if theme_settings.show_sitemap_link '===' true}}
+									{{#if theme_settings.show_powered_by '===' true}}
+										<span class="separator"> | </span>
+									{{/if}}
+								{{/if}}
+								</li>
+
+							{{#if theme_settings.show_powered_by}}
+								<li class="built-by">Premium <a target="_blank" href="https://www.bigcommerce.com/">BigCommerce</a> Theme by <a class="lone-star-templates" target="_blank" href="http://lonestartemplates.com/">Lone Star Templates</a></li>
+							{{/if}}
+						<!-- <div class="clear"></div> -->
+						</ul>
+        </div>
+    </div>
+
+	<div class="global-region screen-width below-footer-creditsBar">
+		<div class="global-region body-width">
+			{{{region name="footer_below_credits_bar--global"}}}
+		</div>
+	</div>
+
+    <div id="topcontrol" class="backtoTop" title="Scroll Back to Top">
+          <svg class="icon back-to-top-icon" title="submit" alt="submit"><use xlink:href="#icon-caret-square-up"></use></svg>
+      </div>
+    </footer>

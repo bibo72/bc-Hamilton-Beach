@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js {{#if theme_settings.button_animation '===' 'none'}}{{/if}}{{#if theme_settings.button_animation '===' 'fade'}}fade-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'rectangle-out'}}rectangle-out-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'rectangle-in'}}rectangle-in-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'position-aware'}}position-aware-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'swipe'}}swipe-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'shutter-in'}}shutter-in-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-btnAnimate{{/if}}{{#if theme_settings.focus-box-visibility '===' false}} hide-focus-box{{/if}}" lang="{{ locale_name }}">
+<head>
+    <title>{{ head.title }}</title>
+    {{{ resourceHints }}}
+    {{{ head.meta_tags }}}
+    {{{ head.config }}}
+    {{#block "head"}} {{/block}}
+
+    <link href="{{ head.favicon }}" rel="shortcut icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        // Change document class from no-js to js so we can detect this in css
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+
+    {{ getFontsCollection }}
+    {{{stylesheet '/assets/css/theme.css'}}}
+    {{{stylesheet '/assets/css/nextgen.css'}}}
+    {{{stylesheet '/assets/css/cards-simple.css'}}}
+    {{{stylesheet '/assets/css/cards-quicksearch.css'}}}
+    {{{stylesheet '/assets/css/theme-editor-responsive.css'}}}
+    {{{stylesheet '/assets/css/custom.css'}}}
+
+        {{{head.scripts}}}
+        {{{head.rsslinks}}}
+
+        {{inject 'themeSettings' theme_settings}}
+        {{inject 'genericError' (lang 'common.generic_error')}}
+        {{inject 'maintenanceMode' settings.maintenance}}
+        {{inject 'urls' urls}}
+        {{inject 'secureBaseUrl' settings.secure_base_url}}
+        {{inject 'cartId' cart_id}}
+        {{inject 'template' template}}
+        {{~inject 'showAdminBar' theme_settings.show-admin-bar}}
+        {{~inject 'adminBarLanguage' (langJson 'admin')}}
+
+    </head>
+    <body id="body" class="main contact-layout{{#if theme_settings.body_width '===' 960}} nine-sixty{{/if}} {{#if theme_settings.body_width '===' 1170}} eleven-seventy {{/if}} {{#if theme_settings.body_width '===' 1280}} twelve-eighty {{/if}} {{#if theme_settings.body_width '===' 1366}} thirteen-sixty-six {{/if}} {{#if theme_settings.body_width '===' 1440}} fourteen-forty {{/if}} base-layout {{#if theme_settings.italicize_headers_buttons '===' true}} italicize-headers-buttons {{/if}} {{#if theme_settings.contact_page_with_sidenav '===' false}} contact-layout-no-sidevav{{else}} contact-layout-with-sidevav{{/if}}">
+
+        {{{snippet 'header'}}}
+        <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
+
+        {{#and settings.privacy_cookie settings.is_eu_ip_address}}
+            {{> components/common/cookie}}
+        {{/and}}
+
+        {{> components/common/header }}
+        {{> components/common/body }}
+        {{> components/common/footer }}
+
+        <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+        <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+
+        <script>
+            // Exported in app.js
+            window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+        </script>
+
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
+
+        <!-- CUSTOM JS -->
+
+        {{{footer.scripts}}}
+
+    </body>
+</html>

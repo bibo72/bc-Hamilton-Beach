@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="{{#if theme_settings.button_animation '===' 'none'}}{{/if}}{{#if theme_settings.button_animation '===' 'fade'}}fade-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'rectangle-out'}}rectangle-out-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'rectangle-in'}}rectangle-in-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'position-aware'}}position-aware-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'swipe'}}swipe-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'shutter-in'}}shutter-in-btnAnimate{{/if}}{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-btnAnimate{{/if}}{{#if theme_settings.focus-box-visibility '===' false}} hide-focus-box{{/if}}" lang="{{ locale_name }}">
+<head>
+    <title>{{ head.title }}</title>
+    {{{ head.meta_tags }}}
+    {{{ head.config }}}
+
+    <link href="{{ head.favicon }}" rel="shortcut icon">
+
+    {{#block "head"}}{{/block}}
+
+    {{inject 'themeSettings' theme_settings}}
+    {{inject 'genericError' (lang 'common.generic_error')}}
+    {{inject 'maintenanceMode' settings.maintenance}}
+    {{inject 'urls' urls}}
+    {{inject 'secureBaseUrl' settings.secure_base_url}}
+    {{inject 'cartId' cart_id}}
+    {{inject 'template' template}}
+    {{~inject 'showAdminBar' theme_settings.show-admin-bar}}
+    {{~inject 'adminBarLanguage' (langJson 'admin')}}
+
+</head>
+<body id="body" class="main{{#if theme_settings.body_width '===' 960}} nine-sixty{{/if}} {{#if theme_settings.body_width '===' 1170}} eleven-seventy {{/if}} {{#if theme_settings.body_width '===' 1280}} twelve-eighty {{/if}} {{#if theme_settings.body_width '===' 1366}} thirteen-sixty-six {{/if}} {{#if theme_settings.body_width '===' 1440}} fourteen-forty {{/if}} checkout-layout {{#if theme_settings.italicize_headers_buttons '===' true}} italicize-headers-buttons {{/if}}">
+  <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
+
+  {{#block "page"}}{{/block}}
+
+    {{{footer.scripts}}}
+    {{{snippet 'footer'}}}
+
+</body>
+</html>

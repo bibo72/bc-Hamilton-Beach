@@ -1,0 +1,38 @@
+{{#if children}}
+<a class="navPages-action has-subMenu" href="{{url}}">
+    {{name}} <i class="fa fa-chevron-down main-nav" aria-hidden="true"><svg><use xlink:href="#icon-angle-down" /></svg></i>
+</a>
+<div class="navPage-subMenu simple-subMenu" id="" aria-hidden="true" tabindex="-1">
+    <ul class="navPage-subMenu-list">
+      <li class="navPage-subMenu-item-parent">
+          <a class="navPage-subMenu-action navPages-action navPages-action-depth-max {{#if is_active}} activePage{{/if}}" href="{{url}}">{{lang 'category.view_all.name' category=name}}</a>
+      </li>
+        {{#each children}}
+            <li class="navPage-subMenu-item level-2">
+                {{#if children}}
+                    <a
+                        class="navPage-subMenu-action navPages-action has-subMenu level-2"
+                        href="{{url}}"
+                        data-collapsible="navPages-{{id}}"
+                        data-collapsible-disabled-breakpoint="medium"
+                        data-collapsible-disabled-state="open"
+                        data-collapsible-enabled-state="closed">
+                        {{name}} <i class="fa fa-chevron-down" aria-hidden="true"><svg><use xlink:href="#icon-angle-down" /></svg></i>
+                    </a>
+                    <ul class="navPage-childList level-3" id="">
+                        {{#each children}}
+                        <li class="navPage-childList-item level-3">
+                            <a class="navPage-childList-action navPages-action level-3" href="{{url}}">{{name}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <a class="navPage-subMenu-action navPages-action level-2" href="{{url}}">{{name}}</a>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+{{else}}
+  <a class="navPages-action" href="{{url}}">{{name}}</a>
+{{/if}}

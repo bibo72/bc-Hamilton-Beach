@@ -1,0 +1,92 @@
+<div class="previewCart {{#if ../theme_settings.quickCart_override '===' true}} quick-override{{/if}}">
+    {{#if cart.items.length}}
+        <ul class="previewCartList">
+            {{#each (limit cart.items 4)}}
+                <li class="previewCartItem">
+                    <div class="previewCartItem-image">
+                        {{#if type '==' 'GiftCertificate'}}
+                            <img src="{{cdn ../../theme_settings.default_image_gift_certificate}}" alt="GiftCertificate" title="GiftCertificate">
+                        {{else}}
+                            <img src="{{getImage image 'productthumb_size' (cdn ../../theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+                        {{/if}}
+                    </div>
+
+                    <div class="previewCartItem-content">
+                      <div class="card-sku-brand-section {{#if ../theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if ../theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if ../theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
+                          <h4 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}" data-test-info-type="brandName"><a class="brand-link" href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h4>
+                           {{#if brand.name}}
+                             {{#if sku}}
+                               <span class="brand-sku-divider">|</span>
+                             {{/if}}
+                           {{/if}}
+                        <h4 class="card-text sku {{#if ../theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
+                          {{#if ../theme_settings.card-sku '===' true}}
+                          {{#if sku}}
+                          <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
+                            <span class="sku-label">{{lang 'sku'}}:</span>
+                            <span class="sku-value" data-product-sku>{{sku}}</span>
+                          </a>
+                          {{/if}}
+                          {{/if}}
+                        </h4>
+                      </div>
+
+                        <h4 class="card-title {{#if ../theme_settings.card-title-lines '===' '1-line'}}card-title-one-line{{/if}}{{#if ../theme_settings.card-title-lines '===' '2-lines'}}card-title-two-lines{{/if}}{{#if ../theme_settings.card-title-lines '===' '3-lines'}}card-title-three-lines{{/if}}{{#if ../theme_settings.card-title-lines '===' '4-lines'}}card-title-four-lines{{/if}}">
+                          {{#if demo}}
+                            {{name}}
+                          {{else}}
+                            <a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>{{name}}</a>
+                          {{/if}}
+                        </h4>
+
+                        <span class="previewCartItem-price">
+                            {{#if quantity '>' 1}}
+                                {{quantity}} &times;
+                            {{/if}}
+                            {{#or ../customer (if ../theme_settings.restrict_to_login '!==' true)}}
+                                {{price.formatted}}
+                            {{else}}
+                                {{> components/common/login-for-pricing}}
+                            {{/or}}
+                        </span>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+        {{#if theme_settings.additional_payment_options_visibility '!==' "hidden"}}
+          <div class="previewCartCheckout-additionalCheckoutButtons">
+            {{#each cart.additional_checkout_buttons}}
+                {{{this}}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+        <div class="previewCartAction">
+            {{#if cart.show_primary_checkout_button}}
+                <div class="previewCartAction-checkout">
+                    <a href="{{urls.checkout.single_address}}" class="button button--small button--primary">
+                        {{lang 'cart.preview.checkout_now'}}
+                    </a>
+                </div>
+            {{/if}}
+
+            <div class="previewCartAction-viewCart{{#unless cart.show_primary_checkout_button}} previewCartAction-viewCart--sole{{/unless}}">
+                <a href="{{urls.cart}}" class="button button--small button--action">
+                    {{lang 'cart.preview.view_cart'}}
+                </a>
+            </div>
+
+            {{#if cart.show_multiple_address_shipping}}
+                <div class="previewCartAction-checkoutMultiple">
+                    <a href="{{urls.checkout.multiple_address}}">
+                        {{lang 'cart.preview.checkout_multiple'}}
+                    </a>
+                </div>
+            {{/if}}
+        </div>
+    {{else}}
+        <div class="previewCart-emptyBody">
+            {{lang 'cart.checkout.empty_cart'}}
+        </div>
+    {{/if}}
+</div>

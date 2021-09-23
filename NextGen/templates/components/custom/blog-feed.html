@@ -1,0 +1,8 @@
+<div class="home recent-blog-posts {{#if theme_settings.blog_feed_columns '===' 3}}three-columns{{/if}} {{#if theme_settings.blog_feed_columns '===' 4}}four-columns{{/if}}">
+  <h2 class="container-header page-heading">{{theme_settings.blogFeedHeader}}</h2>
+  <div class="recent-posts-slider">
+    {{> components/custom/blog-carousel}}
+</div>
+  <div class="clear"></div>
+  {{{region name="home_below_blog_feed"}}}
+</div>
