@@ -1,11 +1,19 @@
 <nav class="navPages">
+
+    {{!--
     <div class="navPages-quickSearch right searchbar">
         {{> components/common/quick-search}}
     </div>
+    --}}
     <div class="navPages-list">
         <div class="nav-align{{#if theme_settings.mainNav-align '!==' 'left'}} center{{/if}}">
           <div class="custom-pages-nav">
-
+            <ul>
+              <li>products</li>
+              <li>learn</li>
+              <li>contact us</li>
+            </ul>
+          {{!--
           <!-- MAIN NAV WITH CATEGORY IMAGES -->
             {{#if theme_settings.subcatImages_in_mainNav '===' true}}
               <!-- SHOW ONLY PAGES IN MAIN NAV -->
@@ -160,6 +168,9 @@
             {{/if}}
 
           {{/if}}
+
+          --}}
+
           </div>
         </div>
     </div>

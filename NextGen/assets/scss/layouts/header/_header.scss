@@ -45,6 +45,7 @@
     margin: 20px 0 !important;
      width: 33%;
             float: left;
+            
 
     @include breakpoint("small") { // 4
         margin-left: remCalc($header-toggle-width * 1.5);
@@ -153,6 +154,10 @@
     }
 }
 
+
+
+
+
 //
 // Mobile Menu Toggle
 //
@@ -223,4 +228,31 @@
         }
 
     }
+}
+
+//the custom 
+.top-menu.store-credit-hidden{
+    display: block;
+    @include breakpoint("medium") {
+        display: none;
+    }
+}
+.header-logo.header-logo--left{
+    width: 180px !important;
+    height: 160px;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 0px 0px 20px 20px;
+    z-index: 1000;
+    .header-logo-image-container{
+        padding: 24px;
+    }
+}
+
+.header> .navPages-container.inside-header.left-logo.visible{
+    display: none;
+}
+.mobile-menu.navPages-container{
+
 }
