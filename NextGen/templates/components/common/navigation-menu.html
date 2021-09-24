@@ -9,169 +9,40 @@
         <div class="nav-align{{#if theme_settings.mainNav-align '!==' 'left'}} center{{/if}}">
           <div class="custom-pages-nav">
             <ul>
-              <li>products</li>
-              <li>learn</li>
-              <li>contact us</li>
+              <li data-dropdown="id01" >
+                <span>products</span>
+                <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
+              </li>
+                
+              <li>
+                <span>learn</span>
+                <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
+              </li>
+              <li>
+                <span>contact us</span>
+              </li>
             </ul>
-          {{!--
-          <!-- MAIN NAV WITH CATEGORY IMAGES -->
-            {{#if theme_settings.subcatImages_in_mainNav '===' true}}
-              <!-- SHOW ONLY PAGES IN MAIN NAV -->
-              {{#if theme_settings.main_nav_content '===' "pages-only"}}
-                <!-- Pages -->
-                <!-- <div class="page-list"> -->
-                <ul class="top-level-pages">
-                  {{#each pages}}
-                    <li class="navPages-item top-level pages">
-                      {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                        {{> components/common/navigation-list}}
-                      {{/if}}
-                      {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                        {{> components/common/navigation-list-alternate}}
-                      {{/if}}
-                    </li>
-                  {{/each}}
-                </ul>
-                <!-- </div> -->
-              {{/if}}
+            <div class="getUpdate">
+              <span>get updates</span>
+            </div>
+      
+          </div>
 
-              <!-- SHOW ONLY CATEGORIES IN MAIN NAV -->
-              <!-- Categories -->
-              {{#if theme_settings.main_nav_content '===' "categories-only"}}
-                <div class="category-menu">
-                  <div class="category-list">
-                    {{#each categories}}
-                      <li class="navPages-item">
-                        {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                          {{> components/common/navigation-list}}
-                        {{/if}}
-                        {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                          {{> components/common/navigation-list-alternate-main-nav-with-images}}
-                        {{/if}}
-                      </li>
-                    {{/each}}
-                  </div>
-                </div>
-              {{/if}}
-
-              <!-- SHOW BOTH PAGES & CATEGORIES IN MAIN NAV -->
-            {{#if theme_settings.main_nav_content '===' "both"}}
-            <!-- Categories -->
-            <div class="category-menu pages-menu">
-              <div class="category-list">
-                <ul class="top-level-pages">
-                  {{#each categories}}
-                    <li class="navPages-item top-level">
-                    {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                      {{> components/common/navigation-list}}
-                    {{/if}}
-                    {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                      {{> components/common/navigation-list-alternate-main-nav-with-images}}
-                    {{/if}}
-                  </li>
-                {{/each}}
-                </ul>
-              </div>
-            <!-- Pages -->
-              <!-- <div class="page-list"> -->
-              <ul class="top-level-pages">
-                {{#each pages}}
-                  <li class="navPages-item top-level pages">
-                    {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                      {{> components/common/navigation-list}}
-                    {{/if}}
-                    {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                      {{> components/common/navigation-list-alternate-main-nav-with-images}}
-                    {{/if}}
-                  </li>
-                {{/each}}
-                </ul>
-              <!-- </div> -->
-              </div>
-              {{/if}}
-
-            {{else}}
-
-            <!-- MAIN NAV WITHOUT CATEGORY IMAGES -->
-            <!-- SHOW ONLY PAGES IN MAIN NAV -->
-            {{#if theme_settings.main_nav_content '===' "pages-only"}}
-                <!-- Pages -->
-                <!-- <div class="page-list"> -->
-                <ul class="top-level-pages">
-                  {{#each pages}}
-                    <li class="navPages-item top-level pages">
-                      {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                        {{> components/common/navigation-list}}
-                      {{/if}}
-                      {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                        {{> components/common/navigation-list-alternate}}
-                      {{/if}}
-                    </li>
-                  {{/each}}
-                  </ul>
-                <!-- </div> -->
-            {{/if}}
-
-            <!-- SHOW ONLY CATEGORIES IN MAIN NAV -->
-              <!-- Categories -->
-              {{#if theme_settings.main_nav_content '===' "categories-only"}}
-                <div class="category-menu">
-                  <div class="category-list">
-                    {{#each categories}}
-                      <li class="navPages-item">
-                        {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                          {{> components/common/navigation-list}}
-                        {{/if}}
-                        {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                          {{> components/common/navigation-list-alternate-main-nav}}
-                        {{/if}}
-                      </li>
-                    {{/each}}
-                  </div>
-                </div>
-              {{/if}}
-
-            <!-- SHOW BOTH PAGES & CATEGORIES IN MAIN NAV -->
-            {{#if theme_settings.main_nav_content '===' "both"}}
-            <!-- Categories -->
-            <div class="category-menu pages-menu">
-              <div class="category-list">
-                <ul class="top-level-pages">
-                {{#each categories}}
-                  <li class="navPages-item top-level">
-                    {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                      {{> components/common/navigation-list}}
-                    {{/if}}
-                    {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                      {{> components/common/navigation-list-alternate-main-nav}}
-                    {{/if}}
-                  </li>
-                {{/each}}
-                </ul>
-              </div>
-            <!-- Pages -->
-              <!-- <div class="page-list"> -->
-              <ul class="top-level-pages">
-                {{#each pages}}
-                  <li class="navPages-item top-level pages">
-                    {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
-                      {{> components/common/navigation-list}}
-                    {{/if}}
-                    {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
-                      {{> components/common/navigation-list-alternate-main-nav}}
-                    {{/if}}
-                  </li>
-                {{/each}}
-                </ul>
-              <!-- </div> -->
-              </div>
-            {{/if}}
-
-          {{/if}}
-
-          --}}
+          <div class="nav_products">
+            {{#each products.featured}}
+            <div class="nav_product">
+              <a href="{{url}}">
+                <img src="" alt="">
+                <p>{{name}}</p>
+              </a>
+              
+            </div>
+            {{/each}}
 
           </div>
         </div>
+
     </div>
 </nav>
+
+

@@ -12,7 +12,7 @@
 //
 // -----------------------------------------------------------------------------
 
-.header {
+/* .header {
     background-color: $header-bg;
     border-bottom: container("border");
     position: fixed;
@@ -153,7 +153,7 @@
         max-height: none;
     }
 }
-
+ */
 
 
 
@@ -245,14 +245,73 @@
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     border-radius: 0px 0px 20px 20px;
     z-index: 1000;
-    .header-logo-image-container{
-        padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 120px;
+    .header-logo-image-container img{
+        width: 143px;
+        height: 92px;
     }
 }
 
 .header> .navPages-container.inside-header.left-logo.visible{
     display: none;
 }
-.mobile-menu.navPages-container{
-
+.main-nav-container {
+    border: none !important;
+    background-color: #fff !important;
+    .navPages-container.main-nav.desktop#menu{
+        margin: 0;
+        height: 100px;
+        background-color: #fff;
+        max-width: none;
+        .navPages{
+            max-width: none;
+            padding: 0 120px;
+        }
+        .nav-align{
+            text-align: right; 
+        }
+        .custom-pages-nav{
+            font-size: remCalc(18px);
+            font-family: "Larsseit";
+            // text-align: right;
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100px;
+            ul {
+                display: inline-flex;
+                line-height: 98px;
+                text-transform: uppercase;
+                color: #0056A8;
+                li{
+                    // float: left;
+                    margin-right: 40px;
+                    font-family: "Larsseit";
+                    border-bottom: 2px saddlebrown solid;
+                    .downMenuIco{
+                        fill: #0056A8;
+                        width: 13px;
+                        height: 13px;
+                        // margin-left: remCalc(11px);
+                    }
+                }
+            }
+            .getUpdate{
+                text-transform: uppercase;
+                text-align: center;
+                padding: 15px 42px;
+                background-color: #0056A8;
+                font-size: 17px;
+                color: #fff;
+                font-family: "Roboto Condensed";
+                font-weight: bold;
+                border-radius: 3px;
+                
+            }
+            
+        }
+    }
 }
