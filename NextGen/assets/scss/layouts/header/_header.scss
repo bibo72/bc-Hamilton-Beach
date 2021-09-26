@@ -237,6 +237,9 @@
         display: none;
     }
 }
+body.main.eleven-seventy .header-container.in-container.full-width{
+    max-width: none !important;
+}
 .header-logo.header-logo--left{
     width: 180px !important;
     height: 160px;
