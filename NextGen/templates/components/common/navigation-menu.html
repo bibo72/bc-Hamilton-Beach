@@ -9,12 +9,12 @@
         <div class="nav-align{{#if theme_settings.mainNav-align '!==' 'left'}} center{{/if}}">
           <div class="custom-pages-nav">
             <ul>
-              <li data-dropdown="id01" >
+              <li class="header_products">
                 <span>products</span>
                 <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
               </li>
-                
-              <li>
+
+              <li class="learn" data-dropdown="nav_learn">
                 <span>learn</span>
                 <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
               </li>
@@ -28,18 +28,34 @@
       
           </div>
 
-          <div class="nav_products">
+          <div class="nav_products" >
             {{#each products.featured}}
             <div class="nav_product">
               <a href="{{url}}">
-                <img src="" alt="">
+                <div class="img">
+                  <img src="{{getImage image 1x=80w}}" alt="{{image.alt}}">
+                </div>
                 <p>{{name}}</p>
               </a>
               
             </div>
             {{/each}}
+            
 
           </div>
+
+          <div class="nav_learn" data-dropdown-content id="nav_learn" aria-hidden="true">
+            <ul class="footer-info-list">
+              {{#each pages}}
+                {{#if name '==' "Learn"}}
+                  {{#each (limit children theme_settings.footer_blog_posts_count)}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                  {{/each}}
+                {{/if}}
+              {{/each}}
+            </ul>
+          </div>
+
         </div>
 
     </div>
