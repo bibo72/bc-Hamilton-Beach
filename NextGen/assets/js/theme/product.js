@@ -8,6 +8,7 @@ import ProductDetails from './common/product-details';
 import videoGallery from './product/video-gallery';
 import { classifyForm } from './common/form-utils';
 import '@fancyapps/fancybox';
+import { hasClass } from 'nod-validate';
 
 export default class Product extends PageManager {
     constructor(context) {
@@ -53,6 +54,7 @@ export default class Product extends PageManager {
 
         this.productReviewHandler();
         this.bulkPricingHandler();
+        this.overViewAndFeature();
     }
 
     productReviewHandler() {
@@ -65,5 +67,48 @@ export default class Product extends PageManager {
         if (this.url.indexOf('#bulk_pricing') !== -1) {
             this.$bulkPricingLink.trigger('click');
         }
+    }
+    overViewAndFeature() {
+            let number1 = 0
+            let number2 = 0
+            let number3 = 0
+            let number4 = 0
+        $('.tab-content-title-Overview').on('click',function(){
+            const addnumber1 = (++number1)%2
+            if(addnumber1 == 1) {
+                $('.tab-content-title-Overview').addClass('fixAngle')
+            }else {
+                $('.tab-content-title-Overview').removeClass('fixAngle')
+            }
+            $('.overview .product-detail-overview').toggle()
+
+        })
+        $('.tab-content-title-Features').on('click',function(){
+            let addnumber2 = (++number2)%2
+            if(addnumber2 == 1) {
+                $('.tab-content-title-Features').addClass('fixAngle')
+            }else {
+                $('.tab-content-title-Features').removeClass('fixAngle')
+            }
+            $('.features .product-detail-features').toggle()
+        })
+        $('.tab-content-Custom').on('click',function(){
+            let addnumber3 = (++number3)%2
+            if(addnumber3 == 1) {
+                $('.tab-content-Custom').addClass('fixAngle')
+            }else {
+                $('.tab-content-Custom').removeClass('fixAngle')
+            }
+            $('.customFields-container').toggle()
+        })
+        $('.tab-content-Videos').on('click',function(){
+            let addnumber4 = (++number4)%2
+            if(addnumber4 == 1) {
+                $('.tab-content-Videos').addClass('fixAngle')
+            }else {
+                $('.tab-content-Videos').removeClass('fixAngle')
+            }
+            $('.product-detail-videos').toggle()
+        })
     }
 }
