@@ -4,27 +4,7 @@
 	</div>
 </div>
 
-{{#if settings.show_newsletter_box}}
-<div class="footer">
-	<div class="footer-top newsletter">
-		<div class="content newsletter">
-			<div class="" data-section-type="newsletterSubscription">
-				{{> components/common/subscription-form}}
-				<div class="clear"></div>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
-	<div class="clear"></div>
-</div>
 
-<div class="global-region screen-width below-footer-newsletter">
-	<div class="global-region body-width">
-		{{{region name="footer_below_newsletter--global"}}}
-	</div>
-</div>
-
-{{/if}}
 
 
 <div class="footer-infomations">
@@ -97,7 +77,7 @@
 				</article>
 				{{/if}}
 			--}}
-
+			{{!-- navigation
 			{{#if theme_settings.footer_page_links_visibility '===' true}}
 			<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
 				<h3 class="footer-info-heading">{{theme_settings.pages_header}}</h3>
@@ -116,7 +96,8 @@
 				</div>
 			</article>
 			{{/if}}
-
+			--}}
+			{{!-- top categories
 			{{#if theme_settings.footer_category_links_visibility '===' true}}
 			<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
 				<h3 class="footer-info-heading">{{theme_settings.categories_header}}</h3>
@@ -135,7 +116,8 @@
 				</div>
 			</article>
 			{{/if}}
-
+			--}}
+			{{!-- popular brands
 			{{#if theme_settings.footer_brand_links_visibility '===' true}}
 			<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
 				<h3 class="footer-info-heading">{{theme_settings.brands_header}}</h3>
@@ -153,7 +135,7 @@
 				</div>
 			</article>
 			{{/if}}
-
+			--}}
 			{{!--  recent blog posts
 				{{#if theme_settings.footer_blog_visibility '===' true}}
 				<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
@@ -180,6 +162,35 @@
 				</article>
 				{{/if}}
 			--}}
+
+			<article class="footer-info-col footer-info-col--small footer-products" data-section-type="storeInfo">
+				<h3 class="footer-info-heading">products</h3>
+				<div class="regular">
+					<ul class="footer-info-list"><li>xxxxx</li></ul>
+				</div>
+
+				<div class="global-region container-width">
+					{{{region name="footer_below_contact--global"}}}
+				</div>
+			</article>
+
+			<article class="footer-info-col footer-info-col--small footer-learn" data-section-type="footer-categories">
+				<h3 class="footer-info-heading recent-posts-heading">Learn</h3>
+				<div class="blog regular">
+					<ul class="footer-info-list">
+						{{#each pages}}
+							{{#if name '==' "Learn"}}
+								{{#each (limit children theme_settings.footer_blog_posts_count)}}
+									<li><a href="{{url}}">{{name}}</a></li>
+								{{/each}}
+							{{/if}}
+						{{/each}}
+					</ul>
+				</div>
+			</article>
+
+
+			
 			{{#if theme_settings.footer_contact_info_visibility '===' true}}
 			<!-- contact us-->
 			<article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
@@ -194,6 +205,35 @@
 			</article>
 			{{/if}}
 
+			<article class="footer-info-col social_newsletter" data-section-type="storeInfo">
+				{{#if theme_settings.footer_social_links_visibility '===' true}}
+					<div class="social-media">
+						{{> components/common/social-links}}
+					</div>
+				{{/if}}
+				{{#if settings.show_newsletter_box}}
+
+					
+						<div class="content newsletter">
+							<div class="" data-section-type="newsletterSubscription">
+								{{> components/common/subscription-form}}
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					
+					<div class="clear"></div>
+				</div>
+
+				<div class="global-region screen-width below-footer-newsletter">
+					<div class="global-region body-width">
+						{{{region name="footer_below_newsletter--global"}}}
+					</div>
+	
+
+				{{/if}}
+			</article>
+
 			<div class="clear"></div>
 			{{#if theme_settings.geotrust_ssl_common_name}}
 			<div class="footer-geotrust-ssl-seal">
@@ -201,81 +241,40 @@
 				<div class="clear"></div>
 			</div>
 			{{/if}}
-			{{#if theme_settings.footer_payment_icons_visibility '===' true}}
-			{{> components/common/payment-icons}}
-			{{/if}}
+			{{!--
+				{{#if theme_settings.footer_payment_icons_visibility '===' true}}
+				{{> components/common/payment-icons}}
+				{{/if}}
+			--}}
 
 		</section>
 
 		<div class="clear"></div>
 	</div>
 
-	<div class="global-region screen-width above-footer-creditsBar">
+	<!-- <div class="global-region screen-width above-footer-creditsBar">
 		<div class="global-region body-width">
 			{{{region name="footer_above_credits_bar--global"}}}
 		</div>
-	</div>
-
+	</div> -->
+	
 	<div class="footer-bottom">
 		<div class="content copyright">
-			<ul class="site-info">
-				{{#if theme_settings.show_copyright_footer}}
-				<li class="copyright"><span class="current-year">&copy; <span id="copyright_year"></span>
-						{{settings.store_name}}</span>
-					{{/if}}
-
-					{{#if theme_settings.show_copyright_footer '===' true}}
-					{{#if theme_settings.show_sitemap_link '===' true}}
-					{{#if theme_settings.show_powered_by '===' true}}
-					<span class="separator"> | </span>
-					{{/if}}
-					{{/if}}
-					{{/if}}
-
-
-					{{#if theme_settings.show_copyright_footer '===' true}}
-					{{#if theme_settings.show_sitemap_link '===' true}}
-					{{#if theme_settings.show_powered_by '===' false}}
-					<span class="separator"> | </span>
-					{{/if}}
-					{{/if}}
-					{{/if}}
-
-					{{#if theme_settings.show_copyright_footer '===' true}}
-					{{#if theme_settings.show_sitemap_link '===' false}}
-					{{#if theme_settings.show_powered_by '===' true}}
-					<span class="separator"> | </span>
-					{{/if}}
-					{{/if}}
-					{{/if}}
-				</li>
-
-				{{#if theme_settings.show_sitemap_link}}
-				<li class="sitemap"><a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-					{{/if}}
-
-					{{#if theme_settings.show_sitemap_link '===' true}}
-					{{#if theme_settings.show_powered_by '===' true}}
-					<span class="separator"> | </span>
-					{{/if}}
-					{{/if}}
-				</li>
-
-				{{#if theme_settings.show_powered_by}}
-				<li class="built-by">Premium <a target="_blank" href="https://www.bigcommerce.com/">BigCommerce</a>
-					Theme by <a class="lone-star-templates" target="_blank" href="http://lonestartemplates.com/">Lone
-						Star Templates</a></li>
-				{{/if}}
-				<!-- <div class="clear"></div> -->
+			<p>The Clorox name and logo are trademarks of The Clorox Company and are used under license by Hamilton Beach Brands, Inc.</p>
+			<ul>
+				<li>Legal Link</li>
+				<li>Legal Link</li>
+				<li>Legal Link</li>
+				<li>Legal Link</li>
 			</ul>
 		</div>
 	</div>
 
-	<div class="global-region screen-width below-footer-creditsBar">
+	<!-- <div class="global-region screen-width below-footer-creditsBar">
 		<div class="global-region body-width">
 			{{{region name="footer_below_credits_bar--global"}}}
 		</div>
-	</div>
+	</div> -->
 
 	<div id="topcontrol" class="backtoTop" title="Scroll Back to Top">
 		<svg class="icon back-to-top-icon" title="submit" alt="submit">

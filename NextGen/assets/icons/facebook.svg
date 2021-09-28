@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-<path id="Facebook_2_" d="M36.8,62.4V34.7h10l1.5-10.8H36.8V17c0-3.1,0.9-5.3,5.7-5.3h6.1V2c-1.1-0.1-4.7-0.4-9-0.4
-	c-8.9,0-14.9,5-14.9,14.3v8h-10v10.8h10v27.7H36.8z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="23" cy="23" r="23" transform="translate(834 4919)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-834 -4919)" clip-path="url(#clip-path)">
+    <g id="facebook" transform="translate(834 4919)">
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="23" cy="23" r="23" transform="translate(0 0)" fill="#3b5998"/>
+      <path id="Path_46" data-name="Path 46" d="M28.782,23.9h-4.1V38.936H18.46V23.9H15.5V18.616H18.46V15.2c0-2.445,1.162-6.274,6.273-6.274l4.606.019v5.129H26a1.266,1.266,0,0,0-1.319,1.44v3.11h4.647Z" fill="#fff"/>
+    </g>
+  </g>
 </svg>

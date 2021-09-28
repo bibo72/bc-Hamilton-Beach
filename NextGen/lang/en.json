@@ -786,8 +786,8 @@
         "comments": "Comments"
     },
     "newsletter": {
-        "subscribe": "Join Our Mailing List",
-        "subscribe_intro": "for special offers!",
+        "subscribe": "Join Our Mailing List and",
+        "subscribe_intro": "stay up to date with product availability",
         "subscribe_submit": "Subscribe",
         "email_placeholder": "Your email address",
         "subscribed_heading": "Thanks for Subscribing!",
