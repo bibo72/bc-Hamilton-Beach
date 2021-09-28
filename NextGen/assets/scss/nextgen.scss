@@ -7641,10 +7641,10 @@ body.product-layout.main .slider-nav.slick-initialized.slick-slider button.slick
 }
 
 input#nl_email {
-  color: stencilColor("input-font-color");
-  text-align: center;
-  border: 1px solid !important;
-  border-color: stencilColor('input-border-color') !important;
+  //color: stencilColor("input-font-color");
+  //text-align: center;
+  //border: 1px solid !important;
+  //border-color: stencilColor('input-border-color') !important;
 }
 
 input#nl_email::placeholder {
