@@ -4,21 +4,22 @@
 	</div>
 </div>
 
-{{#if settings.show_newsletter_box}}
+
 <div class="footer">
-		<!-- move to HP body -->
-		<div class="footer-top newsletter" style="display: none;">
-			<div class="content newsletter">
-					<div class="" data-section-type="newsletterSubscription">
-									{{> components/common/subscription-form}}
-									<div class="clear"></div>
-					</div>
-					<div class="clear"></div>
+	<!-- move to HP body -->
+	<div class="footer-top newsletter" style="display: none;">
+		<div class="content newsletter">
+			<div class="" data-section-type="newsletterSubscription">
+				{{> components/common/subscription-form}}
+				<div class="clear"></div>
 			</div>
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
 	</div>
-{{/if}}
+	<div class="clear"></div>
+</div>
+
+
 
 
 <div class="footer-infomations">
@@ -41,57 +42,56 @@
 	<div class="container">
 		<section
 			class="footer-info{{#if theme_settings.footer-columns '===' 4}} four-columns{{/if}}{{#if theme_settings.footer-columns '===' 5}} five-columns{{/if}}{{#if theme_settings.footer-columns '===' 6}} six-columns{{/if}}">
-			
-			{{!--
-				{{#if theme_settings.footer_account_links_visibility '===' true}}
-				<!-- Account  -->
-				<article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-					<h3 class="footer-info-heading">{{theme_settings.account_header}}</h3>
-					<div class="regular">
-						<ul class="footer-info-list">
-							{{#if settings.gift_certificates_enabled}}
-							<li>
-								<a href="/giftcertificates.php">Gift Certificates</a>
-							</li>
-							{{/if}}
-							{{#if settings.show_wishlist}}
-							<li>
-								<a href="/wishlist.php">Wishlist</a>
-							</li>
-							{{/if}}
+		{{!--
+			{{#if theme_settings.footer_account_links_visibility '===' true}}
+			<!-- Account  -->
+			<article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+				<h3 class="footer-info-heading">{{theme_settings.account_header}}</h3>
+				<div class="regular">
+					<ul class="footer-info-list">
+						{{#if settings.gift_certificates_enabled}}
+						<li>
+							<a href="/giftcertificates.php">Gift Certificates</a>
+						</li>
+						{{/if}}
+						{{#if settings.show_wishlist}}
+						<li>
+							<a href="/wishlist.php">Wishlist</a>
+						</li>
+						{{/if}}
+						{{#if settings.account_creation_enabled}}
+						{{#if customer}}
+						<li><a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a></li>
+						<li><a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a></li>
+						<li>
+							<a href="/account.php?action=order_status">Order Status</a>
+						</li>
+						{{else}}
+						<li><a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
 							{{#if settings.account_creation_enabled}}
-							{{#if customer}}
-							<li><a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a></li>
-							<li><a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a></li>
-							<li>
-								<a href="/account.php?action=order_status">Order Status</a>
-							</li>
-							{{else}}
-							<li><a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
-								{{#if settings.account_creation_enabled}}
-								<span class="navUser-or">{{lang 'common.or'}}</span> <a class="navUser-action"
-									href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
-							</li>
-							{{/if}}
-							{{/if}}
-							{{/if}}
+							<span class="navUser-or">{{lang 'common.or'}}</span> <a class="navUser-action"
+								href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+						</li>
+						{{/if}}
+						{{/if}}
+						{{/if}}
 
-							{{#if theme_settings.show_shipping_returns_link}}
-							<li>
-								<a
-									href="{{theme_settings.shipping_returns_url}}">{{theme_settings.shipping_returns_link_name}}</a>
-							</li>
-							{{/if}}
-						</ul>
-					</div>
+						{{#if theme_settings.show_shipping_returns_link}}
+						<li>
+							<a
+								href="{{theme_settings.shipping_returns_url}}">{{theme_settings.shipping_returns_link_name}}</a>
+						</li>
+						{{/if}}
+					</ul>
+				</div>
 
-					<div class="global-region container-width">
-						{{{region name="footer_below_account--global"}}}
-					</div>
-				</article>
-				{{/if}}
-			--}}
-			{{!-- navigation
+				<div class="global-region container-width">
+					{{{region name="footer_below_account--global"}}}
+				</div>
+			</article>
+			{{/if}}
+		--}}
+		{{!-- navigation
 			{{#if theme_settings.footer_page_links_visibility '===' true}}
 			<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
 				<h3 class="footer-info-heading">{{theme_settings.pages_header}}</h3>
@@ -110,8 +110,8 @@
 				</div>
 			</article>
 			{{/if}}
-			--}}
-			{{!-- top categories
+		--}}
+		{{!-- top categories
 			{{#if theme_settings.footer_category_links_visibility '===' true}}
 			<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
 				<h3 class="footer-info-heading">{{theme_settings.categories_header}}</h3>
@@ -130,8 +130,8 @@
 				</div>
 			</article>
 			{{/if}}
-			--}}
-			{{!-- popular brands
+		--}}
+		{{!-- popular brands
 			{{#if theme_settings.footer_brand_links_visibility '===' true}}
 			<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
 				<h3 class="footer-info-heading">{{theme_settings.brands_header}}</h3>
@@ -149,38 +149,40 @@
 				</div>
 			</article>
 			{{/if}}
-			--}}
-			{{!--  recent blog posts
-				{{#if theme_settings.footer_blog_visibility '===' true}}
-				<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-					{{#if settings.blog_enabled}}
-					<h3 class="footer-info-heading recent-posts-heading">{{theme_settings.blog_header}}</h3>
-					<div class="blog regular">
-						<ul class="footer-info-list">
-							{{#each (limit blog.recent_posts theme_settings.footer_blog_posts_count)}}
-							<li><a href="{{url}}">{{title}}</a></li>
-							{{/each}}
-						</ul>
-					</div>
-					{{/if}}
-					{{/if}}
-
-					{{#if theme_settings.footer_social_links_visibility '===' true}}
-					<div class="social-media">
-						{{> components/common/social-links}}
-					</div>
-
-					<div class="global-region container-width">
-						{{{region name="footer_below_social_links--global"}}}
-					</div>
-				</article>
+		--}}
+		{{!-- recent blog posts
+			{{#if theme_settings.footer_blog_visibility '===' true}}
+			<article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
+				{{#if settings.blog_enabled}}
+				<h3 class="footer-info-heading recent-posts-heading">{{theme_settings.blog_header}}</h3>
+				<div class="blog regular">
+					<ul class="footer-info-list">
+						{{#each (limit blog.recent_posts theme_settings.footer_blog_posts_count)}}
+						<li><a href="{{url}}">{{title}}</a></li>
+						{{/each}}
+					</ul>
+				</div>
 				{{/if}}
-			--}}
+				{{/if}}
+
+				{{#if theme_settings.footer_social_links_visibility '===' true}}
+				<div class="social-media">
+					{{> components/common/social-links}}
+				</div>
+
+				<div class="global-region container-width">
+					{{{region name="footer_below_social_links--global"}}}
+				</div>
+			</article>
+			{{/if}}
+		--}}
 
 			<article class="footer-info-col footer-info-col--small footer-products" data-section-type="storeInfo">
 				<h3 class="footer-info-heading">products</h3>
 				<div class="regular">
-					<ul class="footer-info-list"><li>xxxxx</li></ul>
+					<ul class="footer-info-list">
+						<li>xxxxx</li>
+					</ul>
 				</div>
 
 				<div class="global-region container-width">
@@ -193,18 +195,18 @@
 				<div class="blog regular">
 					<ul class="footer-info-list">
 						{{#each pages}}
-							{{#if name '==' "Learn"}}
-								{{#each (limit children theme_settings.footer_blog_posts_count)}}
-									<li><a href="{{url}}">{{name}}</a></li>
-								{{/each}}
-							{{/if}}
+						{{#if name '==' "Learn"}}
+						{{#each (limit children theme_settings.footer_blog_posts_count)}}
+						<li><a href="{{url}}">{{name}}</a></li>
+						{{/each}}
+						{{/if}}
 						{{/each}}
 					</ul>
 				</div>
 			</article>
 
 
-			
+
 			{{#if theme_settings.footer_contact_info_visibility '===' true}}
 			<!-- contact us-->
 			<article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
@@ -221,49 +223,51 @@
 
 			<article class="footer-info-col social_newsletter" data-section-type="storeInfo">
 				{{#if theme_settings.footer_social_links_visibility '===' true}}
-					<div class="social-media">
-						{{> components/common/social-links}}
-					</div>
+				<div class="social-media">
+					{{> components/common/social-links}}
+				</div>
 				{{/if}}
-				{{#if settings.show_newsletter_box}}
+			
 
-					
-						<div class="content newsletter">
-							<div class="" data-section-type="newsletterSubscription">
-								{{> components/common/subscription-form}}
-								<div class="clear"></div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					
+
+				<div class="content newsletter">
+					<div class="" data-section-type="newsletterSubscription">
+						{{> components/common/subscription-form}}
+						<div class="clear"></div>
+					</div>
 					<div class="clear"></div>
 				</div>
 
-				<div class="global-region screen-width below-footer-newsletter">
-					<div class="global-region body-width">
-						{{{region name="footer_below_newsletter--global"}}}
-					</div>
-	
-
-				{{/if}}
-			</article>
-
-			<div class="clear"></div>
-			{{#if theme_settings.geotrust_ssl_common_name}}
-			<div class="footer-geotrust-ssl-seal">
-				{{> components/common/geotrust-ssl-seal}}
 				<div class="clear"></div>
-			</div>
-			{{/if}}
-			{{!--
-				{{#if theme_settings.footer_payment_icons_visibility '===' true}}
-				{{> components/common/payment-icons}}
-				{{/if}}
-			--}}
+	</div>
 
-		</section>
+	<div class="global-region screen-width below-footer-newsletter">
+		<div class="global-region body-width">
+			{{{region name="footer_below_newsletter--global"}}}
+		</div>
+	</div>
 
+
+	{{/if}}
+	</article>
+
+	<div class="clear"></div>
+	{{#if theme_settings.geotrust_ssl_common_name}}
+	<div class="footer-geotrust-ssl-seal">
+		{{> components/common/geotrust-ssl-seal}}
 		<div class="clear"></div>
+	</div>
+	{{/if}}
+
+	{{!--
+	{{#if theme_settings.footer_payment_icons_visibility '===' true}}
+	{{> components/common/payment-icons}}
+	{{/if}}
+	--}}
+
+	</section>
+
+	<div class="clear"></div>
 	</div>
 
 	<!-- <div class="global-region screen-width above-footer-creditsBar">
@@ -271,10 +275,11 @@
 			{{{region name="footer_above_credits_bar--global"}}}
 		</div>
 	</div> -->
-	
+
 	<div class="footer-bottom">
 		<div class="content copyright">
-			<p>The Clorox name and logo are trademarks of The Clorox Company and are used under license by Hamilton Beach Brands, Inc.</p>
+			<p>The Clorox name and logo are trademarks of The Clorox Company and are used under license by Hamilton
+				Beach Brands, Inc.</p>
 			<ul>
 				<li>Legal Link</li>
 				<li>Legal Link</li>
