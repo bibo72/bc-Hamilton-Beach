@@ -4,6 +4,7 @@ export default function () {
     const $down_arrow = $('li .down-arrow');
     
     let proNum = 0;
+    let itemNum = 0;
     // pc chilk products
     $products.on('click',function(){
         if(proNum == 0){
@@ -19,9 +20,17 @@ export default function () {
         
     });
     $down_arrow.on('click',function(){
-        console.log($(this).parents('.navPages-item'));
-        const $li = $(this).parents('.navPages-item');
-        // $li.addClass('down_active');
+        if(itemNum == 0){
+            $('.navPages-item').css("display","none");
+            console.log($(this).parents('.navPages-item'));
+            const $li = $(this).parents('.navPages-item');
+            $li.css('display','block');
+            itemNum++ ;
+        }else{
+            $('.navPages-item').css("display","block");
+            itemNum = 0;
+        }
+        
     });
 
 }

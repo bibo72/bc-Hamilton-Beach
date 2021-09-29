@@ -44,6 +44,28 @@
 
         <!-- <h2 class="container-header mobile">{{theme_settings.menu-pageHeader}}</h2> -->
         <div class="page-list">
+        <li class="navPages-item page-list-products">
+            <a class="navPages-action has-subMenu" href="/">
+              Products
+              <i class="fa fa-chevron-down main-nav" aria-hidden="true"><svg><use xlink:href="#icon-angle-down" /></svg></i>
+            </a>
+                <div class="navPage-subMenu simple-subMenu" id="" aria-hidden="true" tabindex="-1">
+                  <div class="products">                
+                    {{#each products.featured}}
+                      <div class="nav_product">
+                        <a href="{{url}}">
+                          <div class="img">
+                            <img src="{{getImage image 1x=80w}}" alt="{{image.alt}}">
+                          </div>
+                          <p>{{name}}</p>
+                        </a>
+                        
+                      </div>
+                    {{/each}}
+                  </div>
+                </div>  
+          </li>
+          
           {{#each pages}}
           <li class="navPages-item">
             {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
@@ -54,6 +76,7 @@
             {{/if}}
           </li>
           {{/each}}
+
         </div>
 
         <!-- </div> -->
@@ -143,7 +166,7 @@
       --}}
 
       <!-- products -->
-      <div class="page-list-products">
+ <!--      <div class="page-list-products">
         <li class="navPages-item">
           <a class="navPages-action has-subMenu" href="/">
             Products
@@ -166,11 +189,9 @@
                     </div>
                   {{/each}}
                 </div>
-              </div>
-       
-         
+              </div>  
         </li>
-      </div>
+      </div> -->
 
 
 

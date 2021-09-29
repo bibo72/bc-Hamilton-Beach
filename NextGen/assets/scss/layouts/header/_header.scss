@@ -240,13 +240,46 @@
 body.main.eleven-seventy .header-container.in-container.full-width{
     max-width: none !important;
 }
-.header-container.sticky-header{
+body.main.home.eleven-seventy{
+    padding-top: 100px !important;
+    .mobileMenu-toggle{
+        right: 0;
+        left: auto;
+        padding: 0;
+        margin-right: 36px;
+        top: 35px;
+    }
+}
+.header-container.sticky-header .navPages-container.main-nav {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
+#body .main-nav-container.with-categories div#menu {
+    position: fixed;
+    top: 0;
+}
+.header-container.sticky-header .top-menu{
+    z-index: 999 !important;
+    height: 100px;
+    background: #fff;
+    border:none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    .mobileMenu-toggle .mobileMenu-toggleIcon, .mobileMenu-toggle .mobileMenu-toggleIcon::before, .mobileMenu-toggle .mobileMenu-toggleIcon::after{
+        background: #0056A8;
+    }
+    .mobileMenu-toggle.is-open .mobileMenu-toggleIcon{
+        background-color: transparent;
+    }
+}
+
+
+header.header{
+    z-index: 100000000 !important;
+}
+
 .header .header-logo.header-logo--left{
     width: 180px !important;
     height: 160px;
-    position: absolute;
+    position: fixed;
     background: #fff;
     border-radius: 0px 0px 20px 20px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
@@ -255,25 +288,27 @@ body.main.eleven-seventy .header-container.in-container.full-width{
     justify-content: center;
     align-items: center;
     left: 120px;
+    top: 0;
     @media only screen and (max-width:1222px) {
-        width: 100px !important;
-        height: 100px;
+        width: 110px !important;
+        height: 127px !important;
         left: 36px;
         padding:8px 0;
-        
-
+        // top: 0;
     }
+
     .header-logo-image-container {
         display: flex;
         justify-content: center;
         align-items: center;
         img{
             width: 143px;
-            height: 92px;
-            @media (max-width:1222px) {
-                
-    
-            }
+            height: 92px;      
+            @media only screen and (max-width:1222px) {
+                width: 110px;
+                height: 110px;
+                top: -5px;
+            }     
         }
     }
 }
@@ -390,15 +425,23 @@ body.main.eleven-seventy .header-container.in-container.full-width{
 @media (max-width:1222px) {
     div#menu.mobile-menu .page-list-products{
         .navPages-action.has-subMenu{
-            display: inline;
+            display: inline-block;
         }
             .down-arrow{
                 position: relative;
             }
     
     }
-    div#menu.mobile-menu{
-        padding-top: 120px !important;
+    #body.has-activeNavPages:not(.search-only) div#menu.mobile-menu.navPages-container{
+        padding-top: 77px !important;
+        top: 99px !important;
+        .navPages-item{
+            border-top: 1px solid rgba(0, 90, 122, 0.20);
+            &:last-child{
+                border-bottom: 1px solid rgba(0, 90, 122, 0.20);
+            }
+            
+        }
     }
     div#menu.mobile-menu .active{
         position: absolute;
@@ -407,11 +450,37 @@ body.main.eleven-seventy .header-container.in-container.full-width{
         .navPage-subMenu{
             position: relative;
             z-index: 100;
-            height: 500px;
-            top: 32px;
+            min-height: 500px;
+            top: 5px;
             padding-top: 30px !important;
             
         }
+    }
+    div#menu .custom-pages-nav .navPages-item{
+        .navPages-action.has-subMenu,.navPages-action{
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+            line-height: normal;
+            
+        }
+        span.down-arrow{
+            top:20px;
+            transform: rotate(-90deg);
+        }
+
+    }
+    div#menu .navPages-item.active{
+        .navPages-action.has-subMenu.active{
+            border-bottom: 1px solid rgba(0, 90, 122, 0.2);
+            margin: 0 -15px;
+            text-align: center;
+        }
+        span.down-arrow{
+            position: absolute;
+            top: 15px;
+            right: auto;
+        }
+        
     }
 }
 
