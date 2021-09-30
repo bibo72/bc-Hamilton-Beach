@@ -35,11 +35,11 @@ export default function () {
         
     });
 
-    $getUpdate.on('click',function(){
-        $modal.toggle();
-        // $(body).css("background","rgba(60, 70, 77, 0.95);");
-        $('.modal-close').on("click",function(){
-            $modal.hide();
-        });
-    });
+    // $getUpdate.on('click',function(){
+    //     $modal.toggle();
+    //     // $(body).css("background","rgba(60, 70, 77, 0.95);");
+    //     $('.modal-close').on("click",function(){
+    //         $modal.hide();
+    //     });
+    // });
 }

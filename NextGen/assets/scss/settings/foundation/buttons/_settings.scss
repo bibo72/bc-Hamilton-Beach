@@ -115,8 +115,8 @@ $include-html-button-classes:           $include-html-classes;
 $button-display:                        inline-block;
 $button-margin-bottom:                  spacing("base");
 
-$button-font-family:                    fontFamily("headingSans");
-$button-font-weight:                    fontWeight("normal");
+$button-font-family:                    "Roboto Condensed", fontFamily("headingSans");
+$button-font-weight:                    fontWeight("bold");
 $button-font-align:                     center;
 
 $button-border-width:                   1px;

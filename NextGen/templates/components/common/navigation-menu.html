@@ -22,14 +22,14 @@
                 <span>contact us</span>
               </li>
             </ul>
-            <div class="getUpdate" >
+            <div class="getUpdate" data-reveal-id="getUpdateModal">
               <span>get updates</span>
             </div>
       
           </div>
 
           <div class="nav_products" >
-            {{#each products.featured}}
+            {{#each products.new}}
             <div class="nav_product">
               <a href="{{url}}">
                 <div class="img">
@@ -48,7 +48,7 @@
             <ul class="footer-info-list">
               {{#each pages}}
                 {{#if name '==' "Learn"}}
-                  {{#each (limit children theme_settings.footer_blog_posts_count)}}
+                  {{#each children}}
                     <li><a href="{{url}}">{{name}}</a></li>
                   {{/each}}
                 {{/if}}
