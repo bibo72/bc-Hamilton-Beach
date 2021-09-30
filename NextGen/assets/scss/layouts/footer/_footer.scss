@@ -390,3 +390,11 @@ footer.footer .container{
         }
     }
 }
+
+#body.eleven-seventy .global-region.screen-width.above-footer.custom_footer{
+    background-color: #EBF8FC;
+    padding: 0 120px;
+    .global-region.body-width{
+        max-width: none;
+    }
+}
