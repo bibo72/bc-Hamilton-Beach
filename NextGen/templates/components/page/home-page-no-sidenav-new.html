@@ -1,4 +1,3 @@
-{{{region name="home_below_menu"}}}
 {{#if carousel}}
   <div class="slider hero{{#if theme_settings.slider_width '!==' 'full-width'}} in-container{{/if}} {{#if theme_settings.slider_width '===' 'full-width'}}full-width{{/if}}{{#if theme_settings.slide_content_background '===' 'without-bg'}} slide-content-no-bg{{/if}}">
     {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
@@ -19,6 +18,8 @@
       <h1><div class="title-1">Join our mailing List</div> Stay up to date with product availability</h1>
       {{> components/common/subscription-form}}
     </div>
+    {{{region name="home_below_bottom_banner"}}}
+    {{{region name="home_below_menu"}}}
   </div>
 
 <div class="main full home no-sidenav">
@@ -87,8 +88,8 @@
              </div>
            {{/if}}
        {{/if}}
-       {{{region name="home_below_bottom_banner"}}}
-    </div> <!-- right-main -->
+
+      </div> <!-- right-main -->
 
     <div class="clear"></div>
 

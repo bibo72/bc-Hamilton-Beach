@@ -1618,3 +1618,15 @@ $('#search-results-content.u-hiddenVisually').remove();
 //     console.log('desktop');
 //   }
 // });
+$('.title').on('click',function(e){
+  const target = $(e.target)
+  const targetArtice = target.siblings();
+  targetArtice.slideToggle();
+  const targetabc = target.hasClass('removeAdd');
+  if(targetabc) {
+    target.removeClass('removeAdd');
+  } else {
+    target.addClass('removeAdd');
+  }
+
+})
