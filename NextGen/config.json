@@ -1065,7 +1065,7 @@
         "banner-borderColor": "#e1dfdd",
         "body-font": "Google_Poppins_400",
         "headings-font": "Google_Poppins_300",
-        "newsletter-font": "Google_Poppins_700",
+        "newsletter-font": "Google_Roboto+Condensed_700",
         "newsletter-fontSize": 20,
         "newsletter-fontColor": "#3c3936",
         "newsletter-bgColor": "#f9f9f9",

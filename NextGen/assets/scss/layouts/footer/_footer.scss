@@ -87,7 +87,7 @@
 .footer-info-heading {
     color: $footer-heading-fontColor;
     font-size: fontSize("base");
-    text-transform: inherit;
+    text-transform: none!important;
 }
 
 .footer-info-list {
@@ -210,11 +210,14 @@ body.main.eleven-seventy footer.footer{
                 font-size: remCalc(18px);
                 font-family: "Larsseit";
                 font-weight: bold;
-                margin-bottom: 29px;
+                margin-bottom: 20px;
             }
-            .footer-info-list a{
+            .footer-info-list li,.footer-info-list a,.regular address, .contact-item{
                 color: #3e3f3f !important;
                 font-size: remCalc(18px);
+                font-family: "Larsseit"!important;
+                line-height: 48px;
+                margin: 0;
             }
         }
     }
@@ -240,11 +243,19 @@ section.footer-info.six-columns article.footer-info-col.footer-info-col--small.f
         .socialLinks.socialLinks--alt{
             margin-bottom: 37px;
             .socialLinks-item{
-                a{
+                margin-right: 0!important;
+                padding: 0!important;
+                a {
                     width: 46px;
                     height: 46px;
-                    margin-right: 40px;
+                    svg{
+                        border-radius: 25px;
+                    }
                     
+                }
+
+                &+.socialLinks-item {
+                    margin-left: 40px;
                 }
             }
         }
@@ -275,7 +286,7 @@ section.footer-info.six-columns article.footer-info-col.footer-info-col--small.f
                 input#nl_email{
                     text-align: left;
                     border-radius:  5px 0 0 5px  !important;
-                    border-right: none !important;
+                    border-right-color: #fff ;
                 }
                 input.button.button--primary.form-prefixPostfix-button--postfix{
                     padding: 0 40px;
@@ -288,6 +299,10 @@ section.footer-info.six-columns article.footer-info-col.footer-info-col--small.f
         }
     }
    
+}
+
+.social_newsletter.footer-info-col .content.newsletter h3.footer-info-heading {
+    font-size: 22px !important;
 }
 
 footer.footer .footer-bottom{
@@ -309,4 +324,93 @@ footer.footer .footer-bottom{
             margin-right: 23px;
         }
     }
+}
+footer.footer .container{
+    @media screen and (max-width:1222px) {
+        display: none;
+    }
+}
+.footer-container-mobile{
+    display: none;
+    @media screen and (max-width:1222px) {
+        display: block;
+    }
+    div.content {
+        display: none;
+    }
+    div.content.newsletter{
+        display: block;
+    }
+    ul.accordion{
+        border: none;
+        
+    }
+    li.accordion-navigation {
+        border: none;
+        border-bottom: 1px solid rgba(0, 90, 122, 0.20);
+        margin: 0;
+        >a{
+            background: #fff;
+            padding-left: 36px;
+            padding-right: 36px;
+            color: #119EDD;
+            font-size: remCalc(18px);
+            font-family: "Larsseit";
+            font-weight: bold;
+            // padding: 0;
+            &:hover{
+                background: #fff;
+            }
+            i{
+                float: right;
+                svg{
+                    fill:#119EDD;
+                }
+            }
+        }
+        > .content{
+            padding-left:72px;
+            
+            >ul >li > a, >ul > li,address{
+                font-size: remCalc(18px);
+                font-family: "Larsseit";
+                // font-weight: bold;
+                color: #3e3f3f !important;
+            }
+          
+          
+        }
+    }
+    .social_newsletter.footer-info-col .content.newsletter form.form .form-fieldset .form-field .form-prefixPostfix input#nl_email,.social_newsletter.footer-info-col .content.newsletter form.form .form-fieldset .form-field .form-prefixPostfix input.button.button--primary.form-prefixPostfix-button--postfix{
+        border-radius: 5px !important;
+        border-right-color: #707070;
+        margin-bottom: 15px;
+    }
+  
+    .footer-info-col.social_newsletter{
+        padding: 0 36px;
+        .content.newsletter  h3.footer-info-heading{
+            color:#119EDD ;
+            font-size: remCalc(22px);
+            font-family: "Larsseit";
+           
+        }
+        .form-prefixPostfix.wrap{
+            input{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+#body.eleven-seventy .global-region.screen-width.above-footer.custom_footer{
+    background-color: #EBF8FC;
+    padding: 0 120px;
+    .global-region.body-width{
+        max-width: none;
+    }
+}
+
+.teconsent-container {
+    text-align: center;
 }

@@ -252,6 +252,8 @@ body.main.home.eleven-seventy{
 }
 .header-container.sticky-header .navPages-container.main-nav {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.29);
+    border: none;
 }
 #body .main-nav-container.with-categories div#menu {
     position: fixed;
@@ -341,24 +343,49 @@ header.header{
             height: 100px;
             ul {
                 display: inline-flex;
-                line-height: 98px;
+                // line-height: 98px;
                 text-transform: uppercase;
                 color: #0056A8;
+                height: 100%;
                 li{
                     // float: left;
+                    display: flex;
+                    align-items: center;
                     margin-right: 40px;
                     font-family: "Larsseit";
+                    font-weight: 500;
                     cursor: pointer;
+
+                    &[aria-expanded="true"] {
+                        border: none;
+                    }
+
+                    span {
+                        border: 3px solid transparent;
+                        border-left: none;
+                        border-right: none;
+                        height: 100px;
+                        line-height: 100px;
+                    }
                     
                     .downMenuIco{
                         fill: #0056A8;
-                        width: 13px;
-                        height: 13px;
+                        width: 23px;
+                        height: 23px;
                         // margin-left: remCalc(11px);
                     }
                 }
-                li.active{
-                    border-bottom: 2px saddlebrown solid;
+                li.active,
+                li[aria-expanded="true"] {
+                    // border-bottom: 2px saddlebrown solid;
+
+                    span {
+                        border-bottom-color: #0056A8;
+                    }
+
+                    .downMenuIco {
+                        transform: rotate(180deg);
+                    }
                 }
             }
             .getUpdate{
@@ -371,7 +398,7 @@ header.header{
                 font-family: "Roboto Condensed";
                 font-weight: bold;
                 border-radius: 3px;
-                
+                cursor: pointer;
             }
             
         }
@@ -396,6 +423,7 @@ header.header{
                 width: 224px;
                 height: 224px;
                 text-align: center;
+                margin-top: 50px;
                 img{
                     max-height: 224px;
                     max-width: 224px;
@@ -407,12 +435,19 @@ header.header{
                 text-align: left;
                 text-decoration: none;
                 color: #0056A8;
+                margin-top: 15px;
+                margin-bottom: 40px;
+                font-family: "Larsseit";
+                font-weight: 500;
             }
            
         }
         
        
     }
+}
+.nav_products,.nav_learn{
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.16);
 }
 .nav_learn{
     font-size: 18px;
@@ -421,6 +456,12 @@ header.header{
     position: absolute; 
     left: -99999px; 
     top: 99px;
+    border-radius: 0 0 15px 15px;
+    padding: 5px 10px
+
+}
+[aria-expanded = "true"]{
+    border-bottom: 2px saddlebrown solid;
 }
 @media (max-width:1222px) {
     div#menu.mobile-menu .page-list-products{
@@ -451,7 +492,7 @@ header.header{
             position: relative;
             z-index: 100;
             min-height: 500px;
-            top: 5px;
+            top: 100px;
             padding-top: 30px !important;
             
         }
@@ -507,3 +548,32 @@ div#menu.mobile-menu .navPage-subMenu{
     }
    
 }
+
+
+#getUpdateModal{
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    .modal-header .modal-header-title{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: remCalc(24px);
+    }
+    .modal-body{
+        .newsletter{
+            h3.footer-info-heading{
+                color: #119EDD;
+                font-size: remCalc(22px);
+                font-family: "Larsseit";
+                margin-bottom: 20px;
+                span{
+                    display: block;
+                    text-transform: lowercase;
+                    font-size: remCalc(22px);
+                    color: #0056A8;
+                }
+            }
+        }
+    }
+}
+
