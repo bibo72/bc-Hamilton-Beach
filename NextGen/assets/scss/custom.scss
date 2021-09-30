@@ -156,6 +156,9 @@
     }
 }
 .hp-newsletterSubscription {
+    .footer-info-heading {
+        display: none !important;
+    }
     display: flex;
     flex-direction: column;
     max-width: 792px;
