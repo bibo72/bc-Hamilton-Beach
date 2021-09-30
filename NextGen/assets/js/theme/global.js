@@ -18,6 +18,7 @@ import 'lazysizes';
 import loadingProgressBar from './global/loading-progress-bar';
 import svgInjector from './global/svg-injector';
 import custom_header from './global/heder';
+import custom_footer from './global/footer';
 
 export default class Global extends PageManager {
     onReady() {
@@ -44,5 +45,6 @@ export default class Global extends PageManager {
         loadingProgressBar();
         svgInjector();
         custom_header();
+        custom_footer();
     }
 }
