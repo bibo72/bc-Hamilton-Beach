@@ -3,3 +3,127 @@ $fonts: $fontFamily-sans $fontFamily-serif $fontFamily-mono $fontFamily-headings
 @if contains($fonts, "'Clear Sans', sans-serif") {
     @import "clear-sans";
 }
+
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit.eot);
+    src: url(../fonts/Larsseit/Larsseit.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-Italic.eot);
+    src: url(../fonts/Larsseit/Larsseit-Italic.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-Italic.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-Italic.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-Thin.eot);
+    src: url(../fonts/Larsseit/Larsseit-Thin.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-Thin.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-Thin.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-Thin.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-ThinItalic.eot);
+    src: url(../fonts/Larsseit/Larsseit-ThinItalic.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-ThinItalic.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-ThinItalic.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-ThinItalic.ttf) format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-Light.eot);
+    src: url(../fonts/Larsseit/Larsseit-Light.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-Light.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-Light.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-LightItalic.eot);
+    src: url(../fonts/Larsseit/Larsseit-LightItalic.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-LightItalic.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-LightItalic.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-LightItalic.ttf) format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-Medium.eot);
+    src: url(../fonts/Larsseit/Larsseit-Medium.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-Medium.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-Medium.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-MediumItalic.eot);
+    src: url(../fonts/Larsseit/Larsseit-MediumItalic.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-MediumItalic.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-MediumItalic.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-MediumItalic.ttf) format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-Bold.eot);
+    src: url(../fonts/Larsseit/Larsseit-Bold.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-Bold.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-Bold.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-BoldItalic.eot);
+    src: url(../fonts/Larsseit/Larsseit-BoldItalic.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-BoldItalic.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-BoldItalic.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-ExtraBold.eot);
+    src: url(../fonts/Larsseit/Larsseit-ExtraBold.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-ExtraBold.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-ExtraBold.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: Larsseit;
+    src: url(../fonts/Larsseit/Larsseit-ExtraBoldItalic.eot);
+    src: url(../fonts/Larsseit/Larsseit-ExtraBoldItalic.eot#iefix-fvbane) format("embedded-opentype"),
+      url(../fonts/Larsseit/Larsseit-ExtraBoldItalic.woff) format("woff"),
+      url(../fonts/Larsseit/Larsseit-ExtraBoldItalic.woff2) format("woff2"),
+      url(../fonts/Larsseit/Larsseit-ExtraBoldItalic.ttf) format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
