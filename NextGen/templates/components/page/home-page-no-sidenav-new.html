@@ -9,6 +9,18 @@
 <div class="home-below-hero">
   {{{region name="home_below_carousel"}}}
 
+  <!-- see products carousel -->
+  <div class="full-width">
+    {{{region name="home_below_top_banner"}}}
+    {{{region name="home_below_featured_products"}}}
+    {{{region name="home_below_top_products"}}}
+    {{{region name="home_below_new_products"}}}
+    <div class="hp-newsletterSubscription" data-section-type="newsletterSubscription">
+      <h1><div class="title-1">Join our mailing List</div> Stay up to date with product availability</h1>
+      {{> components/common/subscription-form}}
+    </div>
+  </div>
+
 <div class="main full home no-sidenav">
 
   {{#each shipping_messages}}
@@ -28,28 +40,24 @@
               {{/each}}
             </div>
         {{/if}}
-        {{{region name="home_below_top_banner"}}}
-
+{{!--
          {{> components/custom/home-featured-banners}}
 
       <div id="showcase-products" class="featured-products-section">
         {{#if products.featured}}
             {{> components/products/featured products=products.featured columns=theme_settings.homepage_productGrid_column_count}}
         {{/if}}
-        {{{region name="home_below_featured_products"}}}
 
         {{#if products.top_sellers}}
             {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_productGrid_column_count}}
         {{/if}}
-        {{{region name="home_below_top_products"}}}
 
         {{#if products.new}}
             {{> components/products/new products=products.new columns=theme_settings.homepage_productGrid_column_count}}
         {{/if}}
-        {{{region name="home_below_new_products"}}}
         <div class="clear"></div>
       </div>
-
+--}}
       <!-- NEWS/BLOG FEED -->
       {{#if theme_settings.latest_news_visibility '===' true}}
         {{#if settings.blog_enabled}}

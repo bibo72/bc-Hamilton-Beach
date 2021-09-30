@@ -1,0 +1,17 @@
+<section class="carousel-vertical {{#if theme_settings.vertical_related_columns '===' 3}}three-slides{{/if}}{{#if theme_settings.vertical_related_columns '===' 4}}four-slides{{/if}}{{#if theme_settings.vertical_related_columns '===' 5}}five-slides{{/if}}{{#if theme_settings.vertical_related_columns '===' 6}}six-slides{{/if}}"
+    data-list-name="{{list}}"
+    data-slick='{
+        "dots": true,
+        "infinite": false,
+        "mobileFirst": false,
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "vertical": true,
+        "verticalSwiping": true,
+    }'>
+      {{#each products}}
+        <li class="productCarousel-slide product">
+          {{> components/products/card settings=../settings show_rating=../settings.show_product_rating theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
+        </li>
+      {{/each}}
+</section>
