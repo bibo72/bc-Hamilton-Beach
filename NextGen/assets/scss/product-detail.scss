@@ -24,7 +24,7 @@
         display: none;
     }
     .breadcrumbs {
-        margin-top: 106px;
+        margin-top: 160px;
     }
     .product.main.left.no-sidenav {
         width: 100% !important;
@@ -327,6 +327,22 @@
         }
         .product.main .tabs-contents {
             box-shadow: unset;
+        }
+        .moblie-content {
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        .product-detail-overview {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .product-detail-features {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .product-detail-videos {
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     }
 }

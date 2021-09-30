@@ -294,7 +294,7 @@
                 {{/if}}
                     <li class="tab videos">
                         <a class="tab-title" href="#tab-videos">Videos</a>
-                    </li>
+                    </li>   
                 <!-- {{#if product.custom_fields}}
                     <li class="tab customFieldOne">
                         <a class="tab-title custom-visibility" href="#tab-customField1">Custom Field #1</a>
@@ -336,7 +336,7 @@
                         <div class="customFields-container">
                             {{#each product.custom_fields}}
                             {{#unless name '==' 'Short Description'}}
-                            <div><span class="custom_fieldsName">{{name}}:</span><span class="custom_fieldsValue">{{value}}</span></div>
+                            <div class="moblie-content"><span class="custom_fieldsName">{{name}}:</span><span class="custom_fieldsValue">{{value}}</span></div>
                             {{/unless}}
                         {{/each}}
                         </div>
