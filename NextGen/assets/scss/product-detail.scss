@@ -27,7 +27,7 @@
         display: none;
     }
     .breadcrumbs {
-        margin-top: 160px;
+        margin-top: 190px;
     }
     .product.main.left.no-sidenav {
         width: 100% !important;
@@ -111,6 +111,7 @@
     .productView-title {
         font-size: 36px;
         color: #0056A8;
+        margin-bottom: 15px;
     }
     .productView-details dt {
         font-size: 16px;
@@ -142,6 +143,10 @@
         background-color: #0456A8;
         color: white;
         font-weight: bold;
+
+        &.tab-title:hover {
+            color: white!important;
+        }
     }
     .tabs-contents p{
         font-size: 16px;

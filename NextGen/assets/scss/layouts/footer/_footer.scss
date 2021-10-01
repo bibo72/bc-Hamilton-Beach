@@ -305,15 +305,19 @@ section.footer-info.six-columns article.footer-info-col.footer-info-col--small.f
     font-size: 22px !important;
 }
 
+.above-footer-creditsBar {
+    border-top: 1px solid rgba(0, 90, 122, 0.20);
+}
 footer.footer .footer-bottom{
     background-color: #fff;
-    border-color: rgba(0, 90, 122, 0.20);
+    border: none;
     text-align: center;
     color: #323232;
     font-size: remCalc(14px);
     font-family: "Larsseit";
     .content.copyright{
         padding: 40px 0;
+        font-size: 14px;
     }
     ul {
         
@@ -322,6 +326,10 @@ footer.footer .footer-bottom{
             text-decoration: underline;
             display: inline;
             margin-right: 23px;
+            a {
+                font-size: 14px;
+                color: #323232;
+            }
         }
     }
 }
@@ -405,12 +413,117 @@ footer.footer .container{
 
 #body.eleven-seventy .global-region.screen-width.above-footer.custom_footer{
     background-color: #EBF8FC;
-    padding: 0 120px;
+    // padding: 0 120px;
     .global-region.body-width{
-        max-width: none;
+        // max-width: none;
     }
 }
 
 .teconsent-container {
     text-align: center;
+}
+
+[data-layout-name="3-columns"] {
+    display: none!important;
+    @include breakpoint("medium") {
+        display: flex!important;
+    }
+    > [data-sub-layout] {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        div[id^="sd-image-"] {
+            background-size: 150px;
+        }
+        p {
+            text-align: left;
+            width: 180px;
+            margin-left: 20px;
+        }
+    }
+}
+[data-layout-name="3-columns-mobile"] {
+    @include breakpoint("medium") {
+        display: none!important;
+    }
+    [id^="bc-carousel-container-"] {
+        margin-bottom: 0;
+        [id^="bc-carousel-"] {
+            [data-test-id^="carousel-slide-"] {
+                >div {
+                    align-items: flex-end;
+                    min-height: 356px;
+
+                    &:after {
+                        background-size: 140px !important;
+                        background-position: top 50px center;
+                    }
+                }
+
+            }
+            [data-test-id="carousel-slide-0"] {
+                [data-test-id="carousel-title"] {
+                    &:after {
+                        content: "1/3";
+                    }
+                }
+            }
+            [data-test-id="carousel-slide-1"] {
+                [data-test-id="carousel-title"] {
+                    &:after {
+                        content: "2/3";
+                    }
+                }
+            }
+            [data-test-id="carousel-slide-2"] {
+                [data-test-id="carousel-title"] {
+                    &:after {
+                        content: "3/3";
+                    }
+                }
+            }
+            [data-test-id="carousel-title"] {
+                position: relative;
+                max-width: 180px;
+                min-height: 60px;
+                display: flex;
+                align-items: center;
+
+                &:after {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    top: -20px;
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+
+        }
+        >div:nth-child(2) {
+            display: block!important;
+            .css-mwwowe {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+
+                svg {
+                    fill: #0056A8;
+                    stroke: #0056A8;
+                    width: 8px;
+                    height: 13px;
+                }
+            }
+            .bc-carousel__arrow--left {
+                left: 18px;
+            }
+            .bc-carousel__arrow--right {
+                right: 18px;
+            }
+        }
+        [data-test-id="carousel-bullets"] {
+            display: none!important;
+        }
+    }
 }
