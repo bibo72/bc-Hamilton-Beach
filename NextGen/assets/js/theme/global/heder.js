@@ -1,29 +1,43 @@
+function renderSubscribeForm() {
+    const title = window.newletterTitle || 'Join our mailing list and';
+    const description = window.newletterDescription || 'stay up to date with product availability';
+    $('.footer .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
+    $('.modal .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
+    $('.hp-newsletterSubscription h1').html(`<h1><div class="title-1">${title}</div> ${description}</h1>`);
+}
 export default function () {
     const $products = $('.header_products');
     const $nav_products=$('.nav_products');
+    const $dropdownLink = $('li[data-dropdown]');
     const $down_arrow = $('li .down-arrow');
     const $getUpdate = $('.getUpdate');
     const $modal = $('#getUpdateModal');
-    let proNum = 0;
     let itemNum = 0;
     // pc chilk products
-    $products.on('click',function(){
+    $products.on('mouseenter',() => {
         const $navList = $('.main-nav .custom-pages-nav');
-        if(proNum == 0){
-            $nav_products.show();
-            $products.addClass('active');
-            if ($navList.width() > $nav_products.width()) {
-                $nav_products.css({"display":"inline-flex", "left": '0'});
-            } else {
-                $nav_products.css({"display":"inline-flex", "right": '0'});
-            }
-            proNum++;
-        }else{
-            $nav_products.hide();
-            $products.removeClass('active');
-            proNum = 0;
+        // $nav_products.show();
+        $products.addClass('active');
+        if ($navList.width() > $nav_products.width()) {
+            $nav_products.css({"display":"inline-flex", "left": '0'});
+        } else {
+            $nav_products.css({"display":"inline-flex", "right": '0'});
         }
-        
+    }).on('mouseleave', () => {
+        $nav_products.hide();
+        $products.removeClass('active');
+    });
+
+    $dropdownLink.on('mouseenter', (event) => {
+        const $target = $(event.currentTarget);
+        const $dropDown = $target.find('[data-dropdown-content]');
+        $target.attr('aria-expanded', 'true');
+        $dropDown.addClass('is-open f-open-dropdown').attr('aria-hidden', 'false').css("left", '0');
+    }).on('mouseleave', (event) => {
+        const $target = $(event.currentTarget);
+        const $dropDown = $target.find('[data-dropdown-content]');
+        $target.attr('aria-expanded', 'false');
+        $dropDown.removeClass('is-open f-open-dropdown').attr('aria-hidden', 'true').css("left", '-9999px');
     });
 
     $down_arrow.on('click',function(){
@@ -40,6 +54,7 @@ export default function () {
         
     });
 
+    renderSubscribeForm();
     // $getUpdate.on('click',function(){
     //     $modal.toggle();
     //     // $(body).css("background","rgba(60, 70, 77, 0.95);");

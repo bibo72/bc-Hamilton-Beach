@@ -17438,7 +17438,7 @@ html div#checkout-app .button:hover {
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    outline: none!important;
+    // outline: none!important;
 }
 html.hide-focus-box[contenteditable=true]:focus, html.hide-focus-box #body [href]:focus, html.hide-focus-box #body [tabindex]:not([tabindex="-1"]):focus, html.hide-focus-box #body button:focus, html.hide-focus-box #body details:focus, html.hide-focus-box #body input:focus, html.hide-focus-box #body select:focus {
     outline: 2px solid transparent !important;
@@ -17446,7 +17446,7 @@ html.hide-focus-box[contenteditable=true]:focus, html.hide-focus-box #body [href
     border-radius: 4px !important;;
     -webkit-border-radius: 4px !important;;
     -moz-border-radius: 4px !important;
-    outline: none!important;
+    // outline: none!important;
 }
 html.hide-focus-box #body textarea:focus {
   outline: 2px solid transparent !important;
@@ -17454,7 +17454,7 @@ html.hide-focus-box #body textarea:focus {
   border-radius: 4px !important;;
   -webkit-border-radius: 4px !important;;
   -moz-border-radius: 4px !important;
-  outline: none!important;
+  // outline: none!important;
 }
 html.hide-focus-box *:focus {
   outline: 2px solid transparent !important;
@@ -17462,7 +17462,7 @@ html.hide-focus-box *:focus {
   border-radius: 4px !important;;
   -webkit-border-radius: 4px !important;;
   -moz-border-radius: 4px !important;
-  outline: none!important;
+  // outline: none!important;
 }
 ul.sidenav-list {
   margin-left: 0;

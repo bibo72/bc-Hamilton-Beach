@@ -348,13 +348,13 @@ header.header{
             justify-content: flex-end;
             align-items: center;
             height: 100px;
-            ul {
+            >ul {
                 display: inline-flex;
                 // line-height: 98px;
                 text-transform: uppercase;
                 color: #0056A8;
                 height: 100%;
-                li{
+                >li{
                     // float: left;
                     display: flex;
                     align-items: center;
@@ -367,7 +367,11 @@ header.header{
                         border: none;
                     }
 
-                    span, a {
+                    &.learn {
+                        position: relative;
+                    }
+
+                    >span, >a {
                         border: 3px solid transparent;
                         border-left: none;
                         border-right: none;
@@ -449,6 +453,8 @@ header.header{
                 margin-bottom: 40px;
                 font-family: "Larsseit";
                 font-weight: 500;
+                line-height: 1.5;
+                text-transform: none;
             }
            
         }
@@ -467,7 +473,20 @@ header.header{
     left: -99999px; 
     top: 99px;
     border-radius: 0 0 15px 15px;
-    padding: 5px 10px
+    padding: 5px 10px;
+    line-height: 1.5;
+
+    ul {
+        display: block!important;
+
+        li {
+            a {
+                line-height: 1.5 !important;
+                text-transform: none;
+                white-space: nowrap;
+            }
+        }
+    }
 
 }
 [aria-expanded = "true"]{
