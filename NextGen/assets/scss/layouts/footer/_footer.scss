@@ -88,6 +88,10 @@
     color: $footer-heading-fontColor;
     font-size: fontSize("base");
     text-transform: none!important;
+    a {
+        color: #119EDD !important;
+        text-decoration: none;
+    }
 }
 
 .footer-info-list {

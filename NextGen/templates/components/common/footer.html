@@ -44,7 +44,7 @@
 			class="footer-info{{#if theme_settings.footer-columns '===' 4}} four-columns{{/if}}{{#if theme_settings.footer-columns '===' 5}} five-columns{{/if}}{{#if theme_settings.footer-columns '===' 6}} six-columns{{/if}}">
 			<article class="footer-info-col footer-info-col--small footer-products"
 				data-section-type="footer-categories">
-				<h3 class="footer-info-heading">products</h3>
+				<h3 class="footer-info-heading">Products</h3>
 				<div class="regular">
 					<ul class="footer-info-list">
 						{{#each categories}}
@@ -84,13 +84,13 @@
 			{{#if theme_settings.footer_contact_info_visibility '===' true}}
 			<!-- contact us-->
 			<article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-				<h3 class="footer-info-heading">{{theme_settings.contact_header}}</h3>
-				<div class="regular">
+				<h3 class="footer-info-heading"><a href="/contact-us/">{{theme_settings.contact_header}}</a></h3>
+				<!-- <div class="regular">
 					<address>{{nl2br settings.address}}</address>
 
 					<p class="contact-item">{{settings.phone_number}}</p>
-					<p class="contact-item">Email Address</p>
-				</div>
+					<p class="contact-item" data-site-email></p>
+				</div> -->
 
 				<div class="global-region container-width">
 					{{{region name="footer_below_contact--global"}}}
@@ -100,9 +100,9 @@
 
 			<article class="footer-info-col social_newsletter" data-section-type="storeInfo">
 				{{#if theme_settings.footer_social_links_visibility '===' true}}
-				<div class="social-media">
+				<!-- <div class="social-media">
 					{{> components/common/social-links}}
-				</div>
+				</div> -->
 				{{/if}}
 
 
