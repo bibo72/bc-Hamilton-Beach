@@ -652,7 +652,7 @@
     "relatedProductsHeader": "Recommended",
     "similarProductsHeader": "You May Also Like...",
     "vertical_related_columns": 3,
-    "focus-color": "#e84d56",
+    "focus-color": "#026CD1",
     "focus-box-visibility": true,
     "show_product_quantity_box": true,
     "supported_card_type_icons": [
@@ -1313,7 +1313,7 @@
         "relatedProductsHeader": "Recommended",
         "similarProductsHeader": "You May Also Like...",
         "vertical_related_columns": 3,
-        "focus-color": "#0056A8",
+        "focus-color": "#026CD1",
         "focus-box-visibility": true,
         "show_product_quantity_box": true,
         "supported_card_type_icons": [
