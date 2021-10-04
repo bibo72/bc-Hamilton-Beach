@@ -6,9 +6,13 @@
 <div class="header-container {{#if theme_settings.sticky_topMenu '===' true}}sticky-header{{/if}}{{#if settings.gift_certificates_enabled}} gift-certificates-enabled {{/if}}">
 <div class="top-menu {{#if theme_settings.topMenu_override '===' true}}quick-override{{/if}}">
     <div class="content">
+         <a aria-label="search" data-dropdown-custom="nav_search_mobile" name="search" class="mobileMenu-search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-search"></use></svg></i></a>
          <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
             <span class="mobileMenu-toggleIcon">Toggle menu</span>
         </a>
+        <div class="navPages-quickSearch dropdown right searchbar nav-search-dropdown" id="nav_search_mobile" aria-hidden="true">
+          {{> components/common/quick-search}}
+        </div>
         {{!--
         <div class="left phone-number">
             {{#if settings.phone_number}}
