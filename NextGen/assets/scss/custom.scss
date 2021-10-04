@@ -413,6 +413,9 @@
         display: none !important;
     }
 }
+body.main:not(.nine-sixty) .header-container.in-container {
+    margin-top: 0 !important;
+}
 @media only screen and (max-width : 767px) {
     .home.eleven-seventy.slider-full-width-in-container div[data-content-region="home_below_menu"] .outer-hp-fourth-block {
         margin-left: 0 !important;
@@ -439,10 +442,20 @@
 }
 
 .body.content {
+    margin-top: 147px!important;
+    @media screen and (min-width : 800px) {
+        margin-top: 165px!important;
+    }
     @media screen and (min-width : 1025px) {
+        margin-top: 167px!important;
+    }
+    @media screen and (min-width : 1223px) {
         margin-top: 210px!important;
     }
 }
 ul.breadcrumbs {
     width: 100%;
+}
+.container.main {
+    margin-top: 0 !important;
 }

@@ -240,14 +240,16 @@
 body.main.eleven-seventy .header-container.in-container.full-width{
     max-width: none !important;
 }
-body.main.home.eleven-seventy{
-    padding-top: 100px !important;
-    .mobileMenu-toggle{
-        right: 0;
-        left: auto;
-        padding: 0;
-        margin-right: 36px;
-        top: 35px;
+
+.mobileMenu-toggle{
+    right: 0;
+    left: auto;
+    padding: 0;
+    margin-right: 36px;
+    width: 40px;
+    top: 36px!important;
+    &[aria-expanded="true"] {
+        border: none;
     }
 }
 .header-container.sticky-header .navPages-container.main-nav {
@@ -329,6 +331,10 @@ header.header{
         .navPages{
             max-width: none;
             padding: 0 120px;
+            padding-right: 26px;
+            @media screen and(min-width: 1223px) {
+                padding: 0 120px;
+            }
         }
         .nav-align{
             text-align: right; 
@@ -478,7 +484,7 @@ header.header{
     
     }
     #body.has-activeNavPages:not(.search-only) div#menu.mobile-menu.navPages-container{
-        padding-top: 77px !important;
+        padding-top: 67px !important;
         top: 99px !important;
         .navPages-item{
             border-top: 1px solid rgba(0, 90, 122, 0.20);
@@ -509,7 +515,7 @@ header.header{
             
         }
         span.down-arrow{
-            top:20px;
+            top:12px;
             transform: rotate(-90deg);
         }
 
@@ -522,7 +528,7 @@ header.header{
         }
         span.down-arrow{
             position: absolute;
-            top: 15px;
+            top: 12px;
             right: auto;
         }
         

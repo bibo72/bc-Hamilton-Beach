@@ -44,9 +44,6 @@
     <div class="listItem-body">
         <div class="listItem-content">
             <div class="listItem-details">
-                {{#if show_rating}}
-                    <p class="listItem-rating">{{> components/products/ratings rating=rating}}</p>
-                {{/if}}
                 <div class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
                     <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}" data-test-info-type="brandName"><a class="brand-link" aria-label="brand name" href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
                     {{#if theme_settings.card-brand-name '===' true}}
@@ -87,25 +84,7 @@
                             <a href="tel:{{theme_settings.card_call_for_price_phone_number}}" class="call-for-price mobile" data-product-id="{{id}}"><span class="line-one">{{theme_settings.card_call_for_price_text}}</span><span class="line-two">{{theme_settings.card_call_for_price_phone_number}}</span></a>
                           </div>
                     {{/if}}
-                    {{#if show_cart_action}}
-                        {{#if has_options}}
-                            <a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--small" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a>
-                        {{/if}}
-                        {{#if pre_order}}
-                            <a href="{{pre_order_add_to_cart_url}}" data-event-type="product-click" class="button button--primary">{{lang 'products.pre_order'}}</a>
-                        {{/if}}
-                        {{#if add_to_cart_url }}
-                            <a href="{{add_to_cart_url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--primary">{{lang 'products.add_to_cart'}}</a>
-                        {{/if}}
-                        {{#if out_of_stock_message }}
-                            <a href="{{url}}" data-event-type="product-click" class="button button--small" data-product-id="{{id}}">{{out_of_stock_message}}</a>
-                        {{/if}}
-                        {{#if stock_level '<' 1}}
-                          {{#if out_of_stock_message '===' false}}
-                            <a href="{{url}}" class="button button--small card-figcaption-button false-stock-message" data-product-id="{{id}}">View Details</a>
-                          {{/if}}
-                        {{/if}}
-                    {{/if}}
+                    <a href="#" class="button button--primary" data-reveal-id="getUpdateModal">Notify Me</a>
                 {{else}}
                     {{> components/common/login-for-pricing}}
                 {{/or}}
