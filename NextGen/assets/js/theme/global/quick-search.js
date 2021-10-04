@@ -7,7 +7,7 @@ export default function () {
     const $quickSearchResults = $('.quickSearchResults');
     const $quickSearchDiv = $('#quickSearch');
     const $searchQuery = $('#search_query');
-    var searchInputValue = $('#search_query');
+    var searchInputValue = $('#search_query');debugger
     const stencilDropDownExtendables = {
         // hide: () => {
         //     $searchQuery.trigger('blur');

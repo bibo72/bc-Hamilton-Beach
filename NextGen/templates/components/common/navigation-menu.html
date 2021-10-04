@@ -13,7 +13,7 @@
                 <span>products</span>
                 <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
                 <div class="nav_products" >
-                  {{#each products.new}}
+                  {{#each products.featured}}
                   <div class="nav_product">
                     <a href="{{url}}">
                       <div class="img">
@@ -27,7 +27,7 @@
                 </div>
               </li>
 
-              <li class="learn" data-dropdown="nav_learn">
+              <li class="learn hover-open" data-dropdown="nav_learn">
                 <span>learn</span>
                 <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
                 <div class="nav_learn" data-dropdown-content id="nav_learn" aria-hidden="true">
@@ -44,6 +44,13 @@
               </li>
               <li>
                 <a href="/contact-us/">contact us</a>
+              </li>
+              <li class="nav-search">
+                <a aria-label="search" data-dropdown="nav_search" name="search" class="" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-search"></use></svg></i></a>
+                <div class="navPages-quickSearch right searchbar dropdown-menu nav-search-dropdown" data-dropdown-content id="nav_search" aria-hidden="true">
+                  {{> components/common/quick-search}}
+                </div>
+                </li>
               </li>
             </ul>
             <div class="getUpdate" data-reveal-id="getUpdateModal">

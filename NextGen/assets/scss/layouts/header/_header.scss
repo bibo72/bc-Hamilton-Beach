@@ -370,6 +370,17 @@ header.header{
                     &.learn {
                         position: relative;
                     }
+                    &.nav-search {
+                        .fa {
+                            height: 20px;
+                        }
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            fill: #0056A8;
+                            vertical-align: middle;
+                        }
+                    }
 
                     >span, >a {
                         border: 3px solid transparent;
@@ -489,6 +500,9 @@ header.header{
     }
 
 }
+.nav-search-dropdown {
+    background-color: #fff;
+}
 [aria-expanded = "true"]{
     border-bottom: 2px saddlebrown solid;
 }
@@ -584,7 +598,7 @@ div#menu.mobile-menu .navPage-subMenu{
     visibility: visible;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     min-height: auto;
-    border-radius: 6px;
+    border-radius: 10px;
     
     .modal-header .modal-header-title{
         text-transform: uppercase;

@@ -8,7 +8,7 @@ function renderSubscribeForm() {
 export default function () {
     const $products = $('.header_products');
     const $nav_products=$('.nav_products');
-    const $dropdownLink = $('li[data-dropdown]');
+    const $dropdownLink = $('li.hover-open[data-dropdown]');
     const $down_arrow = $('li .down-arrow');
     const $getUpdate = $('.getUpdate');
     const $modal = $('#getUpdateModal');
