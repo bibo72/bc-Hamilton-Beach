@@ -53,6 +53,13 @@ export default function () {
         }
         
     });
+    $('[data-dropdown-custom]').on('click', (event) => {
+        event.preventDefault();
+        const $target = $(event.currentTarget);
+        const controlId = $target.attr('data-dropdown-custom');
+        const $dropdown = $(`#${controlId}`);
+        $dropdown.slideToggle();
+    });
 
     renderSubscribeForm();
     // $getUpdate.on('click',function(){
