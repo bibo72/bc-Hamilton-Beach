@@ -437,3 +437,12 @@
         margin-top: 2rem !important;
     }
 }
+
+.body.content {
+    @media screen and (min-width : 1025px) {
+        margin-top: 210px!important;
+    }
+}
+ul.breadcrumbs {
+    width: 100%;
+}

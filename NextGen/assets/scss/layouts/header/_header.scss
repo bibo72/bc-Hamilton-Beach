@@ -334,6 +334,7 @@ header.header{
             text-align: right; 
         }
         .custom-pages-nav{
+            position: relative;
             font-size: remCalc(18px);
             font-family: "Larsseit";
             // text-align: right;
@@ -360,12 +361,13 @@ header.header{
                         border: none;
                     }
 
-                    span {
+                    span, a {
                         border: 3px solid transparent;
                         border-left: none;
                         border-right: none;
                         height: 100px;
                         line-height: 100px;
+                        text-decoration: none;
                     }
                     
                     .downMenuIco{
@@ -406,6 +408,8 @@ header.header{
 }
 
 .nav_products{
+    position: absolute;
+    top: 100px;
     display: inline-flex;
     flex-wrap: wrap;
     background-color: #fff;

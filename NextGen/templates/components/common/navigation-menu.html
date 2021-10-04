@@ -19,29 +19,27 @@
                 <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
               </li>
               <li>
-                <span>contact us</span>
+                <a href="/contact-us/">contact us</a>
               </li>
             </ul>
             <div class="getUpdate" data-reveal-id="getUpdateModal">
               <span>get updates</span>
             </div>
-      
-          </div>
-
-          <div class="nav_products" >
-            {{#each products.new}}
-            <div class="nav_product">
-              <a href="{{url}}">
-                <div class="img">
-                  <img src="{{getImage image 1x=80w}}" alt="{{image.alt}}">
-                </div>
-                <p>{{name}}</p>
-              </a>
+            <div class="nav_products" >
+              {{#each products.new}}
+              <div class="nav_product">
+                <a href="{{url}}">
+                  <div class="img">
+                    <img src="{{getImage image 1x=80w}}" alt="{{image.alt}}">
+                  </div>
+                  <p>{{name}}</p>
+                </a>
+                
+              </div>
+              {{/each}}
               
+  
             </div>
-            {{/each}}
-            
-
           </div>
 
           <div class="nav_learn" data-dropdown-content id="nav_learn" aria-hidden="true">

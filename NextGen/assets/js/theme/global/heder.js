@@ -8,10 +8,15 @@ export default function () {
     let itemNum = 0;
     // pc chilk products
     $products.on('click',function(){
+        const $navList = $('.main-nav .custom-pages-nav');
         if(proNum == 0){
             $nav_products.show();
-            $nav_products.css("display","inline-flex");
             $products.addClass('active');
+            if ($navList.width() > $nav_products.width()) {
+                $nav_products.css({"display":"inline-flex", "left": '0'});
+            } else {
+                $nav_products.css({"display":"inline-flex", "right": '0'});
+            }
             proNum++;
         }else{
             $nav_products.hide();
