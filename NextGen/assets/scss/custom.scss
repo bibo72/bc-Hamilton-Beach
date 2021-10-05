@@ -447,6 +447,12 @@ body.main:not(.nine-sixty) .header-container.in-container {
     }
 }
 
+#body.slider-full-width.home-layout .container.main {
+    margin-bottom: -128px;
+    @media screen and (min-width : 800px) {
+        margin-bottom: 200px;
+    }
+}
 .body.content {
     margin-top: 147px!important;
     @media screen and (min-width : 800px) {
