@@ -1,4 +1,70 @@
 // PASTE CUSTOM STYLING HERE
+input#gift-certificate-submit,
+input#gift-certificate-preview,
+input.button.button--primary.form-prefixPostfix-button--postfix,
+.heroCarousel-action,
+.compare a,
+.button--primary,
+.form-actions .button,
+.form-actions a.button.button--small,
+.cart-actions .button,
+.previewCartAction .button,
+h3.account .button:not(.card-figcaption-button),
+a.modal-close.custom-quick-search,
+a.reset.quicksearch,
+button.swal2-confirm.button,
+button.swal2-cancel.button,
+form#facet-range-form button.button.button--small,
+div#alert-modal button.confirm.button,
+main.page.blog a.read-more-button,
+html div#checkout-app .button {
+    font-family: "Roboto Condensed";
+}
+#side-categories li .navPages-action,
+#side-categories div.brands li a,
+.heroCarousel-title,
+p.heroCarousel-description,
+.shop-by-price .navList li a,
+a.subcategory-link,
+.card-title > a,
+.card-text,
+.productView-details .price-section.price-section--saving.price span,
+.productView-brand a,
+.productView-title,
+dt.productView-info-name,
+dd.productView-info-value,
+.productView-price,
+.productView-price .price-section--minor,
+.price-section--minor,
+.product.main .tabs-contents,
+.tab,
+h3.tab-content-title,
+.productView label.form-label,
+main.page.content h1, main.page.content h2, main.page.content h3, main.page.content h4, main.page.content h5, main.page.content h6,
+main.page.content h1.page-heading,
+main.page.content p,
+main.page.blog h1.page-heading,
+h2.card-title,
+.product-layout .productView-details .productView-reviewLink + .productView-reviewLink,
+.product-layout .productView-details span.productView-reviewLink.reviewList,
+h4.listItem-title,
+.listItem-price,
+#modal .productView.productView--quickView .tab,
+#modal .productView.productView--quickView .tabs-contents,
+h2.card-text.brand,
+h2.card-text.sku,
+.card-text span.price-label,
+span.price-label,
+.card-text abbr,
+article .current-price span.price,
+span.price.price--withTax,
+span.price.price--withoutTax,
+.previewCart  h2.card-title,
+.previewCart  h2.card-title > a,
+.cart-item-name a {
+    font-family: "Larsseit";
+}
+
 // first HP block
 #sd-image-fc153c69-186b-451f-922a-9f6da0c6616a {
     @media only screen and (max-width : 767px) {
@@ -447,6 +513,12 @@ body.main:not(.nine-sixty) .header-container.in-container {
     }
 }
 
+.container.main {
+    margin-bottom: 70px;
+    @media screen and (min-width : 800px) {
+        margin-bottom: 100px;
+    }
+}
 #body.slider-full-width.home-layout .container.main {
     margin-bottom: -128px;
     @media screen and (min-width : 800px) {

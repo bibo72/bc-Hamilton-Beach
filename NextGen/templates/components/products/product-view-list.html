@@ -214,9 +214,9 @@
                  {{/each}}
              </dl>
          </div>
-         <button class="notify-button">
-            <a class="notify-word" data-reveal-id="getUpdateModal">Notify Me</a>
-        </button>
+         <div class="notify-button">
+            <a class="button button--primary notify-word" data-reveal-id="getUpdateModal">Notify Me</a>
+        </div>
     
     
          <section class="productView-details product-options">
@@ -289,7 +289,7 @@
                 {{/if}} -->
                 {{#if product.custom_fields}}
                 <li class="tab customFields">
-                    <a class="tab-title" href="#tab-customFields">specifications</a>
+                    <a class="tab-title" href="#tab-customFields">Specifications</a>
                 </li>
                 {{/if}}
                     <li class="tab videos">
@@ -332,7 +332,7 @@
                     </div>
                 {{/if}} -->
                 <div class="tab-content customFields" id="tab-customFields">
-                        <h3 class="tab-content-title tab-content-Custom">specifications</h3>
+                        <h3 class="tab-content-title tab-content-Custom">Specifications</h3>
                         <div class="customFields-container">
                             {{#each product.custom_fields}}
                             {{#unless name '==' 'Short Description'}}

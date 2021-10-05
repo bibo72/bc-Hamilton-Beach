@@ -1,4 +1,10 @@
 .product-page-layout.no-sidenav.right-sideBar.product-layout-with-sidevav {
+    .productView {
+        padding-top: 50px;
+        @media screen and (min-width: 800px) {
+            padding-top: 100px;
+        }
+    }
     section.productView-details {
         display: block;
     }
@@ -29,16 +35,19 @@
     .product.main.left.no-sidenav {
         width: 100% !important;
     }
-    button.notify-button {
-        width: 160px;
-        height: 53px;
-        background-color: #0056A8;
+    .notify-button {
+        margin-top: 40px;
         a {
             color: #fff;
             font-size: 17px;
             font-weight: bold;
             text-decoration: none;
             text-transform: uppercase;
+            width: 160px;
+            height: 53px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     .productView-details.product-options {
@@ -85,13 +94,17 @@
         width: 35%;
     }
     div#carousel-active {
-        padding-left: 24px;
         width: 30%;
+        @media screen and (min-width : 800px) {
+            padding-left: 24px;
+        }
     }
     .sidebar.right {
         float: none;
         width: 100%;
+        padding: 0;
         border-top: none;
+        border-radius: 10px;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     }
     .product-top-container {
@@ -109,6 +122,7 @@
         font-size: 36px;
         color: #0056A8;
         margin-bottom: 15px;
+        line-height: 1.2;
     }
     .productView-details dt {
         font-size: 16px;
@@ -120,6 +134,7 @@
         text-align: center;
         font-size: 18px;
         border: none;
+        padding-top: 30px;
     }
     .card-title a {
         font-size: 18px;
@@ -128,13 +143,35 @@
     }
     .sidebar.right .carousel-vertical {
         border: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+    }
+    .sidebar.right .card-body {
+        padding: 10px 0 0;
+    }
+    .sidebar.right .carousel-vertical li.product article.card a {
+        max-height: none;
+        max-width: none;
+        text-align: center;
+        line-height: 1.22;
+
+    }
+    article.card-title-two-lines h2.card-title {
+        height: auto;
     }
     .tab {
         background-color: #EBF8FC;
+        border: none;
+        border-radius: 10px 10px 0 0;
+        width: 180px;
+        margin-right: 5px;
     }
     .tab a {
         font-weight: normal;
         font-size: 16px;
+        padding-top: 13px;
+        padding-bottom: 13px;
     }
     .tab.is-active a {
         background-color: #0456A8;
@@ -144,6 +181,18 @@
         &.tab-title:hover {
             color: white!important;
         }
+    }
+    .tab.is-active a.tab-title {
+        border: none;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-radius: 10px 10px 0 0;
+
+    }
+    [tabindex]:not([tabindex="-1"]):focus {
+        border: none!important;
+        border-radius: 10px 10px 0 0!important;
+        outline: none!important;
     }
     .tabs-contents p{
         font-size: 16px;
@@ -163,7 +212,18 @@
     }
     .product.main .tabs-contents {
         border-top: none;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        padding: 30px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+        border-radius: 0 10px 10px 10px;
+    }
+    .tab-content {
+        padding: 0;
+
+        >div {
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
     .toggle-title {
         font-size: 16px;
@@ -229,27 +289,28 @@
             line-height: 60px;
             padding-left: 36px;
             color: #0456A8;
+            text-transform: none;
         }
         h3.tab-content-title::after {
             content: '';
             position: absolute;
             right: 36px;
-            border-bottom:2px solid blue;
-            border-right:2px solid blue;
-            width: 13px;
-            height: 13px;
+            border-bottom:2px solid #0056A8;
+            border-right:2px solid #0056A8;
+            width: 10px;
+            height: 10px;
             transform: rotate(45deg);
             top:50%;
-            margin-top: -11px;
+            margin-top: -8px;
         }
         h3.tab-content-title::before {
             content: '';
             position: absolute;
             right: 36px;
-            border-bottom:2px solid blue;
-            border-right:2px solid blue;
-            width: 13px;
-            height: 13px;
+            border-bottom:2px solid #0056A8;
+            border-right:2px solid #0056A8;
+            width: 10px;
+            height: 10px;
             transform: rotate(-135deg);
             top:50%;
             margin-top: -7px;
@@ -269,15 +330,18 @@
                 max-width: unset;
             }
             margin-top: 70px;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
             width: 100%;
             display: block;
+            overflow: hidden;
+            border-radius: 10px;
             .sidebar.right {
                 box-shadow: unset;
             }
             #carousel-active {
                 display: block;
                 width: 100%;
+                padding-left: 0;
             }
             a {
                 line-height: 40px;
@@ -295,7 +359,7 @@
         }
         .fixAngle::after {
             transform: rotate(-135deg) !important;
-            margin-top: -7px !important;
+            margin-top: -3px !important;
         }
         #product-images-container .slick-prev::before {
             background-color: #0056A8 !important;
