@@ -216,7 +216,7 @@
         position: absolute;
         transform: rotate(0deg);
         transition: transform 100ms ease-in, top 100ms ease-in 150ms, bottom 100ms ease-in 150ms; // 1
-        width: remCalc(20);
+        width: remCalc(25);
     }
 
     .mobileMenu-toggleIcon {
@@ -225,11 +225,11 @@
     }
 
     .mobileMenu-toggleIcon::before {
-        top: -0.5rem;
+        top: -0.65rem;
     }
 
     .mobileMenu-toggleIcon::after {
-        bottom: -0.5rem;
+        bottom: -0.65rem;
     }
 
     &.is-open .mobileMenu-toggleIcon {
@@ -274,7 +274,7 @@ body.main.eleven-seventy .header-container.in-container.full-width{
     left: auto;
     padding: 0;
     margin-right: 36px;
-    width: 40px;
+    width: 26px;
     top: 36px!important;
     &[aria-expanded="true"] {
         border: none;
@@ -439,28 +439,27 @@ header.header{
                     }
                 }
             }
-            .getUpdate{
-                text-transform: uppercase;
-                text-align: center;
-                padding: 15px 42px;
-                background-color: #0056A8;
-                font-size: 17px;
-                color: #fff;
-                font-family: "Roboto Condensed";
-                font-weight: bold;
-                border-radius: 3px;
-                cursor: pointer;
-                transition: all 0.15s ease;
-
-                &:hover {
-                    background-color: #026CD1;
-                }
-            }
             
         }
     }
 }
+.getUpdate{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 42px;
+    background-color: #0056A8;
+    font-size: 17px;
+    color: #fff;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
 
+    &:hover {
+        background-color: #026CD1;
+    }
+}
 .nav_products{
     position: absolute;
     top: 100px;
@@ -515,7 +514,7 @@ header.header{
     background-color: #fff;
     position: absolute; 
     left: -99999px; 
-    top: 99px;
+    top: 100px;
     border-radius: 0 0 10px 10px;
     padding: 45px 20px;
     line-height: 1.5;
@@ -558,7 +557,7 @@ header.header{
 }
 .mobileMenu-search {
     position: absolute;
-    right: 110px;
+    right: 90px;
     top: 40px;
     svg {
         width: 26px;
@@ -577,6 +576,23 @@ a.modal-close.custom-quick-search {
     border-bottom: 2px saddlebrown solid;
 }
 @media (max-width:1222px) {
+    .header div#menu span.down-arrow {
+        right: 15px;
+    }
+    .mobile-menu#menu li.navPage-subMenu-item {
+        border-left: none !important;
+    }
+    
+    .header .mobile-menu#menu .page-list .navPage-subMenu-list li a {
+        padding-left: 24px !important;
+    }
+    .mobile-menu#menu {
+        .getUpdate {
+            margin-left: 36px;
+            margin-right: 36px;
+            padding: 14px;
+        }
+    }
     div#menu.mobile-menu .page-list-products{
         .navPages-action.has-subMenu{
             display: inline-block;
@@ -606,7 +622,7 @@ a.modal-close.custom-quick-search {
             z-index: 100;
             min-height: 500px;
             top: 100px;
-            padding-top: 30px !important;
+            // padding-top: 30px !important;
             
         }
     }
@@ -615,10 +631,10 @@ a.modal-close.custom-quick-search {
             padding-top: 25px !important;
             padding-bottom: 25px !important;
             line-height: normal;
-            
+            padding-left: 21px !important;
         }
         span.down-arrow{
-            top:12px;
+            top:10px;
             transform: rotate(-90deg);
         }
 
@@ -631,8 +647,9 @@ a.modal-close.custom-quick-search {
         }
         span.down-arrow{
             position: absolute;
-            top: 12px;
+            top: 10px;
             right: auto;
+            margin-left: 15px;
         }
         
     }
@@ -647,6 +664,14 @@ div#menu.mobile-menu .navPage-subMenu{
         justify-items:center;
         .nav_product{
             width: 154px;
+            a {
+                text-decoration: none;
+
+                p {
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+            }
             .img{
                 text-align: center;
                 width: 154px;
@@ -700,7 +725,6 @@ div#menu.mobile-menu .navPage-subMenu{
                 margin-right: 0;
                 border-top-right-radius: 0!important;
                 border-bottom-right-radius: 0!important;
-                border-right: none;
             }
             input.button.button--primary.form-prefixPostfix-button--postfix {
                 margin-left: 0;

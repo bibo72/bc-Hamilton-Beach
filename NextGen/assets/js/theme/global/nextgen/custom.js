@@ -882,9 +882,9 @@ function myFunction(screenWidth) {
 
   // SET MENU TO DESKTOP OR MOBILE
   var mobileMenu = $('.mobile-menu.navPages-container');
-  console.log(mobileMenu);
+  // console.log(mobileMenu);
   var desktopMenu = $('.mobile-menu.navPages-container');
-  console.log(desktopMenu);
+  // console.log(desktopMenu);
   if (checkMobile.matches) { // MOBILE 800PX OR LESS
     // console.log('MOBILE')
     $('.navPages-container.main-nav.desktop').removeAttr('id');

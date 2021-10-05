@@ -545,10 +545,14 @@ ul.breadcrumbs {
 .container.main {
     margin-top: 0 !important;
 }
-// plp
+
 h1.page-heading {
     font-weight: 700;
 }
+main.page.content h1.page-heading {
+    font-weight: 700;
+}
+// plp
 body.main.eleven-seventy div#side-categories {
     display: none;
 }

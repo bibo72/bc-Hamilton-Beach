@@ -12,7 +12,7 @@ function renderGetUpdateSubscribeForm() {
 export default function () {
     const $products = $('.header_products');
     const $nav_products=$('.nav_products');
-    const $dropdownLink = $('li.hover-open[data-dropdown]');
+    const $dropdownLink = $('li.hover-open[data-dropdown-hover]');
     const $down_arrow = $('li .down-arrow');
     const $getUpdate = $('.getUpdate');
     const $modal = $('#getUpdateModal');
@@ -36,12 +36,12 @@ export default function () {
 
     $dropdownLink.on('mouseenter', (event) => {
         const $target = $(event.currentTarget);
-        const $dropDown = $target.find('[data-dropdown-content]');
+        const $dropDown = $target.find('[data-dropdown-hover-content]');
         $target.attr('aria-expanded', 'true');
         $dropDown.addClass('is-open f-open-dropdown fadeIn').attr('aria-hidden', 'false').css("left", '0');
     }).on('mouseleave', (event) => {
         const $target = $(event.currentTarget);
-        const $dropDown = $target.find('[data-dropdown-content]');
+        const $dropDown = $target.find('[data-dropdown-hover-content]');
         $target.attr('aria-expanded', 'false');
         $dropDown.removeClass('is-open f-open-dropdown fadeIn').attr('aria-hidden', 'true').css("left", '-9999px');
     });
@@ -60,7 +60,7 @@ export default function () {
         
     });
     $('[data-dropdown-custom]').on('click', (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         const $target = $(event.currentTarget);
         const controlId = $target.attr('data-dropdown-custom');
         const $dropdown = $(`#${controlId}`);

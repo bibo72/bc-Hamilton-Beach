@@ -7,6 +7,7 @@
     }
     section.productView-details {
         display: block;
+        padding: 0;
     }
     .card-figcaption-body {
         display: none !important;
@@ -94,9 +95,10 @@
         width: 35%;
     }
     div#carousel-active {
-        width: 30%;
+        width: 100%;
         @media screen and (min-width : 800px) {
             padding-left: 24px;
+            width: 30%;
         }
     }
     .sidebar.right {
@@ -146,6 +148,10 @@
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 15px;
+
+        @media screen and (max-width:1024px) {
+            padding-bottom: 30px;
+        }
     }
     .sidebar.right .card-body {
         padding: 10px 0 0;
@@ -353,8 +359,8 @@
         .product.main .tabs-contents {
             padding: 0;
             .tab-content-title {
-                margin-left: -15px;
-                margin-right: -15px;
+                margin-left: -36px;
+                margin-right: -36px;
             }
         }
         .fixAngle::after {

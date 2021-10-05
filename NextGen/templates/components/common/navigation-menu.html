@@ -10,7 +10,7 @@
           <div class="custom-pages-nav">
             <ul>
               <li class="header_products">
-                <span>products</span>
+                <span>Products</span>
                 <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
                 <div class="nav_products" >
                   {{#each products.featured}}
@@ -27,10 +27,10 @@
                 </div>
               </li>
 
-              <li class="learn hover-open" data-dropdown="nav_learn">
+              <li class="learn hover-open" data-dropdown-hover="nav_learn">
                 <span>learn</span>
                 <svg class="downMenuIco"><use xlink:href="#icon-headerdown" /></svg>
-                <div class="nav_learn" data-dropdown-content id="nav_learn" aria-hidden="true">
+                <div class="nav_learn" data-dropdown-hover-content id="nav_learn" aria-hidden="true">
                   <ul class="footer-info-list">
                     {{#each pages}}
                       {{#if name '==' "Learn"}}
@@ -43,7 +43,7 @@
                 </div>
               </li>
               <li>
-                <a href="/contact-us/">contact us</a>
+                <a href="/contact-us/">Contact us</a>
               </li>
               <li class="nav-search">
                 <a aria-label="search" data-dropdown-custom="nav_search" name="search" class="" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-search"></use></svg></i></a>
@@ -54,7 +54,7 @@
               </li>
             </ul>
             <div class="getUpdate" data-reveal-id="getUpdateModal">
-              <span>get updates</span>
+              <span>Get updates</span>
             </div>
           </div>
         </div>

@@ -316,6 +316,12 @@ section.footer-info.six-columns article.footer-info-col.footer-info-col--small.f
 .above-footer-creditsBar {
     border-top: 1px solid rgba(0, 90, 122, 0.20);
 }
+body.main.eleven-seventy .footer-bottom .content.copyright {
+    padding-top: 20px!important;
+    @media screen and (min-width: 800px) {
+        padding-top: 40px!important;
+    }
+}
 footer.footer .footer-bottom{
     background-color: #fff;
     border: none;
@@ -326,6 +332,7 @@ footer.footer .footer-bottom{
     .content.copyright{
         padding: 40px 0;
         font-size: 14px;
+        line-height: 24px;
     }
     ul {
         
@@ -333,10 +340,14 @@ footer.footer .footer-bottom{
             color: #323232 !important;
             text-decoration: underline;
             display: inline;
-            margin-right: 23px;
+            
             a {
                 font-size: 14px;
                 color: #323232;
+            }
+
+            +li {
+                margin-left: 23px;
             }
         }
     }

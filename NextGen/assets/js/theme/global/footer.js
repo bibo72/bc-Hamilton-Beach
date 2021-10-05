@@ -1,5 +1,4 @@
 export default function(){
-    console.log($('.container-mobile'));
     let actionNum = 0
     $('.footer-container-mobile a.list-action').on("click",function(event){
         event.preventDefault();
