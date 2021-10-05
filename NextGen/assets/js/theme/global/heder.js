@@ -2,8 +2,12 @@ function renderSubscribeForm() {
     const title = window.newletterTitle || 'Join our mailing list and';
     const description = window.newletterDescription || 'stay up to date with product availability';
     $('.footer .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
-    $('.modal .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
     $('.hp-newsletterSubscription h1').html(`<h1><div class="title-1">${title}</div> ${description}</h1>`);
+}
+function renderGetUpdateSubscribeForm() {
+    const title = window.getUpdatesTitle || 'Join our mailing list and';
+    const description = window.getUpdatesDescription || 'stay up to date with product availability';
+    $('.modal .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
 }
 export default function () {
     const $products = $('.header_products');
@@ -23,8 +27,10 @@ export default function () {
         } else {
             $nav_products.css({"display":"inline-flex", "right": '0'});
         }
+        $nav_products.addClass('fadeIn');
     }).on('mouseleave', () => {
         $nav_products.hide();
+        $nav_products.removeClass('fadeIn');
         $products.removeClass('active');
     });
 
@@ -32,12 +38,12 @@ export default function () {
         const $target = $(event.currentTarget);
         const $dropDown = $target.find('[data-dropdown-content]');
         $target.attr('aria-expanded', 'true');
-        $dropDown.addClass('is-open f-open-dropdown').attr('aria-hidden', 'false').css("left", '0');
+        $dropDown.addClass('is-open f-open-dropdown fadeIn').attr('aria-hidden', 'false').css("left", '0');
     }).on('mouseleave', (event) => {
         const $target = $(event.currentTarget);
         const $dropDown = $target.find('[data-dropdown-content]');
         $target.attr('aria-expanded', 'false');
-        $dropDown.removeClass('is-open f-open-dropdown').attr('aria-hidden', 'true').css("left", '-9999px');
+        $dropDown.removeClass('is-open f-open-dropdown fadeIn').attr('aria-hidden', 'true').css("left", '-9999px');
     });
 
     $down_arrow.on('click',function(){
@@ -62,6 +68,7 @@ export default function () {
     });
 
     renderSubscribeForm();
+    renderGetUpdateSubscribeForm();
     // $getUpdate.on('click',function(){
     //     $modal.toggle();
     //     // $(body).css("background","rgba(60, 70, 77, 0.95);");

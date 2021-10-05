@@ -1295,6 +1295,7 @@ input.button.button--primary.form-prefixPostfix-button--postfix {
   border-left: none;
   border-right: none;
   font-family: stencilFontFamily("theme-font");
+  font-family: "Roboto Condensed";
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -1314,6 +1315,7 @@ input.button.button--primary.form-prefixPostfix-button--postfix:hover  {
   background-color: stencilColor("primary-actionHoverColor");
   color: stencilColor("primary-actionInnerHoverFontIconLinkColor");
   border-color: stencilColor("primary-actionColor");
+  font-size: 14px;
 }
 
 .footer-top.newsletter .form-prefixPostfix .button {
@@ -7649,7 +7651,7 @@ input#nl_email {
 
 input#nl_email::placeholder {
   color: stencilColor("input-font-color");
-  text-align: center;
+  text-align: left;
 }
 
 #newsletter-popup h3.footer-info-heading {
@@ -17463,6 +17465,10 @@ html.hide-focus-box *:focus {
   -webkit-border-radius: 4px !important;;
   -moz-border-radius: 4px !important;
   // outline: none!important;
+}
+#body [href]:focus,
+html.hide-focus-box #body  [href]:focus {
+  outline: none!important;
 }
 ul.sidenav-list {
   margin-left: 0;
