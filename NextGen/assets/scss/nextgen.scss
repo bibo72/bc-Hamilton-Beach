@@ -223,7 +223,7 @@ li.navUser-item.navUser-item--cart .navUser-action:hover svg, li.navUser-item.na
 .breadcrumb {
   color: stencilColor("color-textBase");
   font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .breadcrumb.is-active > .breadcrumb-label {
@@ -231,18 +231,23 @@ li.navUser-item.navUser-item--cart .navUser-action:hover svg, li.navUser-item.na
   // color: stencilColor("color-primary");
   // color: stencilColor("primary-actionColor") !important;
   color: stencilColor("color-textBase");
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .breadcrumb a {
   // color: stencilColor("color-textBase");
   color: stencilColor("primaryBody-fontColor") !important;
-  font-size: 11px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .breadcrumb:before {
   // color: stencilColor("color-textBase");
   color: stencilColor("primaryBody-fontColor");
   content: ">";
+  top: -1px;
+  font-weight: 700;
 }
 
 .breadcrumb a:hover {

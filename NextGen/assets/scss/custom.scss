@@ -61,7 +61,9 @@ span.price.price--withTax,
 span.price.price--withoutTax,
 .previewCart  h2.card-title,
 .previewCart  h2.card-title > a,
-.cart-item-name a {
+.cart-item-name a,
+.breadcrumb,
+.breadcrumb.is-active > .breadcrumb-label {
     font-family: "Larsseit";
 }
 
