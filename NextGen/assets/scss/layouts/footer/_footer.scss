@@ -376,10 +376,21 @@ footer.footer .container{
         border: none;
         border-bottom: 1px solid rgba(0, 90, 122, 0.20);
         margin: 0;
+
+        &.is-open {
+            >a {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+            > .content{
+                display: block;
+            }
+        }
         >a{
+            position: relative;
             background: #fff;
-            padding-left: 36px;
-            padding-right: 36px;
+            padding: 20px 36px;
             color: #119EDD;
             font-size: remCalc(18px);
             font-family: "Larsseit";
@@ -389,6 +400,13 @@ footer.footer .container{
                 background: #fff;
             }
             i{
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 27px 36px;
                 float: right;
                 svg{
                     fill:#119EDD;
@@ -396,6 +414,7 @@ footer.footer .container{
             }
         }
         > .content{
+            display: none;
             padding-left:72px;
             
             >ul >li > a, >ul > li,address{
