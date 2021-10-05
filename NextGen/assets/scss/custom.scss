@@ -90,6 +90,8 @@
 #sd-image-f803c0b2-dac0-41d7-b273-0d4d82f0ca84 {
     max-width: 1095px !important;
     max-height: 990px !important;
+    align-items: flex-start !important;
+    margin-right: 3rem !important;
     @media only screen and (max-width : 767px) {
         order: 1 !important;
         position: relative;
@@ -107,7 +109,7 @@
 }
 .learn-more-modal-outer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     .learn-more-modal {
         max-width: 384px;
         max-height: 203px;
@@ -169,18 +171,22 @@
     position: relative;
     left: 150px;
     top: -200px;
-    h1 {
-        font-size: 48px;
-        line-height: 1.2;
-        margin-left: 2rem;
-        color: #0056A8;
-        font-weight: bold;
-        .title-1 {
-            color: #009FDF;
+    .newsletterSubscription-h1 {
+        h1 {
+            margin-top: 0;
+            margin-bottom: 40px;
+            font-size: 48px;
+            line-height: 1.2;
+            margin-left: 42px;
+            color: #0056A8;
+            font-weight: bold;
+            .title-1 {
+                color: #009FDF;
+            }
         }
     }
     .form-prefixPostfix.wrap {
-        margin-left: 2rem;
+        margin-left: 42px;
         max-width: 708px;
         height: 70px;
         border: solid 1px #707070;
