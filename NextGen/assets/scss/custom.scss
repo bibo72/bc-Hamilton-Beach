@@ -239,18 +239,15 @@ span.price.price--withoutTax,
     position: relative;
     left: 150px;
     top: -200px;
-    .newsletterSubscription-h1 {
-        h1 {
-            margin-top: 0;
-            margin-bottom: 40px;
-            font-size: 48px;
-            line-height: 1.2;
-            margin-left: 42px;
-            color: #0056A8;
-            font-weight: bold;
-            .title-1 {
-                color: #009FDF;
-            }
+    h1 {
+        margin-bottom: 40px;
+        font-size: 48px;
+        line-height: 1.2;
+        margin-left: 42px;
+        color: #0056A8;
+        font-weight: bold;
+        .title-1 {
+            color: #009FDF;
         }
     }
     .form-prefixPostfix.wrap {
@@ -310,6 +307,7 @@ span.price.price--withoutTax,
             text-align: center;
             margin-bottom: 1.3em;
             margin-top: 2.5em;
+            max-width: 260px;
         }
         .form-prefixPostfix.wrap {
             margin-left: 0;

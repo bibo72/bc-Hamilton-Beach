@@ -1,12 +1,19 @@
-function renderSubscribeForm() {
-    const title = window.newletterTitle || 'Join our mailing list and';
-    const description = window.newletterDescription || 'stay up to date with product availability';
+function renderFooterSubscribeForm() {
+    const title = window.footerNewletterTitle || 'Join our mailing list and';
+    const description = window.footerNewletterDescription || 'stay up to date with product availability';
+    // footer
     $('.footer .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
-    $('.hp-newsletterSubscription h1').html(`<h1><div class="title-1">${title}</div> ${description}</h1>`);
+}
+function renderSubscribeForm() {
+    const title = window.homepageNewletterTitle || 'Join our mailing List';
+    const description = window.homepageNewletterDescription || 'stay up to date with product availability';
+    // homepage
+    $('.newsletterSubscription-h1').html(`<div class="title-1">${title}</div> ${description}`);
 }
 function renderGetUpdateSubscribeForm() {
     const title = window.getUpdatesTitle || 'Join our mailing list and';
     const description = window.getUpdatesDescription || 'stay up to date with product availability';
+    // get update modal
     $('.modal .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
 }
 export default function () {
@@ -67,6 +74,7 @@ export default function () {
         $dropdown.slideToggle();
     });
 
+    renderFooterSubscribeForm();
     renderSubscribeForm();
     renderGetUpdateSubscribeForm();
     // $getUpdate.on('click',function(){
