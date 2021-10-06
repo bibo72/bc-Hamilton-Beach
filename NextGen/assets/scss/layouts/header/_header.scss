@@ -467,7 +467,7 @@ header.header{
     flex-wrap: wrap;
     background-color: #fff;
     padding: 0 10px;
-    border-radius:  0 0 5px 5px;
+    border-radius:  0 0 10px 10px;
     max-width: 996px;
     display: none;
     .nav_product{
@@ -518,6 +518,7 @@ header.header{
     border-radius: 0 0 10px 10px;
     padding: 45px 20px;
     line-height: 1.5;
+    min-width: 255px;
 
     ul {
         display: block!important;
@@ -528,6 +529,11 @@ header.header{
                 text-transform: none;
                 white-space: nowrap;
                 padding: 5px 0;
+                color: #0056A8!important;
+                transition: all 0.1s ease;
+                &:hover {
+                    font-weight: 700;
+                }
             }
         }
     }

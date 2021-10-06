@@ -222,12 +222,12 @@ li.navUser-item.navUser-item--cart .navUser-action:hover svg, li.navUser-item.na
 
 .breadcrumb {
   color: stencilColor("color-textBase");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 
 .breadcrumb.is-active > .breadcrumb-label {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   // color: stencilColor("color-primary");
   // color: stencilColor("primary-actionColor") !important;
   color: stencilColor("color-textBase");
@@ -312,14 +312,14 @@ span.smaller.lighter.lowercase {
   padding: 5px;
   color: stencilColor("color-secondary");
   text-transform: capitalize;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
 .top-menu .right a.navUser-action {
   padding-right: 0;
   color: stencilColor("topMenu-fontColor");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   margin-bottom: 0;
   text-transform: capitalize;
@@ -347,7 +347,7 @@ span.smaller.lighter.lowercase {
 .top-menu .right span.or-text {
   color: stencilColor("topMenu-fontColor");
   padding-left: 5px;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   text-transform: lowercase;
 }
@@ -360,7 +360,7 @@ span.smaller.lighter.lowercase {
 }
 
 .top-menu div {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -751,7 +751,7 @@ header .form-prefixPostfix .form-input {
   border-right: none;
   height: 32px !important;
   font-size: 13px;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 }
 
 .navPages-quickSearch .form-prefixPostfix .form-input {
@@ -841,7 +841,7 @@ input#gift-certificate-submit {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -864,7 +864,7 @@ input#gift-certificate-submit:hover {
 }
 
  input#gift-certificate-preview {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -1059,14 +1059,14 @@ div#menu.main-nav .nav-align.center .custom-pages-nav li.navPages-item.mobile {
   padding-left: 17.5px;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: stencilNumber("mainNav-fontSize");
   color: stencilColor("mainNav-fontColor");
 }
 
 .custom-pages-nav a.navPage-subMenu-action.navPages-action {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("mainSubNav-fontSize");
   color: stencilColor("mainSubNav-fontColor");
@@ -1078,12 +1078,12 @@ div#menu.main-nav .nav-align.center .custom-pages-nav li.navPages-item.mobile {
 }
 
 .custom-pages-nav ul#navPages- li a {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
 .custom-pages-nav .navPage-childList.sub-category-visible li a {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("mainSubNav-fontSize");
   color: stencilColor("mainSubNav-fontColor");
@@ -1097,7 +1097,7 @@ div#menu.main-nav .nav-align.center .custom-pages-nav li.navPages-item.mobile {
 #side-categories .navPages-action {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("sideNav-fontSize");
   color: stencilColor("sideNav-fontColor");
@@ -1218,7 +1218,7 @@ span.go-arrow i.fa.fa-chevron-right {
 }
 
 .banners .banner {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -1299,7 +1299,7 @@ input.button.button--primary.form-prefixPostfix-button--postfix {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -1366,7 +1366,7 @@ h3.footer-info-heading {
   margin: 0;
   font-size: 16px;
   padding-bottom: 5px;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -1388,7 +1388,7 @@ h3.footer-info-heading {
   border-color: stencilColor("footerCopyrightBar-borderColor");
   padding-left: 15px;
   padding-right: 15px;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -1430,7 +1430,7 @@ footer ul.site-info {
 }
 
 .footer-info-list {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -1478,13 +1478,13 @@ ul.site-info li {
 }
 
 footer .navUser-action {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
 footer address {
   font-style: normal;
-	font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+	font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -1537,7 +1537,7 @@ footer ul li {
 }
 
 .footer-top.newsletter h3 {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   color: stencilColor("newsletter-fontColor");
   font-size: stencilNumber("newsletter-fontSize");
@@ -1643,7 +1643,7 @@ svg.icon.back-to-top-icon:hover {
 
 #side-categories li .navPages-action {
   text-decoration: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   color: stencilColor("sideNav-fontColor");
   width: 85%;
@@ -1704,7 +1704,7 @@ a.navPage-subMenu-action.navPages-action:hover {
 }
 
 #side-categories div.brands li a {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   font-size: stencilNumber("sideNav-fontSize");
   text-decoration: none;
@@ -1838,7 +1838,7 @@ a.navPage-subMenu-action.navPages-action:hover {
 }
 
 .heroCarousel-title {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("carousel-title-color");
   width: 40%;
@@ -1850,7 +1850,7 @@ a.navPage-subMenu-action.navPages-action:hover {
 }
 
 p.heroCarousel-description {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   color: stencilColor("carousel-description-color");
   text-align: left;
@@ -1862,7 +1862,7 @@ p.heroCarousel-description {
 .heroCarousel-action {
   text-align: left;
   display: table;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // color: stencilColor("slideButton-textColor");
   color: stencilColor("primary-actionInnerFontIconLinkColor");
@@ -1933,7 +1933,7 @@ div#side-categories a.activePage {
 }
 
 .shop-by-price .navList li a {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   font-size: stencilNumber("sideNav-fontSize");
 }
@@ -2101,7 +2101,7 @@ span.down-arrow:hover {
 #side-categories li.navPages-item.active li.navPage-subMenu-item a {
   // color: stencilColor("sideNav-active-fontColor");
   color: stencilColor("primary-actionColor");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   padding: 5px 12px !important;
   background: stencilColor("sideNav-active-bgColor");
@@ -2159,7 +2159,7 @@ article.card {
 //   border-radius: 4px;
 //   background-color: stencilColor("card-figcaption-button-background");
 //   color: stencilColor("card-figcaption-button-color");
-//   font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+//   font-family: Larsseit, Arial, Helvetica, sans-serif;
 //   font-weight: 700;
 //   width: 100%;
 // }
@@ -2367,7 +2367,7 @@ li.subcategory-item {
 a.subcategory-link {
   display: block;
   text-decoration: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // color: stencilColor("subCategory-fontColor");
   color: stencilColor("primaryBody-fontColor");
@@ -2518,7 +2518,7 @@ fieldset.form-fieldset.actionBar-section {
 .card-title > a {
   color: stencilColor("card-title-color");
   font-size: stencilNumber("cardTitle-fontSize");
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   line-height: 19px;
 }
@@ -2545,7 +2545,7 @@ label.button.button--small.card-figcaption-button {
 }
 
 .card-text {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("cardText-color");
 }
@@ -2582,7 +2582,7 @@ article.listItem {
 }
 
 .productView-details .price-section.price-section--saving.price span {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("productPage-infoName-textColor");
   font-size: 16px !important;
@@ -2756,7 +2756,7 @@ div#side-categories .shop-by-price li a:hover {
   border-radius: 4px;
   // background: stencilColor("compareButton-bgColor");
   background: stencilColor("primary-actionColor");
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 12px;
@@ -2805,7 +2805,7 @@ div.category-header-image {
 //   border-radius: 0;
 //   background-color: stencilColor("card-figcaption-button-background");
 //   color: stencilColor("card-figcaption-button-color");
-//   font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+//   font-family: Larsseit, Arial, Helvetica, sans-serif;
 //   font-weight: 700;
 // }
 //
@@ -2999,7 +2999,7 @@ ul.productGrid li.product article.card h4 > a {
 
 // QUICK CART BUTTONS
 .previewCartCheckout .button, .previewCartCheckout .button + .button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   line-height: 20px;
   background: stencilColor("primary-actionColor");
@@ -3014,7 +3014,7 @@ ul.productGrid li.product article.card h4 > a {
 }
 
 .previewCart.quick-override.quick-override .previewCartCheckout .button, .previewCart.quick-override.quick-override .previewCartCheckout .button + .button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   line-height: 20px;
   background: stencilColor("quickCart-button-bgColor") !important;
@@ -3058,7 +3058,7 @@ h2.productView-brand {
 
 .productView-brand a {
   text-decoration: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   // color: stencilColor("productPage-brand-textColor");
   color: stencilColor("secondaryBody-fontColor");
@@ -3070,7 +3070,7 @@ h2.productView-brand {
 }
 
 .productView-title {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // color: stencilColor("productPage-title-textColor");
   color: stencilColor("primaryBody-fontColor");
@@ -3083,7 +3083,7 @@ h2.productView-brand {
 
 dt.productView-info-name {
     float: left;
-    font-family: stencilFontFamily("theme-font");
+    font-family: Larsseit;
     font-weight: 700;
     color: stencilColor("primaryBody-fontColor");
 }
@@ -3091,7 +3091,7 @@ dt.productView-info-name {
 dd.productView-info-value {
     float: left;
     display: block;
-    font-family: stencilFontFamily("theme-font");
+    font-family: Larsseit;
     font-weight: 400;
     color: stencilColor("primaryBody-fontColor");
 }
@@ -3140,20 +3140,20 @@ div#___plusone_0 {
 
 .productView-price {
   font-size: 20px;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("productPage-price-textColor");
 }
 
 .productView-price .price-section--minor {
   font-size: 20px;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("productPage-price-textColor");
 }
 
 .price-section--minor {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("productPage-price-textColor");
 }
@@ -3210,7 +3210,7 @@ div#___plusone_0 {
     border-color: stencilColor("container-border-global-color-dark");
     background-color: stencilColor("card-bgColor");
     color: stencilColor("productPage-tabContent-textColor");
-    font-family: stencilFontFamily("theme-font");
+    font-family: Larsseit;
     font-weight: 400;
     position: relative;
     top: -1px;
@@ -3235,7 +3235,7 @@ figure.productView-image {
 }
 
 .tab {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("productPage-tabs-bgColor");
   border: 1px solid;
@@ -3280,7 +3280,7 @@ figure.productView-image {
 }
 
 h3.tab-content-title {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("productPage-tabContentTitle-textColor");
   font-size: 20px;
@@ -3444,7 +3444,7 @@ ul.grid-default {
 
 .productView label.form-label {
   font-size: 14px;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("productPage-infoName-textColor");
   float: left;
@@ -3518,7 +3518,7 @@ ul.grid-default {
 .button--primary {
   border: 1px solid;
   border-radius: 4px;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -3541,7 +3541,7 @@ ul.grid-default {
 }
 
 .form-actions .button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -3582,7 +3582,7 @@ ul.grid-default {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -3653,7 +3653,7 @@ span.custom-checkbox-text {
 }
 
 input#form-action-addToCart {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
@@ -4059,19 +4059,19 @@ body.main.nine-sixty .sidebar.right .card-figcaption-body {
 }
 
 main.page.content h1, main.page.content h2, main.page.content h3, main.page.content h4, main.page.content h5, main.page.content h6 {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("contentPage-headers-fontColor")
 }
 
 main.page.content h1.page-heading {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 300;
   color: stencilColor("contentPageTitle-fontColor");
 }
 
 main.page.content p {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   color: stencilColor("primaryBody-fontColor");
 }
@@ -4132,7 +4132,7 @@ main.page.contact-page-with-sidenav h1.page-heading {
 }
 
 main.page.blog h1.page-heading {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 300;
 }
 
@@ -4266,7 +4266,7 @@ main.page.blog .blog-post a {
 }
 
 // main.page.blog a.read-more-button {
-//   font-family: stencilFontFamily("theme-font");
+//   font-family: Larsseit;
 //   font-weight: 700;
 //   color: stencilColor("blog-readMoreButton-fontColor");
 //   background-color: stencilColor("blog-readMoreButton-bgColor");
@@ -4452,7 +4452,7 @@ main.page.blog .socialLinks a:hover > svg {
     position: absolute;
     transition: 800ms ease;
     z-index: zIndex("lower");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 700;;
 }
 
@@ -4528,7 +4528,7 @@ li.product .sale-flag-side.visible {
 .sale-flag-side span {
   color: stencilColor("color_text_product_sale_badges");
   // color: stencilColor("primary-actionInnerFontIconLinkColor");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
@@ -4537,7 +4537,7 @@ main.page-content {
     padding: 0 !important;
 }
 .cart-actions .button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -4562,7 +4562,7 @@ main.page-content {
 }
 
 .previewCartAction .button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -4757,7 +4757,7 @@ h3.account-heading {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -4869,7 +4869,7 @@ h2.container-header.page-heading {
 }
 
 .container-header {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif !important;
+  font-family: Larsseit, Arial, Helvetica, sans-serif !important;
   font-weight: 700 !important;
   font-size: stencilNumber("containerHeader-fontSize");
   background-color: stencilColor("containerHeader-bgColor");
@@ -5236,7 +5236,7 @@ iframe {
 
 h2.card-title {
   height: auto;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   height: 30px;
   overflow: hidden;
@@ -5322,7 +5322,7 @@ a.modal-close.custom-quick-search {
   right: 0;
   text-decoration: none;
   // border: 1px solid;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -5352,7 +5352,7 @@ a.reset.quicksearch {
     right: 32px;
     text-decoration: none;
     border: 1px solid;
-    font-family: stencilFontFamily("theme-font");
+    font-family: Larsseit;
     font-weight: 700;
     // background-color: stencilColor("forms-submitButton-bgColor");
     background-color: stencilColor("primary-actionColor");
@@ -5499,7 +5499,7 @@ ul#currencySelection li a {
   stroke: stencilColor("topMenu-fontHoverColor") !important;
 }
 .currency-converter ul.navPnavPagesage-subMenu-list li a {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("mainSubNav-fontSize");
   color: stencilColor("mainSubNav-fontColor");
@@ -6249,7 +6249,7 @@ label.button.button--small.card-figcaption-button.compare {
 
 span.compare-text {
     color: stencilColor('color-textBase') !important;
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
 }
 
 // FIX FOR PREVIOUS/NEXT BUTTON HOVER COLOR TO MATCH THEME
@@ -6347,7 +6347,7 @@ body.eleven-seventy .product.main.left.product-page-with-sidenav .recommended-po
 
 .ui-widget {
   color: stencilColor("color-textBase") !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-size: 14px !important;
   border-radius: 0 !important;
 }
@@ -6360,7 +6360,7 @@ body.eleven-seventy .product.main.left.product-page-with-sidenav .recommended-po
 }
 
 button.swal2-confirm.button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -6387,7 +6387,7 @@ button.swal2-confirm.button:hover:hover {
 }
 
 button.swal2-cancel.button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -6410,7 +6410,7 @@ button.swal2-cancel.button:hover:hover {
 }
 
 form#facet-range-form button.button.button--small {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -6467,7 +6467,7 @@ body.compensate-for-scrollbar {
   backface-visibility: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
  'Segoe UI Emoji', 'Segoe UI Symbol';
- font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+ font-family: Larsseit, Arial, Helvetica, sans-serif;
   height: 100%;
   left: 0;
   position: fixed;
@@ -7632,7 +7632,7 @@ body.product-layout.main .slider-nav.slick-initialized.slick-slider button.slick
 
 #newsletter-popup h1.newsletter-headline {
   text-transform: uppercase;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif !important;
+  font-family: Larsseit, Arial, Helvetica, sans-serif !important;
   font-weight: 700 !important;
   font-size: 38px !important;
   color: stencilColor('newsletterPopup-headlineColor');
@@ -8986,7 +8986,7 @@ article.listItem .msrp-sale-regular-price-section {
 .product-layout .productView-details .productView-reviewLink + .productView-reviewLink {
   font-size: 1rem;
   font-weight: 300;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   color: stencilColor("productPage-infoValue-textColor");
 }
@@ -8994,7 +8994,7 @@ article.listItem .msrp-sale-regular-price-section {
 .product-layout .productView-details span.productView-reviewLink.reviewList {
   font-size: 1rem;
   font-weight: 300;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   color: stencilColor("productPage-infoValue-textColor");
 }
@@ -9074,7 +9074,7 @@ abbr {
 .listItem-actions .button + .button {
   margin-top: 0;
   background: transparent;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif !important;
+  font-family: Larsseit, Arial, Helvetica, sans-serif !important;
 	font-weight: 400;
   margin-left: 15px;
   text-transform: capitalize;
@@ -9095,7 +9095,7 @@ abbr {
 
 h4.listItem-title {
   height: auto;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   height: auto;
   overflow: hidden;
@@ -9119,7 +9119,7 @@ h4.listItem-title {
 }
 
 .listItem-price {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("cardText-color");
   margin-bottom: 0px;
@@ -9166,7 +9166,7 @@ figure.listItem-figure a.button.button--small.listItem-button.quickview {
   text-transform: uppercase;
   color: stencilColor("quickView-button-textColor");
   max-width: 100% !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   width: 100%;
   margin-bottom: 0;
@@ -9342,7 +9342,7 @@ div#alert-modal button.confirm.button {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -9752,7 +9752,7 @@ body.main .product.main.left .productImageSlider.slider-for .slick-slide img {
   margin-top: 0;
   font-size: 14px;
   background: transparent;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif !important;
+  font-family: Larsseit, Arial, Helvetica, sans-serif !important;
 	font-weight: 400;
   margin-left: 5px;
   text-transform: uppercase;
@@ -9788,7 +9788,7 @@ body.main .product.main.left .productImageSlider.slider-for .slick-slide img {
 
 .productView form.form-wishlist .dropdown-menu .button {
   border-bottom: 1px solid !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   padding: 10px 5px;
   text-transform: capitalize;
@@ -10632,7 +10632,7 @@ body.main.home.slider-full-width .main-nav-container.in-container {
 }
 
 #modal .productView.productView--quickView .tab {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("productPage-tabs-bgColor");
   border: none;
@@ -10671,7 +10671,7 @@ body.main.home.slider-full-width .main-nav-container.in-container {
     border-color: stencilColor("container-border-global-color-dark");
     background-color: stencilColor("card-bgColor") !important;
     color: stencilColor("productPage-tabContent-textColor");
-    font-family: stencilFontFamily("theme-font");
+    font-family: Larsseit;
     font-weight: 400;
 }
 
@@ -11803,7 +11803,7 @@ a:-webkit-any-link {
 .productView form.form-wishlist a.button.dropdown-menu-button {
   // color: stencilColor("productPage-addButton-bgColor") !important;
   color: stencilColor("color-textBase");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
@@ -11969,7 +11969,7 @@ body.main.home.eleven-seventy ul.productGrid.productGrid--maxCol2 .productCarous
 
 // END HIDE HIDDEN PRICING BUT KEEP SPACING
 h2.card-text.brand {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
     display: inline;
     margin-top: 0;
@@ -11978,7 +11978,7 @@ h2.card-text.brand {
 }
 
 h2.card-text.sku {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
   display: inline;
   margin-top: 0;
@@ -12248,7 +12248,7 @@ article.card.brand-sku-active.brand-sku-active.sku-hidden .card-sku-brand-sectio
 .price-section.price-section--withoutTax.rrp-price--withoutTax {
   font-size: 12px;
   color: stencilColor("card-small-font-color");
-  font-family: stencilFontFamily("theme-font") !important;
+  font-family: Larsseit !important;
   font-weight: 400 !important;
   // display: none;
   display: inline;
@@ -12259,7 +12259,7 @@ article.card.brand-sku-active.brand-sku-active.sku-hidden .card-sku-brand-sectio
   display: inline;
   font-size: 12px;
   color: stencilColor("card-small-font-color");
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
   padding-right: 10px;
 }
@@ -12288,25 +12288,25 @@ article.card.price-visibility.brand-sku-active.brand-sku-active.msrp-before-sale
 
 .price-section.price-section--withoutTax.rrp-price--withoutTax span.price.price--rrp {
   font-size: 12px !important;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
 }
 .price-section.price-section--withTax.rrp-price--withTax span.price.price--rrp {
   font-size: 12px !important;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
 }
 
 .price-section.price-section--withoutTax.non-sale-price--withoutTax {
   font-size: 12px;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
   display: inline-block;
   color: stencilColor("secondaryBody-fontColor") !important;
 }
 .price-section.price-section--withTax.non-sale-price--withTax {
   font-size: 12px;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
   display: inline-block;
   color: stencilColor("secondaryBody-fontColor") !important;
@@ -12314,7 +12314,7 @@ article.card.price-visibility.brand-sku-active.brand-sku-active.msrp-before-sale
 
 .price-section.price-section--withoutTax.non-sale-price--withoutTax span.price.price--non-sale {
   font-size: 12px;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
   // display: inline-block;
   color: stencilColor("secondaryBody-fontColor") !important;
@@ -12322,7 +12322,7 @@ article.card.price-visibility.brand-sku-active.brand-sku-active.msrp-before-sale
 }
 .price-section.price-section--withTax.non-sale-price--withTax span.price.price--non-sale {
   font-size: 12px;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
   // display: inline-block;
   color: stencilColor("secondaryBody-fontColor") !important;
@@ -12348,20 +12348,20 @@ article.card.price-visibility.brand-sku-active.brand-sku-active.msrp-before-sale
 
 .card-text span.price-label {
   font-size: 12px;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   // font-weight: bold !important;
 }
 
 span.price-label {
   font-size: 12px;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   // font-weight: bold !important;
 }
 
 .card-text abbr {
   text-decoration: none;
   font-size: 12px;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 400;
 }
 
@@ -12607,15 +12607,15 @@ article.card.brand-sku-active.brand-sku-active.brand-2-lines.sku-2-lines .card-s
 }
 
 article .current-price span.price {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
 }
 span.price.price--withTax {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
 }
 span.price.price--withoutTax {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
 }
 
@@ -13167,7 +13167,7 @@ div#carousel-active .related.similar  section.productCarousel.slick-initialized 
 
 body.product-page-layout .productView-product span.productView-reviewLink.reviewList, body.product-page-layout .productView-product .productView-reviewLink + .productView-reviewLink {
   font-size: 16px;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
 }
 
@@ -13332,7 +13332,7 @@ svg.custom-fancy-arrows.custom {
 }
 .modal-body.quickView .productView-reviewLink {
   font-size: 1rem !important;
-	font-family: stencilFontFamily("theme-font") !important;
+	font-family: Larsseit !important;
   font-weight: 400 !important;
   // color: stencilColor("productPage-infoValue-textColor");
 }
@@ -14223,21 +14223,21 @@ a.button.button--small.card-figcaption-button.quickview {
   font-weight: 400;
 }
 .form-input, .form-select {
-	font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+	font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 li.pagination-item {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 div#facetedSearch-navList * {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 }
 .category.main .category-description {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 }
 .listItem-content p {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 }
 figure.card-figure {
   border-radius: 4px !important;
@@ -14421,7 +14421,7 @@ a.button.button--small.card-figcaption-button {
   // background-color: stencilColor("secondary-actionColor");
   color: stencilColor("card-figcaption-button-color");
   // color: stencilColor("secondary-actionInnerFontIconLinkColor");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   width: 100%;
 }
@@ -14452,7 +14452,7 @@ a.button.button--small.card-figcaption-button:hover {
   width: auto;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   width: auto;
   border: 1px solid;
@@ -14530,7 +14530,7 @@ article.listItem label.button.button--small.card-figcaption-button.compare:hover
   border-color: stencilColor("primary-actionColor");
   background-color: stencilColor("primary-actionColor");
   color: stencilColor("primary-actionInnerFontIconLinkColor");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   width: 100%;
 }
@@ -14544,7 +14544,7 @@ article.listItem label.button.button--small.card-figcaption-button.compare:hover
 }
 // NEW BLOG READ MORE BUTTONS
 main.page.blog a.read-more-button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   border: 1px solid !important;
   border-radius: 4px !important;
@@ -14555,7 +14555,7 @@ main.page.blog a.read-more-button {
   border-color: stencilColor("secondary-actionColor");
   background-color: stencilColor("secondary-actionColor");
   color: stencilColor("secondary-actionInnerFontIconLinkColor");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   text-decoration: none;
   padding: 5px 10px;
   bottom: 67px;
@@ -16000,7 +16000,7 @@ html.rectangle-out-btnAnimate div.input-container {
   text-transform: initial;
   color: stencilColor("card-title-color");
   font-size: stencilNumber("cardTitle-fontSize");
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   line-height: 19px;
 }
@@ -16008,7 +16008,7 @@ html.rectangle-out-btnAnimate div.input-container {
   text-transform: initial;
   color: stencilColor("card-title-color");
   font-size: stencilNumber("cardTitle-fontSize");
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   line-height: 19px;
 }
@@ -16134,7 +16134,7 @@ body.main.eleven-seventy li.brand figure.card-figure {
   // color: stencilColor("card-title-color");
   text-decoration: none;
   font-size: stencilNumber("cardTitle-fontSize");
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   line-height: 19px;
 }
@@ -16823,14 +16823,14 @@ a.category-image.zoom-image-container {
 .main-nav-container #menu .category-menu .navPage-subMenu li a.level-2 {
   font-weight: 700 !important;
   text-decoration: underline;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-size: stencilNumber("mainNav-fontSize");
   color: stencilColor("mainNav-fontColor");
 }
 .main-nav-container #menu .category-menu .navPage-subMenu li a.level-3 {
   font-weight: 400 !important;
   text-decoration: none;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-size: stencilNumber("mainNav-fontSize");
   color: stencilColor("mainNav-fontColor");
 }
@@ -17376,7 +17376,7 @@ div[data-content-region="above_add_to_cart"] {
 }
 
 html div#checkout-app .button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -21437,7 +21437,7 @@ section.quickSearchResults ul.productGrid {
 }
 
 .mobile-menu .currency-converter .navPages-action {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: stencilNumber("containerHeader-fontSize") !important;
 }
@@ -22993,7 +22993,7 @@ figure.active.card-figure.multiple-images.second-hover-img-active:hover img.card
   text-transform: capitalize;
   background-color: stencilColor("card-figcaption-button-background");
   color: stencilColor("card-figcaption-button-color");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 10px;
   padding: 0.57143rem 1.5rem;

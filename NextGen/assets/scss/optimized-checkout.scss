@@ -42,7 +42,7 @@
     color: stencilColor("optimizedCheckout-headingPrimary-color");
     // font-family: stencilFontFamily("optimizedCheckout-headingPrimary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-headingPrimary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -50,7 +50,7 @@
     color: stencilColor("optimizedCheckout-headingSecondary-color");
     // font-family: stencilFontFamily("optimizedCheckout-headingSecondary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-headingSecondary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -78,7 +78,7 @@ body {
     color: stencilColor("optimizedCheckout-contentPrimary-color");
     // font-family: stencilFontFamily("optimizedCheckout-contentPrimary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-contentPrimary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -86,7 +86,7 @@ body {
     color: stencilColor("optimizedCheckout-contentSecondary-color");
     // font-family: stencilFontFamily("optimizedCheckout-contentSecondary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-contentSecondary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -101,7 +101,7 @@ body {
   color: stencilColor("optimizedCheckout-buttonPrimary-color");
   // font-family: stencilFontFamily("optimizedCheckout-buttonPrimary-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("optimizedCheckout-buttonPrimary-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   border-radius: 0;
@@ -137,7 +137,7 @@ button#checkout-customer-continue {
     color: stencilColor("optimizedCheckout-buttonPrimary-color");
     // font-family: stencilFontFamily("optimizedCheckout-buttonPrimary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-buttonPrimary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 700;
     border-radius: 0;
     font-size: 18px;
@@ -180,7 +180,7 @@ button#checkout-customer-continue {
     color: stencilColor("optimizedCheckout-buttonSecondary-color");
     // font-family: stencilFontFamily("optimizedCheckout-buttonSecondary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-buttonSecondary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     padding: 5px 15px;
@@ -201,7 +201,7 @@ a {
     color: stencilColor("optimizedCheckout-link-color");
     // font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-link-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -209,7 +209,7 @@ a:hover {
   color: stencilColor("contentPage-anchor-fontHoverColor");
   // font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("optimizedCheckout-link-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -477,7 +477,7 @@ button#applyRedeemableButton {
   color: stencilColor("optimizedCheckout-buttonPrimary-color");
   // font-family: stencilFontFamily("optimizedCheckout-buttonPrimary-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("optimizedCheckout-buttonPrimary-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   border-radius: 0;
   font-size: 18px;
@@ -531,7 +531,7 @@ input.button.button--primary.form-prefixPostfix-button--postfix {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -584,7 +584,7 @@ h5.footer-info-heading {
   padding-bottom: 5px;
   // font-family: stencilFontFamily("footerHeaders-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerHeaders-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
@@ -603,7 +603,7 @@ h5.footer-info-heading {
   padding-right: 15px;
   // font-family: stencilFontFamily("footerCopyrightBar-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerCopyrightBar-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -649,7 +649,7 @@ footer a {
 .footer-info-list {
   // font-family: stencilFontFamily("footerInfoList-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerInfoList-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -701,7 +701,7 @@ ul.site-info li {
 footer .navUser-action {
   // font-family: stencilFontFamily("footerInfoList-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerInfoList-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -709,7 +709,7 @@ footer address {
   font-style: normal;
   // font-family: stencilFontFamily("footerInfoList-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerInfoList-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -750,7 +750,7 @@ footer address {
 .footer-top.newsletter h5 {
   // font-family: stencilFontFamily("newsletter-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("newsletter-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 700;
   color: stencilColor("newsletter-fontColor");
   font-size: stencilNumber("newsletter-fontSize");
@@ -1537,7 +1537,7 @@ input#gift-certificate-submit {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -1554,7 +1554,7 @@ input#gift-certificate-submit:hover {
  }
 
  input#gift-certificate-preview {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -1709,14 +1709,14 @@ div#menu.main-nav .nav-align.center .custom-pages-nav li.navPages-item.mobile {
   padding-right: 35px;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: stencilNumber("mainNav-fontSize");
   color: stencilColor("mainNav-fontColor");
 }
 
 .custom-pages-nav a.navPage-subMenu-action.navPages-action {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("mainSubNav-fontSize");
   color: stencilColor("mainSubNav-fontColor");
@@ -1727,12 +1727,12 @@ div#menu.main-nav .nav-align.center .custom-pages-nav li.navPages-item.mobile {
 }
 
 .custom-pages-nav ul#navPages- li a {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
 .custom-pages-nav .navPage-childList.sub-category-visible li a {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("mainSubNav-fontSize");
   color: stencilColor("mainSubNav-fontColor");
@@ -2009,7 +2009,7 @@ a.modal-close.custom-quick-search {
   right: 0;
   text-decoration: none;
   border-bottom: 3px solid;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -2035,7 +2035,7 @@ a.reset.quicksearch {
     right: 32px;
     text-decoration: none;
     border-bottom: 3px solid;
-    font-family: stencilFontFamily("theme-font");
+    font-family: Larsseit;
     font-weight: 700;
     background-color: stencilColor("forms-submitButton-bgColor");
     color: stencilColor("forms-submitButton-fontColor");
@@ -2093,7 +2093,7 @@ a.modal-close.custom-quick-search {
   right: 0;
   text-decoration: none;
   border-bottom: 3px solid;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -2276,7 +2276,7 @@ body.has-activeModal .modal {
   border-radius: 0 !important;
   background-color: stencilColor("card-figcaption-button-background") !important;
   color: stencilColor("card-figcaption-button-color") !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif !important;
+  font-family: Larsseit, Arial, Helvetica, sans-serif !important;
   font-weight: 700 !important;
   width: 100% !important;
 }
@@ -2363,7 +2363,7 @@ fieldset.form-fieldset.redeemable-entry button#applyRedeemableButton {
 }
 
 html div#checkout-app .button {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
   background-color: stencilColor("primary-actionColor");
@@ -4179,7 +4179,7 @@ section.quickSearchResults ul.productGrid {
 }
 
 .mobile-menu .currency-converter .navPages-action {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: stencilNumber("containerHeader-fontSize") !important;
 }
@@ -8347,7 +8347,7 @@ footer ul li {
     color: stencilColor("optimizedCheckout-headingPrimary-color");
     // font-family: stencilFontFamily("optimizedCheckout-headingPrimary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-headingPrimary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -8355,7 +8355,7 @@ footer ul li {
     color: stencilColor("optimizedCheckout-headingSecondary-color");
     // font-family: stencilFontFamily("optimizedCheckout-headingSecondary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-headingSecondary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -8383,7 +8383,7 @@ body {
     color: stencilColor("optimizedCheckout-contentPrimary-color");
     // font-family: stencilFontFamily("optimizedCheckout-contentPrimary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-contentPrimary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -8391,7 +8391,7 @@ body {
     color: stencilColor("optimizedCheckout-contentSecondary-color");
     // font-family: stencilFontFamily("optimizedCheckout-contentSecondary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-contentSecondary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -8406,7 +8406,7 @@ body {
   color: stencilColor("optimizedCheckout-buttonPrimary-color");
   // font-family: stencilFontFamily("optimizedCheckout-buttonPrimary-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("optimizedCheckout-buttonPrimary-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   border-radius: 0;
@@ -8442,7 +8442,7 @@ button#checkout-customer-continue {
     color: stencilColor("optimizedCheckout-buttonPrimary-color");
     // font-family: stencilFontFamily("optimizedCheckout-buttonPrimary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-buttonPrimary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
     font-weight: 700;
     border-radius: 0;
     font-size: 18px;
@@ -8482,7 +8482,7 @@ button#checkout-customer-continue {
     color: stencilColor("optimizedCheckout-buttonSecondary-color");
     // font-family: stencilFontFamily("optimizedCheckout-buttonSecondary-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-buttonSecondary-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
 	  font-weight: 700;
     text-transform: uppercase;
     padding: 5px 15px;
@@ -8503,7 +8503,7 @@ a {
     color: stencilColor("optimizedCheckout-link-color");
     // font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-link-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
 	  font-weight: 400;
 }
 
@@ -8511,7 +8511,7 @@ a:hover {
   color: stencilColor("contentPage-anchor-fontHoverColor");
   // font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("optimizedCheckout-link-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -8779,7 +8779,7 @@ button#applyRedeemableButton {
   color: stencilColor("optimizedCheckout-buttonPrimary-color");
   // font-family: stencilFontFamily("optimizedCheckout-buttonPrimary-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("optimizedCheckout-buttonPrimary-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 700;
   border-radius: 0;
   font-size: 18px;
@@ -8833,7 +8833,7 @@ input.button.button--primary.form-prefixPostfix-button--postfix {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -8886,7 +8886,7 @@ h5.footer-info-heading {
   padding-bottom: 5px;
   // font-family: stencilFontFamily("footerHeaders-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerHeaders-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 700;
 }
 
@@ -8905,7 +8905,7 @@ h5.footer-info-heading {
   padding-right: 15px;
   // font-family: stencilFontFamily("footerCopyrightBar-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerCopyrightBar-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -8951,7 +8951,7 @@ footer a {
 .footer-info-list {
   // font-family: stencilFontFamily("footerInfoList-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerInfoList-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -9002,7 +9002,7 @@ ul.site-info li {
 footer .navUser-action {
   // font-family: stencilFontFamily("footerInfoList-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerInfoList-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -9010,7 +9010,7 @@ footer address {
   font-style: normal;
   // font-family: stencilFontFamily("footerInfoList-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("footerInfoList-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
 
@@ -9051,7 +9051,7 @@ footer address {
 .footer-top.newsletter h5 {
   // font-family: stencilFontFamily("newsletter-font"), Arial, Helvetica, sans-serif;
   // font-weight: stencilFontWeight("newsletter-font");
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
 	font-weight: 700;
   color: stencilColor("newsletter-fontColor");
   font-size: stencilNumber("newsletter-fontSize");
@@ -9839,7 +9839,7 @@ input#gift-certificate-submit {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -9856,7 +9856,7 @@ input#gift-certificate-submit:hover {
  }
 
  input#gift-certificate-preview {
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -10019,14 +10019,14 @@ div#menu.main-nav .nav-align.center .custom-pages-nav li.navPages-item.mobile {
   padding-right: 35px;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: stencilNumber("mainNav-fontSize");
   color: stencilColor("mainNav-fontColor");
 }
 
 .custom-pages-nav a.navPage-subMenu-action.navPages-action {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("mainSubNav-fontSize");
   color: stencilColor("mainSubNav-fontColor");
@@ -10037,12 +10037,12 @@ div#menu.main-nav .nav-align.center .custom-pages-nav li.navPages-item.mobile {
 }
 
 .custom-pages-nav ul#navPages- li a {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
 .custom-pages-nav .navPage-childList.sub-category-visible li a {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: stencilNumber("mainSubNav-fontSize");
   color: stencilColor("mainSubNav-fontColor");
@@ -10316,7 +10316,7 @@ a.modal-close.custom-quick-search {
   right: 0;
   text-decoration: none;
   border-bottom: 3px solid;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -10342,7 +10342,7 @@ a.reset.quicksearch {
     right: 32px;
     text-decoration: none;
     border-bottom: 3px solid;
-    font-family: stencilFontFamily("theme-font");
+    font-family: Larsseit;
     font-weight: 700;
     background-color: stencilColor("forms-submitButton-bgColor");
     color: stencilColor("forms-submitButton-fontColor");
@@ -10400,7 +10400,7 @@ a.modal-close.custom-quick-search {
   right: 0;
   text-decoration: none;
   border-bottom: 3px solid;
-  font-family: stencilFontFamily("theme-font");
+  font-family: Larsseit;
   font-weight: 700;
   background-color: stencilColor("forms-submitButton-bgColor");
   color: stencilColor("forms-submitButton-fontColor");
@@ -10583,7 +10583,7 @@ body.has-activeModal .modal {
   border-radius: 0 !important;
   background-color: stencilColor("card-figcaption-button-background") !important;
   color: stencilColor("card-figcaption-button-color") !important;
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif !important;
+  font-family: Larsseit, Arial, Helvetica, sans-serif !important;
   font-weight: 700 !important;
   width: 100% !important;
 }
@@ -12393,7 +12393,7 @@ section.quickSearchResults ul.productGrid {
 }
 
 .mobile-menu .currency-converter .navPages-action {
-  font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+  font-family: Larsseit, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: stencilNumber("containerHeader-fontSize") !important;
 }
@@ -16522,7 +16522,7 @@ footer ul li {
     color: stencilColor("optimizedCheckout-discountBanner-textColor");
     // font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-link-font");
-    font-family: stencilFontFamily("theme-font"), Arial, Helvetica, sans-serif;
+    font-family: Larsseit, Arial, Helvetica, sans-serif;
   	font-weight: 400;
 
     svg {
