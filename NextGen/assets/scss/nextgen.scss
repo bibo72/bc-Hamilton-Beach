@@ -750,7 +750,7 @@ header .form-prefixPostfix .form-input {
   border-color: stencilColor("input-border-color");
   border-right: none;
   height: 32px !important;
-  font-size: 13px;
+  font-size: 16px;
   font-family: Larsseit, Arial, Helvetica, sans-serif;
 }
 
@@ -759,13 +759,13 @@ header .form-prefixPostfix .form-input {
   border-color: stencilColor("input-border-color");
   border-right: none;
   height: 32px !important;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .footer .form-prefixPostfix .form-input {
   border-radius: 4px !important;
   height: 32px !important;
-  font-size: 13px;
+  font-size: 16px;
   border-right: 1px solid;
   border-color: stencilColor("input-border-color");
 }
@@ -12410,8 +12410,8 @@ ul.productGrid li.product article.card-title-one-line h4 > a {
   overflow: hidden !important;
 }
 article.card-title-two-lines h2.card-title {
-  height: 40px;
-  overflow: hidden;
+  // height: 40px;
+  // overflow: hidden;
 }
 ul.productGrid li.product article.card-title-two-lines h4 > a {
   height: 40px !important;
@@ -17471,7 +17471,11 @@ html.hide-focus-box *:focus {
   // outline: none!important;
 }
 #body [href]:focus,
-html.hide-focus-box #body  [href]:focus {
+html.hide-focus-box #body  [href]:focus,
+#body [tabindex]:not([tabindex="-1"]):focus,
+#body [tabindex][tabindex="-1"]:focus,
+#body button:focus,
+#body .slider-nav .slick-slide:focus {
   outline: none!important;
 }
 ul.sidenav-list {
@@ -17827,14 +17831,14 @@ section.quickSearchResults ul.productGrid {
 
 
 
-#body .slider-nav .slick-slide:focus {
-    // border: 2px solid stencilColor("focus-color") !important;
-    outline: 2px solid stencilColor("focus-color") !important;
-    outline-offset: -2px!important;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-}
+// #body .slider-nav .slick-slide:focus {
+//     // border: 2px solid stencilColor("focus-color") !important;
+//     outline: 2px solid stencilColor("focus-color") !important;
+//     outline-offset: -2px!important;
+//     border-radius: 4px;
+//     -webkit-border-radius: 4px;
+//     -moz-border-radius: 4px;
+// }
 a.main-image-link {
   display: flex !important;
   justify-content: center;
@@ -22631,10 +22635,10 @@ section.quickSearchResults {
 }
 #body.product-page-layout .main-image-container button.slick-next {
   left: initial !important;
-  right: 0 !important;
+  right: -15px !important;
 }
 #body.product-page-layout .main-image-container button.slick-prev {
-  left: 0!important;
+  left: -15px!important;
   right: initial !important;
 }
 .header.is-open div#menu {

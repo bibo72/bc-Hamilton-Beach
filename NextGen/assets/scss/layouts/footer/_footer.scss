@@ -283,24 +283,38 @@ section.footer-info.six-columns article.footer-info-col.footer-info-col--small.f
             .form-fieldset .form-field {
                 margin-bottom: 0;
                 .form-prefixPostfix {
-                input{
-                    margin: 0;
-                    height: 50px !important;
-                }
-                input#nl_email{
-                    text-align: left;
-                    border-radius:  5px 0 0 5px  !important;
-                    border-right-color: #fff ;
-                    padding-left: 20px;
-                    padding-right: 20px;
-                }
-                input.button.button--primary.form-prefixPostfix-button--postfix{
-                    padding: 0 40px;
-                    border: 1px solid #707070;
-                    border-radius: 0px 5px 5px 0px !important;
-                    // background: #0456A8;
-                    font-size: 22px;
-                }
+                    &.wrap {
+                        @media screen and (min-width:1261px) {
+                            flex-wrap: nowrap;
+                        }
+                    }
+                    input{
+                        margin: 0;
+                        height: 50px !important;
+
+                        @media screen and (min-width:1223px) and (max-width:1260px){
+                            margin-bottom: 15px;
+                        }
+                    }
+                    input#nl_email{
+                        text-align: left;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        @media screen and (min-width:1261px) {
+                            border-right-color: #fff ;
+                            border-radius:  5px 0 0 5px  !important;
+                        }
+                    }
+                    input.button.button--primary.form-prefixPostfix-button--postfix{
+                        padding: 0 40px;
+                        border: 1px solid #707070;
+                        // background: #0456A8;
+                        font-size: 22px;
+
+                        @media screen and (min-width:1261px) {
+                            border-radius: 0px 5px 5px 0px !important;
+                        }
+                    }
                 }
             }
         }
@@ -310,7 +324,9 @@ section.footer-info.six-columns article.footer-info-col.footer-info-col--small.f
 
 .social_newsletter.footer-info-col .content.newsletter h3.footer-info-heading {
     font-size: 22px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    line-height: 32px;
+    text-align: left;
 }
 
 .above-footer-creditsBar {
@@ -370,7 +386,7 @@ footer.footer .container{
     }
     ul.accordion{
         border: none;
-        
+        margin-bottom: 25px;
     }
     li.accordion-navigation {
         border: none;
@@ -447,6 +463,12 @@ footer.footer .container{
             }
         }
     }
+    input#nl_email {
+        text-align: center!important;
+    }
+    input#nl_email::placeholder {
+        text-align: center;
+    }
 }
 
 #body.eleven-seventy .global-region.screen-width.above-footer.custom_footer{
@@ -458,7 +480,7 @@ footer.footer .container{
 }
 
 .teconsent-container {
-    text-align: center;
+    // text-align: center;
 }
 
 [data-layout-name="3-columns"] {

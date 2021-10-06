@@ -20,52 +20,6 @@ main.page.blog a.read-more-button,
 html div#checkout-app .button {
     font-family: "Roboto Condensed";
 }
-#side-categories li .navPages-action,
-#side-categories div.brands li a,
-.heroCarousel-title,
-p.heroCarousel-description,
-.shop-by-price .navList li a,
-a.subcategory-link,
-.card-title > a,
-.card-text,
-.productView-details .price-section.price-section--saving.price span,
-.productView-brand a,
-.productView-title,
-dt.productView-info-name,
-dd.productView-info-value,
-.productView-price,
-.productView-price .price-section--minor,
-.price-section--minor,
-.product.main .tabs-contents,
-.tab,
-h3.tab-content-title,
-.productView label.form-label,
-main.page.content h1, main.page.content h2, main.page.content h3, main.page.content h4, main.page.content h5, main.page.content h6,
-main.page.content h1.page-heading,
-main.page.content p,
-main.page.blog h1.page-heading,
-h2.card-title,
-.product-layout .productView-details .productView-reviewLink + .productView-reviewLink,
-.product-layout .productView-details span.productView-reviewLink.reviewList,
-h4.listItem-title,
-.listItem-price,
-#modal .productView.productView--quickView .tab,
-#modal .productView.productView--quickView .tabs-contents,
-h2.card-text.brand,
-h2.card-text.sku,
-.card-text span.price-label,
-span.price-label,
-.card-text abbr,
-article .current-price span.price,
-span.price.price--withTax,
-span.price.price--withoutTax,
-.previewCart  h2.card-title,
-.previewCart  h2.card-title > a,
-.cart-item-name a,
-.breadcrumb,
-.breadcrumb.is-active > .breadcrumb-label {
-    font-family: "Larsseit";
-}
 
 // first HP block
 #sd-image-fc153c69-186b-451f-922a-9f6da0c6616a {
@@ -556,4 +510,7 @@ body.main.eleven-seventy div#side-categories {
 }
 .subcategory-grid {
     display: none!important;
+}
+h2.card-title {
+    height: auto;
 }
