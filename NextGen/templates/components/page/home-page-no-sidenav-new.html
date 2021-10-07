@@ -11,17 +11,19 @@
   <!-- see products carousel -->
   <div class="full-width">
     {{{region name="home_below_top_banner"}}}
-    {{{region name="home_below_featured_products"}}}
+    <div class="main full home no-sidenav">{{{region name="home_below_featured_products"}}}</div>
     {{{region name="home_below_top_products"}}}
     {{{region name="home_below_new_products"}}}
-    <div class="hp-newsletterSubscription" data-section-type="newsletterSubscription">
-        <!-- <h1 class="newsletterSubscription-h1"><div class="title-1">Join our mailing List</div> Stay up to date with product availability</h1> -->
-        <!-- render by header.js -->
-        <h1 class="newsletterSubscription-h1"></h1>
-        {{> components/common/subscription-form}}
-    </div>
+    <div class="main full home no-sidenav">
+      <div class="hp-newsletterSubscription" data-section-type="newsletterSubscription">
+          <!-- <h1 class="newsletterSubscription-h1"><div class="title-1">Join our mailing List</div> Stay up to date with product availability</h1> -->
+          <!-- render by header.js -->
+          <h1 class="newsletterSubscription-h1"></h1>
+          {{> components/common/subscription-form}}
+      </div>
     {{{region name="home_below_bottom_banner"}}}
     {{{region name="home_below_menu"}}}
+    </div>
   </div>
 
 <div class="main full home no-sidenav">

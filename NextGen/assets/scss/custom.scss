@@ -131,7 +131,7 @@ html div#checkout-app .button {
 }
 .learn-more-modal-outer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     @media only screen and (max-width : 767px) {
         margin: 0 3rem;
         margin-bottom: 50px;
@@ -198,7 +198,6 @@ html div#checkout-app .button {
     box-shadow: 0px 3px 6px #d3d3d3;
     background-color: #fff;
     position: relative;
-    left: 150px;
     top: -200px;
     h1 {
         margin-bottom: 40px;
@@ -301,7 +300,6 @@ html div#checkout-app .button {
 #sd-image-30621b37-8d54-422f-aa1d-66e4e35b6878 {
     max-width: 792px !important;
     max-height: 650px !important;
-    margin-left: 10rem !important;
     @media only screen and (min-width : 1800px) {
         margin-left: 20rem !important;
     }
@@ -329,7 +327,6 @@ html div#checkout-app .button {
 .outer-hp-fourth-block {
     display: flex;
     justify-content: flex-end;
-    margin-right: 10rem;
     @media only screen and (min-width : 1800px) {
         margin-right: 20rem;
     }
@@ -400,7 +397,6 @@ html div#checkout-app .button {
     width: 132px !important;
     height: 103px !important;
     position: relative;
-    right: -20px;
     @media only screen and (min-width : 1800px) {
         right: -50px;
     }
@@ -415,7 +411,6 @@ html div#checkout-app .button {
 #sd-image-3a72f44c-f5e8-48c5-a7a9-f49a42188946 {
     max-width: 792px !important;
     max-height: 650px !important;
-    margin-right: 10rem !important;
     @media only screen and (min-width : 1800px) {
         margin-right: 20rem !important;
     }
@@ -429,7 +424,6 @@ html div#checkout-app .button {
         .hp-fourth-block {
             max-width: 282px;
         }
-        margin-left: 10rem !important;
         margin-right: 0 !important;
         justify-content: flex-start;
         @media only screen and (min-width : 1800px) {
