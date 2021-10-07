@@ -300,9 +300,6 @@ html div#checkout-app .button {
 #sd-image-30621b37-8d54-422f-aa1d-66e4e35b6878 {
     max-width: 792px !important;
     max-height: 650px !important;
-    @media only screen and (min-width : 1800px) {
-        margin-left: 20rem !important;
-    }
     @media only screen and (max-width : 767px) {
         display: none !important;
     }
@@ -320,16 +317,10 @@ html div#checkout-app .button {
     left: -2em;
     width: 132px !important;
     height: 103px !important;
-    @media only screen and (min-width : 1800px) {
-        left: -5em;
-    }
 }
 .outer-hp-fourth-block {
     display: flex;
     justify-content: flex-end;
-    @media only screen and (min-width : 1800px) {
-        margin-right: 20rem;
-    }
     .hp-fourth-block {
         max-width: 282px;
         h1 {
@@ -397,9 +388,6 @@ html div#checkout-app .button {
     width: 132px !important;
     height: 103px !important;
     position: relative;
-    @media only screen and (min-width : 1800px) {
-        right: -50px;
-    }
     @media only screen and (max-width : 767px) {
         display: none !important;
     }
@@ -411,9 +399,6 @@ html div#checkout-app .button {
 #sd-image-3a72f44c-f5e8-48c5-a7a9-f49a42188946 {
     max-width: 792px !important;
     max-height: 650px !important;
-    @media only screen and (min-width : 1800px) {
-        margin-right: 20rem !important;
-    }
     @media only screen and (max-width : 767px) {
         display: none !important;
     }
@@ -426,10 +411,6 @@ html div#checkout-app .button {
         }
         margin-right: 0 !important;
         justify-content: flex-start;
-        @media only screen and (min-width : 1800px) {
-            margin-left: 20rem !important;
-            margin-right: 0 !important;
-        }
     }
 }
 #sd-image-85735771-f5e0-4fd7-93cb-0ae3cbcb14bf {
