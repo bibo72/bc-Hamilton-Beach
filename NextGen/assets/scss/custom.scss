@@ -132,6 +132,10 @@ html div#checkout-app .button {
 .learn-more-modal-outer {
     display: flex;
     justify-content: center;
+    @media only screen and (max-width : 767px) {
+        margin: 0 3rem;
+        margin-bottom: 50px;
+    }
     .learn-more-modal {
         max-width: 384px;
         max-height: 203px;
@@ -139,6 +143,9 @@ html div#checkout-app .button {
             font-size: 48px;
             font-weight: bold;
             line-height: 1.2;
+            @media only screen and (max-width : 767px) {
+                line-height: 52px;
+            }
             color: #0056A8;
             margin-bottom: 1em;
             .title-1 {
@@ -341,6 +348,8 @@ html div#checkout-app .button {
         h5 {
             font-size: 12px;
             color: #323232;
+            font-style: italic;
+            text-transform: none;
         }
     }
 }
@@ -415,10 +424,10 @@ html div#checkout-app .button {
     }
 }
 .home.eleven-seventy.slider-full-width-in-container div[data-content-region="home_below_menu"] {
-    margin-top: 10rem;
+    margin-top: 200px;
     .outer-hp-fourth-block {
         .hp-fourth-block {
-            max-width: 350px;
+            max-width: 282px;
         }
         margin-left: 10rem !important;
         margin-right: 0 !important;
@@ -513,4 +522,8 @@ body.main.eleven-seventy div#side-categories {
 }
 h2.card-title {
     height: auto;
+}
+// mobile QA
+@media only screen and (max-width: 800px) {
+    #body.main.home .home-below-hero { padding: 0; }
 }
