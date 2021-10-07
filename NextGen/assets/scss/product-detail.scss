@@ -114,7 +114,8 @@
         padding: 0;
         border-top: none;
         border-radius: 10px;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        overflow: hidden;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     }
     .product-top-container {
         display: flex;

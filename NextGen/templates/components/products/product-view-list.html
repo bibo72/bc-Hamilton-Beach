@@ -276,10 +276,10 @@
         <!-- TABS   -->
         <article class="productView-description"{{#if schema}} itemprop="description"{{/if}}>
             <ul class="tabs" data-tab>
-                <li class="tab overview is-active">
+                <!-- <li class="tab overview is-active">
                     <a class="tab-title" href="#tab-description-Overview">Overview</a>
-                </li>
-                <li class="tab feature">
+                </li> -->
+                <li class="tab feature is-active">
                     <a class="tab-title" href="#tab-description-Features">Features</a>
                 </li>
                 <!-- {{#if product.warranty}}
@@ -315,12 +315,12 @@
     
             <!-- TAB CONTENTS -->
             <div class="tabs-contents">
-                <div class="tab-content overview is-active" id="tab-description-Overview">
+                <div class="tab-content overview is-active" id="tab-description-Overview" style="display: none;">
                     <h3 class="tab-content-title tab-content-title-Overview">Overview</h3>
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}
                 </div>
-                <div class="tab-content features" id="tab-description-Features">
+                <div class="tab-content features is-active" id="tab-description-Features">
                     <h3 class="tab-content-title tab-content-title-Features">Features</h3>
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}
@@ -335,9 +335,9 @@
                         <h3 class="tab-content-title tab-content-Custom">Specifications</h3>
                         <div class="customFields-container">
                             {{#each product.custom_fields}}
-                            {{#unless name '==' 'Short Description'}}
+                            {{#if name '==' 'Short Description'}}{{else}}
                             <div class="moblie-content"><span class="custom_fieldsName">{{name}}:</span><span class="custom_fieldsValue">{{value}}</span></div>
-                            {{/unless}}
+                            {{/if}}
                         {{/each}}
                         </div>
                 </div>
