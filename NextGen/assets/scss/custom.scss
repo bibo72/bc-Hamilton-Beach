@@ -502,6 +502,10 @@ body.main:not(.nine-sixty) .header-container.in-container {
 }
 ul.breadcrumbs {
     width: 100%;
+    margin-bottom: 34px;
+    @media screen and (min-width : 767px) {
+        margin-bottom: 60px;
+    }
 }
 .container.main {
     margin-top: 0 !important;
@@ -512,6 +516,15 @@ h1.page-heading {
 }
 main.page.content h1.page-heading {
     font-weight: 700;
+    font-size: 36px;
+    color: #0056A8;
+    line-height: 1.2;
+    margin-bottom: 34px;
+
+    @media screen and (min-width: 767px) {
+        font-size: 48px;
+        margin-bottom: 44px;
+    }
 }
 // plp
 body.main.eleven-seventy div#side-categories {
@@ -526,4 +539,22 @@ h2.card-title {
 // mobile QA
 @media only screen and (max-width: 800px) {
     #body.main.home .home-below-hero { padding: 0; }
+}
+
+// press kits
+[data-layout-name="press-kits-box"] {
+    div[data-sub-layout] {
+        &:last-child {
+            
+            @media only screen and (min-width: 701px) {
+                padding-left: 30px;
+            }
+            @media only screen and (min-width: 1261px) {
+                padding-left: 126px;
+            }
+        }
+    }
+}
+[role="button"] a {
+    font-family: "Roboto Condensed"!important;
 }

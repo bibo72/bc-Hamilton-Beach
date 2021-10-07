@@ -170,7 +170,6 @@
 
 //the custom
 .footer-info.six-columns{
-    margin: 0 120px;
     padding-bottom: 64px;
     display: grid;
     grid-template-columns: 1.5fr 2fr 1.5fr 3fr;
@@ -207,7 +206,6 @@ body.main.eleven-seventy footer.footer{
    
     .container{
         margin-bottom: 0;
-        max-width: max-content !important;
         .footer-info-col{
             .footer-info-heading{
                 // color: #119EDD !important;
@@ -473,7 +471,6 @@ footer.footer .container{
 
 #body.eleven-seventy .global-region.screen-width.above-footer.custom_footer{
     background-color: #EBF8FC;
-    // padding: 0 120px;
     .global-region.body-width{
         // max-width: none;
     }
