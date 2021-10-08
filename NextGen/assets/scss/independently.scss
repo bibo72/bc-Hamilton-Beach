@@ -1,0 +1,23 @@
+[data-sub-layout-container="713ac16e-8d07-4c49-aeb8-6b6196034d60"] {
+    margin-bottom: 150px;
+}
+[data-sub-layout-container="27967a75-f5a1-48ee-973b-51064f675fd6"] {
+    margin-bottom: 150px;
+}
+[data-sub-layout-container="32511f3b-f86e-486e-9464-910cd6dc07d9"] {
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 1024px) {
+    [data-sub-layout-container="713ac16e-8d07-4c49-aeb8-6b6196034d60"] {
+        margin-bottom: 100px;
+    }
+    [data-sub-layout-container="27967a75-f5a1-48ee-973b-51064f675fd6"] {
+        margin-bottom: 100px;
+    }
+    [data-sub-layout-container="32511f3b-f86e-486e-9464-910cd6dc07d9"] {
+        margin-bottom: 50px;
+    }
+    [data-sub-layout-container="27967a75-f5a1-48ee-973b-51064f675fd6"] {
+        flex-direction: column-reverse;
+    }
+}
