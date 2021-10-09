@@ -551,6 +551,7 @@ main.page.content .contactUs {
         justify-content: space-between;
         align-items: center;
         width: 90%;
+        
         p{
             width: 60%;
             cursor: default;
@@ -559,12 +560,25 @@ main.page.content .contactUs {
             font-weight: bold;
             cursor: default;
         }
+        @media (max-width:1024px) {
+            display: block;
+            width: 100%;
+            div{
+                display: inline-block;
+            }
+            p{
+                width: 100%;
+            }
+        }
 
     }
     .contactUs_icon{
         svg{
             width: 20px;
             height: 20px;
+        }
+        @media (max-width:1024px) {
+            margin-left: 20px;
         }
     }
 }
