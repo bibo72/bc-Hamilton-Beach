@@ -4,4 +4,8 @@ export default function(){
         const $li = $(this).parents('.accordion-navigation');
         $li.toggleClass('is-open');
     });
+    $('.contactUs_icon').html(
+        `<svg><use xlink:href="#icon-speechBubbles" /></svg>`
+    );
+    console.log($('.contactUs_icon'));
 }
