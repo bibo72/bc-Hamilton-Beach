@@ -1,23 +1,59 @@
 [data-sub-layout-container="713ac16e-8d07-4c49-aeb8-6b6196034d60"] {
+    margin-top: 50px;
     margin-bottom: 150px;
+    flex-wrap: nowrap !important;
 }
 [data-sub-layout-container="27967a75-f5a1-48ee-973b-51064f675fd6"] {
     margin-bottom: 150px;
+    flex-wrap: nowrap !important;
 }
 [data-sub-layout-container="32511f3b-f86e-486e-9464-910cd6dc07d9"] {
     margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-sub-layout="314933fd-5248-4eed-b7d6-df49f3430d73"] {
+    margin-left: 126px;
+}
+[data-sub-layout="48e4ad6a-b34b-4edb-9eee-e28526002014"] {
+    margin-right: 126px;
+}
+[data-sub-layout="aae3a3c2-ca2d-4bf0-8d0f-bb3a96394dc4"] {
+    margin-left: 126px;
 }
 @media screen and (max-width: 1024px) {
+    [data-sub-layout="314933fd-5248-4eed-b7d6-df49f3430d73"] {
+        margin-left: 126px !important;
+    }
+    [data-sub-layout="48e4ad6a-b34b-4edb-9eee-e28526002014"] {
+        margin-right: 126px !important;
+    }
+    [data-sub-layout="aae3a3c2-ca2d-4bf0-8d0f-bb3a96394dc4"] {
+        margin-left: 126px !important;
+    }
+}
+@media screen and (max-width: 700px) {
     [data-sub-layout-container="713ac16e-8d07-4c49-aeb8-6b6196034d60"] {
         margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column;
     }
     [data-sub-layout-container="27967a75-f5a1-48ee-973b-51064f675fd6"] {
         margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column-reverse;
     }
     [data-sub-layout-container="32511f3b-f86e-486e-9464-910cd6dc07d9"] {
         margin-bottom: 50px;
+        flex-wrap: wrap !important;
+        flex-direction: column;
     }
-    [data-sub-layout-container="27967a75-f5a1-48ee-973b-51064f675fd6"] {
-        flex-direction: column-reverse;
+    [data-sub-layout="314933fd-5248-4eed-b7d6-df49f3430d73"] {
+        margin-left: 0 !important;
+    }
+    [data-sub-layout="48e4ad6a-b34b-4edb-9eee-e28526002014"] {
+        margin-right: 0 !important;
+    }
+    [data-sub-layout="aae3a3c2-ca2d-4bf0-8d0f-bb3a96394dc4"] {
+        margin-left: 0 !important;
     }
 }
