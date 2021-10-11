@@ -87,12 +87,14 @@ html div#checkout-app .button {
 }
 @media only screen and (max-width : 767px) {
     .see-products-modal-outer {
+        justify-content: flex-start;
         .see-products-modal {
             max-width: 318px;
             max-height: 258px;
             margin: 0;
             position: relative;
             top: -110px;
+            left: 36px;
             .title {
                 font-size: 36px;
                 margin-top: 49px;
