@@ -533,20 +533,23 @@ h2.card-title {
 //contact us
 main.page.content .contactUs {
     h1.page-heading{
-        color: #3c3936;
+        // color: #0056a8;
         font-size: 32px;
         margin-bottom: 0;
     }
     p{
         font-size: 18px;
         cursor: default;
+        // color: #323232;
     }
     .contact_us_message{
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        
+        a.button{
+            font-size: 22px;
+        }
         p{
             width: 60%;
             cursor: default;
@@ -554,6 +557,10 @@ main.page.content .contactUs {
         .tel{
             font-weight: bold;
             cursor: default;
+            span{
+             font-size: 22px;   
+            }
+            
         }
         @media (max-width:1024px) {
             display: block;
@@ -587,5 +594,4 @@ main.page.content .contactUs {
 h1.page-heading.category{
     font-size: 48px;
     line-height: 57px;
-    color: #0054a8;
 }
