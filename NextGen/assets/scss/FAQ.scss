@@ -19,13 +19,14 @@
         font-weight: bold !important;
         padding: 0;
         margin: 22px 0 30px 0;
-        color: #0056A8 !important;
+        color: #0056A7 !important;
+        padding-top: 40px;
     }
     p {
         margin: 0 0 17px 0;
         padding: 0;
         font-family: "Larsseit Alt Medium",sans-serif;
-        color: #4A4E50;
+        color: #323232 !important;
         font-size: 16px !important;
     }
 }
@@ -115,4 +116,10 @@
         color: #0056A8 !important;
         text-decoration: underline !important;
     }
+    p {
+        color: #323232 !important;
+    }
+}
+.faq-page p.sub-page-title {
+    color: #323232 !important;
 }
