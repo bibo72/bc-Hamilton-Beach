@@ -220,6 +220,7 @@
     }
 
     .mobileMenu-toggleIcon {
+        font-size: 0;
         top: remCalc(27);
         transition: background-color 10ms ease-in 100ms;
     }
@@ -637,7 +638,7 @@ a.modal-close.custom-quick-search {
             padding-left: 21px !important;
         }
         span.down-arrow{
-            top:10px;
+            top:5px;
             transform: rotate(-90deg);
         }
 
@@ -650,7 +651,7 @@ a.modal-close.custom-quick-search {
         }
         span.down-arrow{
             position: absolute;
-            top: 10px;
+            top: 5px;
             right: auto;
             margin-left: 15px;
         }
