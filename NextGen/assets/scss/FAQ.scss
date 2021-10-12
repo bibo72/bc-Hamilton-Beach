@@ -123,3 +123,8 @@
 .faq-page p.sub-page-title {
     color: #323232 !important;
 }
+@media only screen and (max-width : 1024px) {
+    .page-learn-content h1 {
+        padding-top: 50px;
+    }
+}
