@@ -65,8 +65,8 @@ html div#checkout-app .button {
                 color: #026CD1;
                 background-color: #026CD1;
             }
-            max-width: 230px;
-            height: 70px;
+            max-width: 221px;
+            height: 59px;
             border-radius: 3px;
             margin-left: 70px;
             margin-top: 50px;
@@ -87,14 +87,14 @@ html div#checkout-app .button {
 }
 @media only screen and (max-width : 767px) {
     .see-products-modal-outer {
-        margin-right: auto;
-        justify-content: center;
+        justify-content: flex-start;
         .see-products-modal {
             max-width: 318px;
-            max-height: 290px;
+            max-height: 258px;
             margin: 0;
             position: relative;
             top: -110px;
+            left: 36px;
             .title {
                 font-size: 36px;
                 margin-top: 49px;
@@ -131,10 +131,8 @@ html div#checkout-app .button {
 }
 .learn-more-modal-outer {
     display: flex;
-    justify-content: flex-start;
     @media only screen and (max-width : 767px) {
-        margin: 0 3rem;
-        margin-bottom: 50px;
+        margin-left: 36px;
     }
     .learn-more-modal {
         max-width: 384px;
@@ -252,8 +250,7 @@ html div#checkout-app .button {
     .hp-newsletterSubscription {
         max-width: 318px;
         max-height: 313px;
-        left: auto;
-        margin: 0 auto;
+        left: 36px;
         position: relative;
         top: -150px;
         justify-content: center;
@@ -353,13 +350,11 @@ html div#checkout-app .button {
 }
 @media only screen and (max-width : 767px) {
     .outer-hp-fourth-block {
-        margin-right: 0;
-        justify-content: center;
+        justify-content: flex-start;
         .hp-fourth-block {
-            max-width: 767px;
-            margin-left: 1rem;
-            margin-right: 1rem; 
-            margin-bottom: 2rem;
+            position: relative;
+            left: 36px;
+            margin-bottom: 40px;
         }
     }
     #sd-image-14928544-23c4-4e16-8af6-aeb556b0df73 {
@@ -404,7 +399,7 @@ html div#checkout-app .button {
     }
 }
 .home.eleven-seventy.slider-full-width-in-container div[data-content-region="home_below_menu"] {
-    margin-top: 200px;
+    margin-top: 140px;
     .outer-hp-fourth-block {
         .hp-fourth-block {
             max-width: 282px;
@@ -582,7 +577,12 @@ main.page.content .contactUs {
         }
     }
 }
-
+// for homepage slide effect
+#body.slider-full-width.home-layout .container.main {
+    @media only screen and (max-width : 767px) {
+        margin-bottom: 0 !important;
+    }
+}
 //category  h1.page-heading 
 h1.page-heading.category{
     font-size: 48px;
