@@ -7,20 +7,23 @@
       <ul class="navBar-section account-navigation">
       {{#each page.sub_pages}}
         <li class="navBar-item">
-            <a class="navBar-action" href="{{url}}">
-                <div class="img_box " data-snakecase-title="{{concat (snakecase title) '.jpg'}}">
-                    <img src="{{concat '/product_images/uploaded_images/' (concat (dashcase title) '.jpg')}}" >    
-                </div>
-                <div class="item-info">
-                    <span class="title">{{title}}</span>  
-                    <span class="icon_right">
-                        <svg>
-                            <use xlink:href="#icon-chevron-right" />
-                        </svg>
-                    </span>
-                </div>
-                
-            </a>
+            <div class="navBar-item-inner">
+                <a class="navBar-action" href="{{url}}">
+                    <div class="img_box " data-snakecase-title="{{concat (snakecase title) '.jpg'}}">
+                        <div class="image-container" style="background-image: url({{concat '/product_images/uploaded_images/nav-' (concat (dashcase title) '.jpg')}})"></div>
+                        <!-- <img src="{{concat '/product_images/uploaded_images/' (concat (dashcase title) '.jpg')}}" >     -->
+                    </div>
+                    <div class="item-info">
+                        <span class="title">{{title}}</span>  
+                        <span class="icon_right">
+                            <svg>
+                                <use xlink:href="#icon-chevron-right" />
+                            </svg>
+                        </span>
+                    </div>
+                    
+                </a>
+            </div>
         </li>
       {{/each}}
       </ul>
