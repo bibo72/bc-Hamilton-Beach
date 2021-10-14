@@ -634,3 +634,14 @@ footer.footer .container{
     }
     
 }
+
+#launcher{
+    bottom: 0 !important;
+    margin: 20px 25px !important;
+    right: 50px !important;
+    opacity: 0 !important;
+
+}
+#launcher.visible{
+    opacity: 1 !important;
+}
