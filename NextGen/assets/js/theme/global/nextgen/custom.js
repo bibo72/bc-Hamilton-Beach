@@ -85,8 +85,12 @@ $( ".mobile-menu.navPages-container .navPage-subMenu span.down-arrow" ).on ('cli
   $(window).scroll(function() {
       if ($(this).scrollTop() > 100 ) {
           $('.backtoTop').addClass("visible");
+          $('#launcher').addClass("visible");
+
       } else {
           $('.backtoTop').removeClass("visible");
+          $('#launcher').removeClass("visible");
+
       }
   });
 
