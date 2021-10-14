@@ -170,7 +170,7 @@
 
 //the custom
 .footer-info.six-columns{
-    padding-bottom: 64px;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1.5fr 2fr 1.5fr 3fr;
     &:after,&:before{
@@ -209,17 +209,24 @@ body.main.eleven-seventy footer.footer{
         .footer-info-col{
             .footer-info-heading{
                 // color: #119EDD !important;
-                font-size: remCalc(18px);
+                font-size: remCalc(20px);
                 font-family: "Larsseit";
                 font-weight: bold;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
+                text-transform: uppercase !important;
+                padding: 0;
+
             }
             .footer-info-list li,.footer-info-list a,.regular address, .contact-item{
                 color: #3e3f3f !important;
                 font-size: remCalc(18px);
                 font-family: "Larsseit"!important;
-                line-height: 48px;
+                // line-height: 48px;
                 margin: 0;
+                line-height: normal;
+            }
+            .footer-info-list li{
+                padding-bottom: 10px;   
             }
         }
     }
@@ -595,8 +602,8 @@ footer.footer .container{
     }
     .topcontrol_left{
         .icon_accessibe{
-            height: 50px;
-            width: 50px;
+            height: 45px;
+            width: 45px;
         }
     }
     .topcontrol_right{
@@ -623,8 +630,8 @@ footer.footer .container{
         .backtoTop_btn{
             background: #0056A8;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -640,6 +647,7 @@ footer.footer .container{
     margin: 20px 25px !important;
     right: 50px !important;
     opacity: 0 !important;
+    height: 45px !important;
 
 }
 #launcher.visible{
