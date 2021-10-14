@@ -8,7 +8,7 @@
     flex-wrap: nowrap !important;
 }
 [data-sub-layout-container="32511f3b-f86e-486e-9464-910cd6dc07d9"] {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     flex-wrap: nowrap !important;
 }
 [data-sub-layout-container="a83f4905-45f2-46fc-9966-1f562220006c"] {
@@ -177,9 +177,16 @@
     [data-sub-layout="0cd431c3-0189-4ed0-9395-368706a337cf"] {
         margin-right: 0 !important;
     }
+    [data-sub-layout="b5169845-afa5-487b-80b5-77b5b52d8368"] {
+        margin-bottom: 30px;
+    }
 }
 [data-layout-name="3-columns"] a {
     text-decoration: none;
+
+    &:hover {
+        color: #323232;
+    }
 }
 .main.category-layout.eleven-seventy.base-layout.category-layout-no-sidevav.sidenav-inactive.shop-by-price-disabled.facetedSearch-disabled article.card.brand-sku-active div.card-sku-brand-section {
     height: 23px;

@@ -215,6 +215,9 @@ body.main.eleven-seventy footer.footer{
                 margin-bottom: 25px;
                 text-transform: uppercase !important;
                 padding: 0;
+                a {
+                    font-size: 20px;
+                }
 
             }
             .footer-info-list li,.footer-info-list a,.regular address, .contact-item{
@@ -226,7 +229,12 @@ body.main.eleven-seventy footer.footer{
                 line-height: normal;
             }
             .footer-info-list li{
-                padding-bottom: 10px;   
+                padding-bottom: 14px;   
+            }
+            &.social_newsletter {
+                .footer-info-heading {
+                    text-transform: none!important;
+                }
             }
         }
     }
@@ -642,14 +650,17 @@ footer.footer .container{
     
 }
 
+.copyright p {
+    font-size: 14px;
+}
+
 #launcher{
     bottom: 0 !important;
     margin: 20px 25px !important;
     right: 50px !important;
-    opacity: 0 !important;
-    height: 45px !important;
+    // opacity: 0 !important;
 
 }
 #launcher.visible{
-    opacity: 1 !important;
+    // opacity: 1 !important;
 }
