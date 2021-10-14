@@ -6,7 +6,22 @@
   <nav class="navBar navBar--sub">
       <ul class="navBar-section account-navigation">
       {{#each page.sub_pages}}
-          <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+        <li class="navBar-item">
+            <a class="navBar-action" href="{{url}}">
+                <div class="img_box " data-snakecase-title="{{concat (snakecase title) '.jpg'}}">
+                    <img src="{{concat '/product_images/uploaded_images/' (concat (dashcase title) '.jpg')}}" >    
+                </div>
+                <div class="item-info">
+                    <span class="title">{{title}}</span>  
+                    <span class="icon_right">
+                        <svg>
+                            <use xlink:href="#icon-chevron-right" />
+                        </svg>
+                    </span>
+                </div>
+                
+            </a>
+        </li>
       {{/each}}
       </ul>
   </nav>
