@@ -90,7 +90,7 @@ $( ".mobile-menu.navPages-container .navPage-subMenu span.down-arrow" ).on ('cli
       }
   });
 
-  $('.backtoTop').click(function(){
+  $('.backtoTop_btn').click(function(){
   $("html, body").animate({ scrollTop: 0 }, 600);
   return false;
   });

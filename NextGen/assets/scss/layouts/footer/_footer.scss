@@ -584,3 +584,53 @@ footer.footer .container{
         }
     }
 }
+
+.footer .backtoTop {
+    display: inline-flex;
+    width: 100%;
+    right: 0;
+    padding: 0 20px;
+    .topcontrol_left,.topcontrol_right{
+        width: 50%;
+    }
+    .topcontrol_left{
+        .icon_accessibe{
+            height: 50px;
+            width: 50px;
+        }
+    }
+    .topcontrol_right{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        .help{
+            cursor: pointer;
+            background: #0056A8;
+            padding: 10px 30px;
+            border-radius: 26px;
+            color: #fff;
+            font-size: 20px;
+            margin-right: 5px;
+            font-family: 'Larsseit';
+            font-weight: bold;
+            .icon_help{
+                width: 20px;
+                height: 20px;
+                fill: #FFFFFF;
+                margin-right: 7px;
+            }
+        }
+        .backtoTop_btn{
+            background: #0056A8;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+        }
+    }
+    
+}

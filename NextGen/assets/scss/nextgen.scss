@@ -1591,12 +1591,16 @@ a.lone-star-templates {
   opacity: 0;
   bottom: 60px;
   right: 30px;
-  cursor: pointer;
+  // cursor: pointer;
   position: fixed;
   transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
 }
+.backtoTop .help,.backtoTop .backtoTop_btn{
+  cursor: pointer;
+}
+
 
 .backtoTop.visible {
   opacity: 1;
@@ -1617,10 +1621,9 @@ a.lone-star-templates {
 svg.icon.back-to-top-icon {
   // fill: stencilColor("backToTopColor");
   // fill: stencilColor("primary-actionColor");
-  fill: stencilColor("primary-actionColor");
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
+  fill: #fff;
+  height: 20px;
+  width: 20px;
 }
 
 svg.icon.back-to-top-icon:hover {
@@ -17656,7 +17659,10 @@ body.hasAdminBar .header {
     margin-top: 2.5rem !important;
 }
 #body.slider-full-width .body.content {
-  margin-top: 0 !important;
+  margin-top: 100px !important;
+  @media (max-width:800px) {
+    margin-top: 66px !important;
+  }
 }
 #body.slider-full-width.hasAdminBar .body.content {
   margin-top: 0 !important;
