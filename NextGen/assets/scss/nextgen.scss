@@ -1018,6 +1018,10 @@ header .form-fieldset {
   color: stencilColor("mainNav-fontHoverColor") !important;
   // color: stencilColor("mainNav-fontHoverColor") !important;
 }
+.main-nav-container.quick-override .custom-pages-nav a.button:hover {
+  color: #fff !important;
+  // color: stencilColor("mainNav-fontHoverColor") !important;
+}
 .main-nav-container #menu .navPage-subMenu a:hover {
   color: stencilColor("mainSubNav-fontHoverColor") !important;
 }
