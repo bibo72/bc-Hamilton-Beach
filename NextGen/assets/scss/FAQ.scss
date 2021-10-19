@@ -136,6 +136,7 @@
     margin: 0 -12.5px!important;
     font-size: 0;
     text-align: left;
+   
     .navBar-item{
         display: inline-block;
         vertical-align: top;
@@ -162,6 +163,14 @@
             text-transform: none;
             border-radius: 10px;
             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            &:hover{
+                .icon_right{
+                    background: #0056A8;
+                    svg{
+                        fill: #fff !important;
+                    }
+                }
+            }
         }
         .img_box{
             position: relative;
@@ -181,6 +190,7 @@
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+                
             }
             img{
                 border: 1px solid #0456A8;

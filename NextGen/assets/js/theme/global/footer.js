@@ -8,4 +8,5 @@ export default function(){
     //     `<svg><use xlink:href="#icon-speechBubbles" /></svg>`
     // );
     // console.log($('.contactUs_icon'));
+
 }
