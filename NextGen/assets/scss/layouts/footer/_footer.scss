@@ -677,3 +677,7 @@ footer.footer .container{
 #launcher.visible{
     // opacity: 1 !important;
 }
+
+.newsletter [data-section-type="newsletterSubscription"]>h3.footer-info-heading,.contact_us>a,.contact_us>a:hover{
+    color: #119eed !important;
+}

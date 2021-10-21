@@ -436,6 +436,11 @@ header.header{
                         transform: rotate(180deg);
                     }
                 }
+                li.contact_us {
+                    > a,>a:hover{
+                        color: #119edd !important;
+                    }
+                }
             }
             
         }
@@ -709,7 +714,7 @@ div#menu.mobile-menu .navPage-subMenu{
         padding-top: 3rem;
         .newsletter{
             h3.footer-info-heading{
-                color: #25AAE1;
+                color: #119eed;
                 font-size: remCalc(22px);
                 font-family: "Larsseit";
                 margin-bottom: 20px;
