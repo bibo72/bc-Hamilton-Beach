@@ -10,7 +10,7 @@ blog:
 
 <section class="page subscribed">
     <div class="page-content">
-        <h1 class="page-heading">
+        <h1 class="page-heading" data-subscription data-subscription-success="{{#unless subscription.error}}true{{/unless}}" data-subscription-message="{{#if subscription.error}}{{subscription.error}}{{else}}{{lang 'newsletter.subscribed_message'}}{{/if}}">
             {{#if subscription.error}}
                 {{lang 'newsletter.subscribed_heading_error'}}
             {{else}}
