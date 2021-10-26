@@ -22,11 +22,19 @@ function triggerContactForm($submitButton, email, message) {
         }
     });
 }
-function newsletterSubscribe() {
+function swithToConfirmationPage(type) {
+    if (type === 'notify-me') {
+        return window.location.href = '/notify-me-confirmation/';
+    }
+    window.location.href = '/newsletter-confirmation/';
+}
+function newsletterSubscribe_old() {
     $('body').on('submit', 'form[action="/subscribe.php"]', event => {
         event.preventDefault();
         const $form = $(event.currentTarget);
         const $submitButton = $form.find('input[type="submit"]');
+        const formType = $form.attr('data-type');
+        sessionStorage.setItem('newsletterType', formType);
         const email = $(event.currentTarget).find('#nl_email').val();
         if (!email) return false;
         $submitButton.prop('disabled', true);
@@ -42,7 +50,8 @@ function newsletterSubscribe() {
                 if (subscriptionTag.length) {
                     const message = subscriptionTag.attr('data-subscription-message');
                     if (subscriptionTag.attr('data-subscription-success') === 'true') {
-                        triggerContactForm($submitButton, email, message);
+                        // triggerContactForm($submitButton, email, message);
+                        swithToConfirmationPage(formType);
                     } else {
                         swal({
                             text: message,
@@ -65,6 +74,15 @@ function newsletterSubscribe() {
                 });
             }
         });
+    });
+}
+function newsletterSubscribe() {
+    $('body').on('submit', 'form[action="/subscribe.php"]', event => {
+        const $form = $(event.currentTarget);
+        const formType = $form.attr('data-type');
+        sessionStorage.setItem('newsletterType', formType);
+        const email = $(event.currentTarget).find('#nl_email').val();
+        if (!email) return false;
     });
 }
 export default function(){

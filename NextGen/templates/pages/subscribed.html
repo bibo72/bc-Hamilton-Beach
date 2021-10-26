@@ -6,6 +6,18 @@ blog:
     recent_posts:
         limit: {{theme_settings.footer_blog_posts_count}}
 ---
+{{#partial "head"}}
+{{#unless subscription.error}}
+<script>
+    if (sessionStorage.getItem('newsletterType') === 'notify-me') {
+        window.location.replace('/notify-me-confirmation/');
+    } else {
+        window.location.replace('/newsletter-confirmation/');
+    }
+</script>
+{{/unless}}
+{{/partial}}
+
 {{#partial "page"}}
 
 <section class="page subscribed">
