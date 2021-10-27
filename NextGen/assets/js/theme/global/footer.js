@@ -77,6 +77,11 @@ function newsletterSubscribe_old() {
     });
 }
 function newsletterSubscribe() {
+    $('body').on('click', '[data-reveal-id="getUpdateModal"]', event => {
+        event.preventDefault();
+        const sku = $(event.currentTarget).attr('data-product-sku') || '';
+        sessionStorage.setItem('newsletterSku', sku);
+    });
     $('body').on('submit', 'form[action="/subscribe.php"]', event => {
         const $form = $(event.currentTarget);
         const formType = $form.attr('data-type');

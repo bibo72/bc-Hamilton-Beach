@@ -10,7 +10,12 @@ blog:
 {{#unless subscription.error}}
 <script>
     if (sessionStorage.getItem('newsletterType') === 'notify-me') {
-        window.location.replace('/notify-me-confirmation/');
+        var notifySku = sessionStorage.getItem('newsletterSku');
+        if (notifySku) {
+            window.location.replace('/notify-me-confirmation-' + notifySku + '/');
+        } else {
+            window.location.replace('/notify-me-confirmation/');
+        }
     } else {
         window.location.replace('/newsletter-confirmation/');
     }

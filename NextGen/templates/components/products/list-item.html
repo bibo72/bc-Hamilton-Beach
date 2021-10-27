@@ -84,7 +84,7 @@
                             <a href="tel:{{theme_settings.card_call_for_price_phone_number}}" class="call-for-price mobile" data-product-id="{{id}}"><span class="line-one">{{theme_settings.card_call_for_price_text}}</span><span class="line-two">{{theme_settings.card_call_for_price_phone_number}}</span></a>
                           </div>
                     {{/if}}
-                    <a href="#" class="button button--primary" data-reveal-id="getUpdateModal">Notify Me</a>
+                    <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
                 {{else}}
                     {{> components/common/login-for-pricing}}
                 {{/or}}
