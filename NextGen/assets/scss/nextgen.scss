@@ -515,6 +515,9 @@ section.quickSearchResults ul.productGrid li.product article.card h4 > a:hover {
 section.quickSearchResults ul.productGrid li.product article.card .card-text {
   color: stencilColor("cardText-color") !important;
 }
+section.quickSearchResults ul.productGrid li.product article.card .card-text.sku span {
+  font-size: 16px;
+}
 
 article.card.card--alternate.price-visibility.restricted {
   margin-bottom: 5px;
@@ -727,6 +730,10 @@ header.header {
     border-width: 2px;
     opacity: 0;
     z-index: 9;
+    height: 54px!important;
+}
+.navPages-quickSearch.right.searchbar .search-icon {
+    top: 9px;
 }
 
 .fa-search:before {
@@ -1009,6 +1016,10 @@ header .form-fieldset {
 }
 .main-nav-container.quick-override .custom-pages-nav a:hover {
   color: stencilColor("mainNav-fontHoverColor") !important;
+  // color: stencilColor("mainNav-fontHoverColor") !important;
+}
+.main-nav-container.quick-override .custom-pages-nav a.button:hover {
+  color: #fff !important;
   // color: stencilColor("mainNav-fontHoverColor") !important;
 }
 .main-nav-container #menu .navPage-subMenu a:hover {
@@ -5341,7 +5352,7 @@ a.modal-close.custom-quick-search {
   display: none;
   z-index: 99999999;
   top: 32px;
-  margin-top: 5px;
+  margin-top: 0;
   border-radius: 4px;
 }
 
@@ -9395,7 +9406,7 @@ main.search.both-grid-list-views .actionBar {
   width: 75%;
   position: relative;
   margin-bottom: 0;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 main.search.both-grid-list-views ul.productList.list-only.visible {
@@ -12049,7 +12060,7 @@ hr.card-img-underscore {
 }
 
 article.card.brand-sku-active .card-sku-brand-section {
-  min-height: 18px;
+  min-height: 20px;
   overflow: hidden;
   margin-bottom: 5px;
 }
@@ -21796,6 +21807,7 @@ body.main.fourteen-forty .product.main.left.product-page-with-sidenav.full-width
 
 main.search.both-grid-list-views .actionBar {
   top: 0;
+  margin-top: 5px;
 }
 
 .search .both-grid-list-views .pagination.bottom {
@@ -22760,7 +22772,7 @@ section.quickSearchResults {
   margin-top: 6px !important;
 }
 .search-buttons-container div.align-right {
-  top: 34px;
+  top: 52px;
   z-index: 999999999;
   right: 5px;
   position: absolute;

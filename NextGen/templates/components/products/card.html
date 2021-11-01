@@ -185,7 +185,7 @@
             {{> components/products/bulk-discount-rates}}
             {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
             <div class="card-text add-to-cart-button">
-              <a href="#" class="button button--primary" data-reveal-id="getUpdateModal">Notify me</a>
+              <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify me</a>
             </div>
             <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
                     {{#if show_cart_action}}
@@ -278,7 +278,7 @@
               {{> components/products/bulk-discount-rates}}
               {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
               <div class="card-text add-to-cart-button">
-                <a href="#" class="button button--primary"  data-reveal-id="getUpdateModal">Notify me</a>
+                <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify me</a>
               </div>
               <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
                       {{#if show_cart_action}}
@@ -357,7 +357,7 @@
               {{> components/products/bulk-discount-rates}}
               {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
               <div class="card-text add-to-cart-button">
-                <a href="#" class="button button--primary" data-reveal-id="getUpdateModal">Notify me</a>
+                <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify me</a>
               </div>
               <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
                       {{#if show_cart_action}}

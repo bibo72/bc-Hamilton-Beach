@@ -465,7 +465,7 @@ footer.footer .container{
     .footer-info-col.social_newsletter{
         padding: 0 36px;
         .content.newsletter  h3.footer-info-heading{
-            color:#119EDD ;
+            color:#119EDD;
             font-size: remCalc(22px);
             font-family: "Larsseit";
            
@@ -504,6 +504,19 @@ footer.footer .container{
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        &:nth-of-type(2) {
+            justify-content: flex-end;
+            >div:last-child {
+                width: 165px;
+            }
+        }
+        &:nth-of-type(3) {
+            justify-content: flex-end;
+
+            >div:last-child {
+                width: 120px;
+            }
+        }
         div[id^="sd-image-"] {
             background-size: 150px;
         }
