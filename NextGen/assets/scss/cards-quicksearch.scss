@@ -363,7 +363,7 @@ body.main section#quickSearch.quickSearchResults .card-text.add-to-cart-button a
   width: 25.63px;
 }
 section.quickSearchResults {
-    margin-top: 0px;
+    margin-top: 0px!important;
 }
 section#quickSearch .productGrid[data-list-name="Quick Search Results"] article.card .card-body {
   padding-bottom: 15px;

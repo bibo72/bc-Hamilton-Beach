@@ -1552,7 +1552,7 @@ if( $.trim( $('.navPages-item.store-credit.desktop').html() ).length ) {
     $('.mobile-menu.navPages-container').attr('id', 'menu');
   }
 
-$('#search-results-content.u-hiddenVisually').remove();
+// $('#search-results-content.u-hiddenVisually').remove();
 
 
 // CUSTOM FACET ARROWS
