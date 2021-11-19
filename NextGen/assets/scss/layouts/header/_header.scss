@@ -626,12 +626,20 @@ a.modal-close.custom-quick-search {
         position: absolute;
         top: 0;
         width: 100%;
+
+        &.navPages-item {
+            position: fixed;
+            top: 165px;
+            bottom: 0;
+        }
         .navPage-subMenu{
-            position: relative;
-            z-index: 100;
-            min-height: 500px;
-            top: 100px;
-            // padding-top: 30px !important;
+            // position: relative;
+            // z-index: 100;
+            // min-height: 500px;
+            // top: 100px;
+            padding-top: 100px !important;
+            overflow-y: auto;
+            height: 100%;
             
         }
     }
