@@ -1088,3 +1088,25 @@ h1.page-heading.category{
         display: none;
     }
 }
+
+//learn page card hover
+.rectangle-out-btnAnimate {
+    .main.eleven-seventy.base-layout.content-layout-no-sidevav {
+        .page-learn-content {
+            .navBar.navBar--sub {
+                .navBar-section.account-navigation {
+                    .navBar-item {
+                        .navBar-item-inner:hover {
+                            .icon_right {
+                                background-color: #0056A8;
+                            }
+                            svg {
+                                fill: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
