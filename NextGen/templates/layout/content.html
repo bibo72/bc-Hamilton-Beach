@@ -4,6 +4,8 @@
     <title>{{ head.title }}</title>
     {{{ resourceHints }}}
     {{{ head.meta_tags }}}
+    <meta name="description" content="{{ head.title }}">
+    <meta name="keywords" content="{{ head.title }}">
     {{{ head.config }}}
     {{#block "head"}} {{/block}}
 

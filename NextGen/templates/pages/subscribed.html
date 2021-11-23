@@ -6,11 +6,28 @@ blog:
     recent_posts:
         limit: {{theme_settings.footer_blog_posts_count}}
 ---
+{{#partial "head"}}
+{{#unless subscription.error}}
+<script>
+    if (sessionStorage.getItem('newsletterType') === 'notify-me') {
+        var notifySku = sessionStorage.getItem('newsletterSku');
+        if (notifySku) {
+            window.location.replace('/notify-me-confirmation-' + notifySku + '/');
+        } else {
+            window.location.replace('/notify-me-confirmation/');
+        }
+    } else {
+        window.location.replace('/newsletter-confirmation/');
+    }
+</script>
+{{/unless}}
+{{/partial}}
+
 {{#partial "page"}}
 
 <section class="page subscribed">
     <div class="page-content">
-        <h1 class="page-heading">
+        <h1 class="page-heading" data-subscription data-subscription-success="{{#unless subscription.error}}true{{/unless}}" data-subscription-message="{{#if subscription.error}}{{subscription.error}}{{else}}{{lang 'newsletter.subscribed_message'}}{{/if}}">
             {{#if subscription.error}}
                 {{lang 'newsletter.subscribed_heading_error'}}
             {{else}}

@@ -251,6 +251,27 @@
     h3.tab-content-title {
         display: none !important;
     }
+    
+    @media screen and (min-width:1025px) {
+        .customFields-container {
+            column-count: 2;
+            column-gap: 228px;
+            padding: 0 72px;
+            line-height: 40px;
+    
+            .moblie-content {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 12px;
+            }
+            .custom_fieldsName {
+                padding-right: 24px;
+            }
+            .custom_fieldsValue {
+                text-align: right;
+            }
+        }
+    }
     @media screen and (max-width:1024px) {
         h3.tab-content-title {
             display: block !important;

@@ -9,8 +9,8 @@
         <li class="navBar-item">
             <div class="navBar-item-inner">
                 <a class="navBar-action" href="{{url}}">
-                    <div class="img_box " data-snakecase-title="{{concat (snakecase title) '.jpg'}}">
-                        <div class="image-container" style="background-image: url({{concat '/product_images/uploaded_images/nav-' (concat (dashcase title) '.jpg')}})"></div>
+                    <div class="img_box">
+                        <div class="image-container" style="background-image: url({{concat '/product_images/uploaded_images/nav-' (concat (dashcase title) '.jpg')}}?t={{moment}})"></div>
                         <!-- <img src="{{concat '/product_images/uploaded_images/' (concat (dashcase title) '.jpg')}}" >     -->
                     </div>
                     <div class="item-info">

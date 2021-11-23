@@ -19,6 +19,7 @@ function renderGetUpdateSubscribeForm() {
 export default function () {
     const $products = $('.header_products');
     const $nav_products=$('.nav_products');
+    const $nav_product=$('.main-nav.desktop .nav_products .nav_product');
     const $dropdownLink = $('li.hover-open[data-dropdown-hover]');
     const $down_arrow = $('li .down-arrow');
     const $getUpdate = $('.getUpdate');
@@ -29,7 +30,9 @@ export default function () {
         const $navList = $('.main-nav .custom-pages-nav');
         // $nav_products.show();
         $products.addClass('active');
-        if ($navList.width() > $nav_products.width()) {
+        const navWidth = $nav_product.length * 244 + 20;
+        $nav_products.css({"width": navWidth + "px"});
+        if ($navList.width() > navWidth) {
             $nav_products.css({"display":"inline-flex", "left": '0'});
         } else {
             $nav_products.css({"display":"inline-flex", "right": '0'});

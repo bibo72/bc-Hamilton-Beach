@@ -215,7 +215,7 @@
              </dl>
          </div>
          <div class="notify-button">
-            <a class="button button--primary notify-word" data-reveal-id="getUpdateModal">Notify Me</a>
+            <a class="button button--primary notify-word" data-product-sku="{{product.sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
         </div>
     
     
@@ -276,11 +276,11 @@
         <!-- TABS   -->
         <article class="productView-description"{{#if schema}} itemprop="description"{{/if}}>
             <ul class="tabs" data-tab>
-                <!-- <li class="tab overview is-active">
-                    <a class="tab-title" href="#tab-description-Overview">Overview</a>
-                </li> -->
                 <li class="tab feature is-active">
                     <a class="tab-title" href="#tab-description-Features">Features</a>
+                </li>
+                <li class="tab overview">
+                    <a class="tab-title" href="#tab-description-Overview">Overview</a>
                 </li>
                 <!-- {{#if product.warranty}}
                     <li class="tab warranty">
@@ -292,9 +292,13 @@
                     <a class="tab-title" href="#tab-customFields">Specifications</a>
                 </li>
                 {{/if}}
+                {{#unless product.sku '==' 11020}}
+                    {{#unless product.sku '==' 11030}}
                     <li class="tab videos">
                         <a class="tab-title" href="#tab-videos">Videos</a>
-                    </li>   
+                    </li>
+                        {{/unless}}
+                    {{/unless}}   
                 <!-- {{#if product.custom_fields}}
                     <li class="tab customFieldOne">
                         <a class="tab-title custom-visibility" href="#tab-customField1">Custom Field #1</a>
@@ -315,13 +319,16 @@
     
             <!-- TAB CONTENTS -->
             <div class="tabs-contents">
-                <div class="tab-content overview is-active" id="tab-description-Overview" style="display: none;">
-                    <h3 class="tab-content-title tab-content-title-Overview">Overview</h3>
-                    {{{product.description}}}
-                    {{{snippet 'product_description'}}}
-                </div>
+                
                 <div class="tab-content features is-active" id="tab-description-Features">
                     <h3 class="tab-content-title tab-content-title-Features">Features</h3>
+                    <div class="product-detail-features">
+                    {{{product.description}}}
+                    {{{snippet 'product_description'}}}
+                    </div>
+                </div>
+                <div class="tab-content overview is-active" id="tab-description-Overview">
+                    <h3 class="tab-content-title tab-content-title-Overview">Overview</h3>
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}
                 </div>
@@ -341,11 +348,17 @@
                         {{/each}}
                         </div>
                 </div>
+                {{#unless product.sku '==' 11020}}
+                    {{#unless product.sku '==' 11030}}
                     <div class="tab-content videos" id="tab-videos">
                         <h3 class="tab-content-title tab-content-Videos">Videos</h3>
+                        <div class="product-detail-videos">
                         {{{product.description}}}
                         {{{snippet 'product_description'}}}
+                    </div>
                    </div>
+                   {{/unless}}
+                    {{/unless}}
                    <div class="tab-content custom-visiblity custom-fieldTab1" id="tab-customField1">
                         <h3 class="tab-content-title">Custom Field</h3>
                         {{#each product.custom_fields}}
