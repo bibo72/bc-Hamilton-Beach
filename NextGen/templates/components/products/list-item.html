@@ -69,8 +69,12 @@
                 <h2 class="listItem-title">
                     <a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>{{name}}</a>
                 </h2>
-                {{#if summary}}
-                    <p>{{{summary}}}</p>
+                {{#if custom_fields}}
+                    {{#each custom_fields}}
+                      {{#if name '==' 'Short Description'}}
+                        <p>{{value}}</p>
+                      {{/if}}
+                    {{/each}}
                 {{/if}}
             </div>
             <div class="listItem-actions">
