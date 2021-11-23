@@ -1150,7 +1150,9 @@ h1.page-heading.category{
 }
 .navBar--sub{
     text-align: left;
-    ul.navBar-section.account-navigation{
+    ul.navBar-section.account-navigation
+    
+    {
         li:first-child{
             margin-left: 0;
         }
@@ -1159,5 +1161,39 @@ h1.page-heading.category{
 .search.both-grid-list-views{
     .panel.panel--large{
         display: none;
+    }
+    #product-listing-container{
+        .both-grid-default > ul >ul{
+            li.product{
+                .card-sku-brand-section{
+                    h2.card-text.sku {
+                        .sku-label,.sku-value{
+                            font-size: 16px;
+                            font-family: "Larsseit";
+                            line-height: 28px;
+                        }
+                    }
+                }
+                .card-title a{
+                    font-size: 20px;
+                    font-family: "Larsseit";
+                    line-height: 30px;
+                    font-weight: 700;
+                }
+                span.price{
+                    font-size: 22px !important;
+                    font-weight: 700;
+                    line-height: 18px!important;
+                    font-family: "Larsseit";
+                }
+                .card-text.add-to-cart-button{
+                    a{
+                        font-family: "Roboto Condensed";
+                        font-weight: 700;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
     }
 }
