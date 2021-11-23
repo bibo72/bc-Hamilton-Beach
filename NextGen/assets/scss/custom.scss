@@ -1111,6 +1111,7 @@ h1.page-heading.category{
     }
 }
 
+
 //plp fix
 .rectangle-out-btnAnimate {
     .category.main.top-pagination-hidden.grid-default.product-filtering-disabled {
@@ -1137,6 +1138,7 @@ h1.page-heading.category{
     }
 }
 
+<<<<<<< HEAD
 //footer hover
 #page-footer {
     .footer-info.six-columns {
@@ -1160,3 +1162,28 @@ h1.page-heading.category{
         }
     }
 }
+=======
+
+//search.html 
+.both-grid-default,#search-results-content{
+    margin-top: 40px;
+}
+#search-results-content{
+    ul{
+        margin-left: 0;
+    }
+}
+.navBar--sub{
+    text-align: left;
+    ul.navBar-section.account-navigation{
+        li:first-child{
+            margin-left: 0;
+        }
+    }
+}
+.search.both-grid-list-views{
+    .panel.panel--large{
+        display: none;
+    }
+}
+>>>>>>> 85d14821ef05710f936c0e65339459afbb979116
