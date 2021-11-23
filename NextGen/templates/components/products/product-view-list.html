@@ -276,11 +276,11 @@
         <!-- TABS   -->
         <article class="productView-description"{{#if schema}} itemprop="description"{{/if}}>
             <ul class="tabs" data-tab>
-                <!-- <li class="tab overview is-active">
-                    <a class="tab-title" href="#tab-description-Overview">Overview</a>
-                </li> -->
                 <li class="tab feature is-active">
                     <a class="tab-title" href="#tab-description-Features">Features</a>
+                </li>
+                <li class="tab overview">
+                    <a class="tab-title" href="#tab-description-Overview">Overview</a>
                 </li>
                 <!-- {{#if product.warranty}}
                     <li class="tab warranty">
@@ -319,17 +319,18 @@
     
             <!-- TAB CONTENTS -->
             <div class="tabs-contents">
-                <div class="tab-content overview is-active" id="tab-description-Overview" style="display: none;">
-                    <h3 class="tab-content-title tab-content-title-Overview">Overview</h3>
-                    {{{product.description}}}
-                    {{{snippet 'product_description'}}}
-                </div>
+                
                 <div class="tab-content features is-active" id="tab-description-Features">
                     <h3 class="tab-content-title tab-content-title-Features">Features</h3>
                     <div class="product-detail-features">
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}
+                    </div>
                 </div>
+                <div class="tab-content overview is-active" id="tab-description-Overview">
+                    <h3 class="tab-content-title tab-content-title-Overview">Overview</h3>
+                    {{{product.description}}}
+                    {{{snippet 'product_description'}}}
                 </div>
                <!-- {{#if product.warranty}}
                     <div class="tab-content warranty" id="tab-warranty">
