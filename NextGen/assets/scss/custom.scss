@@ -1136,3 +1136,27 @@ h1.page-heading.category{
         color: #323232;
     }
 }
+
+//footer hover
+#page-footer {
+    .footer-info.six-columns {
+        .footer-products {
+            h3 a:hover {
+                color: #0056A8 !important;
+            }
+        }
+        .footer-learn {
+            h3 a:hover {
+                color: #0056A8 !important;
+            }
+        }
+        [data-section-type="storeInfo"] {
+            h3 a:hover {
+                color: #0056A8 !important;
+            }
+        }
+        .footer-info-list li a:hover {
+            color: #0056A8 !important;
+        }
+    }
+}
