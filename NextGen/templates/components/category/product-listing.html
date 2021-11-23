@@ -1,4 +1,7 @@
+{{!--
 {{> components/products/filter sort=pagination.category.sort}}
+--}}
+
 
 {{#if theme_settings.product_layout_view '===' 'grid'}}
   <form class="grid-only" action="{{urls.compare}}" method='POST' {{#if settings.data_tag_enabled}} data-list-name="Category: {{category.name}}" {{/if}} data-product-compare>

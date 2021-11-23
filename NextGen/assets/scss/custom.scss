@@ -1110,3 +1110,26 @@ h1.page-heading.category{
         }
     }
 }
+
+//search.html 
+.both-grid-default,#search-results-content{
+    margin-top: 40px;
+}
+#search-results-content{
+    ul{
+        margin-left: 0;
+    }
+}
+.navBar--sub{
+    text-align: left;
+    ul.navBar-section.account-navigation{
+        li:first-child{
+            margin-left: 0;
+        }
+    }
+}
+.search.both-grid-list-views{
+    .panel.panel--large{
+        display: none;
+    }
+}
