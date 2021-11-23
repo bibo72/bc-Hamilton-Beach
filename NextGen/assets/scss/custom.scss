@@ -1111,6 +1111,34 @@ h1.page-heading.category{
     }
 }
 
+
+//plp fix
+.rectangle-out-btnAnimate {
+    .category.main.top-pagination-hidden.grid-default.product-filtering-disabled {
+        .grid-list-view.toggle {
+            margin-bottom: 20px;
+        }
+        #product-listing-container {
+            .actionBar {
+                display: none;
+            }
+            .listItem-body {
+                .button.button--primary {
+                    font-size: 22px;
+                    max-height: 217.14px;
+                    max-width: 100%;
+                    font-weight: 700;
+                    padding: 0.88889rem 4.27778rem;
+                }
+            }
+        }
+    }
+    #product-listing-container .card-sku-brand-section    h2 a span {
+        color: #323232;
+    }
+}
+
+
 //search.html 
 .both-grid-default,#search-results-content{
     margin-top: 40px;
