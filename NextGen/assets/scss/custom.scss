@@ -1186,8 +1186,9 @@ h1.page-heading.category{
         display: none;
     }
     #product-listing-container{
-        .both-grid-default > ul >ul{
+        .both-grid-default > ul >ul,.productList.list-only{
             li.product{
+                //grid style
                 .card-sku-brand-section{
                     h2.card-text.sku {
                         .sku-label,.sku-value{
@@ -1209,6 +1210,13 @@ h1.page-heading.category{
                     line-height: 18px!important;
                     font-family: "Larsseit";
                 }
+                .button.button--primary{
+                    font-size: 22px;
+                    max-height: 217.14px;
+                    max-width: 100%;
+                    font-weight: 700;
+                    padding: 0.88889rem 4.27778rem;
+                }
                 .card-text.add-to-cart-button{
                     a{
                         font-family: "Roboto Condensed";
@@ -1216,8 +1224,12 @@ h1.page-heading.category{
                         font-size: 22px;
                     }
                 }
+                
             }
+           
+            
         }
+         
     }
 }
 
