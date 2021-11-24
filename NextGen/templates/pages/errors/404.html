@@ -10,14 +10,76 @@ blog:
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-<main class="page">
+<main class="page page404">
     <section class="page-content page-content--left">
+        <div class="oops">
+            <div class="oopsContent">oops!</div>
         <h1 class="page-heading">{{lang 'page_not_found.page_heading'}}</h1>
+        </div>
         <p class="u-textAlignCenter">
             {{lang 'page_not_found.message'}}
         </p>
-
-        {{> components/common/search-box}}
+        <div class="404sectionContainer">
+            <ul class="navBar-section account-navigation">
+                <li class="navBar-item">
+                    <div class="navBar-item-inner">
+                        <a href="/products" class="navBar-action">
+                            <div class="img_box">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="item-info">
+                                <span class="title">
+                                    Browse Products
+                                </span>
+                                <span class="icon_right">
+                                    <svg>
+                                        <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="navBar-item">
+                    <div class="navBar-item-inner">
+                        <a href="/learn" class="navBar-action">
+                            <div class="img_box">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="item-info">
+                                <span class="title">
+                                    Learn More
+                                </span>
+                                <span class="icon_right">
+                                    <svg>
+                                        <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </li>                <li class="navBar-item">
+                    <div class="navBar-item-inner">
+                        <a href="/contact-us" class="navBar-action">
+                            <div class="img_box">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="item-info">
+                                <span class="title">
+                                    Contact Us
+                                </span>
+                                <span class="icon_right">
+                                    <svg>
+                                        <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </div>
     </section>
 </main>
 

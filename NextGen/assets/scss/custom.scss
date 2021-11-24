@@ -1241,3 +1241,271 @@ h1.page-heading.category{
         }
     }
 }
+
+//404page
+
+.page404 {
+    .oops {
+        position: relative;
+    }
+    .oopsContent {
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-size: 250px;
+        font-family: Larsseit;
+        color: #EBF8FC;
+        height: 100%;
+        text-align: center;
+        min-height: 280px;
+        line-height: 200px;
+        position: relative;
+    }
+    .page-heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -49px;
+        margin-left: -205px;
+        font-weight: bold;
+        font-family: Larsseit;
+        font-size: 48px;
+        line-height: 57px;
+    }
+    .u-textAlignCenter {
+        font-size: 18px;
+        font-family: Larsseit;
+        line-height: 27px;
+    }
+    .navBar-item-inner:hover {
+        .icon_right {
+            background: #0056A8;
+            svg {
+                fill: #fff !important;
+            }
+        }
+    }
+    .account-navigation {
+        display: block;
+        margin: 0 -12.5px !important;
+        font-size: 0;
+        text-align: left;
+        float: none;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        li:nth-child(1) {
+            width: 25%;
+            margin-left: 0;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 12.5px;
+            margin: 0;
+            .navBar-item-inner {
+                margin: 0;
+                margin-bottom: 25px;
+                padding: 10px;
+                text-transform: none;
+                border-radius: 10px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                a {
+                    color: #0056a8;
+                    .img_box {
+                        position: relative;
+                        width: 100%;
+                        padding-top: 100%;
+                        background-size: cover;
+                        margin: 0 auto 20px;
+                        background: url(/product_images/uploaded_images/backgound-imsge.png);
+                        .image-container {
+                            background-image: url(/product_images/uploaded_images/nav-browse-products.png);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            border: 1px solid #0456A8;
+                            height: 100%;
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    .item-info {
+                        display: inline-flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        align-items: center;
+                        .title {
+                            display: flex;
+                            align-items: center;
+                            text-align: left;
+                            width: 150px;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 22px;
+                            min-height: 44px;
+                        }
+                        .icon_right {
+                            width: 36px;
+                            height: 36px;
+                            display: flex;
+                            align-items: center;
+                            border-radius: 25px;
+                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                            svg {
+                                width: 10px;
+                                height: 14px;
+                                fill: #0056A8;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        li:nth-child(2) {
+            width: 25%;
+            margin-left: 0;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 12.5px;
+            margin: 0;
+            .navBar-item-inner {
+                margin: 0;
+                margin-bottom: 25px;
+                padding: 10px;
+                text-transform: none;
+                border-radius: 10px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                a {
+                    color: #0056a8;
+                    .img_box {
+                        position: relative;
+                        width: 100%;
+                        padding-top: 100%;
+                        background-size: cover;
+                        margin: 0 auto 20px;
+                        background: url(/product_images/uploaded_images/backgound-imsge.png);
+                        .image-container {
+                            background-image: url(/product_images/uploaded_images/nav-learn-more.png);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            border: 1px solid #0456A8;
+                            height: 100%;
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    .item-info {
+                        display: inline-flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        align-items: center;
+                        .title {
+                            display: flex;
+                            align-items: center;
+                            text-align: left;
+                            width: 150px;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 22px;
+                            min-height: 44px;
+                        }
+                        .icon_right {
+                            width: 36px;
+                            height: 36px;
+                            display: flex;
+                            align-items: center;
+                            border-radius: 25px;
+                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                            svg {
+                                width: 10px;
+                                height: 14px;
+                                fill: #0056A8;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        li:nth-child(3) {
+            width: 25%;
+            margin-left: 0;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 12.5px;
+            margin: 0;
+            .navBar-item-inner {
+                margin: 0;
+                margin-bottom: 25px;
+                padding: 10px;
+                text-transform: none;
+                border-radius: 10px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                a {
+                    color: #0056a8;
+                    .img_box {
+                        position: relative;
+                        width: 100%;
+                        padding-top: 100%;
+                        background-size: cover;
+                        margin: 0 auto 20px;
+                        background: url(/product_images/uploaded_images/backgound-imsge.png);
+                        .image-container {
+                            background-image: url(/product_images/uploaded_images/nav-contact-us.png);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            border: 1px solid #0456A8;
+                            height: 100%;
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    .item-info {
+                        display: inline-flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        align-items: center;
+                        .title {
+                            display: flex;
+                            align-items: center;
+                            text-align: left;
+                            width: 150px;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 22px;
+                            min-height: 44px;
+                        }
+                        .icon_right {
+                            width: 36px;
+                            height: 36px;
+                            display: flex;
+                            align-items: center;
+                            border-radius: 25px;
+                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                            svg {
+                                width: 10px;
+                                height: 14px;
+                                fill: #0056A8;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }            
+    }
+}
