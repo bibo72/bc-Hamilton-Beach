@@ -814,3 +814,8 @@ section#quickSearch.quickSearchResults figure.card-figure img {
   max-width: 112px !important;
 }
 }
+
+section.quickSearchResults .card-title > a {
+    font-size: 18px;
+    line-height: 24px;
+}

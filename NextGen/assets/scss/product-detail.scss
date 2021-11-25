@@ -9,7 +9,7 @@
         display: block;
         padding: 0;
     }
-    .card-figcaption-body {
+    .sidebar .card-figcaption-body {
         display: none !important;
     }
     .overview .product-detail-features {
@@ -60,13 +60,13 @@
         font-size: 18px;
         font-weight: normal;
     }
-    article.card.brand-sku-active .card-sku-brand-section {
+    .sidebar article.card.brand-sku-active .card-sku-brand-section {
         display: none;
     }
     p.card-text[data-test-info-type="productRating"] {
         display: none;
     }
-    .card-body .card-text {
+    .sidebar .card-body .card-text {
         display: none;
     }
     .carousel-vertical .slick-dots {
@@ -148,7 +148,7 @@
         border: none;
         padding-top: 30px;
     }
-    .card-title a {
+    .sidebar .card-title a {
         font-size: 18px;
         color: #0056A8;
         font-weight: 500;
@@ -173,7 +173,7 @@
         line-height: 1.22;
 
     }
-    article.card-title-two-lines h2.card-title {
+    .sidebar article.card-title-two-lines h2.card-title {
         height: auto;
     }
     .tab {
