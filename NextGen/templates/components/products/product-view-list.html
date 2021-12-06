@@ -342,9 +342,9 @@
                         <h3 class="tab-content-title tab-content-Custom">Specifications</h3>
                         <div class="customFields-container">
                             {{#each product.custom_fields}}
-                            {{#if name '==' 'Short Description'}}{{else}}
+                            {{#or (if name '==' 'Short Description') (if name '==' 'showVideo')}}{{else}}
                             <div class="moblie-content"><span class="custom_fieldsName">{{name}}: </span><span class="custom_fieldsValue">{{value}}</span></div>
-                            {{/if}}
+                            {{/or}}
                         {{/each}}
                         </div>
                 </div>
