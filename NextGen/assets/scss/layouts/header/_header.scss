@@ -319,7 +319,7 @@ header.header{
 }
 
 .header .header-logo.header-logo--left{
-    width: 180px !important;
+    width: 200px !important;
     height: 160px;
     position: absolute;
     background: #fff;
@@ -332,21 +332,31 @@ header.header{
     left: 0;
     top: 0;
     @media only screen and (max-width:1222px) {
-        width: 110px !important;
+        width: 130px !important;
         height: 127px !important;
         left: 36px;
         padding:8px 0;
         // top: 0;
     }
+    @media only screen and (max-width:850px) {
+        width: 90px !important;
+        height: 127px !important;
+        left: 36px;
+        padding:8px 0;
+        // top: 0;
+    }    
 
     .header-logo-image-container {
         display: flex;
         justify-content: center;
         align-items: center;
         img{
-            width: 110px;
+            width: 140px;
             // height: 92px;      
             @media only screen and (max-width:1222px) {
+                width: 110px;
+            }
+            @media only screen and (max-width:850px) {
                 width: 80px;
                 // height: 110px;
                 top: -5px;
