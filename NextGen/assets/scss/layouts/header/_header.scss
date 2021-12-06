@@ -319,7 +319,7 @@ header.header{
 }
 
 .header .header-logo.header-logo--left{
-    width: 200px !important;
+    width: 180px !important;
     height: 160px;
     position: absolute;
     background: #fff;
@@ -332,7 +332,7 @@ header.header{
     left: 0;
     top: 0;
     @media only screen and (max-width:1222px) {
-        width: 130px !important;
+        width: 110px !important;
         height: 127px !important;
         left: 36px;
         padding:8px 0;
@@ -351,10 +351,10 @@ header.header{
         justify-content: center;
         align-items: center;
         img{
-            width: 140px;
+            width: 141px;
             // height: 92px;      
             @media only screen and (max-width:1222px) {
-                width: 110px;
+                width: 95px;
             }
             @media only screen and (max-width:850px) {
                 width: 80px;
