@@ -22,11 +22,20 @@ function triggerContactForm($submitButton, email, message) {
         }
     });
 }
-function swithToConfirmationPage(type) {
-    if (type === 'notify-me') {
-        return window.location.href = '/notify-me-confirmation/';
+function swithToConfirmationPage() {
+    if (sessionStorage.getItem('newsletterType') === 'notify-me') {
+        var notifySku = sessionStorage.getItem('newsletterSku');
+        if (notifySku !== 'notify') {
+            // product notify
+            window.location.href = '/notify-me-confirmation-' + notifySku + '/';
+        } else {
+            // header notify
+            window.location.href = '/notify-me-confirmation/';
+        }
+    } else {
+        // newsletter
+        window.location.href = '/newsletter-confirmation/';
     }
-    window.location.href = '/newsletter-confirmation/';
 }
 function newsletterSubscribe_old() {
     $('body').on('submit', 'form[action="/subscribe.php"]', event => {
@@ -76,18 +85,86 @@ function newsletterSubscribe_old() {
         });
     });
 }
+function getKlaviyoForm(sku) {
+    // NOTE: formMap is only for dev, on live site, it will managed on: Script Manager > Klaviyo form.  if need to update this map, update both of them.
+    // only for dev
+    const formMap = {
+        newsletter: {
+            listId: 'VaeFzy',
+            url : 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=VaeFzy',
+        },
+        notify: {
+            listId: 'WrGwUX',
+            url: 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=WrGwUX',
+        },
+        11010: {
+            listId: 'RppTV2',
+            url: 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=RppTV2',
+        },
+        12010: {
+            listId: 'WPi4AP',
+            url: ' https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=WPi4AP',
+        },
+        11030: {
+            listId: 'TudyA4',
+            url: ' https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=TudyA4',
+        },
+        12030: {
+            listId: 'QYJC9U',
+            url: 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=QYJC9U',
+        },
+        11021: {
+            listId: 'W4NvmX',
+            url: 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=W4NvmX',
+        },
+        12020: {
+            listId: 'R7RCEc',
+            url: 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=R7RCEc',
+        },
+    }
+    return (window.klaviyoFormMap || formMap)[sku];
+}
+function setKlaviyoForm(sku) {
+    let $form;
+    if (sku === 'newsletter') {
+        $form = $('[data-section-type="newsletterSubscription"] form')
+    } else {
+        $form = $('#getUpdateModal form');
+    }
+    const formInfo = getKlaviyoForm(sku);
+    if ($form.length && formInfo) {
+        $form.attr('action', formInfo.url);
+        $form.find('input[name="g"]').val(formInfo.listId);
+    }
+}
 function newsletterSubscribe() {
+    setKlaviyoForm('newsletter');
     $('body').on('click', '[data-reveal-id="getUpdateModal"]', event => {
         event.preventDefault();
         const sku = $(event.currentTarget).attr('data-product-sku') || '';
         sessionStorage.setItem('newsletterSku', sku);
+        // set kleviyo form
+        setKlaviyoForm(sku);
     });
-    $('body').on('submit', 'form[action="/subscribe.php"]', event => {
+    // auto submit form - native subscribe
+    // $('body').on('submit', 'form[action="/subscribe.php"]', event => {
+    //     const $form = $(event.currentTarget);
+    //     const formType = $form.attr('data-type');
+    //     sessionStorage.setItem('newsletterType', formType);
+    //     const email = $(event.currentTarget).find('#nl_email').val();
+    //     if (!email) return false;
+    // });
+    // return;
+    // manually submit form
+    $('body').on('submit', '#getUpdateModal form, [data-section-type="newsletterSubscription"] form', event => {
         const $form = $(event.currentTarget);
+        const $submitButton = $form.find('input[type="submit"]');
         const formType = $form.attr('data-type');
         sessionStorage.setItem('newsletterType', formType);
         const email = $(event.currentTarget).find('#nl_email').val();
         if (!email) return false;
+        $submitButton.prop('disabled', true);
+        swithToConfirmationPage();
     });
 }
 export default function(){
