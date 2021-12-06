@@ -292,13 +292,13 @@
                     <a class="tab-title" href="#tab-customFields">Specifications</a>
                 </li>
                 {{/if}}
-                {{#unless product.sku '==' 11020}}
-                    {{#unless product.sku '==' 11030}}
+                {{#if product.custom_fields}}
+                {{#any product.custom_fields name='showVideo' value='true'}}
                     <li class="tab videos">
                         <a class="tab-title" href="#tab-videos">Videos</a>
                     </li>
-                        {{/unless}}
-                    {{/unless}}   
+                    {{/any}}
+                    {{/if}} 
                 <!-- {{#if product.custom_fields}}
                     <li class="tab customFieldOne">
                         <a class="tab-title custom-visibility" href="#tab-customField1">Custom Field #1</a>
@@ -348,8 +348,8 @@
                         {{/each}}
                         </div>
                 </div>
-                {{#unless product.sku '==' 11020}}
-                    {{#unless product.sku '==' 11030}}
+                {{#if product.custom_fields}}
+                {{#any product.custom_fields name='showVideo' value='true'}}
                     <div class="tab-content videos" id="tab-videos">
                         <h3 class="tab-content-title tab-content-Videos">Videos</h3>
                         <div class="product-detail-videos">
@@ -357,8 +357,8 @@
                         {{{snippet 'product_description'}}}
                     </div>
                    </div>
-                   {{/unless}}
-                    {{/unless}}
+                   {{/any}}
+                   {{/if}} 
                    <div class="tab-content custom-visiblity custom-fieldTab1" id="tab-customField1">
                         <h3 class="tab-content-title">Custom Field</h3>
                         {{#each product.custom_fields}}
