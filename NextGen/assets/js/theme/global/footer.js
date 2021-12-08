@@ -113,7 +113,7 @@ function getKlaviyoForm(sku) {
             listId: 'QYJC9U',
             url: 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=QYJC9U',
         },
-        11021: {
+        11020: {
             listId: 'W4NvmX',
             url: 'https://manage.kmail-lists.com/subscriptions/subscribe?a=SBFNGm&g=W4NvmX',
         },
@@ -156,16 +156,49 @@ function newsletterSubscribe() {
     // });
     // return;
     // manually submit form
+    // $('body').on('submit', '#getUpdateModal form, [data-section-type="newsletterSubscription"] form', event => {
+    //     const $form = $(event.currentTarget);
+    //     const $submitButton = $form.find('input[type="submit"]');
+    //     const formType = $form.attr('data-type');
+    //     sessionStorage.setItem('newsletterType', formType);
+    //     const email = $(event.currentTarget).find('#nl_email').val();
+    //     if (!email) return false;
+    //     $submitButton.prop('disabled', true);
+    //     swithToConfirmationPage();
+    // });
     $('body').on('submit', '#getUpdateModal form, [data-section-type="newsletterSubscription"] form', event => {
+        event.preventDefault();
         const $form = $(event.currentTarget);
         const $submitButton = $form.find('input[type="submit"]');
         const formType = $form.attr('data-type');
         sessionStorage.setItem('newsletterType', formType);
         const email = $(event.currentTarget).find('#nl_email').val();
+        const listId = $form.find('input[name="g"]').val();
         if (!email) return false;
         $submitButton.prop('disabled', true);
-        swithToConfirmationPage();
+        // swithToConfirmationPage();
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://manage.kmail-lists.com/ajax/subscriptions/subscribe",
+            "method": "POST",
+            "headers": {
+              "content-type": "application/x-www-form-urlencoded",
+              "cache-control": "no-cache"
+            },
+            "data": {
+              "g": listId,
+              "email": email
+            }
+          }
+           
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+            swithToConfirmationPage();
+          });
     });
+    
 }
 export default function(){
     $('.footer-container-mobile a.list-action i').on("click",function(event){
