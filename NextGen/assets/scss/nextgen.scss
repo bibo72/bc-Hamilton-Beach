@@ -24296,7 +24296,8 @@ section.quickSearchResults ul.productGrid li.product article.card .card-text.add
 }
 
 section.quickSearchResults ul.productGrid li.product article.card .card-text.add-to-cart-button a {
-  width: 60% !important;
+  width: 100% !important;
+  max-width: 180px;
   top: 0;
 }
 
