@@ -24,7 +24,6 @@ export default function () {
     const $down_arrow = $('li .down-arrow');
     const $getUpdate = $('.getUpdate');
     const $modal = $('#getUpdateModal');
-    let itemNum = 0;
     // pc chilk products
     $products.on('mouseenter',() => {
         const $navList = $('.main-nav .custom-pages-nav');
@@ -57,15 +56,12 @@ export default function () {
     });
 
     $down_arrow.on('click',function(){
-        if(itemNum == 0){
+        if($down_arrow.hasClass('open')){
             $('.navPages-item').css("display","none");
-            console.log($(this).parents('.navPages-item'));
             const $li = $(this).parents('.navPages-item');
             $li.css('display','block');
-            itemNum++ ;
         }else{
             $('.navPages-item').css("display","block");
-            itemNum = 0;
         }
         
     });

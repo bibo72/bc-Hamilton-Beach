@@ -162,6 +162,10 @@ export class MobileMenuToggle {
     resetSubMenus() {
         this.$navList.find('.is-hidden').removeClass('is-hidden');
         this.$navList.removeClass('subMenu-is-open');
+        $('.navPages-list .custom-pages-nav .navPages-item').removeClass('active').show();
+        $('.navPages-list .custom-pages-nav .navPages-item .navPages-action').removeClass('active');
+        $('.navPages-list .custom-pages-nav .navPages-item .down-arrow').removeClass('open');
+        $('.navPages-list .custom-pages-nav .navPages-item .navPage-subMenu').hide().removeClass('sub-category-visible');
     }
 }
 
