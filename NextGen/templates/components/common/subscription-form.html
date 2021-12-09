@@ -1,35 +1,12 @@
 <h3 class="footer-info-heading">{{lang 'newsletter.subscribe'}}&nbsp;<span class="smaller lighter lowercase">{{lang 'newsletter.subscribe_intro'}}</span></h3>
 
-
-
-<!-- <form class="form" data-type="{{#if dataType}}{{dataType}}{{else}}default{{/if}}" action="{{urls.subscribe.action}}" method="post">
-    <fieldset class="form-fieldset">
-        <input type="hidden" name="action" value="subscribe">
-        <input type="hidden" name="nl_first_name" value="bc{{#if dataType}} - notify{{/if}}">
-        <input type="hidden" name="check" value="1">
-        <div class="form-field">
-            <label class="form-label u-hiddenVisually" for="nl_email">{{lang 'common.email_address'}}</label>
-            <div class="form-prefixPostfix wrap">
-                <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="Enter Email Address">
-                <input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="{{#if buttonText}}{{buttonText}}{{else}}SUBMIT{{/if}}">
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
-    </fieldset>
-</form> -->
 <!-- klaviyo form start -->
 <form class="form" data-type="{{#if dataType}}{{dataType}}{{else}}default{{/if}}" action="" method="post" target="_blank">
     <fieldset class="form-fieldset">
-        <!-- <input type="hidden" name="action" value="subscribe">
-        <input type="hidden" name="nl_first_name" value="bc{{#if dataType}} - notify{{/if}}">
-        <input type="hidden" name="check" value="1"> -->
         <input type="hidden" name="g" value="">
         <div class="form-field">
             <label class="form-label u-hiddenVisually" for="nl_email">{{lang 'common.email_address'}}</label>
             <div class="form-prefixPostfix wrap">
-                <!-- <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="Enter Email Address"> -->
                 <input class="form-input" id="nl_email" name="email" type="email" value="{{customer.email}}" placeholder="Enter Email Address">
                 <input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="{{#if buttonText}}{{buttonText}}{{else}}SUBMIT{{/if}}">
                 <div class="clear"></div>
