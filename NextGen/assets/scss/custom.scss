@@ -624,6 +624,9 @@ h1.page-heading.category{
     }
     a.button.button--primary {
         font-size: 22px;
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
     }
 }
 .main.category-layout.eleven-seventy.base-layout.category-layout-no-sidevav.sidenav-inactive.shop-by-price-disabled.facetedSearch-disabled {
@@ -1130,6 +1133,10 @@ h1.page-heading.category{
                     max-width: 100%;
                     font-weight: 700;
                     padding: 0.88889rem 4.27778rem;
+                    @media screen and (max-width: 767px) {
+                        padding: 0.88889rem 10px;
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -1217,6 +1224,10 @@ h1.page-heading.category{
                     max-width: 100%;
                     font-weight: 700;
                     padding: 0.88889rem 4.27778rem;
+                    @media screen and (max-width: 767px) {
+                        padding: 0.88889rem 10px;
+                        font-size: 16px;
+                    }
                 }
                 .card-text.add-to-cart-button{
                     a{
