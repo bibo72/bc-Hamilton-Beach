@@ -5410,6 +5410,9 @@ section.quickSearchResults .card-body {
 
 section.quickSearchResults ul.productGrid li.product article.card .card-text.add-to-cart-button a {
   width: 180px !important;
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
 }
 
 section.quickSearchResults .card-text.add-to-cart-button {
