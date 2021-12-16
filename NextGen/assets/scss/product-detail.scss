@@ -38,6 +38,7 @@
     }
     .notify-button {
         margin-top: 40px;
+        display: none !important;
         a {
             color: #fff;
             font-size: 17px;
@@ -54,7 +55,7 @@
         }
     }
     .productView-details.product-options {
-        display: none !important;
+        // display: none !important;
     }
     .shortDesciption {
         font-size: 18px;

@@ -1,44 +1,59 @@
-<article id="{{#or customer (if theme_settings.restrict_to_login '===' true)}}pricing-restricted{{/or}}" class="card compare-disabled {{#if alternate}}card--alternate{{/if}} price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}} {{#if theme_settings.show_sale_price_label '===' true}}sale-label-active{{/if}} {{#if theme_settings.card-brand-name '===' true}}brand-sku-active brand-active{{/if}} {{#if theme_settings.card-brand-name '===' false}}brand-hidden{{/if}} {{#if theme_settings.card-sku '===' true}}brand-sku-active sku-active{{/if}} {{#if theme_settings.card-sku '===' false}}sku-hidden{{/if}} {{#if theme_settings.card-brand-sku-separate-lines '===' true}}brand-sku-separate-lines{{/if}} {{#if theme_settings.card-brand-2-lines '===' true}}brand-2-lines{{/if}} {{#if theme_settings.card-sku-2-lines '===' true}}sku-2-lines{{/if}} {{#if theme_settings.msrp-price '===' true}}msrp-visible{{else}}msrp-hidden{{/if}} {{#if theme_settings.msrp-before-sale-pricing-separate-lines '===' true}}msrp-and-regular-separate-lines{{/if}} {{#if theme_settings.before-sale-price '===' true}}before-sale-price-visible{{else}}before-sale-price-hidden{{/if}}{{#if theme_settings.card-title-lines '===' '1-line'}} card-title-one-line{{/if}} {{#if theme_settings.card-title-lines '===' '2-lines'}}card-title-two-lines{{/if}} {{#if theme_settings.card-title-lines '===' '3-lines'}}card-title-three-lines{{/if}} {{#if theme_settings.card-title-lines '===' '4-lines'}}card-title-four-lines{{/if}} {{#if theme_settings.current-price-on-two-lines '===' true}}current-price-on-two-lines {{/if}} {{#if theme_settings.price_ranges '===' true}}price-ranges-active{{/if}} {{#if theme_settings.card-text-align '===' 'center'}} center-align{{/if}} {{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}} {{#if theme_settings.inverse-productCard-buttonColors '===' true}} inverse-productCard-buttonColors{{/if}} {{#if theme_settings.productCard_override '===' true}} quick-override{{/if}}{{#if theme_settings.mobile_quickview '===' true}} mobile-quickview-active{{else}} mobile-quickview-inactive{{/if}}" {{#if settings.data_tag_enabled}} data-event-type="{{event}}" data-entity-id="{{id}}" data-position="{{position}}" data-name="{{name}}" data-product-category="{{#each category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{brand.name}}" data-product-price="{{#if price.with_tax}}{{price.with_tax.value}}{{else}}{{price.without_tax.value}}{{/if}}"  {{/if}}>
-      <figure class="card-figure {{#if theme_settings.product_sale_badges_visibility '===' true}} sale-flag-active{{else}} sale-flag-inactive{{/if}} {{#if images.length '>' 1}} multiple-images{{/if}} {{#if theme_settings.product_hover_images '===' 'active'}} second-hover-img-active{{/if}}">
+<article id="{{#or customer (if theme_settings.restrict_to_login '===' true)}}pricing-restricted{{/or}}"
+  class="card compare-disabled {{#if alternate}}card--alternate{{/if}} price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}} {{#if theme_settings.show_sale_price_label '===' true}}sale-label-active{{/if}} {{#if theme_settings.card-brand-name '===' true}}brand-sku-active brand-active{{/if}} {{#if theme_settings.card-brand-name '===' false}}brand-hidden{{/if}} {{#if theme_settings.card-sku '===' true}}brand-sku-active sku-active{{/if}} {{#if theme_settings.card-sku '===' false}}sku-hidden{{/if}} {{#if theme_settings.card-brand-sku-separate-lines '===' true}}brand-sku-separate-lines{{/if}} {{#if theme_settings.card-brand-2-lines '===' true}}brand-2-lines{{/if}} {{#if theme_settings.card-sku-2-lines '===' true}}sku-2-lines{{/if}} {{#if theme_settings.msrp-price '===' true}}msrp-visible{{else}}msrp-hidden{{/if}} {{#if theme_settings.msrp-before-sale-pricing-separate-lines '===' true}}msrp-and-regular-separate-lines{{/if}} {{#if theme_settings.before-sale-price '===' true}}before-sale-price-visible{{else}}before-sale-price-hidden{{/if}}{{#if theme_settings.card-title-lines '===' '1-line'}} card-title-one-line{{/if}} {{#if theme_settings.card-title-lines '===' '2-lines'}}card-title-two-lines{{/if}} {{#if theme_settings.card-title-lines '===' '3-lines'}}card-title-three-lines{{/if}} {{#if theme_settings.card-title-lines '===' '4-lines'}}card-title-four-lines{{/if}} {{#if theme_settings.current-price-on-two-lines '===' true}}current-price-on-two-lines {{/if}} {{#if theme_settings.price_ranges '===' true}}price-ranges-active{{/if}} {{#if theme_settings.card-text-align '===' 'center'}} center-align{{/if}} {{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}} {{#if theme_settings.inverse-productCard-buttonColors '===' true}} inverse-productCard-buttonColors{{/if}} {{#if theme_settings.productCard_override '===' true}} quick-override{{/if}}{{#if theme_settings.mobile_quickview '===' true}} mobile-quickview-active{{else}} mobile-quickview-inactive{{/if}}"
+  {{#if settings.data_tag_enabled}} data-event-type="{{event}}" data-entity-id="{{id}}" data-position="{{position}}"
+  data-name="{{name}}" data-product-category="{{#each category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}"
+  data-product-brand="{{brand.name}}"
+  data-product-price="{{#if price.with_tax}}{{price.with_tax.value}}{{else}}{{price.without_tax.value}}{{/if}}" {{/if}}>
+  <figure
+    class="card-figure {{#if theme_settings.product_sale_badges_visibility '===' true}} sale-flag-active{{else}} sale-flag-inactive{{/if}} {{#if images.length '>' 1}} multiple-images{{/if}} {{#if theme_settings.product_hover_images '===' 'active'}} second-hover-img-active{{/if}}">
     {{#or price.non_sale_price_with_tax price.non_sale_price_without_tax}}
-            {{#if theme_settings.product_sale_badges '===' 'sash'}}
-                <div class="sale-flag-sash">
-                    <span class="sale-text">SALE</span>
-                </div>
-            {{else if theme_settings.product_sale_badges '===' 'topleft'}}
-                <div class="sale-flag-side">
-                    <span class="sale-text">SALE</span>
-                </div>
-            {{else if theme_settings.product_sale_badges '===' 'burst'}}
-                <div class="starwrap">
-                    <div class="sale-text-burst">SALE</div>
-                    <div class="sale-flag-star"></div>
-                </div>
-            {{/if}}
-        {{/or}}
+    {{#if theme_settings.product_sale_badges '===' 'sash'}}
+    <div class="sale-flag-sash">
+      <span class="sale-text">SALE</span>
+    </div>
+    {{else if theme_settings.product_sale_badges '===' 'topleft'}}
+    <div class="sale-flag-side">
+      <span class="sale-text">SALE</span>
+    </div>
+    {{else if theme_settings.product_sale_badges '===' 'burst'}}
+    <div class="starwrap">
+      <div class="sale-text-burst">SALE</div>
+      <div class="sale-flag-star"></div>
+    </div>
+    {{/if}}
+    {{/or}}
 
-        <a class="image-link desktop" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
-            <img class='card-image primary lazyload' data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
-            {{#if theme_settings.product_hover_images '===' 'active'}}
-              {{#each (limit images 2)}}
-                {{#if @index '>' 0}}
-                  <img class='card-image alt lazyload' src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
-                {{/if}}
-              {{/each}}
-            {{/if}}
-          </a>
-          <a class="image-link mobile" href="#0" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
-              <img class='card-image primary lazyload' data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
-              {{#if theme_settings.product_hover_images '===' 'active'}}
-                {{#each (limit images 2)}}
-                  {{#if @index '>' 0}}
-                    <img class='card-image alt lazyload' src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
-                  {{/if}}
-                {{/each}}
-              {{/if}}
-            </a>
+    <a class="image-link desktop" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click"
+      {{/if}}>
+      <img class='card-image primary lazyload' data-sizes="auto" src="{{cdn 'img/loading.svg'}}"
+        data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}"
+        alt="{{image.alt}}" title="{{image.alt}}">
+      {{#if theme_settings.product_hover_images '===' 'active'}}
+      {{#each (limit images 2)}}
+      {{#if @index '>' 0}}
+      <img class='card-image alt lazyload' src="{{cdn 'img/loading.svg'}}"
+        data-src="{{getImage this 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{this.alt}}"
+        title="{{this.alt}}">
+      {{/if}}
+      {{/each}}
+      {{/if}}
+    </a>
+    <a class="image-link mobile" href="#0" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
+      <img class='card-image primary lazyload' data-sizes="auto" src="{{cdn 'img/loading.svg'}}"
+        data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}"
+        alt="{{image.alt}}" title="{{image.alt}}">
+      {{#if theme_settings.product_hover_images '===' 'active'}}
+      {{#each (limit images 2)}}
+      {{#if @index '>' 0}}
+      <img class='card-image alt lazyload' src="{{cdn 'img/loading.svg'}}"
+        data-src="{{getImage this 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{this.alt}}"
+        title="{{this.alt}}">
+      {{/if}}
+      {{/each}}
+      {{/if}}
+    </a>
 
-        <!-- <figcaption class="card-figcaption">
+    <!-- <figcaption class="card-figcaption">
             <div class="card-figcaption-body">
               {{#unless hide_product_quick_view}}
                   {{#if theme_settings.show_product_quick_view}}
@@ -55,139 +70,166 @@
               {{/unless}}
             </div>
         </figcaption> -->
-    </figure>
+  </figure>
 
-        {{#if theme_settings.price_as_low_as '===' true}}
+  {{#if theme_settings.price_as_low_as '===' true}}
+  {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+  <div
+    class="card-body with-as-low-as-pricing purchase-ability{{#if show_rating}} ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}"
+    data-test-info-type="price">
+    <div
+      class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
+      <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}"
+        data-test-info-type="brandName"><a class="brand-link" aria-label="brand name"
+          href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
+      {{#if theme_settings.card-brand-name '===' true}}
+      {{#if brand.name}}
+      {{#if theme_settings.card-sku '===' true}}
+      {{#if sku}}
+      <span class="brand-sku-divider">|</span>
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
+        {{#if theme_settings.card-sku '===' true}}
+        {{#if sku}}
+        <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
+          <span class="sku-label">{{lang 'Model'}}:</span>
+          <span class="sku-value" data-product-sku>{{sku}}</span>
+        </a>
+        {{/if}}
+        {{/if}}
+      </h2>
+    </div>
+
+    <h2 class="card-title">
+      <a href="{{url}}">{{name}}</a>
+    </h2>
+    {{#if show_rating}}
+    <p class="card-text" data-test-info-type="productRating">
+      <span class="rating--small">
+        {{> components/products/ratings rating=rating}}
+      </span>
+    </p>
+    {{/if}}
+
+    <div class="card-text" data-test-info-type="price">
+      <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
         {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-        <div class="card-body with-as-low-as-pricing purchase-ability{{#if show_rating}} ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}" data-test-info-type="price">
-          <div class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
-              <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}" data-test-info-type="brandName"><a class="brand-link" aria-label="brand name" href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
-              {{#if theme_settings.card-brand-name '===' true}}
-               {{#if brand.name}}
-               {{#if theme_settings.card-sku '===' true}}
-               {{#if sku}}
-                 <span class="brand-sku-divider">|</span>
-               {{/if}}
-               {{/if}}
-               {{/if}}
-             {{/if}}
-            <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
-              {{#if theme_settings.card-sku '===' true}}
-              {{#if sku}}
-              <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
-                <span class="sku-label">{{lang 'Model'}}:</span>
-                <span class="sku-value" data-product-sku>{{sku}}</span>
-              </a>
-              {{/if}}
-              {{/if}}
-            </h2>
-          </div>
-
-            <h2 class="card-title">
-                <a href="{{url}}">{{name}}</a>
-            </h2>
-            {{#if show_rating}}
-                <p class="card-text" data-test-info-type="productRating">
-                    <span class="rating--small">
-                        {{> components/products/ratings rating=rating}}
-                    </span>
-                </p>
-            {{/if}}
-
-            <div class="card-text" data-test-info-type="price">
-                <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
-                  {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                    {{> components/products/price price=price customer=customer}}
-                  {{else}}
-                </div>
-                <div class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
-                    {{> components/common/login-for-pricing}}
-                {{/or}}
-                </div>
-            </div>
-            {{> components/products/bulk-discount-rates}}
-            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-            <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
-                    {{#if show_cart_action}}
-                        {{#if has_options}}
-                            <a href="{{url}}" class="button button--small card-figcaption-button" data-product-id="{{id}}"><span class="zoning-in-animate">{{lang 'products.choose_options'}}</span><span></span></a>
-                        {{/if}}
-                        {{#if pre_order}}
-                            <a href="{{url}}" class="button button--small card-figcaption-button"><span class="zoning-in-animate">{{lang 'products.pre_order'}}</span><span></span></a>
-                        {{/if}}
-                        {{#if add_to_cart_url }}
-                            <a href="{{add_to_cart_url}}" class="button button--small card-figcaption-button"><span class="zoning-in-animate">{{lang 'products.add_to_cart'}}</span><span></span></a>
-                        {{/if}}
-                        {{#if out_of_stock_message }}
-                            <a href="{{url}}" class="button button--small card-figcaption-button" data-product-id="{{id}}"><span class="zoning-in-animate">{{out_of_stock_message}}</span><span></span></a>
-                        {{/if}}
-                        {{#if stock_level '<' 1}}
-                          {{#if out_of_stock_message '===' false}}
-                            <a href="{{url}}" class="button button--small card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="zoning-in-animate">View Details</span><span></span></a>
-                          {{/if}}
-                        {{/if}}
-                    {{/if}}
-                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                        {{#if price}}
-                        {{ else }}
-                          <div class="card-text add-to-cart-button call-for-price">
-                            <a href="{{url}}" class="button button--small card-figcaption-button call-for-price desktop" data-product-id="{{id}}"><span class="line-one"><span class="zoning-in-animate">{{theme_settings.card_call_for_price_text}}</span></span><span class="line-two"><span class="zoning-in-animate">{{theme_settings.card_call_for_price_phone_number}}</span></span></a>
-                            <a href="tel:{{theme_settings.card_call_for_price_phone_number}}" class="button button--small card-figcaption-button call-for-price mobile" data-product-id="{{id}}"><span class="line-one"><span class="zoning-in-animate">{{theme_settings.card_call_for_price_text}}</span></span><span class="line-two"><span class="zoning-in-animate">{{theme_settings.card_call_for_price_phone_number}}</span></span></a>
-                          </div>
-                          <div class="current-price"></div>
-                        {{/if}}
-                      {{/or}}
-            </div>
-            {{/or}}
+        {{> components/products/price price=price customer=customer}}
+        {{else}}
+      </div>
+      <div
+        class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
+        {{> components/common/login-for-pricing}}
+        {{/or}}
+      </div>
+    </div>
+    {{> components/products/bulk-discount-rates}}
+    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+    <div
+      class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
+      {{#if show_cart_action}}
+      {{#if has_options}}
+      <a href="{{url}}" class="button button--small card-figcaption-button" data-product-id="{{id}}"><span
+          class="zoning-in-animate">{{lang 'products.choose_options'}}</span><span></span></a>
+      {{/if}}
+      {{#if pre_order}}
+      <a href="{{url}}" class="button button--small card-figcaption-button"><span class="zoning-in-animate">{{lang
+          'products.pre_order'}}</span><span></span></a>
+      {{/if}}
+      {{#if add_to_cart_url }}
+      <a href="{{add_to_cart_url}}" class="button button--small card-figcaption-button"><span
+          class="zoning-in-animate">{{lang 'products.add_to_cart'}}</span><span></span></a>
+      {{/if}}
+      {{#if out_of_stock_message }}
+      <a href="{{url}}" class="button button--small card-figcaption-button" data-product-id="{{id}}"><span
+          class="zoning-in-animate">{{out_of_stock_message}}</span><span></span></a>
+      {{/if}}
+      {{#if stock_level '<' 1}} {{#if out_of_stock_message '===' false}} <a href="{{url}}"
+        class="button button--small card-figcaption-button false-stock-message" data-product-id="{{id}}"><span
+          class="zoning-in-animate">View Details</span><span></span></a>
+        {{/if}}
+        {{/if}}
+        {{/if}}
+        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+        {{#if price}}
+        {{ else }}
+        <div class="card-text add-to-cart-button call-for-price">
+          <a href="{{url}}" class="button button--small card-figcaption-button call-for-price desktop"
+            data-product-id="{{id}}"><span class="line-one"><span
+                class="zoning-in-animate">{{theme_settings.card_call_for_price_text}}</span></span><span
+              class="line-two"><span
+                class="zoning-in-animate">{{theme_settings.card_call_for_price_phone_number}}</span></span></a>
+          <a href="tel:{{theme_settings.card_call_for_price_phone_number}}"
+            class="button button--small card-figcaption-button call-for-price mobile" data-product-id="{{id}}"><span
+              class="line-one"><span
+                class="zoning-in-animate">{{theme_settings.card_call_for_price_text}}</span></span><span
+              class="line-two"><span
+                class="zoning-in-animate">{{theme_settings.card_call_for_price_phone_number}}</span></span></a>
         </div>
-        {{else if theme_settings.price_as_low_as '===' true}}
-        {{#or customer (if theme_settings.restrict_to_login '===' true)}}
-        <div class="card-body with-as-low-as-pricing purchase-ability{{#if show_rating}}  ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}" data-test-info-type="price">
+        <div class="current-price"></div>
+        {{/if}}
+        {{/or}}
+    </div>
+    {{/or}}
+  </div>
+  {{else if theme_settings.price_as_low_as '===' true}}
+  {{#or customer (if theme_settings.restrict_to_login '===' true)}}
+  <div
+    class="card-body with-as-low-as-pricing purchase-ability{{#if show_rating}}  ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}"
+    data-test-info-type="price">
 
-          <div class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
-              <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}" data-test-info-type="brandName"><a class="brand-link" aria-label="brand name" href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
-              {{#if theme_settings.card-brand-name '===' true}}
-               {{#if brand.name}}
-               {{#if theme_settings.card-sku '===' true}}
-               {{#if sku}}
-                 <span class="brand-sku-divider">|</span>
-               {{/if}}
-               {{/if}}
-               {{/if}}
-             {{/if}}
-            <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
-              {{#if theme_settings.card-sku '===' true}}
-              {{#if sku}}
-              <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
-                <span class="sku-label">{{lang 'Model'}}:</span>
-                <span class="sku-value" data-product-sku>{{sku}}</span>
-              </a>
-              {{/if}}
-              {{/if}}
-            </h2>
-          </div>
+    <div
+      class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
+      <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}"
+        data-test-info-type="brandName"><a class="brand-link" aria-label="brand name"
+          href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
+      {{#if theme_settings.card-brand-name '===' true}}
+      {{#if brand.name}}
+      {{#if theme_settings.card-sku '===' true}}
+      {{#if sku}}
+      <span class="brand-sku-divider">|</span>
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
+        {{#if theme_settings.card-sku '===' true}}
+        {{#if sku}}
+        <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
+          <span class="sku-label">{{lang 'Model'}}:</span>
+          <span class="sku-value" data-product-sku>{{sku}}</span>
+        </a>
+        {{/if}}
+        {{/if}}
+      </h2>
+    </div>
 
-            <h2 class="card-title">
-                <a href="{{url}}">{{name}}</a>
-            </h2>
+    <h2 class="card-title">
+      <a href="{{url}}">{{name}}</a>
+    </h2>
 
-            <div class="card-text" data-test-info-type="price">
-                <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
-                  {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                    {{> components/products/price price=price customer=customer}}
-                  {{else}}
-                </div>
-                <div class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
-                    {{> components/common/login-for-pricing}}
-                {{/or}}
-                </div>
-            </div>
-            {{> components/products/bulk-discount-rates}}
-            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-            <div class="card-text add-to-cart-button">
-              <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify me</a>
-            </div>
-            <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
+    <div class="card-text" data-test-info-type="price">
+      <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
+        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+        {{> components/products/price price=price customer=customer}}
+        {{else}}
+      </div>
+      <div
+        class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
+        {{> components/common/login-for-pricing}}
+        {{/or}}
+      </div>
+    </div>
+    {{> components/products/bulk-discount-rates}}
+    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+    <div class="card-text add-to-cart-button">
+      <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify
+        me</a>
+    </div>
+    <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
                     {{#if show_cart_action}}
                         {{#if has_options}}
                             <a href="{{url}}" class="button button--small card-figcaption-button" data-product-id="{{id}}"><span class="zoning-in-animate">{{lang 'products.choose_options'}}</span><span></span></a>
@@ -218,85 +260,129 @@
                         {{/if}}
                       {{/or}}
             </div> -->
-            {{/or}}
+    {{/or}}
+  </div>
+
+  {{/or}}
+  {{/or}}
+
+
+  {{else if theme_settings.price_as_low_as '===' false}}
+  {{#or customer (if theme_settings.restrict_to_login '===' false)}}
+  <div
+    class="card-body purchase-ability{{#if show_rating}} ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}} {{#or customer (if theme_settings.restrict_to_login '!==' true)}}{{#if price}}{{else}} no-price{{/if}}{{/or}}"
+    data-test-info-type="price">
+
+    <div
+      class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
+      <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}"
+        data-test-info-type="brandName"><a class="brand-link" aria-label="brand name"
+          href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
+      {{#if theme_settings.card-brand-name '===' true}}
+      {{#if brand.name}}
+      {{#if theme_settings.card-sku '===' true}}
+      {{#if sku}}
+      <span class="brand-sku-divider">|</span>
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
+        {{#if theme_settings.card-sku '===' true}}
+        {{#if sku}}
+        <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
+          <span class="sku-label">{{lang 'Model'}}:</span>
+          <span class="sku-value" data-product-sku>{{sku}}</span>
+        </a>
+        {{/if}}
+        {{/if}}
+      </h2>
+    </div>
+
+    <h2 class="card-title">
+      <a href="{{url}}">{{name}}</a>
+    </h2>
+
+    <div
+      class="card-text{{#or customer (if theme_settings.restrict_to_login '!==' true)}}{{#if price}}{{else}} no-price{{/if}}{{/or}}"
+      data-test-info-type="price">
+      <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
+        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+        {{#if price}}
+        {{> components/products/price price=price customer=customer}}
+        {{else}}
+        <div class="msrp-sale-regular-price-section"></div>
+        <div class="card-text add-to-cart-button call-for-price current-price">
+          <div class="call-for-price desktop" data-product-id="{{id}}"><span
+              class="line-one">{{theme_settings.card_call_for_price_text}}</span><span
+              class="line-two">{{theme_settings.card_call_for_price_phone_number}}</span></div>
+          <a href="tel:{{theme_settings.card_call_for_price_phone_number}}" class="call-for-price mobile"
+            data-product-id="{{id}}"><span class="line-one">{{theme_settings.card_call_for_price_text}}</span><span
+              class="line-two">{{theme_settings.card_call_for_price_phone_number}}</span></a>
         </div>
-
+        {{/if}}
+        {{else}}
+      </div>
+      <div
+        class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
+        {{> components/common/login-for-pricing}}
         {{/or}}
-        {{/or}}
-
-
-          {{else if theme_settings.price_as_low_as '===' false}}
-          {{#or customer (if theme_settings.restrict_to_login '===' false)}}
-           <div class="card-body purchase-ability{{#if show_rating}} ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}} {{#or customer (if theme_settings.restrict_to_login '!==' true)}}{{#if price}}{{else}} no-price{{/if}}{{/or}}" data-test-info-type="price">
-
-            <div class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
-                <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}" data-test-info-type="brandName"><a class="brand-link" aria-label="brand name" href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
-                {{#if theme_settings.card-brand-name '===' true}}
-                 {{#if brand.name}}
-                 {{#if theme_settings.card-sku '===' true}}
-                 {{#if sku}}
-                   <span class="brand-sku-divider">|</span>
-                 {{/if}}
-                 {{/if}}
-                 {{/if}}
-               {{/if}}
-              <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
-                {{#if theme_settings.card-sku '===' true}}
-                {{#if sku}}
-                <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
-                  <span class="sku-label">{{lang 'Model'}}:</span>
-                  <span class="sku-value" data-product-sku>{{sku}}</span>
-                </a>
-                {{/if}}
-                {{/if}}
-              </h2>
-            </div>
-
-              <h2 class="card-title">
-                  <a href="{{url}}">{{name}}</a>
-              </h2>
-
-              <div class="card-text{{#or customer (if theme_settings.restrict_to_login '!==' true)}}{{#if price}}{{else}} no-price{{/if}}{{/or}}" data-test-info-type="price">
-                  <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
-                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                      {{#if price}}
-                        {{> components/products/price price=price customer=customer}}
-                      {{else}}
-                        <div class="msrp-sale-regular-price-section"></div>
-                        <div class="card-text add-to-cart-button call-for-price current-price">
-                          <div class="call-for-price desktop" data-product-id="{{id}}"><span class="line-one">{{theme_settings.card_call_for_price_text}}</span><span class="line-two">{{theme_settings.card_call_for_price_phone_number}}</span></div>
-                          <a href="tel:{{theme_settings.card_call_for_price_phone_number}}" class="call-for-price mobile" data-product-id="{{id}}"><span class="line-one">{{theme_settings.card_call_for_price_text}}</span><span class="line-two">{{theme_settings.card_call_for_price_phone_number}}</span></a>
-                        </div>
-                      {{/if}}
-                    {{else}}
-                  </div>
-                  <div class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
-                      {{> components/common/login-for-pricing}}
-                  {{/or}}
-                  </div>
-              </div>
-              {{> components/products/bulk-discount-rates}}
-              {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-              <div class="card-text add-to-cart-button">
+      </div>
+    </div>
+    {{> components/products/bulk-discount-rates}}
+    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+    <!--               <div class="card-text add-to-cart-button">
                 <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify me</a>
+              </div> -->
+
+    <!-- add to cart-->
+    <div id="add-to-cart-wrapper" class=" qty-box-visible">
+      <div class="form-field form-field--increments">
+          <label class="form-label form-label--alternate" for="qty[]">Quantity:</label>
+              <div class="form-increment" data-quantity-change="">
+                  <button class="button button--icon" data-action="dec">
+                      <span class="is-srOnly">Decrease Quantity:</span>
+                      <i class="icon" aria-hidden="true">
+                          <svg>
+                              <use xlink:href="#icon-keyboard-arrow-down"></use>
+                          </svg>
+                      </i>
+                  </button>
+                  <input class="form-input form-input--incrementTotal" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                  <button class="button button--icon" data-action="inc">
+                      <span class="is-srOnly">Increase Quantity:</span>
+                      <i class="icon" aria-hidden="true">
+                          <svg>
+                              <use xlink:href="#icon-keyboard-arrow-up"></use>
+                          </svg>
+                      </i>
+                  </button>
               </div>
-              <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
+      </div>
+
+      <div class="form-action">
+          <input id="form-action-addToCart" data-wait-message="Adding to cart…" class="button button--primary" type="submit" value="Add to Cart">
+      </div>
+  <div class="clear"></div>
+</div>
+
+    <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
                       {{#if show_cart_action}}
                           {{#if has_options}}
-                              <a href="{{url}}" class="button button--small card-figcaption-button options" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.choose_options'}}</span><span></span></a>
+                              <a href="{{url}}" class="button button--primary card-figcaption-button options" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.choose_options'}}</span><span></span></a>
                           {{/if}}
                           {{#if pre_order}}
-                              <a href="{{url}}" class="button button--small card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.pre_order'}}</span><span></span></a>
+                              <a href="{{url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.pre_order'}}</span><span></span></a>
                           {{/if}}
                           {{#if add_to_cart_url }}
-                              <a href="{{add_to_cart_url}}" class="button button--small card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.add_to_cart'}}</span><span></span></a>
+                              <a href="{{add_to_cart_url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.add_to_cart'}}</span><span></span></a>
                           {{/if}}
                           {{#if out_of_stock_message }}
-                              <a href="{{url}}" class="button button--small card-figcaption-button" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{out_of_stock_message}}</span><span></span></a>
+                              <a href="{{url}}" class="button button--primary card-figcaption-button" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{out_of_stock_message}}</span><span></span></a>
                           {{/if}}
                           {{#if stock_level '<' 1}}
                             {{#if out_of_stock_message '===' false}}
-                              <a href="{{url}}" class="button button--small card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">View Details</span><span></span></a>
+                              <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">View Details</span><span></span></a>
                             {{/if}}
                           {{/if}}
                       {{/if}}
@@ -304,62 +390,69 @@
                         {{#if price}}
                         {{ else }}
                           <div class="card-text add-to-cart-button call-for-price">
-                            <a href="{{url}}" class="button button--small card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="zoning-in-animate">View Details</span><span></span></a>
+                            <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="zoning-in-animate">View Details</span><span></span></a>
                           </div>
                         {{/if}}
                       {{/or}}
               </div> -->
-              {{/or}}
-          </div>
+    {{/or}}
+  </div>
 
-          {{else}}
-          {{#or customer (if theme_settings.restrict_to_login '===' true)}}
-          <div class="card-body purchase-ability{{#if show_rating}} ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}" data-test-info-type="price">
+  {{else}}
+  {{#or customer (if theme_settings.restrict_to_login '===' true)}}
+  <div
+    class="card-body purchase-ability{{#if show_rating}} ratings-on{{else}} ratings-off{{/if}}{{#if price.with_tax}} withTax{{/if}}{{#if price.without_tax}} withoutTax{{/if}}{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}"
+    data-test-info-type="price">
 
-            <div class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
-                <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}" data-test-info-type="brandName"><a class="brand-link" aria-label="brand name" href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
-                {{#if theme_settings.card-brand-name '===' true}}
-                 {{#if brand.name}}
-                 {{#if theme_settings.card-sku '===' true}}
-                 {{#if sku}}
-                   <span class="brand-sku-divider">|</span>
-                 {{/if}}
-                 {{/if}}
-                 {{/if}}
-               {{/if}}
-              <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
-                {{#if theme_settings.card-sku '===' true}}
-                {{#if sku}}
-                <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
-                  <span class="sku-label">{{lang 'Model'}}:</span>
-                  <span class="sku-value" data-product-sku>{{sku}}</span>
-                </a>
-                {{/if}}
-                {{/if}}
-              </h2>
-            </div>
+    <div
+      class="card-sku-brand-section {{#if theme_settings.card-brand-sku-separate-lines '===' true}} separate-lines {{/if}} {{#if theme_settings.card-brand-2-lines '===' true}} brand-two-lines {{/if}} {{#if theme_settings.card-sku-2-lines '===' true}} sku-two-lines {{/if}}">
+      <h2 class="card-text brand {{#if theme_settings.card-brand-2-lines '===' true}} two-lines {{/if}}"
+        data-test-info-type="brandName"><a class="brand-link" aria-label="brand name"
+          href="/brands/{{dashcase brand.name}}">{{brand.name}}</a></h2>
+      {{#if theme_settings.card-brand-name '===' true}}
+      {{#if brand.name}}
+      {{#if theme_settings.card-sku '===' true}}
+      {{#if sku}}
+      <span class="brand-sku-divider">|</span>
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      {{/if}}
+      <h2 class="card-text sku {{#if theme_settings.card-sku-2-lines '===' true}} two-lines {{/if}}">
+        {{#if theme_settings.card-sku '===' true}}
+        {{#if sku}}
+        <a class="sku-link" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
+          <span class="sku-label">{{lang 'Model'}}:</span>
+          <span class="sku-value" data-product-sku>{{sku}}</span>
+        </a>
+        {{/if}}
+        {{/if}}
+      </h2>
+    </div>
 
-              <h2 class="card-title">
-                  <a href="{{url}}">{{name}}</a>
-              </h2>
+    <h2 class="card-title">
+      <a href="{{url}}">{{name}}</a>
+    </h2>
 
-              <div class="card-text" data-test-info-type="price">
-                  <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
-                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                      {{> components/products/price price=price customer=customer}}
-                    {{else}}
-                  </div>
-                  <div class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
-                      {{> components/common/login-for-pricing}}
-                  {{/or}}
-                  </div>
-              </div>
-              {{> components/products/bulk-discount-rates}}
-              {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-              <div class="card-text add-to-cart-button">
-                <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify me</a>
-              </div>
-              <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
+    <div class="card-text" data-test-info-type="price">
+      <div class="price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} visible{{/or}}">
+        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+        {{> components/products/price price=price customer=customer}}
+        {{else}}
+      </div>
+      <div
+        class="card-text add-to-cart-button price-visibility{{#or customer (if theme_settings.restrict_to_login '===' true)}} restricted{{/or}}">
+        {{> components/common/login-for-pricing}}
+        {{/or}}
+      </div>
+    </div>
+    {{> components/products/bulk-discount-rates}}
+    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+    <div class="card-text add-to-cart-button">
+      <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify
+        me</a>
+    </div>
+    <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
                       {{#if show_cart_action}}
                           {{#if has_options}}
                               <a href="{{url}}" class="button button--small card-figcaption-button" data-product-id="{{id}}"><span class="zoning-in-animate">{{lang 'products.choose_options'}}</span><span></span></a>
@@ -390,9 +483,9 @@
                         {{/if}}
                       {{/or}}
               </div> -->
-              {{/or}}
-          </div>
-          {{/or}}
-          {{/or}}
-        {{/if}}
+    {{/or}}
+  </div>
+  {{/or}}
+  {{/or}}
+  {{/if}}
 </article>
