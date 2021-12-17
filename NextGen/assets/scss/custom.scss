@@ -63,7 +63,7 @@ html div#checkout-app .button {
         }
         .button {
             &:hover {
-                color: #026CD1;
+                color: #fff;
                 background-color: #026CD1;
             }
             max-width: 221px;
@@ -75,6 +75,9 @@ html div#checkout-app .button {
             align-items: center;
             background-color: #0056A8;
             color: #0056A8;
+            font-size: 18px;
+            color: #fff;
+            border: none;
             .button-text {
                 font-size: 22px;
                 a {
@@ -153,7 +156,7 @@ html div#checkout-app .button {
         }
         .button {
             &:hover {
-                color: #026CD1;
+                color: #fff;
                 background-color: #026CD1;
             }
             background-color: #0056A8;
@@ -163,6 +166,9 @@ html div#checkout-app .button {
             align-items: center;
             max-width: 220px;
             height: 59px;
+            color: #fff;
+            font-size: 18px;
+            border: none;
             .button-text {
                 font-size: 22px;
                 a {
