@@ -1,0 +1,204 @@
+[data-layout-name="inde-clean"] {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="inde-air"] {
+    margin-bottom: 150px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="inde-reduce"] {
+    // margin-bottom: 150px;
+    margin-bottom: 50px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="inde-clean-energy"] {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="pur-improved"] {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="pur-breathing"] {
+    margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="pur-staying"] {
+    margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="pur-night"] {
+    margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="pur-smelling"] {
+    margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="pur-text"] {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    flex-wrap: nowrap !important;
+}
+[data-layout-name="inde-clean"] div[data-sub-layout]:last-child {
+    margin-left: 126px;
+}
+[data-layout-name="inde-air"] div[data-sub-layout]:nth-last-child(2) {
+    margin-right: 126px;
+}
+[data-layout-name="inde-reduce"] div[data-sub-layout]:last-child {
+    margin-left: 126px;
+}
+[data-layout-name="inde-clean-energy"] div[data-sub-layout]:nth-last-child(2) {
+    margin-right: 126px;
+}
+[data-layout-name="pur-improved"] div[data-sub-layout]:last-child {
+    margin-left: 126px;
+}
+[data-layout-name="pur-breathing"] div[data-sub-layout]:nth-last-child(2) {
+    margin-right: 126px;
+}
+[data-layout-name="pur-staying"] div[data-sub-layout]:last-child {
+    margin-left: 126px;
+}
+[data-layout-name="pur-night"] div[data-sub-layout]:nth-last-child(2) {
+    margin-right: 126px;
+}
+[data-layout-name="pur-smelling"] div[data-sub-layout]:last-child {
+    margin-left: 126px;
+}
+[data-layout-name="pur-text"] div[data-sub-layout]:nth-last-child(2) {
+    margin-right: 126px;
+}
+@media screen and (max-width: 1024px) {
+    [data-layout-name="inde-clean"] div[data-sub-layout]:last-child {
+        margin-left: 126px !important;
+    }
+    [data-layout-name="inde-air"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 126px !important;
+    }
+    [data-layout-name="inde-reduce"] div[data-sub-layout]:last-child {
+        margin-left: 126px !important;
+    }
+    [data-layout-name="inde-clean-energy"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 126px !important;
+    }
+    [data-layout-name="pur-improved"] div[data-sub-layout]:last-child {
+        margin-left: 126px !important;
+    }
+    [data-layout-name="pur-breathing"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 126px !important;
+    }
+    [data-layout-name="pur-staying"] div[data-sub-layout]:last-child {
+        margin-left: 126px !important;
+    }
+    [data-layout-name="pur-night"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 126px !important;
+    }
+    [data-layout-name="pur-smelling"] div[data-sub-layout]:last-child {
+        margin-left: 126px !important;
+    }
+    [data-layout-name="pur-text"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 126px !important;
+    }
+}
+@media screen and (max-width: 700px) {
+    [data-layout-name="inde-clean"] {
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column;
+    }
+    [data-layout-name="inde-air"] {
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column-reverse;
+    }
+    [data-layout-name="inde-reduce"] {
+        margin-bottom: 50px;
+        flex-wrap: wrap !important;
+        flex-direction: column;
+    }
+    [data-layout-name="inde-clean-energy"] {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column-reverse;
+    }
+    [data-layout-name="pur-improved"] {
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column;
+    }
+    [data-layout-name="pur-breathing"] {
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column-reverse;
+    }
+    [data-layout-name="pur-staying"] {
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column;
+    }
+    [data-layout-name="pur-night"] {
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column-reverse;
+    }
+    [data-layout-name="pur-smelling"] {
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column;
+    }
+    [data-layout-name="pur-text"] {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        flex-wrap: wrap !important;
+        flex-direction: column-reverse;
+    }
+    
+    [data-layout-name="inde-clean"] div[data-sub-layout]:last-child {
+        margin-left: 0px !important;
+    }
+    [data-layout-name="inde-air"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 0px !important;
+    }
+    [data-layout-name="inde-reduce"] div[data-sub-layout]:last-child {
+        margin-left: 0px !important;
+    }
+    [data-layout-name="inde-clean-energy"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 0px !important;
+    }
+    [data-layout-name="pur-improved"] div[data-sub-layout]:last-child {
+        margin-left: 0 !important;
+    }
+    [data-layout-name="pur-breathing"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 0 !important;
+    }
+    [data-layout-name="pur-staying"] div[data-sub-layout]:last-child {
+        margin-left: 0 !important;
+    }
+    [data-layout-name="pur-night"] div[data-sub-layout]:nth-last-child(2) {
+        margin-right: 0 !important;
+    }
+    [data-layout-name="pur-smelling"] div[data-sub-layout]:last-child {
+        margin-left: 0 !important;
+    }
+    [data-layout-name="pur-text"] div[data-sub-layout]:nth-last-child(2) {
+        margin-left: 0 !important;
+    }
+    [data-sub-layout="3e293e4a-493c-4b6b-80c1-5dff39eef59f"] {
+        margin-right: 0 !important;
+    }
+    [data-sub-layout="372dfd84-ddde-48a9-984b-edf299432d91"] {
+        margin-left: 0 !important;
+    }
+    [data-sub-layout="0cd431c3-0189-4ed0-9395-368706a337cf"] {
+        margin-right: 0 !important;
+    }
+    [data-sub-layout="b5169845-afa5-487b-80b5-77b5b52d8368"] {
+        margin-bottom: 30px;
+    }
+}
