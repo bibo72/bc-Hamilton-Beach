@@ -335,36 +335,7 @@
                 <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify me</a>
               </div> -->
 
-    <!-- add to cart-->
-    <div id="add-to-cart-wrapper" class=" qty-box-visible">
-      <div class="form-field form-field--increments">
-          <label class="form-label form-label--alternate" for="qty[]">Quantity:</label>
-              <div class="form-increment" data-quantity-change="">
-                  <button class="button button--icon" data-action="dec">
-                      <span class="is-srOnly">Decrease Quantity:</span>
-                      <i class="icon" aria-hidden="true">
-                          <svg>
-                              <use xlink:href="#icon-keyboard-arrow-down"></use>
-                          </svg>
-                      </i>
-                  </button>
-                  <input class="form-input form-input--incrementTotal" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
-                  <button class="button button--icon" data-action="inc">
-                      <span class="is-srOnly">Increase Quantity:</span>
-                      <i class="icon" aria-hidden="true">
-                          <svg>
-                              <use xlink:href="#icon-keyboard-arrow-up"></use>
-                          </svg>
-                      </i>
-                  </button>
-              </div>
-      </div>
 
-      <div class="form-action">
-          <input id="form-action-addToCart" data-wait-message="Adding to cart…" class="button button--primary" type="submit" value="Add to Cart">
-      </div>
-  <div class="clear"></div>
-</div>
 
     <!-- <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
                       {{#if show_cart_action}}
@@ -397,6 +368,35 @@
               </div> -->
     {{/or}}
   </div>
+      <!-- add to cart-->
+      <div id="add-to-cart-wrapper" class=" qty-box-visible card-add">
+        <div class="form-field form-field--increments">
+                <div class="form-increment" data-card-quantity-change="">
+                    <button class="button button--icon" data-card-action="dec">
+                        <span class="is-srOnly">Decrease Quantity:</span>
+                        <i class="icon" aria-hidden="true">
+                            <svg>
+                                <use xlink:href="#icon-keyboard-arrow-down"></use>
+                            </svg>
+                        </i>
+                    </button>
+                    <input class="form-input form-input--incrementTotal" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                    <button class="button button--icon" data-card-action="inc">
+                        <span class="is-srOnly">Increase Quantity:</span>
+                        <i class="icon" aria-hidden="true">
+                            <svg>
+                                <use xlink:href="#icon-keyboard-arrow-up"></use>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+        </div>
+  
+        <div class="form-action">
+            <input id="form-action-addToCart" data-wait-message="Adding to cart…" class="button button--primary" type="button" value="Add to Cart" data-card-action="add" data-product-id="{{id}}">
+        </div>
+    <div class="clear"></div>
+      </div>
 
   {{else}}
   {{#or customer (if theme_settings.restrict_to_login '===' true)}}
