@@ -15190,7 +15190,7 @@ a#checkout-customer-cancel {
 }
 div#checkout-app article.cart.optimizedCheckout-orderSummary {
   background-color: stencilColor("optimizedCheckout-orderSummary-backgroundColor") !important;
-  box-shadow: none !important;
+  // box-shadow: none !important;
 }
 div#checkout-app a {
   color: stencilColor("primaryBody-fontColor");
