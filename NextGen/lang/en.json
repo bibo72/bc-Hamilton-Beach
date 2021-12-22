@@ -58,7 +58,8 @@
             "checkout_multiple": "or check out with multiple addresses",
             "view_cart": "View Cart"
         },
-        "label": "Your Cart ({quantity, plural, one {# item} other {# items}})",
+        "label": "Your Cart",
+        "label_number":"({quantity, plural, one {# item} other {# items}})",
         "is_empty": "Your cart is empty",
         "coupon_code": "Coupon Code",
         "discount": "Discount",

@@ -33,7 +33,7 @@ cart: true
 
             {{#if cart.show_primary_checkout_button}}
                 <div class="cart-actions">
-                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}">{{lang 'cart.checkout.button'}}<span></span></a>
+                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}"><i class="icon" aria-hidden="true"><svg class="checkout-lock"><use xlink:href="#icon-lock" /></svg></i><span>{{lang 'cart.checkout.button'}}</span></a>
                     {{#if cart.show_multiple_address_shipping}}
                         <a class="checkoutMultiple" href="{{urls.checkout.multiple_address}}">
                             {{lang 'cart.preview.checkout_multiple'}}
