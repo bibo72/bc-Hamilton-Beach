@@ -307,7 +307,7 @@ body {
 // Text Color & Typography
 // -----------------------------------------------------------------------------
 
-.optimizedCheckout-contentPrimary a {
+.optimizedCheckout-contentPrimary a:not(.button) {
     color: stencilColor("optimizedCheckout-link-color");
     font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
     // font-weight: stencilFontWeight("optimizedCheckout-link-font");
@@ -330,7 +330,7 @@ body {
 }
 
 .optimizedCheckout-orderSummary-cartSection {
-    border-color: stencilColor("optimizedCheckout-orderSummary-borderColor");
+    border-color: rgba(stencilColor("optimizedCheckout-orderSummary-borderColor"), .2);
 }
 
 .optimizedCheckout-checkoutStep {
@@ -593,12 +593,32 @@ html {
     height: 50px;
     border-radius: 3px;
 }
+.optimizedCheckout-buttonPrimary,
+.optimizedCheckout-buttonSecondary {
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
+    min-width: 150px;
+}
+.optimizedCheckout-buttonSecondary.button--tertiary {
+    min-width: auto;
+    padding: 8.5px 21.6px;
+}
 .optimizedCheckout-contentPrimary .form-select {
     padding-right: 50px;
 }
 .paymentMethod .form-input {
     padding-left: 14px;
     padding-right: 14px;
+}
+.form-checkbox + .form-label::before {
+    border-color: #707070;
+    border-radius: 3px;
+    width: 18px;
+    height: 18px;
+}
+.form-checkbox + .form-label::after {
+    top: 1px;
+    left: 1px;
 }
 .form-checklist-checkbox ~ .form-label {
     min-height: 70px;
@@ -611,7 +631,6 @@ html {
 .form-checklist-checkbox ~ .form-label {
     padding-left: 59px;
     padding-right: 20px;
-    // margin-top: 3px;
     line-height: 38px;
 }
 .form-checklist-body {
@@ -620,10 +639,89 @@ html {
 }
 .form-checklist-checkbox ~ .form-label::before, .form-checklist-checkbox ~ .form-label::after {
     left: 19px;
+    width: 30px;
+    height: 30px;
+}
+.form-checklist-checkbox ~ .form-label::after {
+    transform: scale(0.7335);
 }
 .cardIcon-icon.icon--medium {
     width: 36px;
     height: 32px;
+}
+.checkout-step .form-actions {
+    margin-top: 30px;
+    margin-bottom: 26px;
+}
+.checkout-step.checkout-step--shipping .form-actions .optimizedCheckout-buttonPrimary,
+.checkout-step.checkout-step--billing .form-actions .optimizedCheckout-buttonPrimary {
+    background-color: #000;
+}
+.checkout-step.checkout-step--shipping .form-actions .optimizedCheckout-buttonPrimary:hover,
+.checkout-step.checkout-step--billing .form-actions .optimizedCheckout-buttonPrimary:hover {
+    background-color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColor");
+}
+#checkout-customer-returning .form-actions {
+    margin-top: 27px;
+}
+.checkout-step.checkout-step--payment .form-actions .optimizedCheckout-buttonPrimary {
+    font-size: 22px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-step.checkout-step--payment .form-actions .optimizedCheckout-buttonPrimary:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxOC4yODYiIHZpZXdCb3g9IjAgMCAxNiAxOC4yODYiPgogIDxwYXRoIGlkPSJJY29uX2F3ZXNvbWUtbG9jayIgZGF0YS1uYW1lPSJJY29uIGF3ZXNvbWUtbG9jayIgZD0iTTE0LjI4Niw4aC0uODU3VjUuNDI5YTUuNDI5LDUuNDI5LDAsMCwwLTEwLjg1NywwVjhIMS43MTRBMS43MTUsMS43MTUsMCwwLDAsMCw5LjcxNHY2Ljg1N2ExLjcxNSwxLjcxNSwwLDAsMCwxLjcxNCwxLjcxNEgxNC4yODZBMS43MTUsMS43MTUsMCwwLDAsMTYsMTYuNTcxVjkuNzE0QTEuNzE1LDEuNzE1LDAsMCwwLDE0LjI4Niw4Wk0xMC41NzEsOEg1LjQyOVY1LjQyOWEyLjU3MSwyLjU3MSwwLDEsMSw1LjE0MywwWiIgZmlsbD0iI2ZmZiIvPgo8L3N2Zz4K");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    order: -1;
+    margin-right: 10px;
+}
+[data-test="forgot-password-link"] {
+    display: inline-block;
+    margin-top: 6px;
+}
+.checkout-step--customer .form-body >p {
+    margin-bottom: 15px;
+}
+.customerEmail-container {
+    margin-bottom: 17px;
+}
+@media (min-width: 551px) {
+    .customerEmail-container .form-input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .customerEmail-container .button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .customerEmail-container .customerEmail-body {
+        width: 66.64%;
+    }
+    .customerEmail-container .customerEmail-action {
+        padding-left: 0;
+        margin-top: 33px;
+        width: 33.36%;
+    }
+}
+label[for="shouldSubscribe"] {
+    margin-top: 6px;
+}
+.form-body .shippingOptions-panel {
+    border-color: #707070;
+    border-radius: 3px;
+    min-height: 150px;
+}
+.shippingOptionLabel .shippingOption {
+    padding-top: 5px;
 }
 .shippingOption-price {
     font-weight: 500;
@@ -636,6 +734,56 @@ html {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
     border-radius: 10px;
     border: none;
+}
+.cart-header {
+    padding: 16px 20px 10px;
+}
+.cart-header a {
+    font-size: 16px;
+}
+.cart-header .cart-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 28px;
+}
+.cart-section {
+    padding: 15px 20px 13px;
+}
+.cart-section .product-title {
+    text-transform: none;
+}
+.cart-section .product-figure {
+    width: 60px;
+    padding-right: 10px;
+}
+.cart-section .product-body {
+    flex: 1;
+}
+.optimizedCheckout-orderSummary-cartSection span {
+    font-size: 16px;
+}
+.cart-priceItem {
+    margin-bottom: 6px;
+}
+.cart-priceItem.cart-priceItem--total {
+    margin-bottom: 0;
+}
+.cart-priceItem .cart-priceItem-label {
+    color: #000;
+}
+.cart-priceItem--total .cart-priceItem-value {
+    line-height: 30px;
+}
+.cart-priceItem--total .cart-priceItem-label span {
+    font-size: 18px;
+}
+.cart-priceItem--total .cart-priceItem-value span {
+    font-size: 24px;
+}
+.redeemable-entry .form-prefixPostfix .button {
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 @media (min-width: 1080px) {
     .checkout-form {
@@ -653,8 +801,14 @@ html {
     padding-top: 140px;
 }
 h1.optimizedCheckout-headingPrimary {
+    font-size: 48px;
     color: stencilColor("color-primary");
+    margin-bottom: 34px;
+    line-height: 45px;
 }
 body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-list a {
     font-size: 18px;
+}
+.cart-header-link {
+    display: none!important;
 }
