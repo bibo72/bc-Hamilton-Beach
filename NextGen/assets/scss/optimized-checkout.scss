@@ -139,7 +139,7 @@
     font-style: italic;
 }
 
-*:focus {
+.optimizedCheckout-contentPrimary *:focus {
     outline-color: stencilColor("optimizedCheckout-colorFocus");
 }
 
@@ -307,10 +307,10 @@ body {
 // Text Color & Typography
 // -----------------------------------------------------------------------------
 
-a {
+.optimizedCheckout-contentPrimary a {
     color: stencilColor("optimizedCheckout-link-color");
     font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
-    font-weight: stencilFontWeight("optimizedCheckout-link-font");
+    // font-weight: stencilFontWeight("optimizedCheckout-link-font");
 
     &:focus,
     &:hover {
@@ -366,7 +366,7 @@ a {
     font-weight: 400;
 }
 
-.form-field--error {
+.optimizedCheckout-contentPrimary .form-field--error {
     .optimizedCheckout-form-label,
     .form-inlineMessage {
         color: stencilColor("optimizedCheckout-formField-errorColor");
@@ -564,7 +564,7 @@ html {
 }
 .stepHeader-title {
     font-size: 36px;
-    color: #0056A8;
+    color: stencilColor("color-primary");
     margin-left: 30px;
     margin-top: 5px;
     min-width: 202px;
@@ -575,11 +575,11 @@ html {
 }
 .layout-main,
 .layout-main p,
-.form-checkbox + .form-label,
-.form-radio + .form-label,
+.optimizedCheckout-contentPrimary .form-checkbox + .form-label,
+.optimizedCheckout-contentPrimary .form-radio + .form-label,
 .optimizedCheckout-form-label,
-.button,
-ol,
+.optimizedCheckout-contentPrimary .button,
+.optimizedCheckout-contentPrimary ol,
 .optimizedCheckout-form-select,
 .optimizedCheckout-form-input,
 .shippingOption-figure,
@@ -588,12 +588,12 @@ ol,
 .form-checklist-checkbox ~ .form-label {
     font-size: 18px;
 }
-.form-input,
-.form-select {
+.optimizedCheckout-contentPrimary .form-input,
+.optimizedCheckout-contentPrimary .form-select {
     height: 50px;
     border-radius: 3px;
 }
-.form-select {
+.optimizedCheckout-contentPrimary .form-select {
     padding-right: 50px;
 }
 .paymentMethod .form-input {
@@ -631,7 +631,7 @@ ol,
 .layout-cart {
     margin-top: 70px;
 }
-.cart {
+.optimizedCheckout-contentPrimary .cart {
     margin-top: 0;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .29);
     border-radius: 10px;
@@ -645,4 +645,15 @@ ol,
     .layout-main {
         padding-right: 108px;
     }
+}
+
+// order confirmation
+.header-container ~ #checkout-app {
+    padding-top: 140px;
+}
+h1.optimizedCheckout-headingPrimary {
+    color: stencilColor("color-primary");
+}
+body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-list a {
+    font-size: 18px;
 }

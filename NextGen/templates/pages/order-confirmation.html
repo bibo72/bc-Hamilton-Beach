@@ -1,7 +1,7 @@
 ---
-blog:
-    recent_posts:
-        limit: {{theme_settings.footer_blog_posts_count}}
+products:
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
 ---
 
 {{#partial "head"}}
@@ -9,6 +9,8 @@ blog:
 {{{stylesheet '/assets/css/theme.css'}}}
 {{{ checkout.checkout_head }}}
 {{{stylesheet '/assets/css/nextgen.css'}}}
+{{{stylesheet '/assets/css/custom.css'}}}
+{{{ stylesheet '/assets/css/optimized-checkout.css' }}}
 {{ getFontsCollection }}
 
 <script type="text/javascript">
@@ -20,17 +22,23 @@ blog:
 {{/partial}}
 
 {{#partial "page"}}
+    <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
-<svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
+    {{> components/common/header }}
+    {{{ checkout.order_confirmation_content }}}
+    {{> components/common/footer }}
 
-{{> components/custom/checkout-header}}
+    <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+    <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
 
-{{{ checkout.order_confirmation_content }}}
+    <script>
+        // Exported in app.js
+        window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+    </script>
 
-{{> components/custom/checkout-footer}}
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
 
-{{{ footer.scripts }}}
-
+    {{{ footer.scripts }}}
 {{/partial}}
 
 {{> layout/checkout}}

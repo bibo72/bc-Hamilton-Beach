@@ -14403,7 +14403,7 @@ section.heroCarousel {
   height: 34px;
 }
 #body.checkout-layout .header-container.in-container {
-  max-width: 100% !important;
+  // max-width: 100% !important;
 }
 span.productView-reviewLink a {
   color: stencilColor("secondaryBody-fontColor");
@@ -15202,12 +15202,12 @@ div#checkout-app a:hover {
 div#checkout-app .form-checklist-item:hover, div#checkout-app .form-checklist-item--selected {
   border-radius: 4px;
 }
-html.rectangle-out-btnAnimate div#checkout-app .button {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 7px !important;
-  padding-bottom: 6px;
-}
+// html.rectangle-out-btnAnimate div#checkout-app .button {
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   padding-top: 7px !important;
+//   padding-bottom: 6px;
+// }
 div#checkout-app .checkout-steps {
   background-color: stencilColor("optimizedCheckout-orderSummary-backgroundColor") !important;
   padding-left: 15px;
