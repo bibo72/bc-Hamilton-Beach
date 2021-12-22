@@ -527,8 +527,25 @@ html {
     padding: 14px 18.5px; // 1.15385rem * 16 = 18.5
     max-width: 1237px; // 1200 + 1.15385rem * 2 * 16
 }
+.checkoutHeader-content-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .checkoutHeader-heading .checkoutHeader-logo {
     max-height: 72px;
+}
+.checkoutHeader-contact {
+    font-size: 24px;
+    color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColor");
+    font-weight: 500;
+    font-family: stencilFontFamily("optimizedCheckout-contentPrimary-font"), Arial, Helvetica, sans-serif;
+}
+.checkoutHeader-contact a {
+    color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColor");;
+}
+.checkoutHeader-contact a:hover {
+    color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColorHover");;
 }
 .checkout-steps {
     padding-right: 0;
