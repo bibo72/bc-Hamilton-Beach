@@ -49,8 +49,9 @@
     position: relative;
 
     .panel-body {
-        min-height: remCalc(250px); // 2
+        min-height: remCalc(272px); // 2
         padding: spacing("single");
+        border-radius: 3px;
 
         @include breakpoint("small") {
             padding: spacing("single") spacing("single") (spacing("single") + spacing("double")); // 3
@@ -59,7 +60,7 @@
 
     .form-actions {
         margin-bottom: -(spacing("half"));
-        margin-top: spacing("single");
+        margin-top: spacing("half");
         text-align: left;
 
         @include breakpoint("small") { // 3
@@ -86,13 +87,13 @@
 }
 
 .address-title {
-    margin: 0 0 spacing("half");
+    margin: 0 0 spacing("third");
     text-transform: none;
 }
 
 .address-details {
     list-style: none;
-    margin: 0 0 spacing("half");
+    margin: 0 0 spacing("third");
 }
 
 .address-details--postal {

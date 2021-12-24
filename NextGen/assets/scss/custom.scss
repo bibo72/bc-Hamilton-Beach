@@ -493,6 +493,11 @@ ul.breadcrumbs {
 
 h1.page-heading {
     font-weight: 700;
+    margin-bottom: 34px;
+
+    &.text-center {
+        text-align: center;
+    }
 }
 main.page.content h1.page-heading {
     font-weight: 700;
