@@ -138,6 +138,7 @@
 .footer-payment-icons {
     height: remCalc(40);
     margin-top: spacing("single");
+    font-size: 0;
 
     @include breakpoint("medium") {
         margin-top: spacing("double");
@@ -145,9 +146,9 @@
 
     .footer-payment-icon {
         height: 100%;
-        margin: spacing("quarter");
+        margin: 5px 10px 5px 0;
         vertical-align: middle;
-        width: remCalc(50);
+        width: remCalc(38);
     }
 
     svg {
@@ -209,7 +210,7 @@ body.main.eleven-seventy footer.footer{
         .footer-info-col{
             .footer-info-heading{
                 // color: #119EDD !important;
-                font-size: remCalc(20px);
+                font-size: remCalc(22px);
                 font-family: "Larsseit";
                 font-weight: bold;
                 margin-bottom: 25px;

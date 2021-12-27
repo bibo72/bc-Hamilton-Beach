@@ -1432,7 +1432,7 @@ footer ul.site-info {
     width: 25px;
 }
 
-.footer a {
+.footer a:not(.button) {
   color: stencilColor("navPages-color");
   text-deocoration: none !important;
 }
@@ -1559,7 +1559,10 @@ footer ul li {
 }
 
 svg.footer-payment-icon.amex {
-    width: 4.5rem;
+    // width: 4.5rem;
+}
+svg.footer-payment-icon.amazonpay {
+   width: 47px;
 }
 
 svg.footer-payment-icon.discover {
@@ -10784,7 +10787,7 @@ article.footer-info-col.footer-info-col--small:last-of-type {
 }
 
 .footer-payment-icons .footer-payment-icon {
-  height: 35px !important;
+  height: 24px !important;
 }
 
 .pagination.top {
@@ -17057,8 +17060,8 @@ footer address {
   word-wrap: break-word;
 }
 footer section.footer-info.six-columns .socialLinks--alt .icon {
-  height: 18px;
-  width: 18px;
+  height: 36px;
+  width: 36px;
 }
 body.main .main-nav-container.with-categories div#menu .navPages {
   position: relative;

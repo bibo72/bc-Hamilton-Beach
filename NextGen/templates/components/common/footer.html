@@ -91,6 +91,12 @@
 					<p class="contact-item">{{settings.phone_number}}</p>
 					<p class="contact-item" data-site-email></p>
 				</div> -->
+				<a href="javascript:void(0);" class="button button--primary button--chat" onclick="zE(function() {zE.activate();});">Send Us A Message</a>
+				{{#if theme_settings.footer_social_links_visibility '===' true}}
+				<div class="social-media">
+					{{> components/common/social-links}}
+				</div>
+				{{/if}}
 
 				<div class="global-region container-width">
 					{{{region name="footer_below_contact--global"}}}
@@ -99,14 +105,6 @@
 			{{/if}}
 
 			<article class="footer-info-col social_newsletter" data-section-type="storeInfo">
-				{{#if theme_settings.footer_social_links_visibility '===' true}}
-				<!-- <div class="social-media">
-					{{> components/common/social-links}}
-				</div> -->
-				{{/if}}
-
-
-
 				<div class="content newsletter">
 					<div class="" data-section-type="newsletterSubscription">
 						{{> components/common/subscription-form buttonText="Subscribe"}}
@@ -126,6 +124,9 @@
 					</div>
 				</div>
 
+				{{#if theme_settings.footer_payment_icons_visibility '===' true}}
+				    {{> components/common/payment-icons}}
+				{{/if}}
 
 			</article>
 
@@ -189,23 +190,24 @@
 						</svg>
 					</i> -->
 				</a>
-				<!-- <div id="demo3" class="content">
-					<ul>
+				<div id="demo3" class="content">
+					<!-- <ul>
 						<li>
 							<address>{{nl2br settings.address}}</address>
 						</li>
 						<li>{{settings.phone_number}}</li>
-					</ul>
+					</ul> -->
+					<a href="javascript:void(0);" class="button button--primary button--chat" onclick="zE(function() {zE.activate();});">Send Us A Message</a>
+					{{#if theme_settings.footer_social_links_visibility '===' true}}
+					<div class="social-media">
+						{{> components/common/social-links}}
+					</div>
+					{{/if}}
 
-				</div> -->
+				</div>
 			</li>
 		</ul>
 		<article class="footer-info-col social_newsletter" data-section-type="storeInfo">
-			{{#if theme_settings.footer_social_links_visibility '===' true}}
-			<!-- <div class="social-media">
-				{{> components/common/social-links}}
-			</div>
-			{{/if}} -->
 			<div class="content newsletter">
 				<div class="" data-section-type="newsletterSubscription">
 					{{> components/common/subscription-form  buttonText="Subscribe"}}
@@ -224,6 +226,9 @@
 					{{{region name="footer_below_newsletter--global"}}}
 				</div>
 			</div>
+			{{#if theme_settings.footer_payment_icons_visibility '===' true}}
+				{{> components/common/payment-icons}}
+			{{/if}}
 
 		</article>
 
