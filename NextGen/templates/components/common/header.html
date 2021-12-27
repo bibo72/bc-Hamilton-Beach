@@ -6,7 +6,13 @@
 <div class="header-container {{#if theme_settings.sticky_topMenu '===' true}}sticky-header{{/if}}{{#if settings.gift_certificates_enabled}} gift-certificates-enabled {{/if}}">
 <div class="top-menu {{#if theme_settings.topMenu_override '===' true}}quick-override{{/if}}">
     <div class="content">
-         <a aria-label="search" data-dropdown-custom="nav_search_mobile" name="search" class="mobileMenu-search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-search"></use></svg></i></a>
+         <a aria-label="search" data-dropdown-custom="nav_search_mobile" name="search" class="mobileMenu-search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-new_search"></use></svg></i></a>
+         <a href="javaScript:;" class="mobileMenu-user">
+          <svg ><use xlink:href="#icon-user"></use></svg>
+        </a>
+         <a href="/cart.php" class="mobileMenu-addToCart">
+          <svg ><use xlink:href="#icon-add_to_cart"></use></svg>
+        </a>
          <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
             <span class="mobileMenu-toggleIcon">Toggle menu</span>
         </a>
@@ -26,7 +32,7 @@
         <div class="right account-links {{#if cart.items}} countPill--positive{{/if}}">
             <ul>
               <li class="navUser-item navUser-item--account search mobile">
-                <a aria-label="search" name="search" class="navUser-action account search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search"><use xlink:href="#icon-search" /></svg></i></a>
+                <a aria-label="search" name="search" class="navUser-action account search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search"><use xlink:href="#icon-new_search" /></svg></i></a>
               </li>
               <!-- <li class="navUser-item navUser-item--account mobile"><i class="fa fa-user" aria-hidden="true"><svg class="" title="search" alt="search"><use xlink:href="#icon-search"></use></svg></i></li> -->
 

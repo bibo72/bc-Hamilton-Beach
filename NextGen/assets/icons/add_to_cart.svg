@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.317" height="24.258" viewBox="0 0 25.317 24.258">
+  <g id="_003-shopping-cart" data-name="003-shopping-cart" transform="translate(0.5 -10.166)">
+    <g id="Group_895" data-name="Group 895" transform="translate(16.915 28.638)">
+      <g id="Group_894" data-name="Group 894">
+        <path id="Path_933" data-name="Path 933" d="M343.977,373.333a2.643,2.643,0,1,0,2.643,2.643A2.647,2.647,0,0,0,343.977,373.333Zm0,4.229a1.586,1.586,0,1,1,1.586-1.586A1.588,1.588,0,0,1,343.977,377.562Z" transform="translate(-341.334 -373.333)" fill="#0056a8" stroke="#0056a8" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Group_897" data-name="Group 897" transform="translate(6.343 28.638)">
+      <g id="Group_896" data-name="Group 896">
+        <path id="Path_934" data-name="Path 934" d="M130.643,373.333a2.643,2.643,0,1,0,2.643,2.643A2.647,2.647,0,0,0,130.643,373.333Zm0,4.229a1.586,1.586,0,1,1,1.586-1.586A1.588,1.588,0,0,1,130.643,377.562Z" transform="translate(-128 -373.333)" fill="#0056a8" stroke="#0056a8" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Group_899" data-name="Group 899" transform="translate(0 10.666)">
+      <g id="Group_898" data-name="Group 898" transform="translate(0 0)">
+        <path id="Path_935" data-name="Path 935" d="M21.672,26.524H9.471A2.65,2.65,0,0,1,6.88,24.4L4.218,11.091a.529.529,0,0,0-.518-.425H.529a.529.529,0,1,0,0,1.057H3.267L5.843,24.607a3.71,3.71,0,0,0,3.628,2.974h12.2a.529.529,0,0,0,0-1.057Z" transform="translate(0 -10.666)" fill="#0056a8" stroke="#0056a8" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Group_901" data-name="Group 901" transform="translate(4.229 13.838)">
+      <g id="Group_900" data-name="Group 900" transform="translate(0 0)">
+        <path id="Path_936" data-name="Path 936" d="M105.288,74.846a.53.53,0,0,0-.4-.179H85.862a.529.529,0,1,0,0,1.057h18.431l-.752,6.011a1.589,1.589,0,0,1-1.574,1.389H87.447a.529.529,0,0,0,0,1.057h14.52a2.647,2.647,0,0,0,2.623-2.315l.826-6.605A.527.527,0,0,0,105.288,74.846Z" transform="translate(-85.333 -74.667)" fill="#0056a8" stroke="#0056a8" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>
