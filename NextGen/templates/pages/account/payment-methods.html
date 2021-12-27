@@ -1,3 +1,8 @@
+---
+products:
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+---
 {{#partial "page"}}
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     <h2 class="page-heading">{{lang 'account.payment_methods.heading' }}</h2>

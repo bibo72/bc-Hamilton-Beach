@@ -93,14 +93,14 @@ span.primary-color span {
 
 .button {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
   border: 1px solid;
   border-radius: 4px;
 }
 
 a.button {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 div#cart-preview-dropdown {
@@ -3562,13 +3562,13 @@ ul.grid-default {
   font-family: Larsseit;
   font-weight: 700;
   // background-color: stencilColor("forms-submitButton-bgColor");
-  background-color: stencilColor("primary-actionColor");
+  // background-color: stencilColor("primary-actionColor");
   // color: stencilColor("forms-submitButton-fontColor");
-  color: stencilColor("primary-actionInnerFontIconLinkColor");
-  border: 1px solid;
-  border-radius: 4px !important;
+  // color: stencilColor("primary-actionInnerFontIconLinkColor");
+  // border: 1px solid;
+  // border-radius: 4px !important;
   // border-color: stencilColor("forms-submitButton-borderColor");
-  border-color: stencilColor("primary-actionColor");
+  // border-color: stencilColor("primary-actionColor");
 }
 
 .form-actions .button:hover {
@@ -3578,14 +3578,14 @@ ul.grid-default {
   // border: 1px solid;
   // border-radius: 4px !important;
   // border-color: stencilColor("forms-submitButton-borderHoverColor");
-  border: 1px solid;
-  border-radius: 4px !important;
-  // background-color: stencilColor("forms-submitButton-bgHoverColor");
-  background-color: stencilColor("primary-actionHoverColor");
-  // color: stencilColor("forms-submitButton-fontHoverColor");
-  color: stencilColor("primary-actionInnerHoverFontIconLinkColor");
-  // border-color: stencilColor("forms-submitButton-borderHoverColor");
-  border-color: stencilColor("primary-actionColor");
+  // border: 1px solid;
+  // border-radius: 4px !important;
+  // // background-color: stencilColor("forms-submitButton-bgHoverColor");
+  // background-color: stencilColor("primary-actionHoverColor");
+  // // color: stencilColor("forms-submitButton-fontHoverColor");
+  // color: stencilColor("primary-actionInnerHoverFontIconLinkColor");
+  // // border-color: stencilColor("forms-submitButton-borderHoverColor");
+  // border-color: stencilColor("primary-actionColor");
 }
 
 .form-actions a.button.button--small {
@@ -3596,7 +3596,7 @@ ul.grid-default {
   height: 42px !important;
   line-height: 42px;
   padding: 0 30px;
-  margin-left: 5px;
+  // margin-left: 5px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -4764,41 +4764,41 @@ h3.account-heading {
   padding-right: 0;
 }
 
-.account .button:not(.card-figcaption-button) {
-  text-transform: uppercase;
-  margin-left: 0;
-  border-radius: 0;
-  padding: 0;
-  height: 42px !important;
-  line-height: 42px;
-  padding: 0 30px;
-  margin-left: 5px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  font-family: Larsseit;
-  font-weight: 700;
-  // background-color: stencilColor("forms-submitButton-bgColor");
-  background-color: stencilColor("primary-actionColor");
-  // color: stencilColor("forms-submitButton-fontColor");
-  color: stencilColor("primary-actionInnerFontIconLinkColor");
-  border: 1px solid;
-  // border-color: stencilColor("forms-submitButton-borderColor");
-  border-color: stencilColor("primary-actionColor");
-  border-radius: 4px !important;
-}
+// .account .button:not(.card-figcaption-button) {
+//   text-transform: uppercase;
+//   margin-left: 0;
+//   border-radius: 0;
+//   padding: 0;
+//   height: 42px !important;
+//   line-height: 42px;
+//   padding: 0 30px;
+//   margin-left: 5px;
+//   border-top: none;
+//   border-left: none;
+//   border-right: none;
+//   font-family: Larsseit;
+//   font-weight: 700;
+//   // background-color: stencilColor("forms-submitButton-bgColor");
+//   background-color: stencilColor("primary-actionColor");
+//   // color: stencilColor("forms-submitButton-fontColor");
+//   color: stencilColor("primary-actionInnerFontIconLinkColor");
+//   border: 1px solid;
+//   // border-color: stencilColor("forms-submitButton-borderColor");
+//   border-color: stencilColor("primary-actionColor");
+//   border-radius: 4px !important;
+// }
 
-.account .button:hover {
-  border: 1px solid;
-  border-radius: 4px !important;
-  // background-color: stencilColor("forms-submitButton-bgHoverColor");
-  // color: stencilColor("forms-submitButton-fontHoverColor");
-  // background: stencilColor("forms-submitButton-bgHoverColor");
-  // border-color: stencilColor("forms-submitButton-borderHoverColor");
-  background-color: stencilColor("primary-actionHoverColor");
-  color: stencilColor("primary-actionInnerHoverFontIconLinkColor");
-  border-color: stencilColor("primary-actionColor");
-}
+// .account .button:hover {
+//   border: 1px solid;
+//   border-radius: 4px !important;
+//   // background-color: stencilColor("forms-submitButton-bgHoverColor");
+//   // color: stencilColor("forms-submitButton-fontHoverColor");
+//   // background: stencilColor("forms-submitButton-bgHoverColor");
+//   // border-color: stencilColor("forms-submitButton-borderHoverColor");
+//   background-color: stencilColor("primary-actionHoverColor");
+//   color: stencilColor("primary-actionInnerHoverFontIconLinkColor");
+//   border-color: stencilColor("primary-actionColor");
+// }
 
 
 /*THEME CONTENT HEADERS*/
@@ -4821,6 +4821,7 @@ h2.page-heading {
   margin-bottom: 0;
   color: stencilColor("color-textBase");
   margin-top: 0;
+  font-weight: 700;
 }
 
 h2 {
@@ -14007,26 +14008,26 @@ body#body.product-page-layout.with-sidenav.fourteen-forty div[data-content-regio
   float: left;
   width: 80%;
 }
-.account .button:hover {
-    border-radius: 0;
-    height: 42px !important;
-    padding: 0 30px;
-    // position: absolute;
-    // right: -.78571rem;
-    // top: -.78571rem;
-    width: auto !important;
-    z-index: 1;
-    // line-height: unset !important;
-    line-height: auto !important;
-}
-.account .button:hover {
-  border: 1px solid;
-  // background: stencilColor("newsletter-button-bgHoverColor");
-  // border-color: stencilColor("newsletter-button-borderHoverColor");
-  background-color: stencilColor("primary-actionHoverColor");
-  color: stencilColor("primary-actionInnerHoverFontIconLinkColor");
-  border-color: stencilColor("primary-actionColor");
-}
+// .account .button:hover {
+//     border-radius: 0;
+//     height: 42px !important;
+//     padding: 0 30px;
+//     // position: absolute;
+//     // right: -.78571rem;
+//     // top: -.78571rem;
+//     width: auto !important;
+//     z-index: 1;
+//     // line-height: unset !important;
+//     line-height: auto !important;
+// }
+// .account .button:hover {
+//   border: 1px solid;
+//   // background: stencilColor("newsletter-button-bgHoverColor");
+//   // border-color: stencilColor("newsletter-button-borderHoverColor");
+//   background-color: stencilColor("primary-actionHoverColor");
+//   color: stencilColor("primary-actionInnerHoverFontIconLinkColor");
+//   border-color: stencilColor("primary-actionColor");
+// }
  .button--primary:focus {
   border: 1px solid;
   // background-color: stencilColor("forms-submitButton-bgHoverColor");
@@ -14403,7 +14404,7 @@ section.heroCarousel {
   height: 34px;
 }
 #body.checkout-layout .header-container.in-container {
-  max-width: 100% !important;
+  // max-width: 100% !important;
 }
 span.productView-reviewLink a {
   color: stencilColor("secondaryBody-fontColor");
@@ -15190,7 +15191,7 @@ a#checkout-customer-cancel {
 }
 div#checkout-app article.cart.optimizedCheckout-orderSummary {
   background-color: stencilColor("optimizedCheckout-orderSummary-backgroundColor") !important;
-  box-shadow: none !important;
+  // box-shadow: none !important;
 }
 div#checkout-app a {
   color: stencilColor("primaryBody-fontColor");
@@ -15202,12 +15203,12 @@ div#checkout-app a:hover {
 div#checkout-app .form-checklist-item:hover, div#checkout-app .form-checklist-item--selected {
   border-radius: 4px;
 }
-html.rectangle-out-btnAnimate div#checkout-app .button {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 7px !important;
-  padding-bottom: 6px;
-}
+// html.rectangle-out-btnAnimate div#checkout-app .button {
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   padding-top: 7px !important;
+//   padding-bottom: 6px;
+// }
 div#checkout-app .checkout-steps {
   background-color: stencilColor("optimizedCheckout-orderSummary-backgroundColor") !important;
   padding-left: 15px;

@@ -58,7 +58,8 @@
             "checkout_multiple": "or check out with multiple addresses",
             "view_cart": "View Cart"
         },
-        "label": "Your Cart ({quantity, plural, one {# item} other {# items}})",
+        "label": "Your Cart",
+        "label_number":"({quantity, plural, one {# item} other {# items}})",
         "is_empty": "Your cart is empty",
         "coupon_code": "Coupon Code",
         "discount": "Discount",
@@ -1031,7 +1032,7 @@
             "gift_certificate_text": "Gift Certificate",
             "remove_action": "Remove",
             "store_credit_available_text": "Your account currently has {storeCredit} total store credit available",
-            "toggle_action": "Promo/Gift Certificate"
+            "toggle_action": "+ Coupon Code"
         },
         "remote": {
             "browser_unsupported": "The selected payment method requires a different web browser. Please choose another payment method.",
