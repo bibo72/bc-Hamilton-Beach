@@ -327,6 +327,10 @@
                     border-top:1px solid rgba(0,90,122,0.2);
                     .cart-item {
                         border-bottom:1px solid rgba(0,90,122,0.2);
+                        padding:20px 0;
+                        .cart-item-figure {
+                            height: 118px !important;
+                        }
                         @media screen and (max-width : 800px) {
                             td.cart-item-block.cart-item-figure {
                                 text-align: center;
@@ -462,6 +466,14 @@
                 }
             }
             .cart-totals {
+                .cart-total .form-select {
+                    height: 40px;
+                    background-position: right 0.27778rem top 0.65889rem;
+                    padding: 0 0.5rem;
+                }
+                .cart-total .form-input {
+                    height: 40px;
+                }
                 .cart-total-label, .cart-total-value {
                     padding: 20px 0;
                 }
@@ -494,10 +506,12 @@
             }
             .cart-actions {
                 .button--primary {
-                    .checkout-lock {
+                    display: flex;
+                    align-items: center;
+                    i {
+                        margin-right: 10px;
                         position: relative;
-                        right: 9px;
-                        bottom: 3.5px;
+                        bottom: 1px;
                     }
                     span {
                         font-size: 22px;
