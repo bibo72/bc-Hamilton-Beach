@@ -750,6 +750,10 @@ label[for="shouldSubscribe"] {
 .shippingOption-price {
     font-weight: 500;
 }
+#checkoutShippingAddress .checkout-address .dynamic-form-field--countryCode {
+    display: none;
+}
+// cart
 .layout-cart {
     margin-top: 70px;
 }
