@@ -352,6 +352,7 @@
                             top: 50%;
                             margin-top: -25px;
                             min-width: 180px;
+                            text-align: left;
                             .form-increment {
                                 margin: 0;
                             }
@@ -466,9 +467,12 @@
                 }
             }
             .cart-totals {
+                [aria-expanded="true"] {
+                    border-bottom: none;
+                }
                 .cart-total .form-select {
                     height: 40px;
-                    background-position: right 0.27778rem top 0.65889rem;
+                    background-position: right 0.27778rem top 0.5rem;
                     padding: 0 0.5rem;
                 }
                 .cart-total .form-input {
@@ -508,6 +512,8 @@
                 .button--primary {
                     display: flex;
                     align-items: center;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
                     i {
                         margin-right: 10px;
                         position: relative;
@@ -529,4 +535,49 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
 .button--chat {
     padding-left: 15px;
     padding-right: 15px;
+}
+//preview cart
+#menu {
+    .navPages {
+        .custom-pages-nav {
+            .addToCart {
+                #cart-preview-dropdown {
+                    .previewCartAction {
+                        .button {
+                            font-size: 14px;
+                        }
+                    }
+                    .previewCartList {
+                        .previewCartItem-content {
+                            text-align: left;
+                            .previewCartItem-image {
+                                img {
+                                    // max-width: 85px;
+                                }
+                            }
+                            .card-sku-brand-section   {
+                               .sku-label,.sku-value {
+                                   font-size: 16px;
+                               }
+                            }
+                            .previewCartItem-price {
+                                font-size: 16px;
+                            }
+                        }
+                        .card-title-two-lines {
+                            a {
+                                font-size: 20px;
+                                line-height: unset;
+                            }
+                        }
+                    }
+                    .previewCartCheckout-additionalCheckoutButtons {
+                        .braintree-paypal-button {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
