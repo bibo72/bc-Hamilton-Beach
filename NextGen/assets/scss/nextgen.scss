@@ -2,6 +2,9 @@ body,p,span,a{
   font-size: 18px;
   line-height: 28px;
 }
+.button span {
+  line-height: 1rem;
+}
 a {
   // color: stencilColor("contentPage-anchor-fontColor");
   // color: stencilColor("primary-actionColor");
