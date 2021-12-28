@@ -42,6 +42,52 @@ blog:
 
     {{{ checkout.checkout_content }}}
 
+<!-- Shipping address: set default value of Country to "US" -->
+<script>
+    (function () {
+        if (typeof window.CustomEvent === "function") return false;
+
+        function CustomEvent(event, params) {
+            params = params || {
+                bubbles: false,
+                cancelable: false,
+                detail: undefined,
+            };
+            var evt = document.createEvent("CustomEvent");
+            evt.initCustomEvent(
+                event,
+                params.bubbles,
+                params.cancelable,
+                params.detail
+            );
+            return evt;
+        }
+
+        CustomEvent.prototype = window.Event.prototype;
+
+        window.CustomEvent = CustomEvent;
+    })();
+    function setValue() {
+        var shippingAddresses = document.getElementById("shippingAddresses");
+        var countrySelect = document.getElementById("countryCodeInput");
+        if (!countrySelect || !shippingAddresses) return;
+
+        var nativeSelectValueSetter = Object.getOwnPropertyDescriptor(
+            window.HTMLSelectElement.prototype,
+            "value"
+        ).set;
+        nativeSelectValueSetter.call(countrySelect, 'US');
+        if (typeof window.CustomEvent === "function") {
+            var evt = new CustomEvent("change", { bubbles: true });
+        } else {
+            var evt = new CustomEvent("change", { bubbles: true });
+        }
+        countrySelect.dispatchEvent(evt);
+    }
+    setInterval(setValue, 1000);
+</script>
+
 {{/partial}}
 
 {{> layout/checkout}}
+
