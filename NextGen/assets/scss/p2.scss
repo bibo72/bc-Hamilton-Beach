@@ -470,6 +470,13 @@
                 [aria-expanded="true"] {
                     border-bottom: none;
                 }
+                .shipping-quotes {
+                    .estimator-form-row {
+                        #shipping-quote-freeshipping-0 {
+                            margin-top: 8.5px;
+                        }
+                    }
+                }
                 .cart-total .form-select {
                     height: 40px;
                     background-position: right 0.27778rem top 0.5rem;
@@ -550,11 +557,6 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
                     .previewCartList {
                         .previewCartItem-content {
                             text-align: left;
-                            .previewCartItem-image {
-                                img {
-                                    // max-width: 85px;
-                                }
-                            }
                             .card-sku-brand-section   {
                                .sku-label,.sku-value {
                                    font-size: 16px;
