@@ -6,11 +6,13 @@ products:
 
 {{#partial "head"}}
 
-{{{stylesheet '/assets/css/theme.css'}}}
 {{{ checkout.checkout_head }}}
+{{{stylesheet '/assets/css/theme.css'}}}
 {{{stylesheet '/assets/css/nextgen.css'}}}
-{{{stylesheet '/assets/css/custom.css'}}}
 {{{ stylesheet '/assets/css/optimized-checkout.css' }}}
+{{{stylesheet '/assets/css/custom.css'}}}
+
+
 {{ getFontsCollection }}
 
 <script type="text/javascript">
@@ -25,6 +27,17 @@ products:
     <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
     {{> components/common/header }}
+    <div class="body content">
+        <ul class="breadcrumbs">
+            <li class="breadcrumb">
+                <a href="/" class="breadcrumb-label">Home</a>
+            </li>
+            <li class="breadcrumb is-active">
+                <span class="breadcrumb-label">ORDER CONFIRMATION</span>
+            </li>
+        </ul>
+    </div>
+
     {{{ checkout.order_confirmation_content }}}
     {{> components/common/footer }}
 
