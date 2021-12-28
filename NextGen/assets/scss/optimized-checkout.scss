@@ -623,6 +623,13 @@ html {
 .optimizedCheckout-contentPrimary .form-select {
     padding-right: 50px;
 }
+.dropdown-toggle--select {
+    font-family: Larsseit;
+    border-color: #707070;
+}
+.dropdown-menu-item {
+    font-size: 18px;
+}
 .paymentMethod .form-input {
     padding-left: 14px;
     padding-right: 14px;
@@ -825,7 +832,4 @@ h1.optimizedCheckout-headingPrimary {
 }
 body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-list a {
     font-size: 18px;
-}
-.cart-header-link {
-    display: none!important;
 }

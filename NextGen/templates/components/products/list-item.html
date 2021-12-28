@@ -88,7 +88,6 @@
                             <a href="tel:{{theme_settings.card_call_for_price_phone_number}}" class="call-for-price mobile" data-product-id="{{id}}"><span class="line-one">{{theme_settings.card_call_for_price_text}}</span><span class="line-two">{{theme_settings.card_call_for_price_phone_number}}</span></a>
                           </div>
                     {{/if}}
-                    <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
                 {{else}}
                     {{> components/common/login-for-pricing}}
                 {{/or}}
@@ -100,6 +99,36 @@
                     </div>
                   {{/if}}
                 {{/or}}
+                <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
+                  {{#if show_cart_action}}
+                      {{#if has_options}}
+                          <a href="{{url}}" class="button button--primary card-figcaption-button options" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.choose_options'}}</span><span></span></a>
+                      {{/if}}
+                      {{#if pre_order}}
+                          <a href="{{url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.pre_order'}}</span><span></span></a>
+                      {{/if}}
+                      {{#if add_to_cart_url }}
+                          <a href="{{add_to_cart_url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.add_to_cart'}}</span><span></span></a>
+                      {{/if}}
+                      {{#if out_of_stock_message }}
+                          <a href="{{url}}" class="button button--primary card-figcaption-button" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{out_of_stock_message}}</span><span></span></a>
+                      {{/if}}
+                      {{#if stock_level '<' 1}}
+                        {{#if out_of_stock_message '===' false}}
+                          <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">View Details</span><span></span></a>
+                        {{/if}}
+                      {{/if}}
+                  {{/if}}
+                  {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                    {{#if price}}
+                    {{ else }}
+                      <div class="card-text add-to-cart-button call-for-price">
+                        <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="zoning-in-animate">View Details</span><span></span></a>
+                      </div>
+                    {{/if}}
+                  {{/or}}
+                </div>
+
                 {{#if show_compare}}
                 <!-- <label class="button button--small card-figcaption-button compare" for="compare-{{id}}">
                   <span class="custom-checkbox"><input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}"></span>

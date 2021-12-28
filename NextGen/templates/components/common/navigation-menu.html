@@ -52,9 +52,15 @@
                 </div>
               </li>
               <li class="nav-icon user">
-                <a href="">
-                  <svg ><use xlink:href="#icon-user"></use></svg>
-                </a>
+                {{#if customer}}
+                  <a href="{{urls.account.index}}">
+                    <svg ><use xlink:href="#icon-user"></use></svg>
+                  </a>
+                {{else}}
+                  <a href="{{urls.auth.login}}">
+                    <svg ><use xlink:href="#icon-user"></use></svg>
+                  </a>
+                {{/if}}
                 
               </li>
               <li class="nav-icon addToCart navUser-item navUser-item--cart">

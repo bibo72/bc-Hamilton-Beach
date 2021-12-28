@@ -609,7 +609,7 @@ h1.page-heading.category{
 .main.category-layout.eleven-seventy.base-layout.category-layout-no-sidevav.sidenav-inactive.sidebar-no-sidenav-categories {
     .form-field {
         position: relative;
-        bottom: 7px;
+        // bottom: 7px;
     }
     article.card.brand-sku-active .card-sku-brand-section {
         height: 20px;
@@ -633,7 +633,7 @@ h1.page-heading.category{
     .price-section.current-price span.price {
         font-size: 22px !important;
     }
-    a.button.button--primary {
+    .product a.button.button--primary {
         font-size: 22px;
         @media (max-width: 767px) {
             font-size: 16px;
@@ -647,7 +647,7 @@ h1.page-heading.category{
 .main.category-layout.eleven-seventy.base-layout.category-layout-no-sidevav.sidenav-inactive.shop-by-price-disabled.facetedSearch-disabled {
     .form-field {
         position: relative;
-        bottom: 7px;
+        // bottom: 7px;
     }
     article.card.brand-sku-active .card-sku-brand-section {
         height: 20px;
@@ -671,7 +671,7 @@ h1.page-heading.category{
     .price-section.current-price span.price {
         font-size: 22px !important;
     }
-    a.button.button--primary {
+    .product a.button.button--primary {
         font-size: 22px;
     }
 }

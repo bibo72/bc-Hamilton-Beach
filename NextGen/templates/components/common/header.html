@@ -7,9 +7,15 @@
 <div class="top-menu {{#if theme_settings.topMenu_override '===' true}}quick-override{{/if}}">
     <div class="content">
          <a aria-label="search" data-dropdown-custom="nav_search_mobile" name="search" class="mobileMenu-search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-new_search"></use></svg></i></a>
-         <a href="javaScript:;" class="mobileMenu-user">
+         {{#if customer}}
+         <a href="{{urls.account.index}}" class="mobileMenu-user">
           <svg ><use xlink:href="#icon-user"></use></svg>
         </a>
+        {{else}}
+        <a href="{{urls.auth.login}}" class="mobileMenu-user">
+          <svg ><use xlink:href="#icon-user"></use></svg>
+        </a>
+        {{/if}}
          <a href="/cart.php" class="mobileMenu-addToCart">
           <svg ><use xlink:href="#icon-add_to_cart"></use></svg>
         </a>
