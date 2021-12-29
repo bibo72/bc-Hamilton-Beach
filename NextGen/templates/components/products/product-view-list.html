@@ -213,11 +213,7 @@
                     {{/if}}
                  {{/each}}
              </dl>
-         </div>
-         <div class="notify-button">
-            <a class="button button--primary notify-word" data-product-sku="{{product.sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
-        </div>
-    
+         </div>   
     
          <section class="productView-details product-options">
           <div class="productView-options">
@@ -240,13 +236,12 @@
                       <span data-product-stock>{{product.stock_level}}</span>
                   </label>
               </div>
-              {{> components/products/add-to-cart}}
               {{#if product.out_of_stock}}
-                  {{#if product.out_of_stock_message}}
-                      {{> components/common/alert/alert-error product.out_of_stock_message}}
+              <div class="notify-button">
+                <a class="button button--primary notify-word" data-product-sku="{{product.sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
+            </div>
                   {{else}}
-                      {{> components/common/alert/alert-error (lang 'products.sold_out')}}
-                  {{/if}}
+                  {{> components/products/add-to-cart}}
               {{/if}}
           </form>
           {{#if settings.show_wishlist}}
