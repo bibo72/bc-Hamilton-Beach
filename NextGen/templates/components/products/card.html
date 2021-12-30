@@ -331,10 +331,11 @@
     </div>
     {{> components/products/bulk-discount-rates}}
     {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-    {{#if stock_level '<' 1}}
-    <div class="notify-button">
-      <a class="button button--primary notify-word" data-product-sku="{{product.sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
-  </div>
+    {{#if out_of_stock_message}}
+    <div class="card-text add-to-cart-button">
+      <a href="#" class="button button--primary" data-product-sku="{{sku}}" data-reveal-id="getUpdateModal">Notify
+        me</a>
+    </div>
         {{else}}
         <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
           {{#if show_cart_action}}

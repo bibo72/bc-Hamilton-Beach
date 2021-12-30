@@ -602,55 +602,24 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
        }
 }
 
-//plp-notifyButton
-.main.category-layout-no-sidevav.sidenav-inactive.sidebar-no-sidenav-categories.shop-by-price-disabled.facetedSearch-disabled.not-internet-explorer {
-    .category.main.top-pagination-hidden.grid-default.product-filtering-disabled {
-        .notify-button {
-            margin: 0.38889rem 0 0;
+//recently-notifyButton
+.main.eleven-seventy.base-layout.not-internet-explorer.chrome {
+    .page-content.no-sidenav {
+        .card-text.add-to-cart-button {
             a {
-                margin-bottom: 0;
+                font-size: 18px !important;
             }
         }
     }
 }
 
 //search-notifyButton
-.main.search-layout.eleven-seventy.base-layout.search-layout-no-sidevav.sidenav-inactive.facetedSearch-disabled.facetedSearch-disabled.not-internet-explorer.chrome {
-    #product-listing-container .notify-button {
-        margin: 0.38889rem 0 0;
-        a {
-            margin-bottom: 0;
-            font-size: 18px;
-        }
-    }
-}
-
-//recently-notifyButton
-.main.eleven-seventy.base-layout.not-internet-explorer.chrome {
-    .page-content.no-sidenav {
-        .notify-button {
-            margin: 0.38889rem 0 0;
+.main.eleven-seventy.search-layout.not-internet-explorer.chrome {
+    .page-content {
+        .card-text.add-to-cart-button {
             a {
-                margin-bottom: 0;
+                font-size: 18px !important;
             }
         }
-    }
-}
-
-//quicksearch-notifyButton
-.custom-pages-nav {
-    .nav-search.nav-icon {
-        #nav_search {
-            .notify-button {
-                width: 180px;
-                max-width: 100%;
-            }
-        }
-    }
-}
-#quickSearch {
-    .notify-button {
-        width: 180px;
-        max-width: 100%;
     }
 }
