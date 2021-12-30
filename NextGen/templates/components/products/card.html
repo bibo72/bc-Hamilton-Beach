@@ -331,35 +331,41 @@
     </div>
     {{> components/products/bulk-discount-rates}}
     {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-      <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
-        {{#if show_cart_action}}
-            {{#if has_options}}
-                <a href="{{url}}" class="button button--primary card-figcaption-button options" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.choose_options'}}</span><span></span></a>
-            {{/if}}
-            {{#if pre_order}}
-                <a href="{{url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.pre_order'}}</span><span></span></a>
-            {{/if}}
-            {{#if add_to_cart_url }}
-                <a href="{{add_to_cart_url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.add_to_cart'}}</span><span></span></a>
-            {{/if}}
-            {{#if out_of_stock_message }}
-                <a href="{{url}}" class="button button--primary card-figcaption-button" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{out_of_stock_message}}</span><span></span></a>
-            {{/if}}
-            {{#if stock_level '<' 1}}
-              {{#if out_of_stock_message '===' false}}
-                <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">View Details</span><span></span></a>
+    {{#if stock_level '<' 1}}
+    <div class="notify-button">
+      <a class="button button--primary notify-word" data-product-sku="{{product.sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
+  </div>
+        {{else}}
+        <div class="card-text add-to-cart-button {{#if stock_level '<' 1}}{{#if out_of_stock_message '===' false}} no-button{{/if}}{{/if}}">
+          {{#if show_cart_action}}
+              {{#if has_options}}
+                  <a href="{{url}}" class="button button--primary card-figcaption-button options" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.choose_options'}}</span><span></span></a>
               {{/if}}
-            {{/if}}
-        {{/if}}
-        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-          {{#if price}}
-          {{ else }}
-            <div class="card-text add-to-cart-button call-for-price">
-              <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="zoning-in-animate">View Details</span><span></span></a>
-            </div>
+              {{#if pre_order}}
+                  <a href="{{url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.pre_order'}}</span><span></span></a>
+              {{/if}}
+              {{#if add_to_cart_url }}
+                  <a href="{{add_to_cart_url}}" class="button button--primary card-figcaption-button"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{lang 'products.add_to_cart'}}</span><span></span></a>
+              {{/if}}
+              {{#if out_of_stock_message }}
+                  <a href="{{url}}" class="button button--primary card-figcaption-button" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">{{out_of_stock_message}}</span><span></span></a>
+              {{/if}}
+              {{#if stock_level '<' 1}}
+                {{#if out_of_stock_message '===' false}}
+                  <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="{{#if theme_settings.button_animation '===' 'zoning-in'}}zoning-in-animate{{/if}}">View Details</span><span></span></a>
+                {{/if}}
+              {{/if}}
           {{/if}}
-        {{/or}}
-      </div>
+          {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+            {{#if price}}
+            {{ else }}
+              <div class="card-text add-to-cart-button call-for-price">
+                <a href="{{url}}" class="button button--primary card-figcaption-button false-stock-message" data-product-id="{{id}}"><span class="zoning-in-animate">View Details</span><span></span></a>
+              </div>
+            {{/if}}
+          {{/or}}
+        </div>
+    {{/if}}
     {{/or}}
   </div>
 
