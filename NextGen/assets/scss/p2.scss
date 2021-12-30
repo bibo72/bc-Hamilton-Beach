@@ -644,6 +644,12 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
             .notify-button {
                 width: 180px;
                 max-width: 100%;
+                margin: 0.38889rem 0 0;
+                a {
+                    margin-bottom: 0;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
             }
         }
     }
@@ -652,5 +658,11 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
     .notify-button {
         width: 180px;
         max-width: 100%;
+        margin: 0.38889rem 0 0;
+        a {
+            margin-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 }
