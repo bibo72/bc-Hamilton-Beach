@@ -544,7 +544,7 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
 
 .previewCartItem-image {
     @include grid-column(4, $float: false);
-    padding: spacing("single");
+    padding: 15px;
     text-align: center;
 }
 
@@ -578,7 +578,7 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
     @include grid-row;
     border-top: container("border");
     display: block;
-    padding: spacing("single") 5px;
+    padding: spacing("single");
 
     .button {
         margin: 0;

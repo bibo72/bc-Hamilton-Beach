@@ -550,6 +550,7 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
             .addToCart {
                 #cart-preview-dropdown {
                     .previewCartAction {
+                        padding: 15px 5px;
                         .button {
                             font-size: 14px;
                         }
@@ -557,19 +558,26 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
                     .previewCartList {
                         .previewCartItem-content {
                             text-align: left;
-                            .card-sku-brand-section   {
-                               .sku-label,.sku-value {
-                                   font-size: 16px;
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            .card-text   {
+                               a,span {
+                                   font-size: 14px;
+                                   font-weight: 400;
+                                   color: #323232!important;
                                }
                             }
                             .previewCartItem-price {
-                                font-size: 16px;
+                                font-size: 18px;
+                                color: #323232!important;
+                                font-weight: 700;
                             }
                         }
                         .card-title-two-lines {
                             a {
-                                font-size: 20px;
+                                font-size: 16px;
                                 line-height: unset;
+                                text-transform: none;
                             }
                         }
                     }
@@ -620,6 +628,24 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
             a {
                 font-size: 18px !important;
             }
+        }
+    }
+}
+// quick view
+#previewModal {
+    .productView {
+        padding-top: 0;
+    }
+    .productView-details {
+        
+        @media (min-width: 1025px) {
+            float: left;
+        }
+    }
+    .previewCartCheckout {
+        .button {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }
