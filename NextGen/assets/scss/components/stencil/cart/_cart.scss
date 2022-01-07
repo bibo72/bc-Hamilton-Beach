@@ -71,7 +71,7 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
 
     @include breakpoint("small") {
         @include clearfix;
-        padding-left: grid-calc(3, $total-columns);
+        padding-left: grid-calc(2, $total-columns);
     }
 
     @include breakpoint("medium") {
@@ -111,8 +111,8 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
     @include breakpoint("small") {
         // height: auto;
         margin-bottom: 0;
-        margin-left: -(grid-calc(4, $total-columns));
-        width: grid-calc(4, $total-columns);
+        margin-left: -(grid-calc(2, $total-columns));
+        width: grid-calc(2, $total-columns);
     }
 
     @include breakpoint("medium") {
@@ -125,13 +125,14 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
 .cart-item-title {
     display: table-cell;
     height: $cart-thumbnail-height;
-    padding-left: $cart-item-spacing;
+    padding-left: 5px;
 
     @include breakpoint("small") {
         display: block;
         height: auto;
         margin-bottom: $cart-item-spacing;
         overflow: hidden;
+        padding-left: $cart-item-spacing;
     }
 
     @include breakpoint("medium") {
@@ -166,6 +167,9 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
 
     + .cart-item-info {
         margin-top: spacing("half");
+        @media screen and (min-width: 551px) {
+            margin-top: 0;
+        }
     }
 }
 
@@ -201,6 +205,7 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
     margin-bottom: spacing("quarter");
     text-align: right;
     width: grid-calc(4, $total-columns);
+    padding-left: 5px;
 
     @include breakpoint("small") {
         display: block;
@@ -215,7 +220,10 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
 }
 
 .cart-item-value {
-    padding-left: $cart-item-spacing;
+    padding-left: 5px;
+    @include breakpoint("small") {
+        padding-left: $cart-item-spacing;
+    }
 
     @include breakpoint("medium") {
         padding-left: 0;
