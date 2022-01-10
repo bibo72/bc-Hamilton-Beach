@@ -523,8 +523,16 @@ html {
     padding-left: 0;
     padding-right: 0;
 }
+.checkout-page {
+    padding-top: 100px;
+}
 .checkoutHeader {
     min-height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 .checkoutHeader-content {
     padding: 14px 18.5px; // 1.15385rem * 16 = 18.5
