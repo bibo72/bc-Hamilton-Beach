@@ -560,6 +560,9 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
 .button--chat {
     padding-left: 15px;
     padding-right: 15px;
+    &[disabled] {
+        pointer-events: none;
+    }
 }
 //preview cart
 #menu {
