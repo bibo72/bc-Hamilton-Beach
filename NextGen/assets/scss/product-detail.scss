@@ -250,6 +250,18 @@
     h3.tab-content-title {
         display: none !important;
     }
+
+    .form-field--stock {
+        display: none;
+    }
+    .product-detail-videos {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .product-detail-videos > p {
+        display: none;
+    }
     
     @media screen and (min-width:1025px) {
         .customFields-container {
