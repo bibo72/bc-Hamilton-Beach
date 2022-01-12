@@ -1,6 +1,32 @@
 
 // p2
 // header
+.scroll-fixed {
+    .header .header-logo.header-logo--left {
+        width: 110px!important;
+        height: 72px!important;
+        box-shadow: none;
+        top: 14px;
+        @media only screen and (max-width:1222px) {
+            width: 95px!important;
+            height: 72px!important;
+        }
+        @media only screen and (max-width:850px) {
+            width: 80px!important;
+            height: 70px!important;
+        }
+    }
+    
+    .header .header-logo.header-logo--left .header-logo-image-container img {
+        width: 99px;
+        @media only screen and (max-width:1222px) {
+            width: 95px;
+        }
+        @media only screen and (max-width:850px) {
+            width: 80px;
+        }
+    }
+}
 .main-nav-container .navPages-container.main-nav.desktop .custom-pages-nav > ul {
     // margin-right: 128px;
     > li.nav-icon{
