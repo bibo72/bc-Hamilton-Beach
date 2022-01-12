@@ -200,6 +200,20 @@ function newsletterSubscribe() {
     });
     
 }
+function zendeskButton() {
+    // enable chat button after zendesk origin button loaded.
+    let count = 0;
+    const zendeskInterval = setInterval(() => {
+        if (count > 10) {
+            clearInterval(zendeskInterval);
+        }
+        if ($('#launcher').length) {
+            count++;
+            clearInterval(zendeskInterval);
+            $('.button--chat').removeAttr('disabled');
+        }
+    }, 1000);
+}
 export default function(){
     $('.footer-container-mobile a.list-action i').on("click",function(event){
         event.preventDefault();
@@ -211,4 +225,5 @@ export default function(){
     // );
     // console.log($('.contactUs_icon'));
     newsletterSubscribe();
+    zendeskButton();
 }

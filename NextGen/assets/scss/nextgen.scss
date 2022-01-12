@@ -3030,7 +3030,6 @@ ul.productGrid li.product article.card h4 > a {
 
 // QUICK CART BUTTONS
 .previewCartCheckout .button, .previewCartCheckout .button + .button {
-  font-family: Larsseit;
   font-weight: 700;
   line-height: 20px;
   background: stencilColor("primary-actionColor");
@@ -3453,7 +3452,7 @@ ul.grid-default {
 }
 
 .productView label.form-label {
-  font-size: 14px;
+  font-size: 18px;
   font-family: Larsseit;
   font-weight: 700;
   color: stencilColor("productPage-infoName-textColor");
@@ -3461,7 +3460,9 @@ ul.grid-default {
   text-transform: capitalize;
   margin-right: 10px;
 }
-
+.productView label.form-label span {
+  font-weight: 400;
+}
 .productView label.form-label[for="qty[]"] {
   line-height: 33px;
 }
@@ -3490,7 +3491,7 @@ ul.grid-default {
     // background-color: stencilColor("card-figcaption-button-background");
     background-color: #ffffff;
     // padding: 2px;
-    padding: 7px;
+    padding: 9px;
     border-color: stencilColor("container-border-global-color-dark");
 }
 
@@ -14326,7 +14327,7 @@ section.heroCarousel {
 .form-input--incrementTotal {
   width: 3.5rem;
   height: 2.43rem;
-  height: 34px;
+  height: 50px;
   border: 1px solid;
   border-color: stencilColor("container-border-global-color-dark");
   border-radius: 0 !important;
@@ -14345,20 +14346,12 @@ section.heroCarousel {
 .product.main.left .main-image-container button.slick-next {
   border-radius: 4px 0 0 4px !important;
 }
-.cart-item-quantity .form-increment .button[data-action="dec"] {
-  position: relative;
-  left: 4px;
-}
-.cart-item-quantity .form-increment .button[data-action="inc"] {
-  position: relative;
-  right: 4px;
-}
 .cart-remove.icon {
   height: 18px;
   width: 18px;
 }
 .form-increment .button {
-  height: 34px;
+  height: 50px;
 }
 #body.checkout-layout .header-container.in-container {
   // max-width: 100% !important;
@@ -17512,7 +17505,7 @@ span.product-status-message.aria-description--hidden {
 #add-to-cart-wrapper {
   float: left;
   display: block;
-  width: 47%;
+  width: 48%;
   margin-right: 15px;
 }
 section.productView-details.product-options {
@@ -17563,7 +17556,7 @@ div#add-to-cart-wrapper.qty-box-visible .form-action {
 	margin-top: 50px;
 }
 div#add-to-cart-wrapper.qty-box-visible .form-field.form-field--increments {
-	position: absolute;
+	// position: absolute;
 }
 // END FIX FOR ADD TO CART BUTTON VISIBILITY WHEN DEFAULT OPTION IS UNAVAILABLE
 
@@ -21453,7 +21446,7 @@ td.cart-item-block.cart-item-info {
 }
 
 .cart-item-label {
-  color: stencilColor("color-textBase");
+  color: stencilColor("color-secondary");
 }
 
 main.page.contact-page-with-sidenav {
@@ -25962,8 +25955,8 @@ td.cart-item-block.cart-item-info {
 }
 
 .cart-item-label {
-  float: left;
-  width: 50%;
+  // float: left;
+  // width: 50%;
   text-align: left;
 }
 

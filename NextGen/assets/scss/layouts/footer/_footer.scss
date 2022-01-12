@@ -688,7 +688,9 @@ footer.footer .container{
     // opacity: 1 !important;
 }
 
-.sendMessage {
+.sendMessage.button--chat {
     padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 0;
     color: #3e3f3f !important;
 }

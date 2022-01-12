@@ -330,6 +330,7 @@ header.header{
     align-items: center;
     left: 0;
     top: 0;
+    transition: height 0.35s ease;
     @media only screen and (max-width:1222px) {
         width: 110px !important;
         height: 127px !important;

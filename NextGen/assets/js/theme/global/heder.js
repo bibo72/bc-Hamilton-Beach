@@ -72,6 +72,14 @@ export default function () {
         const $dropdown = $(`#${controlId}`);
         $dropdown.slideToggle();
     });
+    $(window).on('scroll', () => {
+        const scrollTop = $(window).scrollTop();
+        if(scrollTop > 0) {
+            $('body').addClass('scroll-fixed');
+        } else {
+            $('body').removeClass('scroll-fixed');
+        }
+    });
 
     renderFooterSubscribeForm();
     renderSubscribeForm();
