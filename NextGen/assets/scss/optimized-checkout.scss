@@ -819,8 +819,8 @@ label[for="shouldSubscribe"] {
 .shippingOption-price {
     font-weight: 500;
 }
-#checkoutShippingAddress .checkout-address .dynamic-form-field--countryCode {
-    display: none;
+.checkout-address .dynamic-form-field--countryCode {
+    display: none!important;
 }
 // cart
 .layout-cart {

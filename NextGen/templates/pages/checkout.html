@@ -73,9 +73,8 @@
         window.CustomEvent = CustomEvent;
     })();
     function setValue() {
-        var shippingAddresses = document.getElementById("shippingAddresses");
         var countrySelect = document.getElementById("countryCodeInput");
-        if (!countrySelect || !shippingAddresses) return;
+        if (!countrySelect) return;
 
         var nativeSelectValueSetter = Object.getOwnPropertyDescriptor(
             window.HTMLSelectElement.prototype,
