@@ -73,6 +73,7 @@ export default class Product extends PageManager {
             let number2 = 0
             let number3 = 0
             let number4 = 0
+            let number5 = 0
         $('.tab-content-title-Overview').on('click',function(){
             const addnumber1 = (++number1)%2
             if(addnumber1 == 1) {
@@ -110,5 +111,20 @@ export default class Product extends PageManager {
             }
             $('.product-detail-videos').toggle()
         })
+        $('.tab-content-Manual').on('click',function(){
+            let addnumber5 = (++number5)%2
+            if(addnumber5 == 1) {
+                $('.tab-content-Manual').addClass('fixAngle')
+            }else {
+                $('.tab-content-Manual').removeClass('fixAngle')
+            }
+            $('.product-detail-Manual').toggle()
+        })
+        // $('.tab-content-titlex').on('click',function(e){
+        //     console.log(2222)
+        //     const eve = e.target;
+        //     eve.siblings('div').toggle();
+        //     $('.tab-content-titlex').parent().addClass('fixAngle')
+        // })
     }
 }

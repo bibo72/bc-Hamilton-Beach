@@ -262,6 +262,9 @@
     .product-detail-videos > p {
         display: none;
     }
+    #tab-description-Overview > p {
+        display: none;
+    }
     
     @media screen and (min-width:1025px) {
         .customFields-container {
@@ -282,8 +285,21 @@
                 text-align: right;
             }
         }
+        #tab-Manual {
+            padding: 0 72px;
+            width: 60%;
+            .product-detail-Manual {
+                display: flex;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                margin-bottom: 12px;
+            }
+        }
     }
     @media screen and (max-width:1024px) {
+        .product-detail-Manual {
+            display: none;
+        }
         h3.tab-content-title {
             display: block !important;
         }
