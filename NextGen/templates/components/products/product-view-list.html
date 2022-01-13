@@ -324,14 +324,14 @@
             <div class="tabs-contents">
                 
                 <div class="tab-content features is-active" id="tab-description-Features">
-                    <h3 class="tab-content-title tab-content-title-Features">Features</h3>
+                    <h3 class="tab-content-title tab-content-title-Features tab-content-moblie">Features</h3>
                     <div class="product-detail-features">
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}
                     </div>
                 </div>
                 <div class="tab-content overview" id="tab-description-Overview">
-                    <h3 class="tab-content-title tab-content-title-Overview">Overview</h3>
+                    <h3 class="tab-content-title tab-content-title-Overview tab-content-moblie">Overview</h3>
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}
                 </div>
@@ -356,7 +356,7 @@
                 {{#if product.custom_fields}}
                 {{#any product.custom_fields name='showVideo' value='true'}}
                     <div class="tab-content videos" id="tab-videos">
-                        <h3 class="tab-content-title tab-content-Videos">Videos</h3>
+                        <h3 class="tab-content-title tab-content-Videos tab-content-moblie">Videos</h3>
                         <div class="product-detail-videos">
                         {{{product.description}}}
                         {{{snippet 'product_description'}}}

@@ -339,16 +339,16 @@
         .tabs {
             display: none;
         }
-        .product-detail-features {
-            display: none;
-        }
         .product-detail-overview {
             display: none;
         }
         .customFields-container {
             display: none;
         }
-        .product-detail-videos {
+        #tab-description-Features > .product-detail-features {
+            display: none;
+        }
+        #tab-videos > .product-detail-videos {
             display: none;
         }
         .custom-fieldTab1 {
