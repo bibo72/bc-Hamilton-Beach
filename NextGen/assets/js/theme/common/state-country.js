@@ -122,7 +122,7 @@ export default function (stateElement, context = {}, options, callback) {
 
     $('select[data-field-type="Country"]').on('change', event => {
         const countryName = $(event.currentTarget).val();
-
+        console.log(countryName);
         if (countryName === '') {
             return;
         }
@@ -148,4 +148,16 @@ export default function (stateElement, context = {}, options, callback) {
             }
         });
     });
+
+    
+    const seletVal = setInterval(function(){
+        if( $('select[data-field-type="Country"]').val() != "United States"){
+            for(let i = 0; i<$('select[data-field-type="Country"] option').length;i++){
+                if($($('select[data-field-type="Country"] option')[i]).val() == "United States"){
+                    $('select[data-field-type="Country"]').val("United States");
+                    $('select[data-field-type="Country"]').change();
+                }
+            }
+        }
+      },500);
 }
