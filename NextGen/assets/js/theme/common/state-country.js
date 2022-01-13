@@ -82,10 +82,16 @@ function makeStateOptional(stateElement) {
  */
 function addOptions(statesArray, $selectElement, options) {
     const container = [];
-
+    statesArray.prefix = "Choose a State";
     container.push(`<option value="">${statesArray.prefix}</option>`);
 
     if (!_.isEmpty($selectElement)) {
+        function sortId(a,b){
+            return a.id - b.id
+        }
+
+        statesArray.states.sort(sortId);
+        console.log(statesArray.states);
         _.each(statesArray.states, (stateObj) => {
             if (options.useIdForStates) {
                 container.push(`<option value="${stateObj.id}">${stateObj.name}</option>`);
