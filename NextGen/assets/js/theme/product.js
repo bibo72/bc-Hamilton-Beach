@@ -69,37 +69,6 @@ export default class Product extends PageManager {
         }
     }
     overViewAndFeature() {
-            let number1 = 0
-            let number2 = 0
-            let number4 = 0
-        $('.tab-content-title-Overview').on('click',function(){
-            const addnumber1 = (++number1)%2
-            if(addnumber1 == 1) {
-                $('.tab-content-title-Overview').addClass('fixAngle')
-            }else {
-                $('.tab-content-title-Overview').removeClass('fixAngle')
-            }
-            $('.overview .product-detail-overview').toggle()
-
-        })
-        $('.tab-content-title-Features').on('click',function(){
-            let addnumber2 = (++number2)%2
-            if(addnumber2 == 1) {
-                $('.tab-content-title-Features').addClass('fixAngle')
-            }else {
-                $('.tab-content-title-Features').removeClass('fixAngle')
-            }
-            $('.features .product-detail-features').toggle()
-        })
-        $('.tab-content-Videos').on('click',function(){
-            let addnumber4 = (++number4)%2
-            if(addnumber4 == 1) {
-                $('.tab-content-Videos').addClass('fixAngle')
-            }else {
-                $('.tab-content-Videos').removeClass('fixAngle')
-            }
-            $('.product-detail-videos').toggle()
-        })
         $('.tab-content-moblie').on('click',function(e){
             const eve = $(e.target);
             eve.siblings('div').toggle();
