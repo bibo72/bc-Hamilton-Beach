@@ -71,7 +71,6 @@ export default class Product extends PageManager {
     overViewAndFeature() {
             let number1 = 0
             let number2 = 0
-            let number3 = 0
             let number4 = 0
         $('.tab-content-title-Overview').on('click',function(){
             const addnumber1 = (++number1)%2
@@ -92,15 +91,6 @@ export default class Product extends PageManager {
             }
             $('.features .product-detail-features').toggle()
         })
-        $('.tab-content-Custom').on('click',function(){
-            let addnumber3 = (++number3)%2
-            if(addnumber3 == 1) {
-                $('.tab-content-Custom').addClass('fixAngle')
-            }else {
-                $('.tab-content-Custom').removeClass('fixAngle')
-            }
-            $('.customFields-container').toggle()
-        })
         $('.tab-content-Videos').on('click',function(){
             let addnumber4 = (++number4)%2
             if(addnumber4 == 1) {
@@ -109,6 +99,15 @@ export default class Product extends PageManager {
                 $('.tab-content-Videos').removeClass('fixAngle')
             }
             $('.product-detail-videos').toggle()
+        })
+        $('.tab-content-moblie').on('click',function(e){
+            const eve = $(e.target);
+            eve.siblings('div').toggle();
+            if( eve.hasClass('fixAngle')) {
+                eve.removeClass('fixAngle')
+            }else {
+                eve.addClass('fixAngle')
+            }
         })
     }
 }

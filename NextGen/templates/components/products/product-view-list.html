@@ -294,6 +294,14 @@
                     </li>
                     {{/any}}
                     {{/if}} 
+                {{#if product.custom_fields}}
+                {{#any product.custom_fields name='Manual'}}
+                <li class="tab tab-Manual">
+                    <a class="tab-title" href="#tab-Manual">Manuals</a>
+                </li>
+                {{/any}}
+                {{/if}}
+
                 <!-- {{#if product.custom_fields}}
                     <li class="tab customFieldOne">
                         <a class="tab-title custom-visibility" href="#tab-customField1">Custom Field #1</a>
@@ -334,11 +342,13 @@
                     </div>
                 {{/if}} -->
                 <div class="tab-content customFields" id="tab-customFields">
-                        <h3 class="tab-content-title tab-content-Custom">Specifications</h3>
+                        <h3 class="tab-content-title tab-content-Custom tab-content-moblie">Specifications</h3>
                         <div class="customFields-container">
                             {{#each product.custom_fields}}
                             {{#or (if name '==' 'Short Description') (if name '==' 'showVideo')}}{{else}}
+                            {{#unless name '==' 'Manual'}}
                             <div class="moblie-content"><span class="custom_fieldsName">{{name}}: </span><span class="custom_fieldsValue">{{value}}</span></div>
+                            {{/unless}}
                             {{/or}}
                         {{/each}}
                         </div>
@@ -354,6 +364,22 @@
                    </div>
                    {{/any}}
                    {{/if}} 
+                   {{#if product.custom_fields}}
+                   {{#any product.custom_fields name='Manual'}}
+                       <div class="tab-content Manual" id="tab-Manual">
+                           <h3 class="tab-content-title tab-content-Manual tab-content-moblie">Manuals</h3>
+                           <div class="product-detail-Manual">
+                            {{#each product.custom_fields}}
+                            {{#if name '==' 'Manual'}}
+                            {{assignVar 'imgV' value}}
+                            <span>{{name}}:</span>
+                            <a href="{{cdn (concat 'webdav:manuals/' (getVar 'imgV'))}}" target="_blank">{{value}}</a>
+                            {{/if}}
+                            {{/each}}
+                       </div>
+                      </div>
+                      {{/any}}
+                      {{/if}} 
                    <div class="tab-content custom-visiblity custom-fieldTab1" id="tab-customField1">
                         <h3 class="tab-content-title">Custom Field</h3>
                         {{#each product.custom_fields}}
