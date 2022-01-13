@@ -91,7 +91,6 @@ function addOptions(statesArray, $selectElement, options) {
         }
 
         statesArray.states.sort(sortId);
-        console.log(statesArray.states);
         _.each(statesArray.states, (stateObj) => {
             if (options.useIdForStates) {
                 container.push(`<option value="${stateObj.id}">${stateObj.name}</option>`);
