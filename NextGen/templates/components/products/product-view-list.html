@@ -342,7 +342,7 @@
                     </div>
                 {{/if}} -->
                 <div class="tab-content customFields" id="tab-customFields">
-                        <h3 class="tab-content-title tab-content-Custom">Specifications</h3>
+                        <h3 class="tab-content-title tab-content-Custom tab-content-moblie">Specifications</h3>
                         <div class="customFields-container">
                             {{#each product.custom_fields}}
                             {{#or (if name '==' 'Short Description') (if name '==' 'showVideo')}}{{else}}
@@ -367,13 +367,13 @@
                    {{#if product.custom_fields}}
                    {{#any product.custom_fields name='Manual'}}
                        <div class="tab-content Manual" id="tab-Manual">
-                           <h3 class="tab-content-title tab-content-Manual">Manuals</h3>
+                           <h3 class="tab-content-title tab-content-Manual tab-content-moblie">Manuals</h3>
                            <div class="product-detail-Manual">
                             {{#each product.custom_fields}}
                             {{#if name '==' 'Manual'}}
                             {{assignVar 'imgV' value}}
-                            {{name}}:
-                            <a href="{{cdn (concat 'webdav:manuals/' (getVar 'imgV'))}}">{{value}}</a>
+                            <span>{{name}}:</span>
+                            <a href="{{cdn (concat 'webdav:manuals/' (getVar 'imgV'))}}" target="_blank">{{value}}</a>
                             {{/if}}
                             {{/each}}
                        </div>

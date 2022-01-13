@@ -287,16 +287,31 @@
         }
         #tab-Manual {
             padding: 0 72px;
-            width: 60%;
+            width: 50%;
             .product-detail-Manual {
                 display: flex;
                 -ms-flex-pack: justify;
                 justify-content: space-between;
                 margin-bottom: 12px;
+                span {
+                    font-weight: bold;
+                }
+                a {
+                    padding-left: 5px;
+                }
             }
         }
     }
     @media screen and (max-width:1024px) {
+        #tab-Manual {
+            .product-detail-Manual {
+                padding-top: 10px;
+                padding-bottom: 20px;
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
         .product-detail-Manual {
             display: none;
         }
