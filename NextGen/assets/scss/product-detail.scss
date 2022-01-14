@@ -298,6 +298,7 @@
                 }
                 a {
                     padding-left: 5px;
+                    word-break: break-all;
                 }
             }
         }
@@ -309,6 +310,9 @@
                 padding-bottom: 20px;
                 span {
                     font-weight: bold;
+                }
+                a {
+                    word-break: break-all;
                 }
             }
         }
