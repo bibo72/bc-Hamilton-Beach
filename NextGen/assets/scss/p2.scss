@@ -715,3 +715,130 @@ div#add-to-cart-wrapper.qty-box-visible{
     }
 
 }
+// klaviyo-form
+form.klaviyo-form {
+    padding: 0!important;
+    div {
+        min-height: auto!important;
+        padding: 0 !important;
+    }
+    input {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+        border-color: #707070!important;
+        color: #323232!important;
+        border-radius: 5px 0 0 5px!important;
+        font-family: "Larsseit",sans-serif !important;
+
+        &::placeholder {
+            font-size: 16px!important;
+            color: #323232!important;
+            font-family: "Larsseit",sans-serif !important;
+        }
+    }
+    button {
+        background-color: #0456a8!important;
+        font-weight: 700!important;
+        text-transform: uppercase!important;
+        border-radius: 0 5px 5px 0!important;
+        padding-left: 40px!important;
+        padding-right: 40px!important;
+        text-transform: uppercase!important;
+        font-family: "Roboto Condensed" !important;
+
+        &:hover {
+            background-color: #026cd1!important;
+        }
+    }
+}
+
+.footer {
+    form.klaviyo-form {
+        button {
+            font-size: 22px!important;
+        }
+    }
+}
+
+.hp-newsletterSubscription {
+    div.klaviyo-form {
+        width: 100%;
+        padding: 0 42px;
+        @media only screen and (max-width: 767px) {
+            padding: 0 30px;
+        }
+    }
+    form.klaviyo-form {
+        input {
+            font-size: 24px!important;
+            height: 68px!important;
+            
+            @media only screen and (max-width: 767px) {
+                font-size: 16px!important;
+                height: 50px!important;
+                margin-bottom: 1.5em;
+                border-radius: 5px!important;
+            }
+            &::placeholder {
+                font-size: 24px!important;
+                @media only screen and (max-width: 767px) {
+                    font-size: 16px!important;
+                }
+            }
+        }
+        button {
+            border-radius: 0 5px 5px 0!important;
+            width: 200px;
+            height: auto!important;
+            background-color: #0456a8!important;
+            font-size: 22px!important;
+            height: 100%!important;
+            padding-left: 0!important;
+            padding-right: 0!important;
+            @media only screen and (max-width: 767px) {
+                height: 50px!important;
+                border-radius: 5px!important;
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+            &:hover {
+                background-color: #026cd1!important;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            [data-testid="form-row"] {
+                display: block!important;
+            }
+        }
+    }
+}
+.modal {
+    div.klaviyo-form {
+        margin-left: 42px;
+        max-width: 708px;
+        height: 70px;
+        border-radius: 5px;
+    }
+    form.klaviyo-form {
+        input {
+            font-size: 24px!important;
+            height: 68px!important;
+            &::placeholder {
+                font-size: 24px!important;
+            }
+        }
+        button {
+            border-radius: 0 5px 5px 0!important;
+            width: 200px;
+            height: auto!important;
+            background-color: #0456a8!important;
+            font-size: 16px!important;
+            height: 100%!important;
+            padding-left: 0!important;
+            padding-right: 0!important;
+            &:hover {
+                background-color: #026cd1!important;
+            }
+        }
+    }
+}
