@@ -36,6 +36,7 @@
 
     {{{ checkout.checkout_content }}}
 
+<!-- header logo scroll -->
 <script>
     window.onscroll = function() {
         const scrollTop = window.scrollY;
@@ -47,7 +48,23 @@
     }
 </script>
 
-<!-- Shipping address: set default value of Country to "US" -->
+ <!-- rename Free Shipping -->
+<script>
+    function renameFreeShipping() {
+        var shippingOptionDesc = document.querySelectorAll('.shippingOption-desc');
+        if (shippingOptionDesc.length) {
+            shippingOptionDesc.forEach(function(desc) {
+                const text = desc.innerText;
+                if (text === 'Free Shipping') {
+                    desc.innerText = 'Free Shipping (UPS® Ground)';
+                }
+            });
+        }
+    }
+    setInterval(renameFreeShipping, 500);
+</script>
+
+<!-- Address: set default value of Country to "US" -->
 <script>
     (function () {
         if (typeof window.CustomEvent === "function") return false;

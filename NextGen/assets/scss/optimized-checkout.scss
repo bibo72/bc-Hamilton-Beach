@@ -816,8 +816,12 @@ label[for="shouldSubscribe"] {
 .shippingOptionLabel .shippingOption {
     padding-top: 5px;
 }
+.shippingOption-desc {
+    padding-right: 0.75rem;
+}
 .shippingOption-price {
     font-weight: 500;
+    padding-left: 0;
 }
 .checkout-address .dynamic-form-field--countryCode {
     display: none!important;
