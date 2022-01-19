@@ -3537,7 +3537,7 @@ ul.grid-default {
   color: stencilColor("primary-actionInnerFontIconLinkColor");
   // border-color: stencilColor("forms-submitButton-borderColor");
   border-color: stencilColor("primary-actionColor");
-  border-radius: 4px !important;
+  border-radius: 3px !important;
 }
 
 .button--primary:hover {
@@ -4890,11 +4890,6 @@ h2.card-title a.visible {
 
 .navPages-quickSearch.right.searchbar.mobile {
     display: none;
-}
-
-.login-form {
-  padding: 0;
-  padding-right: 0.75rem;
 }
 
 .new-customer {
@@ -14182,7 +14177,7 @@ a.button.button--small.card-figcaption-button.quickview {
     border-radius: 4px;
 }
 .form-input {
-  border-radius: 4px !important;
+  border-radius: 3px !important;
 }
 div#facetedSearch .facetedSearch-refineFilters.sidebarBlock, div#facetedSearch.facetedSearch.sidebarBlock {
   border: 0;
@@ -21110,10 +21105,6 @@ ul.navPages-list.navPages-list--user {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 20px;
-}
-
-.login-form {
-  padding: 0;
 }
 
 .new-customer {

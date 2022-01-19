@@ -75,7 +75,7 @@ $buttonStyle-action-borderColorActive:       null;
 
 $buttonSize-default-fontSize:           fontSize("base");
 $buttonSize-default-horizontalPadding:  spacing("single") + spacing("half");
-$buttonSize-default-verticalPadding:    spacing("third") + spacing("quarter");
+$buttonSize-default-verticalPadding:    remCalc(15.05px);
 
 $buttonSize-large-fontSize:             fontSize("smaller");
 $buttonSize-large-horizontalPadding:    null;

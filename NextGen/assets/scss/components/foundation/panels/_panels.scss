@@ -4,7 +4,7 @@
 
 
 .panel-title {
-    font-size: fontSize("small");
+    font-size: 26px;
 }
 
 .panel--large {
@@ -13,4 +13,9 @@
         margin-bottom: spacing("single") + spacing("third");
         padding: spacing("single") + spacing("third");
     }
+}
+
+.panel-header,
+.panel-body {
+    background-color: #EBF8FC;
 }
