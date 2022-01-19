@@ -189,6 +189,7 @@
 
 body {
     background-color: stencilColor("optimizedCheckout-body-backgroundColor");
+    font-family: stencilFontFamily("optimizedCheckout-contentPrimary-font"), Arial, Helvetica, sans-serif;
 }
 
 .optimizedCheckout-overlay {
@@ -525,8 +526,79 @@ html {
 }
 .checkout-page {
     padding-top: 150px;
+    &.has-promo-banner {
+        padding-top: 186px;
+    }
     @media only screen and (max-width:1222px) {
         padding-top: 100px;
+        &.has-promo-banner {
+            padding-top: 136px;
+        }
+    }
+
+    &.has-promo-banner .header-top-banner {
+        height: 36px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .header-top-banner {
+        position: relative;
+        z-index: 1001;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: height .3s ease;
+    }
+    .header-top-banner-inner {
+        position: relative;
+        color: #fff;
+        background-color: stencilColor("color-blue");
+        text-align: center;
+        font-size: 14px;
+        padding: 6px 35px;
+        
+        @media screen and (min-width:768px) {
+            font-size: 18px;
+            padding: 4px 35px;
+        }
+    
+        .icon {
+            fill: #fff;
+    
+            &.icon-shipping {
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+                @media screen and (min-width:768px) {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+        }
+        .header-banner-close {
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            margin-top: -13px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+    
+            @media screen and (min-width:768px) {
+                right: 25px;
+            }
+    
+            &:hover {
+                transform: rotate(90deg);
+            }
+    
+            .icon {
+                width: 26px;
+                height: 26px;
+                fill: #fff;
+            }
+        }
     }
 }
 .checkoutHeader {
@@ -900,6 +972,7 @@ label[for="shouldSubscribe"] {
     .customerEmail-container .button {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        max-height: 50px;
     }
     .customerEmail-container .customerEmail-body {
         width: 66.64%;

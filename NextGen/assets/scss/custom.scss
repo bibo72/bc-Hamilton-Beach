@@ -470,14 +470,26 @@ body.main:not(.nine-sixty) .header-container.in-container {
 }
 .body.content {
     margin-top: 147px!important;
+    .has-promo-banner & {
+        margin-top: 183px!important;
+    }
     @media screen and (min-width : 800px) {
         margin-top: 165px!important;
+        .has-promo-banner & {
+            margin-top: 201px!important;
+        }
     }
     @media screen and (min-width : 1025px) {
         margin-top: 167px!important;
+        .has-promo-banner & {
+            margin-top: 203px!important;
+        }
     }
     @media screen and (min-width : 1223px) {
         margin-top: 210px!important;
+        .has-promo-banner & {
+            margin-top: 246px!important;
+        }
     }
 }
 ul.breadcrumbs {

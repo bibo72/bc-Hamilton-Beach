@@ -27,6 +27,8 @@
     small {
         float: $opposite-direction;
         margin-top: $form-label-small-marginTop;
+        color: stencilColor("color-error");
+        font-size: 16px;
     }
 }
 

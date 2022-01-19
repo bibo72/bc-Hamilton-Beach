@@ -4928,7 +4928,7 @@ main.page.blog .google_plusone_iframe_widget {
 header.header {
   display: table;
   clear: both !important;
-  position: relative;
+  // position: relative;
   z-index: 9;
 }
 /*LEFT ALIGNED LOGO*/
@@ -15885,12 +15885,6 @@ h1.heroCarousel-title {
 .hero-content-bg-opacity.one-hundred-percent .heroCarousel-content-inner {
   background-color: rgba(stencilColor("carousel-content-bgColor"), 1);
 }
-
-
-
-.top-menu.fixed {
-    position: fixed;
-}
 .button {
   font-weight: 700;
 }
@@ -17372,11 +17366,6 @@ html div#checkout-app .button:hover {
 .footer-bottom ul.site-info li {
   padding-top: 5px;
 }
-.top-menu.fixed {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-}
 #body.checkout-layout .header-logo.header-logo--right.logo-image {
   margin-top: 35px !important;
   margin-bottom: 23px !important;
@@ -18408,6 +18397,9 @@ body.main.twelve-eighty #product-listing-container ul.productGrid figure.card-fi
   .container.main {
     padding: 0;
   }
+  body.main.eleven-seventy .body.content {
+    padding: 0 15px;
+  }
   .footer-top.newsletter .form-prefixPostfix .button {
     width: auto;
     margin-top: 0;
@@ -18642,7 +18634,7 @@ body.main.twelve-eighty .sidebar.right ul.productGrid li.product article.card a 
   }
   body.main.eleven-seventy .main-nav-container.in-container {
     margin: 0 auto;
-    padding: 0 15px;
+    // padding: 0 15px;
 }
 
 body.main.eleven-seventy .header-container.full-width.full-width.in-container ~ .main-nav-container div#menu {
@@ -20900,7 +20892,7 @@ p.heroCarousel-description {
 
 .header {
   z-index: 1 !important;
-  position: fixed;
+  // position: fixed;
   padding-bottom: 0
 }
 
@@ -20932,16 +20924,9 @@ body {
   text-align: center;
 }
 
-.top-menu {
-  position: fixed;
-  top: 0;
-  z-index: 5;
-  width: 100%;
-}
-
 .navPages {
   position: fixed;
-  width: 96.5%;
+  width: 100%;
 }
 
 .navPages-quickSearch.right.searchbar.mobile {
@@ -24944,10 +24929,6 @@ body.main.nine-sixty #product-listing-container ul.productGrid figure.card-figur
   margin: 0 auto !important;
 }
 
-.navPages {
-    width: 95.5%;
-}
-
 .header.is-open div#menu {
   width: 95.5%;
 }
@@ -25208,10 +25189,6 @@ a.button.button--small.card-figcaption-button {
 }
 
 @media only screen and (max-width : 600px) {
-.navPages {
-    width: 95%;
-}
-
 .header.is-open div#menu {
   width: 95%;
 }
@@ -25377,10 +25354,6 @@ a.button.button--small.card-figcaption-button {
     font-size: 9.5px;
   }
   .header.is-open div#menu {
-    width: 94.5%;
-  }
-
-  .navPages {
     width: 94.5%;
   }
 
@@ -25729,10 +25702,6 @@ main.page-content.search form.actionBar {
     margin-bottom: 30px;
 }
 .header.is-open div#menu {
-  width: 94.5%;
-}
-
-.navPages {
   width: 94.5%;
 }
 
@@ -26954,9 +26923,6 @@ main.page.blog article.blog {
 .header.is-open div#menu {
   width: 94%;
 }
-.navPages {
-  width: 94%;
-}
 body.main.home.fourteen-forty ul.productGrid figure.card-figure {
   min-height: 230px;
 }
@@ -27079,10 +27045,6 @@ section.quickSearchResults .card-text.add-to-cart-button a {
 }
 
 .header.is-open div#menu {
-  width: 94%;
-}
-
-.navPages {
   width: 94%;
 }
 
@@ -27460,10 +27422,6 @@ section.quickSearchResults .card-text.add-to-cart-button a {
 .header.is-open div#menu {
   width: 93.5%;
 }
-
-.navPages {
-  width: 100%;
-}
 }
 @media only screen and (max-width : 450px) {
 body.main.home.fourteen-forty ul.productGrid figure.card-figure {
@@ -27542,10 +27500,6 @@ main.page.blog article.blog {
 .header.is-open div#menu {
   width: 93.5%;
 }
-
-.navPages {
-  width: 100%;
-}
 }
 
 
@@ -27561,20 +27515,12 @@ main.page.blog article.blog {
   width: 93.5%;
 }
 
-.navPages {
-  width: 100%;
-}
-
 .card-body {
   text-align: left;
   min-height: 145px;
 }
 .header.is-open div#menu {
   width: 93.5%;
-}
-
-.navPages {
-  width: 100%;
 }
 
 .header-container nav.navPages.sticky-nav.search {
@@ -27616,10 +27562,6 @@ main.page.blog article.blog {
 
   .header.is-open div#menu {
     width: 93.5%;
-  }
-
-  .navPages {
-    width: 100%;
   }
 
   .heroCarousel .slick-next, .heroCarousel .slick-prev {
@@ -28045,9 +27987,6 @@ body.main.nine-sixty .sidebar.right .card-image {
 @media only screen and (max-width : 360px) {
 
 .header.is-open div#menu {
-    width: 93%;
-}
-.navPages {
     width: 93%;
 }
   main.page.blog article.blog {
@@ -28631,9 +28570,6 @@ body.main .card-text.add-to-cart-button {
   .header.is-open div#menu {
     width: 92.5%;
   }
-.navPages {
-    width: 92.5%;
-}
 .heroCarousel .slick-next, .heroCarousel .slick-prev {
     top: 50%;
 }

@@ -13,6 +13,7 @@
 {{#partial "page"}}
 
     <header class="checkoutHeader optimizedCheckout-header">
+        <div class="header-top-banner" id="headerTopBanner"></div>
         <div class="checkoutHeader-content">
             <h1 class="is-srOnly">{{lang 'checkout.title'}}</h1>
             <div class="checkoutHeader-content-inner">
@@ -64,6 +65,26 @@
     setInterval(renameFreeShipping, 500);
 </script>
 
+<script>
+    function addHeaderBanner() {
+        var bannerHtml = window.headerBannerHtml;
+        if (bannerHtml) {
+            var headerTopBanner = document.getElementById("headerTopBanner");
+            var shippingIcon = "{{cdn 'img/checkout/shipping.svg'}}";
+            var closeIcon = "{{cdn 'img/checkout/close.svg'}}";
+            headerTopBanner.innerHTML = '<div class="header-top-banner-inner"><img class="icon icon-shipping" src="' + shippingIcon + '"></img>' + bannerHtml + '<span class="header-banner-close" id="headerTopBannerClose"><img class="icon" src="' + closeIcon + '"></img></span></div>';
+            document.body.classList.add('has-promo-banner');
+
+            var headerTopBannerClose = document.getElementById("headerTopBannerClose");
+            headerTopBannerClose.addEventListener('click', function(event) {
+                document.body.classList.remove('has-promo-banner');
+            });
+        }
+    }
+    window.onload = function() {
+        addHeaderBanner();
+    }
+</script>
 <!-- Address: set default value of Country to "US" -->
 <script>
     (function () {

@@ -16,6 +16,19 @@ function renderGetUpdateSubscribeForm() {
     // get update modal
     $('.modal .newsletter .footer-info-heading').html(`${title}<span class="smaller lighter lowercase">${description}</span`);
 }
+function addHeaderBanner() {
+    // window.headerBannerHtml = "Free shipping on orders over $100"; // for DEV
+    const bannerHtml = window.headerBannerHtml;
+    if (bannerHtml) {
+        $('#headerTopBanner').html(`<div class="header-top-banner-inner"><svg class="icon icon-shipping"><use xlink:href="#icon-shipping"></use></svg>${bannerHtml}<span class="header-banner-close" header-banner-close><svg class="icon"><use xlink:href="#icon-close"></use></svg></span></div>`);
+        $('body').addClass('has-promo-banner');
+    }
+    $('#headerTopBanner').on('click', '[header-banner-close]', (event) => {
+        event.preventDefault();
+        $('#headerTopBanner').slideUp('fast');
+        $('body').removeClass('has-promo-banner');
+    });
+}
 export default function () {
     const $products = $('.header_products');
     const $nav_products=$('.nav_products');
@@ -84,6 +97,7 @@ export default function () {
     renderFooterSubscribeForm();
     renderSubscribeForm();
     renderGetUpdateSubscribeForm();
+    addHeaderBanner();
     // $getUpdate.on('click',function(){
     //     $modal.toggle();
     //     // $(body).css("background","rgba(60, 70, 77, 0.95);");

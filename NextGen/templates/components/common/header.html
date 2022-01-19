@@ -4,172 +4,174 @@
   </div>
 </div>
 <div class="header-container {{#if theme_settings.sticky_topMenu '===' true}}sticky-header{{/if}}{{#if settings.gift_certificates_enabled}} gift-certificates-enabled {{/if}}">
-<div class="top-menu {{#if theme_settings.topMenu_override '===' true}}quick-override{{/if}}">
-    <div class="content">
-         <a aria-label="search" data-dropdown-custom="nav_search_mobile" name="search" class="mobileMenu-search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-new_search"></use></svg></i></a>
-         {{#if customer}}
-         <a href="{{urls.account.index}}" class="mobileMenu-user">
-          <svg ><use xlink:href="#icon-user"></use></svg>
-        </a>
-        {{else}}
-        <a href="{{urls.auth.login}}" class="mobileMenu-user">
-          <svg ><use xlink:href="#icon-user"></use></svg>
-        </a>
-        {{/if}}
-         <a href="/cart.php" class="mobileMenu-addToCart">
-          <svg ><use xlink:href="#icon-add_to_cart"></use></svg>
-        </a>
-         <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-            <span class="mobileMenu-toggleIcon">Toggle menu</span>
-        </a>
-        <div class="navPages-quickSearch dropdown right searchbar nav-search-dropdown" id="nav_search_mobile" aria-hidden="true">
-          {{> components/common/quick-search}}
-        </div>
-        {{!--
-        <div class="left phone-number">
-            {{#if settings.phone_number}}
-                {{settings.phone_number}}
-            {{/if}}
-        </div>
-        --}}
-        {{!--
-        {{>components/common/currency-selector}}
-
-        <div class="right account-links {{#if cart.items}} countPill--positive{{/if}}">
-            <ul>
-              <li class="navUser-item navUser-item--account search mobile">
-                <a aria-label="search" name="search" class="navUser-action account search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search"><use xlink:href="#icon-new_search" /></svg></i></a>
-              </li>
-              <!-- <li class="navUser-item navUser-item--account mobile"><i class="fa fa-user" aria-hidden="true"><svg class="" title="search" alt="search"><use xlink:href="#icon-search"></use></svg></i></li> -->
-
-                {{#if customer.store_credit.value '>' 0}}
-                  <li class="navPages-item store-credit desktop">
-                      <a class="navUser-action navPages-action--storeCredit">
-                        {{lang 'common.store_credit_overview' credit=customer.store_credit.formatted}}
-                      </a>
-                  </li>
-               {{/if}}
-
-               {{#if settings.gift_certificates_enabled}}
-                    <li class="navUser-item gift-certficates desktop">
-                        <a class="navUser-action" href="{{urls.gift_certificate.purchase}}">{{lang 'cart.gift_certificate'}}</a>
-                    </li>
-                    <li class="navUser-item navUser-item--account search gift mobile">
-                      <a class="navUser-action account gift" href="{{urls.gift_certificate.purchase}}"><i class="fa fa-user" aria-hidden="true"><svg title="gift certificates" alt="gift certificates"><use xlink:href="#icon-gift" /></svg></i></a>
-                    </li>
-                {{/if}}
-
-                {{#if settings.account_creation_enabled}}
-                    <!-- DESKTOP ACCOUNT LINKS -->
-                    <li class="navUser-item navUser-item--account desktop">
-                        {{#if customer}}
-                            <a class="navUser-action account" aria-label="{{lang 'common.login'}}" href="{{urls.account.index}}"><i class="fa fa-user" aria-hidden="true"><svg title="account" alt="account"><use xlink:href="#icon-user-alt" /></svg></i></a>
-                            <a class="navUser-action logout" aria-label="{{lang 'common.logout'}}" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
-                        {{else}}
-                            <a class="navUser-action" aria-label="{{lang 'common.login'}}" href="{{urls.auth.login}}"><!-- <i class="fa fa-user" aria-hidden="true"></i> --><a class="navUser-action login" href="{{urls.auth.login}}">{{lang 'common.login'}}</a><span class="or-text">or</span><a class="navUser-action create" aria-label="{{lang 'common.sign_up'}}" href="{{urls.auth.create_account}}">{{lang 'Sign Up'}}</a>
-                        {{/if}}
-                     </li>
-                     <!-- MOBILE ACCOUNT LINKS -->
-                     <li class="navUser-item navUser-item--account user mobile">
-                       <a class="navUser-action account" aria-label="{{lang 'common.login'}}" href="{{urls.account.index}}"><i class="fa fa-user" aria-hidden="true"><svg title="account" alt="account"><use xlink:href="#icon-user-alt" /></svg></i></a>
-                     </li>
-                {{/if}}
-        <li class="navUser-item navUser-item--cart {{#if cart.items}} countPill--positive{{/if}}">
-            <a
-                aria-label="cart-preview-dropdown"
-                class="navUser-action"
-                data-cart-preview
-                data-dropdown="cart-preview-dropdown"
-                data-options="align:right"
-                href="{{urls.cart}}">
-                <span class="navUser-item-cartLabel"><i class="cart-icon" aria-hidden="true"><svg><use xlink:href="#icon-cart" /></svg></i></span> <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+  <div class="header-top-banner" id="headerTopBanner"></div>
+  <div class="header-container_container">
+    <div class="top-menu {{#if theme_settings.topMenu_override '===' true}}quick-override{{/if}}">
+        <div class="content">
+            <a aria-label="search" data-dropdown-custom="nav_search_mobile" name="search" class="mobileMenu-search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search" class=""><use xlink:href="#icon-new_search"></use></svg></i></a>
+            {{#if customer}}
+            <a href="{{urls.account.index}}" class="mobileMenu-user">
+              <svg ><use xlink:href="#icon-user"></use></svg>
             </a>
+            {{else}}
+            <a href="{{urls.auth.login}}" class="mobileMenu-user">
+              <svg ><use xlink:href="#icon-user"></use></svg>
+            </a>
+            {{/if}}
+            <a href="/cart.php" class="mobileMenu-addToCart">
+              <svg ><use xlink:href="#icon-add_to_cart"></use></svg>
+            </a>
+            <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+                <span class="mobileMenu-toggleIcon">Toggle menu</span>
+            </a>
+            <div class="navPages-quickSearch dropdown right searchbar nav-search-dropdown" id="nav_search_mobile" aria-hidden="true">
+              {{> components/common/quick-search}}
+            </div>
+            {{!--
+            <div class="left phone-number">
+                {{#if settings.phone_number}}
+                    {{settings.phone_number}}
+                {{/if}}
+            </div>
+            --}}
+            {{!--
+            {{>components/common/currency-selector}}
 
-            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
-        </li>
-            </ul>
+            <div class="right account-links {{#if cart.items}} countPill--positive{{/if}}">
+                <ul>
+                  <li class="navUser-item navUser-item--account search mobile">
+                    <a aria-label="search" name="search" class="navUser-action account search" href="#"><i class="fa fa-user" aria-hidden="true"><svg title="search" alt="search"><use xlink:href="#icon-new_search" /></svg></i></a>
+                  </li>
+                  <!-- <li class="navUser-item navUser-item--account mobile"><i class="fa fa-user" aria-hidden="true"><svg class="" title="search" alt="search"><use xlink:href="#icon-search"></use></svg></i></li> -->
+
+                    {{#if customer.store_credit.value '>' 0}}
+                      <li class="navPages-item store-credit desktop">
+                          <a class="navUser-action navPages-action--storeCredit">
+                            {{lang 'common.store_credit_overview' credit=customer.store_credit.formatted}}
+                          </a>
+                      </li>
+                  {{/if}}
+
+                  {{#if settings.gift_certificates_enabled}}
+                        <li class="navUser-item gift-certficates desktop">
+                            <a class="navUser-action" href="{{urls.gift_certificate.purchase}}">{{lang 'cart.gift_certificate'}}</a>
+                        </li>
+                        <li class="navUser-item navUser-item--account search gift mobile">
+                          <a class="navUser-action account gift" href="{{urls.gift_certificate.purchase}}"><i class="fa fa-user" aria-hidden="true"><svg title="gift certificates" alt="gift certificates"><use xlink:href="#icon-gift" /></svg></i></a>
+                        </li>
+                    {{/if}}
+
+                    {{#if settings.account_creation_enabled}}
+                        <!-- DESKTOP ACCOUNT LINKS -->
+                        <li class="navUser-item navUser-item--account desktop">
+                            {{#if customer}}
+                                <a class="navUser-action account" aria-label="{{lang 'common.login'}}" href="{{urls.account.index}}"><i class="fa fa-user" aria-hidden="true"><svg title="account" alt="account"><use xlink:href="#icon-user-alt" /></svg></i></a>
+                                <a class="navUser-action logout" aria-label="{{lang 'common.logout'}}" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+                            {{else}}
+                                <a class="navUser-action" aria-label="{{lang 'common.login'}}" href="{{urls.auth.login}}"><!-- <i class="fa fa-user" aria-hidden="true"></i> --><a class="navUser-action login" href="{{urls.auth.login}}">{{lang 'common.login'}}</a><span class="or-text">or</span><a class="navUser-action create" aria-label="{{lang 'common.sign_up'}}" href="{{urls.auth.create_account}}">{{lang 'Sign Up'}}</a>
+                            {{/if}}
+                        </li>
+                        <!-- MOBILE ACCOUNT LINKS -->
+                        <li class="navUser-item navUser-item--account user mobile">
+                          <a class="navUser-action account" aria-label="{{lang 'common.login'}}" href="{{urls.account.index}}"><i class="fa fa-user" aria-hidden="true"><svg title="account" alt="account"><use xlink:href="#icon-user-alt" /></svg></i></a>
+                        </li>
+                    {{/if}}
+            <li class="navUser-item navUser-item--cart {{#if cart.items}} countPill--positive{{/if}}">
+                <a
+                    aria-label="cart-preview-dropdown"
+                    class="navUser-action"
+                    data-cart-preview
+                    data-dropdown="cart-preview-dropdown"
+                    data-options="align:right"
+                    href="{{urls.cart}}">
+                    <span class="navUser-item-cartLabel"><i class="cart-icon" aria-hidden="true"><svg><use xlink:href="#icon-cart" /></svg></i></span> <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+                </a>
+
+                <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+            </li>
+                </ul>
+            </div>
+            --}}
+            <div class="clear"></div>
         </div>
-        --}}
-        <div class="clear"></div>
     </div>
-</div>
 
-<div class="global-region screen-width below-topMenu">
-  <div class="global-region body-width">
-    {{{region name="header_top_below_top_menu--global"}}}
-  </div>
-</div>
+    <div class="global-region screen-width below-topMenu">
+      <div class="global-region body-width">
+        {{{region name="header_top_below_top_menu--global"}}}
+      </div>
+    </div>
 
-<div class="header-container full-width {{#if theme_settings.slider_width '===' 'full-width'}} full-width-auto {{/if}} full-width{{#if theme_settings.header-layout '!==' 'full-width'}} in-container{{/if}}">
-  <div class="header-padding{{#if theme_settings.header-layout '===' 'in-container-with-padding-no-margin'}} in-container-with-padding-no-margin{{/if}}">
-  <div class="header-padding{{#if theme_settings.header-layout '===' 'in-container-with-padding'}} in-container-with-padding{{/if}}">
-  <header class="header" role="banner">
-    {{#if page_type '===' 'default'}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </div>
-    {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </div>
+    <div class="header-container full-width {{#if theme_settings.slider_width '===' 'full-width'}} full-width-auto {{/if}} full-width{{#if theme_settings.header-layout '!==' 'full-width'}} in-container{{/if}}">
+      <div class="header-padding{{#if theme_settings.header-layout '===' 'in-container-with-padding-no-margin'}} in-container-with-padding-no-margin{{/if}}">
+      <div class="header-padding{{#if theme_settings.header-layout '===' 'in-container-with-padding'}} in-container-with-padding{{/if}}">
+      <header class="header" role="banner">
+        {{#if page_type '===' 'default'}}
+            <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                {{> components/common/store-logo}}
+            </div>
+        {{else}}
+            <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                {{> components/common/store-logo}}
+            </div>
+        {{/if}}
+
+    {{#if theme_settings.logo-position '===' 'left'}}
+      <div class="navPages-container inside-header left-logo search-container not-sticky" id="" data-menu>
+        <nav class="navPages">
+            <div class="navPages-quickSearch right searchbar">
+                {{> components/common/quick-search name='nav-quick-search'}}
+            </div>
+        </nav>
+    </div>
     {{/if}}
 
-{{#if theme_settings.logo-position '===' 'left'}}
-  <div class="navPages-container inside-header left-logo search-container not-sticky" id="" data-menu>
-    <nav class="navPages">
-        <div class="navPages-quickSearch right searchbar">
-            {{> components/common/quick-search name='nav-quick-search'}}
-        </div>
-    </nav>
-</div>
-{{/if}}
+    {{#if theme_settings.logo-position '===' 'right'}}
+    <div class="navPages-container inside-header right-logo search-container not-sticky" id="" data-menu>
+        <nav class="navPages">
+            <div class="navPages-quickSearch right searchbar">
+                {{> components/common/quick-search name='nav-quick-search'}}
+            </div>
+        </nav>
+    </div>
+    {{/if}}
+    {{#if theme_settings.logo-position '===' 'center'}}
+    <div class="navPages-container inside-header center-logo search-container not-sticky" id="" data-menu>
+        <nav class="navPages">
+            <div class="navPages-quickSearch right searchbar">
+                {{> components/common/quick-search name='nav-quick-search'}}
+            </div>
+        </nav>
+    </div>
+    {{/if}}
 
-{{#if theme_settings.logo-position '===' 'right'}}
-<div class="navPages-container inside-header right-logo search-container not-sticky" id="" data-menu>
-    <nav class="navPages">
-        <div class="navPages-quickSearch right searchbar">
-            {{> components/common/quick-search name='nav-quick-search'}}
-        </div>
-    </nav>
-</div>
-{{/if}}
-{{#if theme_settings.logo-position '===' 'center'}}
-<div class="navPages-container inside-header center-logo search-container not-sticky" id="" data-menu>
-    <nav class="navPages">
-        <div class="navPages-quickSearch right searchbar">
-            {{> components/common/quick-search name='nav-quick-search'}}
-        </div>
-    </nav>
-</div>
-{{/if}}
+    <div class="clear"></div>
+    <div class="mobile-menu navPages-container" id="" data-menu>
+      {{> components/common/navigation-menu-mobile}}
+    </div>
+    </header>
+    </div>
+    </div>
+    </div>
 
-<div class="clear"></div>
-<div class="mobile-menu navPages-container" id="" data-menu>
-  {{> components/common/navigation-menu-mobile}}
-</div>
-</header>
-</div>
-</div>
-</div>
+    <div class="global-region screen-width above-mainNav">
+      <div class="global-region body-width">
+        {{{region name="header_above_main_menu--global"}}}
+      </div>
+    </div>
 
-<div class="global-region screen-width above-mainNav">
-  <div class="global-region body-width">
-    {{{region name="header_above_main_menu--global"}}}
+    <div class="main-nav-container{{#if theme_settings.header-layout '!==' 'in-container'}} full-width{{/if}} {{#if theme_settings.header-layout '===' 'in-container'}} in-container{{/if}} {{#if theme_settings.mainNav_override '===' true}} quick-override{{/if}} {{#if theme_settings.main_nav_content '===' 'pages-only'}}pages-only{{/if}} {{#if theme_settings.main_nav_content '===' 'categories-only'}}categories-only{{/if}} {{#if theme_settings.main_nav_content '===' 'both'}}both-categories-and-pages {{/if}}{{#if theme_settings.main_nav_content '!==' 'pages-only'}} with-categories {{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 3}}three-columns{{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 4}}four-columns{{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 5}}five-columns{{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 6}}six-columns{{/if}} {{#if theme_settings.mainNav-open-method '===' 'click-to-open'}}click-to-open{{/if}} {{#if theme_settings.mainNav-open-method '===' 'hover-to-open'}}hover-to-open{{/if}}">
+      <div class="navPages-container main-nav desktop" id="" data-menu>
+            {{> components/common/navigation-menu}}
+      </div>
+    </div>
+
+    <div class="global-region screen-width below-mainNav">
+      <div class="global-region body-width">
+        {{{region name="header_below_menu--global"}}}
+      </div>
+    </div>
   </div>
-</div>
-
-<div class="main-nav-container{{#if theme_settings.header-layout '!==' 'in-container'}} full-width{{/if}} {{#if theme_settings.header-layout '===' 'in-container'}} in-container{{/if}} {{#if theme_settings.mainNav_override '===' true}} quick-override{{/if}} {{#if theme_settings.main_nav_content '===' 'pages-only'}}pages-only{{/if}} {{#if theme_settings.main_nav_content '===' 'categories-only'}}categories-only{{/if}} {{#if theme_settings.main_nav_content '===' 'both'}}both-categories-and-pages {{/if}}{{#if theme_settings.main_nav_content '!==' 'pages-only'}} with-categories {{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 3}}three-columns{{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 4}}four-columns{{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 5}}five-columns{{/if}} {{#if theme_settings.mainSubNav-columnCount '===' 6}}six-columns{{/if}} {{#if theme_settings.mainNav-open-method '===' 'click-to-open'}}click-to-open{{/if}} {{#if theme_settings.mainNav-open-method '===' 'hover-to-open'}}hover-to-open{{/if}}">
-  <div class="navPages-container main-nav desktop" id="" data-menu>
-        {{> components/common/navigation-menu}}
-  </div>
-</div>
-
-<div class="global-region screen-width below-mainNav">
-  <div class="global-region body-width">
-    {{{region name="header_below_menu--global"}}}
-  </div>
-</div>
-
 </div>
 
 <div id="getUpdateModal" class="modal modal--small" data-reveal>
