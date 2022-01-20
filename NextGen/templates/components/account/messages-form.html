@@ -1,5 +1,5 @@
 {{#if customer.inbox.orders}}
-    <h2>{{lang 'forms.inbox.send_message'}}</h2>
+    <h4 class="account-content-heading">{{lang 'forms.inbox.send_message'}}</h4>
     <form class="form" data-inbox-form action="{{urls.account.send_message}}" method="post">
         {{inject 'enterOrderNum' (lang 'forms.validate.account.inbox.order')}}
         {{inject 'enterSubject' (lang 'forms.validate.account.inbox.subject')}}

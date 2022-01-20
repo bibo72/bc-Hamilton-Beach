@@ -22,8 +22,12 @@
     border-bottom: container("border");
     margin: 0;
     padding-bottom: spacing("base");
+    font-weight: 400;
 }
 
+.account-content-heading {
+    color: stencilColor("color-textBase");
+}
 
 // Account list
 // -----------------------------------------------------------------------------
@@ -106,6 +110,7 @@
 .account-product-title {
     margin: 0 0 spacing("eighth");
     text-transform: inherit;
+    font-weight: 400;
 
     > a {
         text-decoration: none;

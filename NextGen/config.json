@@ -926,6 +926,7 @@
         "icon-ratingEmpty": "#e0e0e0",
         "icon-ratingFull": "#ffc425",
         "color-textHeading": "#323232",
+        "color-textHeading-blue": "#0056A8",
         "color_badge_product_sale_badges": "#0056A8",
         "saleFlag-borderColor": "#0056A8",
         "saleFlag-hover-borderColor": "#0056A8",

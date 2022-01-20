@@ -69,7 +69,7 @@ input.form-file + label:hover {
 }
 
 .page-heading {
-  color: stencilColor("navPages-color");
+  color: stencilColor("color-textHeading-blue");
 }
 
 .quickSearchMessage {
@@ -1244,7 +1244,7 @@ h2.page-heading {
   text-transform: uppercase;
   border: 1px solid;
   border-color: stencilColor("container-border-global-color-dark");
-  color: stencilColor('navPages-color');
+  color: stencilColor('color-textHeading-blue');
   text-align: left;
   padding: 13px 24px 9px 24px;
   font-size: 15px;
@@ -4731,7 +4731,7 @@ h3.account-heading {
 }
 
 .navBar--account {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .account-content {
@@ -4784,7 +4784,7 @@ h1.page-heading {
   font-size: stencilNumber("contentPageTitle-fontSize");
   padding-left: 0;
   margin-bottom: 0;
-  color: stencilColor("color-textBase");
+  color: stencilColor("color-textHeading-blue");
   margin-top: 0;
 }
 
@@ -4794,7 +4794,7 @@ h2.page-heading {
   font-size: 28px;
   padding-left: 0;
   margin-bottom: 0;
-  color: stencilColor("color-textBase");
+  color: stencilColor("color-textHeading-blue");
   margin-top: 0;
   font-weight: 700;
 }

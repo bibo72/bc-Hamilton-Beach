@@ -110,16 +110,23 @@
 
         @include breakpoint("medium") {
             display: inline-block;
+            
+            &:first-child {
+                margin-left: 0;
+            }
         }
 
         // scss-lint:disable SelectorDepth, NestingDepth
         &.is-active {
+            color: stencilColor("color-textBase");
+            font-weight: 700;
             @include breakpoint("medium") {
                 border-bottom: 1px solid stencilColor("color-textBase");
             }
 
             > .navBar-action {
-                color: color("greys", "dark");
+                // color: color("greys", "dark");
+                font-weight: 700;
             }
         }
 
