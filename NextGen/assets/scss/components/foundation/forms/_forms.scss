@@ -25,7 +25,7 @@
 .form-label {
     line-height: 1.35;
     small {
-        float: $opposite-direction;
+        // float: $opposite-direction;
         margin-top: $form-label-small-marginTop;
         color: stencilColor("color-error");
         font-size: 16px;
