@@ -129,6 +129,54 @@
     setInterval(setValue, 1000);
 </script>
 
+<!-- prevent user to enter PO BOX in Address Line 1 & 2 -->
+<script>
+    (function () {
+        function getMatchedString(value) {
+            var regex = /(\b[P|p](OST|ost)*\.*\s*[O|o|0](ffice|FFICE)*\.*)?\s*[B|b][O|o|0]?[X|x]\s*#*\s*[0-9]+\b/g;
+            return value.replaceAll(regex, '');
+        }
+        function setInputValue(input, value) {
+            var nativeSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+            nativeSetter.call(input, value);
+
+            var inputEvent = new Event('input', { bubbles: true });
+            inputEvent.__isKRHack = true;
+            input.dispatchEvent(inputEvent);
+        }
+
+        function modifyInputValue(target, value) {
+            const newValue = getMatchedString(value);
+
+            return newValue;
+        }
+
+        function updateInputValue(target) {
+            console.log(target)
+            if (target.name !== 'shippingAddress.address1' && target.name !== 'shippingAddress.address2') return;
+
+            var newValue = modifyInputValue(target, target.value);
+            if (newValue !== target.value) {
+                setInputValue(target, newValue);
+            }
+        }
+
+        document.addEventListener('input', function(ev) {
+            var target = ev.target;
+
+            // prevent infinite loop
+            if (ev.__isKRHack) return;
+
+            // ensure our new event will always be dispatched
+            // to react handler after the current event is handled
+            // by react
+            setTimeout(function () {
+                updateInputValue(target)
+            }, 0);
+        });
+    })();
+</script>
+
 {{/partial}}
 
 {{> layout/checkout}}
