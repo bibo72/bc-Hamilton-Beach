@@ -132,48 +132,63 @@
 <!-- prevent user to enter PO BOX in Address Line 1 & 2 -->
 <script>
     (function () {
-        function getMatchedString(value) {
+        function hasPoString(value) {
             var regex = /(\b[P|p](OST|ost)*\.*\s*[O|o|0](ffice|FFICE)*\.*)?\s*[B|b][O|o|0]?[X|x]\s*#*\s*[0-9]+\b/g;
-            return value.replaceAll(regex, '');
-        }
-        function setInputValue(input, value) {
-            var nativeSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
-            nativeSetter.call(input, value);
-
-            var inputEvent = new Event('input', { bubbles: true });
-            inputEvent.__isKRHack = true;
-            input.dispatchEvent(inputEvent);
+            var matches = value.match(regex);
+            return matches && matches.length > 0;
         }
 
-        function modifyInputValue(target, value) {
-            const newValue = getMatchedString(value);
+        function watchPo() {
+            // address form
+            const addressLines = document.querySelectorAll('[name="shippingAddress.address1"], [name="shippingAddress.address2"]');
+            if (addressLines.length) {
+                addressLines.forEach(function(line) {
+                    var haspo = hasPoString(line.value);
+                    if (haspo) {
+                        // setInputValue(target, newValue);
+                        line.parentNode.classList.add('form-field--haspo');
+                        line.parentNode.setAttribute('has-po', '');
+                    } else {
+                        line.parentNode.classList.remove('form-field--haspo');
+                        line.parentNode.removeAttribute('has-po');
+                    }
+                });
+            }
 
-            return newValue;
-        }
+            // shipping step dropdown
+            const dropdownAddressLines = document.querySelectorAll('#shippingAddresses .address-line-1, #shippingAddresses .address-line-2');
+            if (dropdownAddressLines.length) {
+                dropdownAddressLines.forEach(function(dropdownLine) {
+                    var haspo = hasPoString(dropdownLine.innerText);
+                    if (haspo) {
+                        dropdownLine.setAttribute('has-po', '');
+                    } else {
+                        dropdownLine.removeAttribute('has-po');
+                    }
+                });
+            }
 
-        function updateInputValue(target) {
-            console.log(target)
-            if (target.name !== 'shippingAddress.address1' && target.name !== 'shippingAddress.address2') return;
+            // shipping step preview
+            const previewAddressLines = document.querySelectorAll('.checkout-step--shipping .stepHeader .address-line-1, .checkout-step--shipping .stepHeader .address-line-2');
+            if (previewAddressLines.length) {
+                previewAddressLines.forEach(function(previewLine) {
+                    var haspo = hasPoString(previewLine.innerText);
+                    if (haspo) {
+                        previewLine.setAttribute('has-po', '');
+                    } else {
+                        previewLine.removeAttribute('has-po');
+                    }
+                });
+            }
 
-            var newValue = modifyInputValue(target, target.value);
-            if (newValue !== target.value) {
-                setInputValue(target, newValue);
+            // add po attribute
+            if (document.querySelector('[has-po]')) {
+                document.body.classList.add('has-po');
+            } else {
+                document.body.classList.remove('has-po');
             }
         }
-
-        document.addEventListener('input', function(ev) {
-            var target = ev.target;
-
-            // prevent infinite loop
-            if (ev.__isKRHack) return;
-
-            // ensure our new event will always be dispatched
-            // to react handler after the current event is handled
-            // by react
-            setTimeout(function () {
-                updateInputValue(target)
-            }, 0);
-        });
+        setInterval(watchPo, 500);
     })();
 </script>
 

@@ -254,9 +254,9 @@ body {
     &[disabled].is-active,
     &[disabled].is-loading,
     &[disabled].active {
-        background-color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColorDisabled");
-        border-color: stencilColor("optimizedCheckout-buttonPrimary-borderColorDisabled");
-        color: stencilColor("optimizedCheckout-buttonPrimary-colorDisabled");
+        background-color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColorDisabled")!important;
+        border-color: stencilColor("optimizedCheckout-buttonPrimary-borderColorDisabled")!important;
+        color: stencilColor("optimizedCheckout-buttonPrimary-colorDisabled")!important;
     }
 }
 
@@ -368,7 +368,8 @@ body {
     font-weight: 400;
 }
 
-.optimizedCheckout-contentPrimary .form-field--error {
+.optimizedCheckout-contentPrimary .form-field--error,
+.optimizedCheckout-contentPrimary .form-field--haspo {
     .optimizedCheckout-form-label,
     .form-inlineMessage {
         color: stencilColor("optimizedCheckout-formField-errorColor");
@@ -396,6 +397,11 @@ $optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor("
     }
 
     .form-field--error & {
+        background-color: stencilColor("optimizedCheckout-formField-backgroundColor");
+        border-color: stencilColor("optimizedCheckout-formField-errorColor");
+        box-shadow: $optimizedCheckout-input--error-boxShadow, $optimizedCheckout-input-boxShadow;
+    }
+    .form-field--haspo & {
         background-color: stencilColor("optimizedCheckout-formField-backgroundColor");
         border-color: stencilColor("optimizedCheckout-formField-errorColor");
         box-shadow: $optimizedCheckout-input--error-boxShadow, $optimizedCheckout-input-boxShadow;
@@ -960,6 +966,44 @@ label[for="shouldSubscribe"] {
     height: 50px;
     padding-top: 14px;
     padding-bottom: 14px;
+}
+// po
+.form-field--haspo:after,
+body.has-po .checkout-step--payment .form-actions:after,
+body.has-po .checkout-step--shipping .form-actions:after {
+    content: "Cannot ship to PO Boxes";
+    display: block;
+    margin-top: 0.1875rem;
+    font-size: 16px;
+    color: stencilColor("optimizedCheckout-formField-errorColor");
+}
+body.has-po .checkout-step--payment .form-actions:after,
+body.has-po .checkout-step--shipping .form-actions:after {
+    margin-top: 10px;
+}
+.address-line-1[has-po],
+.address-line-2[has-po] {
+    color: stencilColor("optimizedCheckout-formField-errorColor");
+}
+body.has-po {
+    #checkout-shipping-continue,
+    #checkout-shipping-continue:hover,
+    #checkout-shipping-continue:focus,
+    #checkout-shipping-continue.is-active,
+    #checkout-shipping-continue.is-loading,
+    #checkout-shipping-continue.active,
+    #checkout-payment-continue,
+    #checkout-payment-continue:hover,
+    #checkout-payment-continue:focus,
+    #checkout-payment-continue.is-active,
+    #checkout-payment-continue.is-loading,
+    #checkout-payment-continue.active {
+        pointer-events: none;
+        cursor: not-allowed;
+        background-color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColorDisabled")!important;
+        border-color: stencilColor("optimizedCheckout-buttonPrimary-borderColorDisabled")!important;
+        color: stencilColor("optimizedCheckout-buttonPrimary-colorDisabled")!important;
+    }
 }
 @media (min-width: 551px) {
     .checkoutHeader-contact {
