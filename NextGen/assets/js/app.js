@@ -50,6 +50,7 @@ const pageClasses = {
     newsletter_subscribe: noop,
     wishlist: () => import('./theme/wishlist'),
     wishlists: () => import('./theme/wishlist'),
+    orderconfirmation: () => import('./theme/orderconfirmation'),
 };
 
 const customClasses = {};
