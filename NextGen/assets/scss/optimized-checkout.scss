@@ -1153,8 +1153,13 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
     z-index: 1005;
 }
 .ReactModalPortal .modal--afterOpen {
+    display: block;
+    visibility: visible;
     top: 2%!important;
     transform: none;
+}
+.ReactModalPortal .modal--afterOpen .cart-modal-body {
+    padding: 0 1.875rem;
 }
 .layout-cart .cart-header {
     display: table;
@@ -1189,6 +1194,9 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
     }
     .backtoTop {
         bottom: 124px;
+    }
+    #launcher {
+        bottom: 100px !important;
     }
 }
 @media (max-width: 800px) {
