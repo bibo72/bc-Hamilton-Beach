@@ -4447,7 +4447,7 @@ main.page.blog .socialLinks a:hover > svg {
     transition: 800ms ease;
     z-index: zIndex("lower");
     font-family: Larsseit, Arial, Helvetica, sans-serif;
-    font-weight: 700;;
+    font-weight: 700;
 }
 
 .product:hover .sale-flag-side {
@@ -4801,7 +4801,7 @@ h2.page-heading {
 
 h2 {
   border: none;
-  text-transform: capitalize;
+  text-transform: none;
   font-size: 26px;
   padding-left: 0;
   margin-top: 2.28571rem;
@@ -17402,24 +17402,24 @@ html div#checkout-app .button:hover {
 html.hide-focus-box[contenteditable=true]:focus, html.hide-focus-box #body [href]:focus, html.hide-focus-box #body [tabindex]:not([tabindex="-1"]):focus, html.hide-focus-box #body button:focus, html.hide-focus-box #body details:focus, html.hide-focus-box #body input:focus, html.hide-focus-box #body select:focus {
     outline: 2px solid transparent !important;
     outline-offset: -2px !important;
-    border-radius: 4px !important;;
-    -webkit-border-radius: 4px !important;;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
     -moz-border-radius: 4px !important;
     // outline: none!important;
 }
 html.hide-focus-box #body textarea:focus {
   outline: 2px solid transparent !important;
   outline-offset: -2px !important;
-  border-radius: 4px !important;;
-  -webkit-border-radius: 4px !important;;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
   -moz-border-radius: 4px !important;
   // outline: none!important;
 }
 html.hide-focus-box *:focus {
   outline: 2px solid transparent !important;
   outline-offset: -2px !important;
-  border-radius: 4px !important;;
-  -webkit-border-radius: 4px !important;;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
   -moz-border-radius: 4px !important;
   // outline: none!important;
 }
