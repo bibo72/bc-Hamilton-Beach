@@ -77,20 +77,7 @@
                  <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
              </h2>
             {{/if}}
-             {{#if product.call_for_price}}
-                 <p class="productView-price">
-                     <span>{{product.call_for_price}}</span>
-                 </p>
-             {{/if}}
-             <div class="productView-price">
-                 {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                     {{> components/products/price price=product.price schema_org=schema}}
-                 {{else}}
-                     {{> components/common/login-for-pricing}}
-                 {{/or}}
-             </div>
-             {{{region name="product_below_price--global"}}}
-             {{{region name="product_below_price"}}}
+             
     
              <div class="productView-rating"{{#if product.num_reviews '>' 0}}{{#if schema}} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"{{/if}}{{/if}}>
                     {{#if settings.show_product_rating}}
@@ -213,6 +200,16 @@
                     {{/if}}
                  {{/each}}
              </dl>
+
+             <div class="productView-price">
+                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                    {{> components/products/price price=product.price schema_org=schema}}
+                {{else}}
+                    {{> components/common/login-for-pricing}}
+                {{/or}}
+            </div>
+            {{{region name="product_below_price--global"}}}
+            {{{region name="product_below_price"}}}
          </div>   
     
          <section class="productView-details product-options">
@@ -230,6 +227,14 @@
                       {{{dynamicComponent 'components/products/options'}}}
                   {{/each}}
               </div>
+
+              {{#if product.call_for_price}}
+                 <p class="productView-price">
+                     <span>{{product.call_for_price}}</span>
+                 </p>
+             {{/if}}
+             
+
               <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
                   <label class="form-label form-label--alternate">
                       {{lang 'products.current_stock'}}
@@ -239,7 +244,7 @@
               {{#if product.out_of_stock}}
               <div class="notify-button">
                 <a class="button button--primary notify-word" data-product-sku="{{product.sku}}" data-reveal-id="getUpdateModal">Notify Me</a>
-            </div>
+               </div>
                   {{else}}
                   {{> components/products/add-to-cart}}
               {{/if}}

@@ -71,8 +71,14 @@
     .carousel-vertical .slick-dots {
         display: none !important;
     }
+    .productView-details .productView-price {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 22px;
+    }
     .productView-details .price-section.current-price {
-        display: none;
+        // display: none;
     }
     .productView-details .productView-rating {
         display: none;

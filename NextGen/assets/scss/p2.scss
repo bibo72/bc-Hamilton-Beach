@@ -722,6 +722,26 @@ form.klaviyo-form {
         min-height: auto!important;
         padding: 0 !important;
     }
+    @media screen and (max-width: 551px){
+        [data-testid="form-row"] {
+            flex-wrap: wrap!important;
+    
+            >div {
+                width: 100%!important;
+                flex: 1 0 auto !important;
+
+                button,input {
+                    width: 100% !important;
+                    border-radius: 5px !important;
+                }
+
+                button {
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+    
     input {
         padding-left: 20px!important;
         padding-right: 20px!important;
