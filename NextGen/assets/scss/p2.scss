@@ -734,10 +734,6 @@ form.klaviyo-form {
                     width: 100% !important;
                     border-radius: 5px !important;
                 }
-
-                button {
-                    margin-top: 13px;
-                }
             }
         }
     }
@@ -776,6 +772,11 @@ form.klaviyo-form {
     form.klaviyo-form {
         button {
             font-size: 22px!important;
+
+            @media screen and (max-width: 551px){
+                height: 54px!important;
+                margin-top: 13px;
+            }
         }
     }
 }
@@ -796,7 +797,7 @@ form.klaviyo-form {
             @media only screen and (max-width: 767px) {
                 font-size: 16px!important;
                 height: 50px!important;
-                margin-bottom: 1.5em;
+                margin-bottom: 13px;
                 border-radius: 5px!important;
                 text-align: center!important;
             }
@@ -846,6 +847,11 @@ form.klaviyo-form {
             border-radius: 0 5px 5px 0!important;
             font-size: 16px!important;
             height: 100%!important;
+
+            @media screen and (max-width: 551px){
+                height: 54px!important;
+                margin-top: 13px;
+            }
         }
     }
 }
