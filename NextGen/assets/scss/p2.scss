@@ -716,54 +716,58 @@ div#add-to-cart-wrapper.qty-box-visible{
 
 }
 // klaviyo-form
-form.klaviyo-form {
-    padding: 0!important;
-    div {
-        min-height: auto!important;
-        padding: 0 !important;
-    }
-    @media screen and (max-width: 551px){
-        [data-testid="form-row"] {
-            flex-wrap: wrap!important;
+.hp-newsletterSubscription,
+.footer,
+.modal {
+    form.klaviyo-form {
+        padding: 0!important;
+        div {
+            min-height: auto!important;
+            padding: 0 !important;
+        }
+        @media screen and (max-width: 551px){
+            [data-testid="form-row"] {
+                flex-wrap: wrap!important;
+        
+                >div {
+                    width: 100%!important;
+                    flex: 1 0 auto !important;
     
-            >div {
-                width: 100%!important;
-                flex: 1 0 auto !important;
-
-                button,input {
-                    width: 100% !important;
-                    border-radius: 5px !important;
+                    button,input {
+                        width: 100% !important;
+                        border-radius: 5px !important;
+                    }
                 }
             }
         }
-    }
-    
-    input {
-        padding-left: 20px!important;
-        padding-right: 20px!important;
-        border-color: #707070!important;
-        color: #323232!important;
-        border-radius: 5px 0 0 5px!important;
-        font-family: "Larsseit",sans-serif !important;
-
-        &::placeholder {
-            font-size: 16px!important;
+        
+        input {
+            padding-left: 20px!important;
+            padding-right: 20px!important;
+            border-color: #707070!important;
             color: #323232!important;
+            border-radius: 5px 0 0 5px!important;
             font-family: "Larsseit",sans-serif !important;
+    
+            &::placeholder {
+                font-size: 16px!important;
+                color: #323232!important;
+                font-family: "Larsseit",sans-serif !important;
+            }
         }
-    }
-    button {
-        background-color: #0456a8!important;
-        font-weight: 700!important;
-        text-transform: uppercase!important;
-        border-radius: 0 5px 5px 0!important;
-        padding-left: 40px!important;
-        padding-right: 40px!important;
-        text-transform: uppercase!important;
-        font-family: "Roboto Condensed" !important;
-
-        &:hover {
-            background-color: #026cd1!important;
+        button {
+            background-color: #0456a8!important;
+            font-weight: 700!important;
+            text-transform: uppercase!important;
+            border-radius: 0 5px 5px 0!important;
+            padding-left: 40px!important;
+            padding-right: 40px!important;
+            text-transform: uppercase!important;
+            font-family: "Roboto Condensed" !important;
+    
+            &:hover {
+                background-color: #026cd1!important;
+            }
         }
     }
 }
