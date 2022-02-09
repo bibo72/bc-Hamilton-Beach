@@ -67,14 +67,16 @@
           </li>
           
           {{#each pages}}
+          {{#or (if name '===' 'Learn') (if name '===' 'Contact Us')}}
           <li class="navPages-item">
-            {{#if ../theme_settings.main_navigation_design '===' 'simple'}}
+            {{#if ../../theme_settings.main_navigation_design '===' 'simple'}}
             {{> components/common/navigation-list}}
             {{/if}}
-            {{#if ../theme_settings.main_navigation_design '===' 'alternate'}}
+            {{#if ../../theme_settings.main_navigation_design '===' 'alternate'}}
             {{> components/common/navigation-list-alternate}}
             {{/if}}
           </li>
+          {{/or}}
           {{/each}}
 
         </div>
