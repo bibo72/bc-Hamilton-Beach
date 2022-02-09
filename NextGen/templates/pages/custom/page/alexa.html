@@ -1,0 +1,24 @@
+{{#partial "page"}}
+<main class="alexa">
+    {{#if page.sub_pages}}
+    <div class="alexa-selcet">
+        {{#if ../theme_settings.content_page_with_sidenav '===' false}}
+        {{> components/page/content-page-no-sidenav}}
+        {{/if}}
+        {{#if ../theme_settings.content_page_with_sidenav '===' true}}
+        {{> components/page/content-page-with-sidenav}}
+        {{/if}}
+    </div>
+    {{else}}
+    <div class="alexa-content">
+        {{#if ../theme_settings.content_page_with_sidenav '===' false}}
+        {{> components/page/content-page-no-sidenav}}
+        {{/if}}
+        {{#if ../theme_settings.content_page_with_sidenav '===' true}}
+        {{> components/page/content-page-with-sidenav}}
+        {{/if}}
+    </div>
+    {{/if}}
+</main>
+{{/partial}}
+{{> layout/alexa}}

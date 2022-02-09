@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ head.title }}</title>
+    {{{ head.meta_tags }}}
+    {{{ head.config }}}
+    {{{stylesheet '/assets/css/alexa.css'}}}
+
+    <link href="{{ head.favicon }}" rel="shortcut icon">
+    {{#block "head"}}{{/block}}
+</head>
+<body>
+    {{#block "page"}}{{/block}}
+</body>
+</html>

@@ -1,0 +1,111 @@
+.main.alexa {
+    display: none;
+}
+.alexa {
+    .breadcrumbs {
+        display: none !important;
+    }
+    .page-heading {
+        display: none !important;
+    }
+    [data-content-region="page_builder_content_editor_area_top"] {
+        display: none !important;
+    }
+    .alexa-content {
+        max-width: 1400px !important;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        h3 {
+            padding-top: 20px;
+            font-size: 1.9375rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        p {
+            color: #5b5b5e;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            text-rendering: optimizeLegibility;
+            a {
+                color: #363636;
+            }
+        }
+        ul {
+            padding: 0;
+            background: #fff;
+            color: #363636;
+            font-size: 16px;
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        ol {
+            padding: 0;
+            background: #fff;
+            color: #363636;
+            font-size: 16px;
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            list-style-type: decimal;
+            li {
+                line-height: 1.6;
+                a {
+                    color: #363636;
+                }
+            }
+        }
+    }
+    .alexa-selcet {
+        .navBar.navBar--sub {
+            display: none !important;
+        }
+    }
+    .alexa-selcet .center-in-page {
+        height: 500px;
+        padding-top: 200px;
+        h2 {
+            max-width: 320px;
+            color: #5b5b5e;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+        select {
+            height: 2.7375rem;
+            padding: 0.5rem;
+            border: 1px solid #cacaca;
+            margin: 0 0 1rem;
+            font-size: 1rem;
+            font-family: inherit;
+            line-height: normal;
+            color: #0a0a0a;
+            background-color: #fefefe;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-background-size: 9px 6px;
+            background-size: 9px 6px;
+            background-position: right -1rem center;
+            -webkit-background-origin: content-box;
+            background-origin: content-box;
+            background-repeat: no-repeat;
+            padding-right: 1.5rem;
+            max-width: 320px;
+            width: 20%;
+            color: #5b5b5e;
+            font-family: 'Zurich W01 Bold';
+            font-size: 20px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,23' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+            option {
+                color: #5b5b5e;
+                font-family: 'Zurich W01 Bold';
+                font-size: 20px;
+            }
+        }
+    }
+}
