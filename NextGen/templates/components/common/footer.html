@@ -56,6 +56,12 @@
 						{{/each}}
 						{{/if}}
 						{{/each}}
+						
+						{{#each pages}}
+						{{#if name '==' "Product Registration"}}
+						<li><a href="{{url}}">Registration</a></li>
+						{{/if}}
+						{{/each}}
 					</ul>
 				</div>
 
@@ -84,7 +90,7 @@
 			{{#if theme_settings.footer_contact_info_visibility '===' true}}
 			<!-- contact us-->
 			<article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-				<h3 class="footer-info-heading"><a href="/contact-us/">{{theme_settings.contact_header}}</a></h3>
+				<h3 class="footer-info-heading"><a href="/contact-us">{{theme_settings.contact_header}}</a></h3>
 				<!-- <div class="regular">
 					<address>{{nl2br settings.address}}</address>
 
@@ -161,6 +167,12 @@
 						{{/each}}
 						{{/if}}
 						{{/each}}
+
+						{{#each pages}}
+						{{#if name '==' "Product Registration"}}
+						<li><a href="{{url}}">Registration</a></li>
+						{{/if}}
+						{{/each}}
 					</ul>
 
 				</div>
@@ -183,7 +195,7 @@
 				</div>
 			</li>
 			<li class="accordion-navigation">
-				<a class="list-action" href="/contact-us/">{{theme_settings.contact_header}}
+				<a class="list-action" href="/contact-us">{{theme_settings.contact_header}}
 					<i class="fa fa-chevron-down main-nav" aria-hidden="true">
 						<svg>
 							<use xlink:href="#icon-angle-down" />
