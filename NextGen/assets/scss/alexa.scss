@@ -16,46 +16,60 @@
         margin: 0 auto;
         padding-bottom: 30px;
         h3 {
-            padding-top: 20px;
-            font-size: 1.9375rem;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
+            font-size: 48px;
+            margin-bottom: 44px;
+            font-weight: 700;
+            color: #0056a8;
+            line-height: 1.2;
+            font-family: Larsseit;
         }
         p {
             color: #5b5b5e;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 1.5rem;
+            font-family: Larsseit;
+            font-weight: 400;
+            color: #323232;
             text-rendering: optimizeLegibility;
             a {
-                color: #363636;
+                color: #0056a8;
             }
         }
         ul {
             padding: 0;
             background: #fff;
             color: #363636;
-            font-size: 16px;
             list-style-type: disc;
             margin-left: 1.25rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 1.5rem;
+            font-family: Larsseit;
+            font-weight: 400;
+            li {
+                line-height: 1.6;
+                a {
+                    color: #0056a8;
+                }
+            }
         }
         ol {
             padding: 0;
             background: #fff;
             color: #363636;
-            font-size: 16px;
             list-style-type: disc;
             margin-left: 1.25rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
             list-style-type: decimal;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 1.5rem;
+            font-family: Larsseit;
+            font-weight: 400;
             li {
                 line-height: 1.6;
                 a {
-                    color: #363636;
+                    color: #0056a8;
                 }
             }
         }
@@ -69,11 +83,13 @@
         height: 500px;
         padding-top: 200px;
         h2 {
-            max-width: 320px;
-            color: #5b5b5e;
-            font-size: 20px;
+            max-width: 420px;
+            color: #0056a8;
+            font-size: 26px;
             font-weight: bold;
             margin: 0 auto;
+            font-family: Larsseit;
+            text-transform: uppercase;
         }
         select {
             height: 2.7375rem;
@@ -98,12 +114,12 @@
             max-width: 320px;
             width: 20%;
             color: #5b5b5e;
-            font-family: 'Zurich W01 Bold';
+            font-family: Larsseit;
             font-size: 20px;
             background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,23' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
             option {
                 color: #5b5b5e;
-                font-family: 'Zurich W01 Bold';
+                font-family: Larsseit;
                 font-size: 20px;
             }
         }
