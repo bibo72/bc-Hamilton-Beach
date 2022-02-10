@@ -3,8 +3,17 @@
 <head>
     <title>{{ head.title }}</title>
     {{{ head.meta_tags }}}
+
+    <meta name="description" content="{{ head.title }}">
+    <meta name="keywords" content="{{ head.title }}">
     {{{ head.config }}}
+
+    <link href="{{ head.favicon }}" rel="shortcut icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     {{{stylesheet '/assets/css/theme.css'}}}
+    {{{stylesheet '/assets/css/nextgen.css'}}}
     {{{stylesheet '/assets/css/alexa.css'}}}
 
     <link href="{{ head.favicon }}" rel="shortcut icon">
