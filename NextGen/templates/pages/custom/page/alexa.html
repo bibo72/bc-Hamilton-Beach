@@ -3,7 +3,57 @@
     {{#if page.sub_pages}}
     <div class="alexa-selcet">
         {{#if ../theme_settings.content_page_with_sidenav '===' false}}
-        {{> components/page/content-page-no-sidenav}}
+        {{! contactUs contact-us-Zendesk}}
+        <div class="page-content page-content no-sidenav {{#if page.title '===' 'Contact Us'}}contactUs{{/if}}">
+          {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+          <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
+          {{#if page.sub_pages}}
+          <nav class="navBar navBar--sub">
+              <ul class="navBar-section account-navigation">
+              {{#each page.sub_pages}}
+                <li class="navBar-item">
+                    <div class="navBar-item-inner">
+                        <a class="navBar-action" href="{{url}}">
+                            <div class="img_box">
+                                <div class="image-container" style="background-image: url({{concat '/product_images/uploaded_images/nav-' (concat (dashcase title) '.jpg')}}?t={{moment}})"></div>
+                                <!-- <img src="{{concat '/product_images/uploaded_images/' (concat (dashcase title) '.jpg')}}" >     -->
+                            </div>
+                            <div class="item-info">
+                                <span class="title">{{title}}</span>  
+                                <span class="icon_right">
+                                    <svg>
+                                        <use xlink:href="#icon-chevron-right" />
+                                    </svg>
+                                </span>
+                            </div>
+                            
+                        </a>
+                    </div>
+                </li>
+              {{/each}}
+              </ul>
+          </nav>
+          {{{region name="page_builder_content"}}}
+          {{/if}}
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+            {{else}}
+              {{{region name="page_builder_content_editor_area_top"}}}
+                <p>{{{page.content}}}</p>
+              {{{region name="page_builder_content_editor_area_bottom"}}}
+            {{/replace}}
+        </div>
+        
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h2><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}        
         {{/if}}
         {{#if ../theme_settings.content_page_with_sidenav '===' true}}
         {{> components/page/content-page-with-sidenav}}
@@ -12,7 +62,57 @@
     {{else}}
     <div class="alexa-content">
         {{#if ../theme_settings.content_page_with_sidenav '===' false}}
-        {{> components/page/content-page-no-sidenav}}
+        {{! contactUs contact-us-Zendesk}}
+        <div class="page-content page-content no-sidenav {{#if page.title '===' 'Contact Us'}}contactUs{{/if}}">
+          {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+          <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
+          {{#if page.sub_pages}}
+          <nav class="navBar navBar--sub">
+              <ul class="navBar-section account-navigation">
+              {{#each page.sub_pages}}
+                <li class="navBar-item">
+                    <div class="navBar-item-inner">
+                        <a class="navBar-action" href="{{url}}">
+                            <div class="img_box">
+                                <div class="image-container" style="background-image: url({{concat '/product_images/uploaded_images/nav-' (concat (dashcase title) '.jpg')}}?t={{moment}})"></div>
+                                <!-- <img src="{{concat '/product_images/uploaded_images/' (concat (dashcase title) '.jpg')}}" >     -->
+                            </div>
+                            <div class="item-info">
+                                <span class="title">{{title}}</span>  
+                                <span class="icon_right">
+                                    <svg>
+                                        <use xlink:href="#icon-chevron-right" />
+                                    </svg>
+                                </span>
+                            </div>
+                            
+                        </a>
+                    </div>
+                </li>
+              {{/each}}
+              </ul>
+          </nav>
+          {{{region name="page_builder_content"}}}
+          {{/if}}
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+            {{else}}
+              {{{region name="page_builder_content_editor_area_top"}}}
+                <p>{{{page.content}}}</p>
+              {{{region name="page_builder_content_editor_area_bottom"}}}
+            {{/replace}}
+        </div>
+        
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h2><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}        
         {{/if}}
         {{#if ../theme_settings.content_page_with_sidenav '===' true}}
         {{> components/page/content-page-with-sidenav}}
