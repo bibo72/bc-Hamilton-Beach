@@ -40,8 +40,8 @@ export default class Orderconfirmation extends PageManager {
                 }
 
                 window.dataLayer = window.dataLayer || [];
-                const revenue = date.orderAmount - data.shippingCostTotal - data.taxTotal ;
-                
+                const revenue = date.orderAmount - data.shippingCostTotal - data.taxTotal - data.handlingCostTotal ;
+                const shipping = date.shippingCostTotal + data.handlingCostTotal;
                 dataLayer.push({
                     "ecommerce": {
                         "currencyCode": "USD",
@@ -49,7 +49,7 @@ export default class Orderconfirmation extends PageManager {
                             "actionField": {
                                 "id": orderId,
                                 "revenue": revenue.toFixed(2).toString(), // Tax and Shipping EXCLUDED
-                                "shipping": data.shippingCostTotal.toFixed(2).toString(),
+                                "shipping": shipping.toFixed(2).toString(),
                                 "tax": data.taxTotal.toFixed(2).toString(), // 5% on Product and Shipping
                                 "affiliation": "",
                                 "coupon": orderCoupon // 10% discount
