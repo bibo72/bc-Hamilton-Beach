@@ -40,8 +40,8 @@ export default class Orderconfirmation extends PageManager {
                 }
 
                 window.dataLayer = window.dataLayer || [];
-                const revenue = date.orderAmount - data.shippingCostTotal - data.taxTotal - data.handlingCostTotal ;
-                const shipping = date.shippingCostTotal + data.handlingCostTotal;
+                const revenue = data.orderAmount - data.shippingCostTotal - data.taxTotal - data.handlingCostTotal ;
+                const shipping = data.shippingCostTotal + data.handlingCostTotal;
                 dataLayer.push({
                     "ecommerce": {
                         "currencyCode": "USD",
