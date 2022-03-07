@@ -55,12 +55,6 @@ export default class Orderconfirmation extends PageManager {
                             "products": orderProducts
                         }
                     },
-                    "eventCategory": "Ecommerce",
-                    "eventAction": "confirmation",
-                    "eventLabel": "",
-                    "eventValue": 0,
-                    "eventNonInteractive": true,
-                    "user_id": "",
                     "event": "confirmation"
                 });
             },
