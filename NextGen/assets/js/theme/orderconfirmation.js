@@ -40,13 +40,14 @@ export default class Orderconfirmation extends PageManager {
                 }
 
                 window.dataLayer = window.dataLayer || [];
+
                 dataLayer.push({
                     "ecommerce": {
                         "currencyCode": "USD",
                         "purchase": {
                             "actionField": {
                                 "id": orderId,
-                                "revenue": data.orderAmount.toFixed(2).toString(), // Tax and Shipping EXCLUDED
+                                "revenue": data.baseAmount.toFixed(2).toString(), // Tax and Shipping EXCLUDED
                                 "shipping": data.shippingCostTotal.toFixed(2).toString(),
                                 "tax": data.taxTotal.toFixed(2).toString(), // 5% on Product and Shipping
                                 "affiliation": "",
@@ -55,6 +56,12 @@ export default class Orderconfirmation extends PageManager {
                             "products": orderProducts
                         }
                     },
+                    "eventCategory": "Ecommerce",
+                    "eventAction": "confirmation",
+                    "eventLabel": "",
+                    "eventValue": 0,
+                    "eventNonInteractive": true,
+                    "user_id": "",
                     "event": "confirmation"
                 });
             },
