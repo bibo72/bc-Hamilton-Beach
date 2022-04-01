@@ -107,4 +107,68 @@
             max-width: 320px;
         }
     }
+    .accordion-item {
+        border-bottom: 1px solid #565a5c;
+        .title {
+            position: relative;
+            font-size: 18px;
+            padding: 24px 28px 24px 0;
+            margin: 1.25rem 0 0;
+            font-family: "Larsseit Alt Medium",sans-serif;
+            cursor: pointer;
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 15px;
+            }
+
+            &:before {
+                right: -6px;
+                bottom: 27px;
+                border-left: 2.5px #0056a8 solid;
+            }
+
+            &:after {
+                right: 0;
+                bottom: 33px;
+                border-bottom: 2.5px #0056a8 solid;
+            }
+
+            &.removeAdd {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        .content {
+            display: none;
+        }
+        .accordion-item {
+            margin: 0 20px;
+            border-bottom: none;
+
+
+            .title {
+                padding-left: 30px;
+                padding-right: 0;
+                margin-top: 0;
+                &:before {
+                    left: 10px;
+                    right: auto;
+                }
+                &:after {
+                    left: 4px;
+                    right: auto;
+                }
+
+            }
+
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
