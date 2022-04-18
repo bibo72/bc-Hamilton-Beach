@@ -18,6 +18,34 @@
         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     </script>
 
+    <script type="text/javascript">
+        function loadCssFile(url) {
+            var link = document.createElement('link')
+            link.type = 'text/css'
+            link.rel = 'stylesheet'
+            link.href = url
+            var head = document.getElementsByTagName('head')[0]
+            head.appendChild(link)
+        }
+        
+        
+        function loadCssCode(code) {
+            var style = document.createElement('style')
+            style.type = 'text/css'
+            style.rel = 'stylesheet'
+            try {
+                //for Chrome Firefox Opera Safari
+                style.appendChild(document.createTextNode(code))
+            } catch (ex) {
+                //for IE
+                style.styleSheet.cssText = code
+            }
+            var head = document.getElementsByTagName('head')[0]
+            head.appendChild(style)
+        }
+        
+    </script>
+
     {{ getFontsCollection }}
     {{{stylesheet '/assets/css/theme.css'}}}
     {{{stylesheet '/assets/css/nextgen.css'}}}
@@ -67,5 +95,6 @@
 
         {{{footer.scripts}}}
 
+        {{{region name="page_builder_custom_css_js"}}}
     </body>
 </html>
