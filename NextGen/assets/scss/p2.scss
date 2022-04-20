@@ -859,3 +859,9 @@ div#add-to-cart-wrapper.qty-box-visible{
         }
     }
 }
+
+#add-to-cart-wrapper {
+    .form-increment {
+        display: flex;
+    }
+}
