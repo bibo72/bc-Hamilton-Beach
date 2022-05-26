@@ -1207,3 +1207,12 @@ body.main.eleven-seventy footer.footer .container .footer-info-col .footer-info-
         font-size: 36px;
     }
 }
+
+[data-test="cart-coupon"] .cart-priceItem-label [data-test="cart-price-label"] {
+    font-size: 0;
+}
+[data-test="cart-coupon"] .cart-priceItem-label [data-test="cart-price-label"]::before {
+    content: "Discount Applied ";
+    display: inline;
+    font-size: 16px;
+}
