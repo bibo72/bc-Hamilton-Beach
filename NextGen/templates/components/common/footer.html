@@ -58,8 +58,14 @@
 						{{/each}}
 						
 						{{#each pages}}
-						{{#if name '==' "Product Registration"}}
-						<li><a href="{{url}}">Registration</a></li>
+						{{#if name '==' "Products Link"}}
+							{{#each children}}
+								{{#if name '==' "Product Registration"}}
+								<li><a href="{{url}}">Registration</a></li>
+								{{else}}
+								<li><a href="{{url}}">{{name}}</a></li>
+								{{/if}}
+							{{/each}}
 						{{/if}}
 						{{/each}}
 					</ul>
@@ -169,8 +175,14 @@
 						{{/each}}
 
 						{{#each pages}}
-						{{#if name '==' "Product Registration"}}
-						<li><a href="{{url}}">Registration</a></li>
+						{{#if name '==' "Products Link"}}
+							{{#each children}}
+								{{#if name '==' "Product Registration"}}
+								<li><a href="{{url}}">Registration</a></li>
+								{{else}}
+								<li><a href="{{url}}">{{name}}</a></li>
+								{{/if}}
+							{{/each}}
 						{{/if}}
 						{{/each}}
 					</ul>

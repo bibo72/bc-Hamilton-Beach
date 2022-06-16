@@ -1,5 +1,6 @@
 <ul class="breadcrumbs">
     {{#each breadcrumbs}}
+        {{#unless name '==' 'Products Link'}}
         <li class="breadcrumb {{#if @last}}is-active{{/if}}">
             {{#if url}}
                 <a href="{{url}}" class="breadcrumb-label">{{name}}</a>
@@ -7,5 +8,6 @@
                 <span class="breadcrumb-label">{{name}}</span>
             {{/if}}
         </li>
+        {{/unless}}
     {{/each}}
 </ul>
